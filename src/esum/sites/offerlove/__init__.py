@@ -289,7 +289,10 @@ def my_offers(ctx, query: str | None = None, bank: Bank | None = None, card: str
     offer and card. Offers past their expiry are left out (`hidden`). Columns: merchant, bank, card,
     title, expiry (a New York date, as the page prints it) and added (yes: on the card; no: still to
     add; not needed: the bank applies it without adding); `--fields` adds slug, started, status (the
-    bank's own word) and terms. Needs the user signed in to Offer.love in ESUM's browser.
+    bank's own word) and terms. A table cell stops at 300 characters and gift card exclusions are
+    often late in the terms, so read them with `--fields terms --json`, which has them whole. There
+    is no offer id: the user's own expiry can differ from the public offer page's, so a public id
+    built from it may not exist. Needs the user signed in to Offer.love in ESUM's browser.
 
     Args:
         query: Only offers whose merchant or title contains this (case and spaces ignored).
@@ -334,5 +337,7 @@ def my_offers(ctx, query: str | None = None, bank: Bank | None = None, card: str
                    about=about, total=len(rows), more=more,
                    empty="no offers of yours match" if (query or bank or card or added)
                    else "Offer.love's My Offers lists no live offers for you",
-                   next=[Next("my-offers", {"query": "<merchant>"}, "list only that merchant's offers of yours"),
+                   next=[Next("my-offers", {"query": "<merchant>"},
+                              "list only that merchant's offers of yours (add `--fields terms --json` for "
+                              "the whole terms, where gift card exclusions usually are)"),
                          Next("search", {"query": "<merchant>"}, "list every bank's public offers at that merchant")])

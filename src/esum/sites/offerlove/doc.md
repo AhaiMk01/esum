@@ -124,7 +124,10 @@ them all from the site's own store in the page (the page itself shows 50 at a ti
 offer and card. Offers past their expiry are left out (`hidden`). Columns: merchant, bank, card,
 title, expiry (a New York date, as the page prints it) and added (yes: on the card; no: still to
 add; not needed: the bank applies it without adding); `--fields` adds slug, started, status (the
-bank's own word) and terms. Needs the user signed in to Offer.love in ESUM's browser.
+bank's own word) and terms. A table cell stops at 300 characters and gift card exclusions are
+often late in the terms, so read them with `--fields terms --json`, which has them whole. There
+is no offer id: the user's own expiry can differ from the public offer page's, so a public id
+built from it may not exist. Needs the user signed in to Offer.love in ESUM's browser.
 
 ```
 esum offerlove my-offers [--query <str>] [--bank amex|boa|chase|citi|paypal|us-bank|wells-fargo] [--card <str>] [--added yes|no] [--sort site|expires] [--offset <int>] [--limit <int>]
