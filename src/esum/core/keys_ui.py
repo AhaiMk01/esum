@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import html
 import secrets
+import socketserver
 import threading
 import time
 import webbrowser
@@ -195,10 +196,20 @@ def _handler(page: KeysPage):
     return Handler
 
 
+class _LocalServer(ThreadingHTTPServer):
+    """An HTTP server for 127.0.0.1 that binds without looking its own name up. The stock
+    `server_bind` calls `socket.getfqdn`, a reverse DNS lookup that takes seconds on macOS, and
+    the page's link is not usable until the server is bound."""
+
+    def server_bind(self) -> None:
+        socketserver.TCPServer.server_bind(self)
+        self.server_name, self.server_port = self.server_address[:2]
+
+
 def serve(page: KeysPage, out: TextIO, *, open_browser: bool = True,
           idle: float = IDLE_SECONDS, port: int = 0) -> ThreadingHTTPServer:
     """Start the page on 127.0.0.1 and print its link; blocks until it has been idle too long."""
-    server = ThreadingHTTPServer(("127.0.0.1", port), _handler(page))
+    server = _LocalServer(("127.0.0.1", port), _handler(page))
     page.origin = f"http://127.0.0.1:{server.server_address[1]}"
     url = f"{page.origin}/?t={page.token}"
     out.write(f"ESUM keys: {url}\n(closes after {int(idle // 60)} idle minutes; Ctrl+C stops it)\n")
