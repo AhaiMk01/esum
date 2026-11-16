@@ -34,6 +34,12 @@ doesn't reach a brand's fare, report the brand with its price and say its fare b
 were not read. When a rung fits, a help line gives the `fares` command for the rung's flights:
 what the airline sells on them now.
 
+Without `--routing` the ladder climbs an open search, and Matrix's open search can leave out
+whole carriers: on SFO-Tokyo (2026-11-15) it left out Cathay, so the ladder stopped at a
+USD 961.50 nonstop while a Cathay fare that isn't basic cost USD 474.80. The result's
+`carriers` line names the carriers its rungs are and its help gives the `search --thorough`
+command; run it, and climb each cheaper carrier it finds with `--routing XX+`.
+
 A routing such as `O:DL+` keeps the flights the carrier operates, under any number sold on
 them: AF3611 and VS3970 beside DL90 are the same aircraft, each with its own airline's fares
 to climb past. For one carrier's own fares use `DL+`: on Delta ATL-CDG it reached the first

@@ -594,7 +594,9 @@ def ladder(ctx, origin: str | None = None, dest: str | None = None, depart: str 
     since a cheaper rung can sit behind it. It also says when Matrix lists a fare its filter
     left out. A fare Matrix doesn't place on a slice is printed without one (`UA.SFO+TYO.K…`)
     and left out of every slice. The answer is the cheapest among the fares Matrix lists, not
-    a proof.
+    a proof. Each rung names its carriers; without `--routing` the climb is an open search,
+    which can leave out whole carriers, so `carriers` says so and `help` gives the thorough
+    search that finds them (climb one with `--routing XX+`).
 
     Without `--until` every fare is left out once read: a list of the fares on the trip, where
     an itinerary that reuses one of them is not found.
@@ -706,6 +708,12 @@ def ladder(ctx, origin: str | None = None, dest: str | None = None, depart: str 
              "searches": f"{searched} in {time.monotonic() - started:.0f} s",
              "stopped": _ended(climb, steps, failed=failed, top_out=top_out, stuck=stuck),
              "caution": _caution(climb)}
+    open_search = not routing   # a routing names the carriers; an open search may leave some out
+    if open_search and steps:
+        about["carriers"] = (f"the rungs are fares of {', '.join(_carriers_of(steps))}: an open search can leave out whole "
+                             f"carriers (Matrix answers within a compute budget), so a cheaper fare that fits can sit "
+                             f"with a carrier no rung shows; a thorough search finds them, and `--routing XX+` "
+                             f"climbs one carrier's ladder")
     hints = []
     if steps:
         hints = [Next("detail", {"search": "<search>", "id": "<id>"},
@@ -728,20 +736,33 @@ def ladder(ctx, origin: str | None = None, dest: str | None = None, depart: str 
         elif not top_out and climb.left_out:
             hints.append(Next("ladder", {**given, "skip": ",".join(climb.left_out)},
                               "climb further: the next rungs, without the fares left out so far"))
-    table = [{"rung": s.number, "price": s.row["price"], "classes": s.rung.classes,
+    if open_search:
+        looked = {k: given.get(k) for k in ("origin", "dest", "depart", "return_", "legs", "cabin", "stops",
+                                             "extension", "adults", "children", "currency", "sales_city")}
+        hints.append(Next("search", {**looked, "thorough": True},
+                          "find the carriers this open search may have left out (1-2 minutes); climb one with "
+                          "`ladder --routing XX+`"))
+    table = [{"rung": s.number, "price": s.row["price"], "carriers": " ".join(_carriers_of([s])),
+              "classes": s.rung.classes,
               "fares": " ".join(dict.fromkeys(f.basis for f in s.rung.fares)), "kind": s.rung.kind,
               "notes": s.rung.notes, "penalties": s.rung.penalties, "itinerary": s.row["itinerary"],
               "id": s.row["id"], "search": s.row["search"]} for s in steps]
     shown = [{**r, "penalties": "as above"} if i and r["penalties"] and r["penalties"] == table[i - 1]["penalties"]
              else r for i, r in enumerate(table)]
     return Listing(name="rungs", rows=shown, about=about, total=None,
-                   fields=("rung", "price", "classes", "fares", "kind", "notes", "penalties", "id", "search"),
+                   fields=("rung", "price", "carriers", "classes", "fares", "kind", "notes", "penalties", "id",
+                           "search"),
                    data={**{k: v for k, v in about.items() if v is not None}, "left_out": climb.left_out,
                          "rungs": table},
                    empty=f"Matrix has nothing without {','.join(climb.left_out)}" if skipped else
                          "Matrix found no itineraries; widen the search (other dates, more stops, another cabin "
                          "or nearby airports)",
                    next=hints)
+
+
+def _carriers_of(steps) -> list[str]:
+    """The carriers whose fares the rungs are, from each fare's name (`UA.SFO+TYO.KLX07JBH`)."""
+    return list(dict.fromkeys(f.name.split(".", 1)[0] for s in steps for f in s.rung.fares if f.name))
 
 
 def _caution(climb: Climb) -> str | None:

@@ -156,8 +156,8 @@ def test_each_rung_searches_without_the_fares_below_it(action_runner):
     assert backend.filters == [None, WITHOUT_K_S]
     assert [len(s) for s in backend.searches] == [2, 2]
     rows = rows_of(text)
-    assert rows[0].startswith("1,USD1472.09,K | S,KLX0 SLX1,basic,non-refundable,")
-    assert rows[1].startswith("2,USD1732.09,L | W,LLX0 WLX1,basic,non-refundable,")
+    assert rows[0].startswith("1,USD1472.09,UA,K | S,KLX0 SLX1,basic,non-refundable,")
+    assert rows[1].startswith("2,USD1732.09,UA,L | W,LLX0 WLX1,basic,non-refundable,")
     assert "stopped:" not in text
     assert "esum matrix rules --search S2.SET2." in text and "--id 1 --category 0,16,33`" in text
     assert ("esum matrix ladder --origin SFO --dest NRT --depart 2027-03-10 --return 2027-03-20 --routing UA+ "
@@ -174,8 +174,8 @@ def test_until_not_basic_passes_a_higher_cabin_and_stops_at_the_first_standard_f
     assert backend.filters == [None, WITHOUT_K_S,
                                (without("UA.SFO+TYO.KLX0", "UA.SFO+TYO.RLX0"), without("UA.TYO+SFO.SLX1"))]
     rows = rows_of(out)
-    assert rows[1].startswith('2,USD2666.09,R | B,RLX0 BLX1,"sell-up, R is premium",non-refundable,')
-    assert rows[2].startswith("3,USD2702.09,B | B,BLX0 BLX1,sell-up,non-refundable,")
+    assert rows[1].startswith('2,USD2666.09,UA,R | B,RLX0 BLX1,"sell-up, R is premium",non-refundable,')
+    assert rows[2].startswith("3,USD2702.09,UA,B | B,BLX0 BLX1,sell-up,non-refundable,")
     assert 'stopped: "rung 3 has no basic fare by its rule titles: confirm it in its rules, notes included"' in out
     assert "esum matrix rules --search S3.SET3." in out
 
@@ -187,7 +187,7 @@ def test_until_not_basic_leaves_out_only_the_basic_fares(action_runner):
     })
     out = climb(action_runner, backend, until="not-basic")
     assert backend.filters == [None, (None, without("UA.TYO+SFO.SLX1"))]
-    assert rows_of(out)[1].startswith('2,USD150.00,K | B,KLX0 BLX1,"",non-refundable,')
+    assert rows_of(out)[1].startswith('2,USD150.00,UA,K | B,KLX0 BLX1,"",non-refundable,')
     assert "rung 2 has no basic fare" in out
     assert "--skip 2:UA.TYO+SFO.SLX1,1:UA.SFO+TYO.KLX0,2:UA.TYO+SFO.BLX1 --until not-basic` to climb past rung 2" in out
 
@@ -200,7 +200,7 @@ def test_until_refundable_leaves_out_only_the_fares_whose_penalties_refuse_a_ref
     })
     out = climb(action_runner, backend, cabin="business", until="refundable")
     assert backend.filters == [None, (without("UA.SFO+TYO.JLX0"), None)]     # the flexible J fare coming back stays
-    assert rows_of(out)[0].startswith('1,USD21315.69,Z J | J,JLX0 JLX1,"",non-refundable,')
+    assert rows_of(out)[0].startswith('1,USD21315.69,UA,Z J | J,JLX0 JLX1,"",non-refundable,')
     assert "rung 2 files no non-refundable cancellation statement: confirm it in its rules, notes included" in out
 
 
@@ -225,7 +225,7 @@ def test_a_business_slice_with_a_domestic_connection_in_first_is_business(action
                                  [FLEXIBLE, FLEXIBLE], notes=[])})
     out = climb(action_runner, backend, cabin="business", until="refundable")
     assert backend.filters == [None]
-    assert rows_of(out)[0].startswith('1,USD21556.79,J | J,JLX0 JLX1,"","",')
+    assert rows_of(out)[0].startswith('1,USD21556.79,UA,J | J,JLX0 JLX1,"","",')
     assert ',"cancel: before departure: CANCELLATIONS PERMITTED.",1,S1.SET1.' in rows_of(out)[0]
     assert "rung 1 files no non-refundable cancellation statement" in out
 
@@ -300,7 +300,7 @@ def test_a_candidate_found_again_cheaper_is_answered_at_the_cheaper_itinerary(ac
     cheaper = Step(9, "USD2500.00", [("B", ECONOMY), ("B", ECONOMY)], [SELL_UP, SELL_UP])
     out = climb(action_runner, Ladder({None: [K_S, B_B], WITHOUT_K_S: cheaper}), until="not-basic")
     answer = rows_of(out)[1]
-    assert answer.startswith("2,USD2500.00,B | B,") and answer.endswith("S9.SET9.ABCDEFGHIJKLMNOPQRSTU9")
+    assert answer.startswith("2,USD2500.00,UA,B | B,") and answer.endswith("S9.SET9.ABCDEFGHIJKLMNOPQRSTU9")
     assert "USD2702.09" not in out
 
 
@@ -334,7 +334,7 @@ def test_skip_takes_fares_with_or_without_a_carrier_and_joins_the_users_extensio
     out = climb(action_runner, backend, searches=1, skip="klx07jbh, ua.slw47fbh", extension="-AIRLINES NH")
     assert backend.filters == [(every, every)]
     assert 'skipped: "KLX07JBH,UA.SLW47FBH"' in out and "--skip KLX07JBH,UA.SLW47FBH,1:UA.SFO+TYO.LLX0,2:UA.TYO+SFO.WLX1" in out
-    assert ",USD1732.09,L | W," in out
+    assert ",USD1732.09,UA,L | W," in out
 
 
 def test_one_way_and_multi_city_trips(action_runner):
@@ -356,15 +356,26 @@ def test_a_failed_first_search_is_the_error(action_runner):
 
 def test_a_later_failure_keeps_the_rungs_found(action_runner):
     out = climb(action_runner, Ladder({None: K_S, WITHOUT_K_S: httpx.ReadTimeout("timed out")}))
-    assert ",USD1472.09,K | S," in out
+    assert ",USD1472.09,UA,K | S," in out
     assert 'stopped: "search 2 failed (ReadTimeout: timed out)"' in out
     assert f"--skip {K_S_LEFT_OUT}`" in out
+
+
+def test_an_open_ladder_says_a_carrier_can_be_missing_and_names_the_thorough_search(action_runner):
+    # SFO-Tokyo (2026-11-15): the open search left Cathay out, so the ladder stopped at USD 961.50
+    # while a thorough search found a fitting Cathay fare at USD 474.80
+    out = climb(action_runner, Ladder({None: K_S, WITHOUT_K_S: httpx.ReadTimeout("timed out")}), routing=None)
+    assert "carriers: \"the rungs are fares of UA: an open search can leave out whole carriers" in out
+    assert ("esum matrix search --origin SFO --dest NRT --depart 2027-03-10 --return 2027-03-20 --thorough` to "
+            "find the carriers this open search may have left out") in out
+    routed = climb(action_runner, Ladder({None: K_S, WITHOUT_K_S: httpx.ReadTimeout("timed out")}))
+    assert "carriers:" not in routed and "--thorough" not in routed
 
 
 def test_a_fare_whose_rules_fail_goes_unmarked_unless_until_needs_them(action_runner):
     broken = Step(1, "USD1472.09", [("K", ECONOMY), ("S", ECONOMY)], [httpx.ReadTimeout("timed out"), BASIC])
     assert rows_of(climb(action_runner, Ladder({None: broken}), searches=1))[0].startswith(
-        "1,USD1472.09,K | S,KLX0 SLX1,basic,non-refundable,")
+        "1,USD1472.09,UA,K | S,KLX0 SLX1,basic,non-refundable,")
     with pytest.raises(httpx.ReadTimeout):
         climb(action_runner, Ladder({None: broken}), searches=1, until="not-basic")
 

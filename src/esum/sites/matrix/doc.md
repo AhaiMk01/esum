@@ -130,7 +130,9 @@ code: a longer one goes out with the code's other designators, and `caution` nam
 since a cheaper rung can sit behind it. It also says when Matrix lists a fare its filter
 left out. A fare Matrix doesn't place on a slice is printed without one (`UA.SFO+TYO.K…`)
 and left out of every slice. The answer is the cheapest among the fares Matrix lists, not
-a proof.
+a proof. Each rung names its carriers; without `--routing` the climb is an open search,
+which can leave out whole carriers, so `carriers` says so and `help` gives the thorough
+search that finds them (climb one with `--routing XX+`).
 
 Without `--until` every fare is left out once read: a list of the fares on the trip, where
 an itinerary that reuses one of them is not found.
