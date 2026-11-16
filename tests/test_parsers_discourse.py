@@ -871,3 +871,16 @@ def test_from_n_costs_no_extra_request_when_n_is_on_the_first_page(action_runner
     assert [p["number"] for p in got if "number" in p] == list(range(42, 51))
     assert [r.url for r in fake_http.requests] == [base + "/t/1.json",
                                                   base + "/t/1/posts.json?post_number=41&asc=true"]
+
+
+def test_posts_moved_in_from_another_topic_are_named_as_out_of_date_order():
+    # uscf topic 526111 (2026-11-15): #476-#483, dated 10-07, follow #475 of 11-09 after a merge
+    from datetime import datetime, timezone
+    from esum.core.posts import Post
+    from esum.engines.discourse import moved_in
+    day = lambda d, h=0: datetime(2026, 11, d, h, tzinfo=timezone.utc)
+    posts = [Post(475, "a", "x", date=day(9)), Post(477, "b", "x", date=day(1)), Post(476, "c", "x", date=day(1)),
+             Post(478, "d", "x", date=day(2)), Post(479, "e", "x", date=day(9, 5)), Post(480, "f", "x", date=day(3)),
+             Post(481, "g", "x", date=day(9, 4).replace(minute=30))]
+    assert moved_in(posts) == ["#476–#478", "#480"]   # #481 is within the hour's slack of #479
+    assert moved_in([Post(1, "a", "x", date=day(1)), Post(2, "b", "x", date=day(2))]) == []

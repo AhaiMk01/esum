@@ -164,3 +164,15 @@ def test_disqus_embed_names_its_script_and_thread():
 def test_disqus_pages_reads_each_number_from_the_cheaper_end(total, wanted, pages):
     from esum.engines.wordpress import disqus_pages
     assert disqus_pages(total, wanted) == pages
+
+
+def test_a_since_read_with_no_comment_names_the_newest_one():
+    # uscreditcardguide's WF page (2026-11-15): republished 11-12, its last comment from 09-21
+    from types import SimpleNamespace
+    from esum.engines.wordpress import _none_since
+    after = datetime(2026, 10, 15, tzinfo=timezone.utc)
+    seen = [SimpleNamespace(when=datetime(2026, 9, 21, 3, tzinfo=timezone.utc), number=1073),
+            SimpleNamespace(when=datetime(2015, 12, 10, tzinfo=timezone.utc), number=1), SimpleNamespace(when=None)]
+    assert _none_since(after, seen, 1073) == \
+        "No comments after 2026-10-15 00:00 UTC; the newest is #1073, 2026-09-21 (of 1073)"
+    assert _none_since(after, [], 0) == "No comments after 2026-10-15 00:00 UTC; the post has 0 comments"

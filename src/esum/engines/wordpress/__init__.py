@@ -246,11 +246,24 @@ def thread(ctx, id: str, mode: Mode = "medium", from_: int | None = None, to: in
         "updated": meta.updated, "comments_closed": meta.closed, "comment_source": source or "wordpress",
         "since": after, "linked_sources": links,
     }
-    result = view.result(title, url=url, data=data, notes=[" · ".join(b for b in (line, "Times: UTC") if b)],
-                         suffix=suffix, next=steps)
+    notes = [" · ".join(b for b in (line, "Times: UTC") if b)]
+    if after is not None and not any(isinstance(p, Post) and p is not article for p in shown):
+        notes.append(_none_since(after, first_seen, total))
+    result = view.result(title, url=url, data=data, notes=notes, suffix=suffix, next=steps)
     if article and "[cut at" in article.text:
         result.summary += "\nThe article is cut: --from 0 --to 0 reads all of it"
     return result
+
+
+def _none_since(after, seen: list, total: int) -> str:
+    """Says a `--since` read found no comment, and when the newest comment ESUM saw was written."""
+    dated = [c for c in seen if getattr(c, "when", None)]
+    if not dated:
+        return f"No comments after {after:%Y-%m-%d %H:%M} UTC; the post has {total} comments"
+    newest = max(dated, key=lambda c: c.when)
+    number = getattr(newest, "number", None)
+    return (f"No comments after {after:%Y-%m-%d %H:%M} UTC; the newest is "
+            f"{f'#{number}, ' if number else ''}{newest.when:%Y-%m-%d} (of {total})")
 
 
 def load_post(ctx, ref: str) -> dict:

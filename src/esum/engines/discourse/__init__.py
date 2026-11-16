@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any, Literal
 from urllib.parse import quote
 
@@ -597,8 +597,36 @@ def thread(ctx, id: int, mode: Mode = "medium", from_: int | None = None, to: in
     data = {"id": tid, "title": topic.get("title"), "url": url, "highest_post_number": highest,
             "posts_count": topic.get("posts_count"), "visible_posts": len(ids) if ids else None,
             "megatopic": ids is None, "selection": selection, "category_id": topic.get("category_id")}
-    return view.result(topic.get("title") or f"Topic {tid}", url=url, data=data,
-                       notes=[f"{meta} · Highest post: #{highest} · Times: UTC · Read: {selection}"], next=steps)
+    notes = [f"{meta} · Highest post: #{highest} · Times: UTC · Read: {selection}"]
+    moved = moved_in(read)
+    if moved:
+        data["dated_before_earlier_posts"] = moved
+        notes.append(f"Out of date order: {', '.join(moved)} {'is' if len(moved) == 1 and '–' not in moved[0] else 'are'} dated before an "
+                     f"earlier-numbered post (moved in from another topic, they keep their old dates); "
+                     f"read by number, not as a timeline")
+    return view.result(topic.get("title") or f"Topic {tid}", url=url, data=data, notes=notes, next=steps)
+
+
+MOVED_SLACK = timedelta(hours=1)   # clocks and edits jitter; a moved-in post is older by days
+
+
+def moved_in(posts: list) -> list[str]:
+    """The runs of posts (`#476–#483`) dated well before a lower-numbered post read with them: posts
+    moved in from another topic take new numbers but keep their dates."""
+    runs: list[list[int]] = []
+    latest = None
+    for post in sorted(posts, key=lambda p: p.number):
+        when = post.date if isinstance(post.date, datetime) else None
+        if when is None:
+            continue
+        if latest is not None and when < latest - MOVED_SLACK:
+            if runs and runs[-1][-1] == post.number - 1:
+                runs[-1].append(post.number)
+            else:
+                runs.append([post.number])
+        else:
+            latest = when
+    return [f"#{r[0]}" if len(r) == 1 else f"#{r[0]}–#{r[-1]}" for r in runs]
 
 
 def first_post_since(ctx, topic_id: int, after: datetime, topic: dict) -> int | None:
