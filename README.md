@@ -114,16 +114,16 @@ hands the agent plain text, on six rules.
 | | |
 |---|---|
 | **Light framework, heavy harness, agent-agnostic** | ESUM only fetches, normalizes, pages and filters. Planning, memory, permissions and the thinking stay in your agent's harness, and any harness will do: Claude Code, Codex, omp, whatever comes next. |
-| **Customizable and self-maintained** | Your agent adds your site from its URL with the `esum-site-author` skill, tests it to the same standard as a built-in one, and repairs it when the site changes. The built-in sites are a starting point, not a catalog to wait on. |
-| **CLI/AXI + skill is the way to go** | A command line built for agents to read ([AXI](https://github.com/kunchenguid/axi)) plus a `SKILL.md` that teaches when to use it. No MCP server and no browser extension: nothing for you to set up or keep running. |
+| **Customizable and self-maintained** | Your agent adds your site from its URL with the `esum-site-author` skill, tests it to the same standard as a built-in one, and repairs it when the site changes. The built-in sites are a starting point: you don't wait for anyone to add yours. |
+| **CLI/AXI + skill is the way to go** | A command line built for agents to read ([AXI](https://github.com/kunchenguid/axi)) plus a `SKILL.md` that teaches when to use it. There is no MCP server or browser extension for you to set up or keep running. |
 | **Tiered access** | Each site uses the lightest way in that works for it: plain HTTP, a Chrome-fingerprint client, or a real Chrome tab, opened in the background by default. A site a bot check blocks moves up a tier. |
 | **Transparent and under your control** | ESUM says what it skipped or couldn't read, and treats page text as data, never as instructions. Writes are rare and logged, and the skill has your agent ask you before each one. |
-| **Restrained access** | Requests are spaced out, a site's rate-limit answers are obeyed, and retries stop at what a short outage needs. |
+| **Restrained access** | ESUM spaces out its requests, obeys a site's rate-limit answers, and stops retrying at what a short outage needs. |
 
 ## Add your own site
 
-The built-in sites below are a curated set: the maintainer picks them and keeps them working. For
-any other site, ask your agent:
+ESUM ships only the sites below; the maintainer picks them and keeps them working. For any other
+site, ask your agent:
 
 > *"Add example-forum.com to ESUM so I can search its discussions and read whole threads. Keep it
 > as my own site."*
@@ -147,8 +147,8 @@ ESUM finds a site by its folder in `~/.esum/sites/`, and custom code loads only 
 site. A custom site never replaces a built-in one: if a built-in site breaks, report it and update
 ESUM.
 
-The whole playbook, step by step: [esum-site-author diagram](docs/esum-site-author.svg). Module
-contract: [module-format.md](skills/esum-site-author/references/module-format.md).
+The [esum-site-author diagram](docs/esum-site-author.svg) shows the whole playbook step by step,
+and [module-format.md](skills/esum-site-author/references/module-format.md) is the module contract.
 
 ## Built-in sites
 
@@ -237,8 +237,8 @@ The full design, with retries and spacing and the decision log, is in
 When a site needs an account, ESUM reports `LOGIN NEEDED` for that call. It doesn't stop a longer task: the agent finishes the rest and tells you at the end what needed a login. The login is yours to start; the agent never logs in for you. **ESUM and the agent never handle passwords.**
 
 A Discourse forum can also keep a key you authorize (`esum uscf login`, run in your own
-terminal), so reads see your account without a browser. Keys, logging out of a site, and why ESUM
-doesn't copy your Chrome cookies: [docs/logins.md](docs/logins.md).
+terminal), so reads see your account without a browser. [docs/logins.md](docs/logins.md) covers keys,
+logging out of a site, and why ESUM doesn't copy your Chrome cookies.
 
 | Mode | Browser | When to use |
 |---|---|---|
@@ -278,7 +278,7 @@ uv run esum docs --all --write    # regenerate site docs after changing actions
 ESUM's site knowledge comes from [xgoose](https://github.com/xGoose-dev/xgoose),
 [nitan-mcp](https://github.com/nitansde/nitan-mcp) and nitan_plugin, the author's own userscript,
 which began from ALousaBao's [nitan-AI-summary](https://github.com/nitan-ALousaBao/nitan-AI-summary).
-All of it is rewritten in Python rather than copied. See
+All of it is rewritten in Python. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## License

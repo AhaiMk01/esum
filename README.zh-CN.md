@@ -104,20 +104,20 @@ uvx --from git+https://github.com/AhaiMk01/esum esum list
 
 ## 设计理念
 
-agent 能分析论坛讨论，却很难把内容拿到手。ESUM 负责抓取，把纯文本交给 agent。它建立在六条规则上。
+agent 能分析论坛讨论，却很难抓取内容。ESUM 负责抓取，把纯文本交给 agent。它建立在六条规则上。
 
 | | |
 |---|---|
 | **轻框架，重 harness，不绑定 agent** | ESUM 只抓取、整理、分页和筛选。规划、记忆、权限和思考都留在你的 agent 的 harness 里，而且哪家的 harness 都行：Claude Code、Codex、omp，以后换别的也一样。 |
-| **可自定义，自维护** | 你的 agent 用 `esum-site-author` skill，从一个网址就能把你的站点加进来，按和内置站点一样的标准测试；站点改版了，也由它修好。内置站点是起点，不是一份要等别人更新的清单。 |
-| **CLI/AXI + skill 才是正路** | 一个为 agent 阅读而设计的命令行（[AXI](https://github.com/kunchenguid/axi)），加一份教 agent 何时使用的 `SKILL.md`。没有 MCP 服务器，没有浏览器扩展：不需要你去搭建或常驻运行任何东西。 |
-| **分级访问（Tiered access）** | 每个站点用对它行得通的最轻的方式：普通 HTTP、带 Chrome 指纹的客户端，或真实的 Chrome 标签页（默认在后台打开）。被反爬检查拦下的站点会升一级。 |
+| **可自定义，自维护** | 你的 agent 用 `esum-site-author` skill，从一个网址就能把你的站点加进来，按和内置站点一样的标准测试；站点改版了，也由它修好。内置站点只是起点，你的站点不用等别人来加。 |
+| **CLI/AXI + skill 才是正路** | 一个为 agent 阅读而设计的命令行（[AXI](https://github.com/kunchenguid/axi)），加一份教 agent 何时使用的 `SKILL.md`。没有需要你搭建或常驻运行的 MCP 服务器和浏览器扩展。 |
+| **分级访问（Tiered access）** | 每个站点用对它行得通的最轻的方式：普通 HTTP、带 Chrome 指纹的客户端，或真实的 Chrome 标签页（默认在后台打开）。被真人验证拦下的站点会升一级。 |
 | **透明，可控** | 跳过了什么、没读出什么，ESUM 都会说；网页文本只当数据，不当指令。写入很少、有记录，skill 要求 agent 每次写入前先问你。 |
 | **克制访问** | 拉开请求间隔，站点返回限流就照办，重试只到应付短暂故障为止。 |
 
 ## 添加自己的站点
 
-下面的内置站点是一组精选站点：由维护者挑选并负责修。其他任何站点，让你的 agent 来加：
+内置站点只有下面这些，由维护者挑选和维护。其他站点，让你的 agent 来加：
 
 > *"把 example-forum.com 加到 ESUM，我要能搜索它的讨论、读完整的帖子。作为我自己的站点。"*
 
@@ -127,7 +127,7 @@ agent 能分析论坛讨论，却很难把内容拿到手。ESUM 负责抓取，
 - 独立的 Python 模块
 - Markdown 站点：一份写明浏览器操作步骤的 `SITE.md`，用于只能通过界面访问的站点
 
-Python 站点附带脱敏的测试数据和离线测试，每个读取类 action 都会实际跑一遍；Markdown 站点则把步骤从头到尾实际走一遍。不论哪种，skill 都会逐个字段对照网页上实际显示的内容，生成站点文档，并分轮试用：有条件时由一个全新的 agent 只靠文档和 `--help` 回答你的问题，它每遇到一处不顺，就加一个先失败的检查并修好。它还可以加一个小的 `esum-<site>` skill，让 agent 在你提到这个站点时自动用 ESUM。需要登录或有人机验证的站点，可能要等你登录；没能验证的部分，skill 会告诉你。
+Python 站点附带脱敏的测试数据和离线测试，每个读取类 action 都会实际跑一遍。Markdown 站点则把步骤从头到尾实际走一遍。不论哪种，skill 都会逐个字段对照网页上实际显示的内容，生成站点文档，并分轮试用：有条件时由一个全新的 agent 只靠文档和 `--help` 回答你的问题，它每遇到一处不顺，就加一个先失败的检查并修好。它还可以加一个小的 `esum-<site>` skill，让 agent 在你提到这个站点时自动用 ESUM。需要登录或有真人验证的站点，可能要等你登录。没能验证的部分，skill 会告诉你。
 
 ESUM 按 `~/.esum/sites/` 下的文件夹发现站点，自定义代码只在你用到这个站点时才加载。自定义站点不能替换内置站点：内置站点坏了，请反馈并更新 ESUM。
 
@@ -165,7 +165,7 @@ ESUM 按 `~/.esum/sites/` 下的文件夹发现站点，自定义代码只在你
 | [NGA](https://bbs.nga.cn) | `nga` | 游戏论坛（魔兽世界、手游）与网事杂谈综合版面；需要登录 | T2 |
 | [一亩三分地](https://www.1point3acres.com) | `onepoint3acres` | 留学、求职、面经、签证与移民 | T2 |
 
-每个站点有一份文档，写明它的动作和注意事项（`esum docs <site>`，保存在 [`src/esum/sites/`](src/esum/sites/) 下该站点文件夹的 `doc.md`）。这些文档由代码生成，是英文的。`A→B` 表示站点被人机验证（Cloudflare、AWS WAF）拦下后从 A 改用 B。
+每个站点有一份文档，写明它的动作和注意事项（`esum docs <site>`，保存在 [`src/esum/sites/`](src/esum/sites/) 下该站点文件夹的 `doc.md`）。这些文档由代码生成，是英文的。`A→B` 表示站点被真人验证（Cloudflare、AWS WAF）拦下后从 A 改用 B。
 
 ## 用法
 
@@ -188,7 +188,7 @@ esum hn thread --id 50261319                      # 一条新闻和它的评论
 
 CLI 遵循 [AXI](https://github.com/kunchenguid/axi) 面向 agent 工具的规范。单独运行 `esum` 会显示站点列表。错误以 `error:` 和 `help:` 行输出到标准输出。空结果退出码为 0，并说明为什么是空的。结果超过 20,000 个字符时，ESUM 把它写到 `./esum-out/`，标准输出只给摘要和文件路径。
 
-退出码：`0` 成功 · `1` 错误 · `2` 用法错误 · `3` LOGIN NEEDED（需要登录） · `5` CHECK NEEDED（agent 在 ESUM 的标签页里勾选浏览器验证）。
+退出码：`0` 成功 · `1` 错误 · `2` 用法错误 · `3` LOGIN NEEDED（需要登录） · `5` CHECK NEEDED（agent 在 ESUM 的标签页里勾选真人验证）。
 
 ## 工作原理
 
@@ -200,15 +200,15 @@ CLI 遵循 [AXI](https://github.com/kunchenguid/axi) 面向 agent 工具的规�
 | **T2** | [curl_cffi](https://github.com/lexiforest/curl_cffi)，带 Chrome 的 TLS 指纹，可借用浏览器 cookie | 有 Cloudflare 或需要登录的站点 |
 | **T3** | 真实的 Chrome 标签页，由 [patchright-cli](https://pypi.org/project/patchright-cli/) 驱动：在页面里 `fetch()`，或运行站点自带的只读页面脚本 | 只有真实页面才能访问的站点 |
 
-每个站点声明一种传输方式，还可以指定一种更强的，在被反爬检查拦下时退到它（表里的 `T2→T3`）。每次调用都实时抓取，两次调用之间不做缓存。ESUM 会拉开对同一站点的请求间隔，跨并行进程也一样；每个并行调用用自己的标签页，所以可以同时进行。
+每个站点声明一种传输方式，还可以指定一种更强的，在被真人验证拦下时退到它（表里的 `T2→T3`）。每次调用都实时抓取，两次调用之间不做缓存。ESUM 会拉开对同一站点的请求间隔，跨并行进程也一样。每个并行调用用自己的标签页，所以可以同时进行。
 
 完整设计见 [ARCHITECTURE.md](ARCHITECTURE.md)（英文），包括重试与请求间隔的细节和决策记录。
 
 ## 登录与浏览器
 
-站点需要账号时，ESUM 会对这次调用提示 `LOGIN NEEDED`，但不会打断长任务：agent 先做完其余部分，最后告诉你哪些内容需要登录。登录由你自己发起，agent 不会替你登录。**ESUM 和 agent 从不接触密码。**
+站点需要账号时，ESUM 会对这次调用提示 `LOGIN NEEDED`，但不会打断长任务。agent 先做完其余部分，最后告诉你哪些内容需要登录。登录由你自己发起，agent 不会替你登录。**ESUM 和 agent 从不接触密码。**
 
-Discourse 论坛还可以保存一个由你授权的密钥（在你自己的终端运行 `esum uscf login`），这样不开浏览器也能以你的账号读取。密钥、退出某个站点的登录、以及为什么 ESUM 不复制你的 Chrome cookie，见 [docs/logins.zh-CN.md](docs/logins.zh-CN.md)。
+Discourse 论坛还可以保存一个由你授权的密钥（在你自己的终端运行 `esum uscf login`），这样不开浏览器也能以你的账号读取。[docs/logins.zh-CN.md](docs/logins.zh-CN.md) 讲了密钥和退出某个站点的登录，也解释了 ESUM 为什么不复制你的 Chrome cookie。
 
 | 模式 | 浏览器 | 什么时候用 |
 |---|---|---|
@@ -224,7 +224,7 @@ Discourse 论坛还可以保存一个由你授权的密钥（在你自己的终�
 v1 唯一的写入操作是 Discourse 论坛的收藏（`esum uscf bookmark`、`esum linuxdo bookmark`）。ESUM 自己不弹确认框。每次写入前 agent 都会先问你（用它的提问框、权限提示或直接发消息），你同意后才运行。agent 也可以主动提出能完成你请求的写入。ESUM 把每次写入记录在 `~/.esum/writes.jsonl`，包括写入的条目和账号。
 
 > [!IMPORTANT]
-> ESUM 相信你的 agent 会先问你。agent 要是存心绕过，ESUM 拦不住，所以它把自己能做的事压到最少：只有一个可撤销的操作，不涉及钱和积分，每次写入都有记录。
+> ESUM 相信你的 agent 会先问你。agent 要是存心绕过，ESUM 拦不住，所以它把自己能做的事压到最少，只有一个可撤销的操作，不涉及钱和积分，每次写入都有记录。
 
 ## 开发
 
@@ -240,7 +240,7 @@ uv run esum docs --all --write    # 修改动作后重新生成站点文档
 
 ## 致谢
 
-ESUM 的站点知识来自 [xgoose](https://github.com/xGoose-dev/xgoose)、[nitan-mcp](https://github.com/nitansde/nitan-mcp) 和作者自己的用户脚本 nitan_plugin（最初源自 ALousaBao 的 [nitan-AI-summary](https://github.com/nitan-ALousaBao/nitan-AI-summary)），全部用 Python 重写，没有照抄。详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+ESUM 的站点知识来自 [xgoose](https://github.com/xGoose-dev/xgoose)、[nitan-mcp](https://github.com/nitansde/nitan-mcp) 和作者自己的用户脚本 nitan_plugin（最初源自 ALousaBao 的 [nitan-AI-summary](https://github.com/nitan-ALousaBao/nitan-AI-summary)），全部用 Python 重写。详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 ## 许可证
 

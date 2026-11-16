@@ -150,7 +150,7 @@
   <rect class="tr" x="570" y="744" width="250" height="96" rx="8"/>
   <text x="586" y="766" class="h">T3 in_page.py</text>
   <text x="586" y="784">FETCH_JS 在该站点的标签页里</text>
-  <text x="586" y="800">执行通用 fetch()，先等反爬检查通过。</text>
+  <text x="586" y="800">执行通用 fetch()，先等真人验证通过。</text>
   <text x="586" y="820" class="m">通用路径。页面脚本见 D-95。</text>
 
   <path class="a" d="M165,716 L165,740"/>
@@ -178,13 +178,13 @@
   <text x="321" y="1022" class="h">T2 站点</text>
   <text x="321" y="1040">有 Cloudflare 或需要登录的站点。</text>
   <text x="321" y="1056">有些把 T3 设为后备：</text>
-  <text x="321" y="1072">被人机验证拦下后，</text>
+  <text x="321" y="1072">被真人验证拦下后，</text>
   <text x="321" y="1088">这次调用改用真实标签页。</text>
 
   <rect class="st" x="570" y="1000" width="250" height="104" rx="8"/>
   <text x="586" y="1022" class="h">T3 站点</text>
   <text x="586" y="1040">只有真实页面才能访问的站点，</text>
-  <text x="586" y="1056">以及被人机验证拦下后的后备</text>
+  <text x="586" y="1056">以及被真人验证拦下后的后备</text>
   <text x="586" y="1072">（Cloudflare、AWS WAF；D-40）</text>
   <text x="586" y="1094" class="m">有 Cloudflare 和指纹检查</text>
 
