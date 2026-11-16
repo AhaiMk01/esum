@@ -55,7 +55,8 @@ and follow it.
 ```
 
 The agent installs uv if it's missing, then the `esum` command and both skills, and asks whether
-you want the browser sites. [INSTALL.md](INSTALL.md) lists the steps if you want to read them first.
+you want the browser sites. Send the same sentence later to update ESUM; to remove it, ask your agent to
+uninstall ESUM following the same file. [INSTALL.md](INSTALL.md) lists the steps if you want to read them first.
 
 <details>
 <summary><b>Or install it yourself</b></summary>

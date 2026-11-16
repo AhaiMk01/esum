@@ -54,7 +54,7 @@ Install ESUM for me: read https://raw.githubusercontent.com/AhaiMk01/esum/main/I
 and follow it.
 ```
 
-agent 会在缺少 uv 时先装 uv，再装 `esum` 命令和两个 skill，并问你要不要启用浏览器类站点。想先看步骤，见 [INSTALL.md](INSTALL.md)。
+agent 会在缺少 uv 时先装 uv，再装 `esum` 命令和两个 skill，并问你要不要启用浏览器类站点。以后发同一句话就是更新；要卸载，让 agent 按同一个文件卸载 ESUM。想先看步骤，见 [INSTALL.md](INSTALL.md)。
 
 <details>
 <summary><b>或者自己装</b></summary>
