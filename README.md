@@ -161,7 +161,7 @@ and [module-format.md](skills/esum-site-author/references/module-format.md) is t
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | Manufactured spending, gift cards; near-daily roundups | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | Airline, hotel and card program forums | T3 |
 | [Offer.love](https://offer.love) | `offerlove` | Card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi…) by merchant or bank | T1→T3 |
-| [Savewise](https://getsavewise.com) | `savewise` | Shopping portal rates at a store (Rakuten, TopCashBack, C1 Shopping, airline malls…), its card-linked offers, Top Offers lists, bank-offer stacks and discount gift cards | T1 |
+| [Savewise](https://getsavewise.com) | `savewise` | Shopping portal rates at a store (Rakuten, TopCashBack, C1 Shopping, airline malls…), its card-linked offers, Top Offers lists, bank-offer stacks and gift cards (CardDepot discounts, Rove miles) | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | Gift card buyer: current buy rates by brand and card value, and the deals behind them (login; read-only) | T2 |
 | [Aligned Incentives](https://alignedincentiv.es) | `alignedincentives` | Gift card buyer: current deals, what it pays and the profit per card value (login; read-only) | T2 |
 | **Flights** | | | |

@@ -105,15 +105,16 @@ def test_pages_lists():
     assert gifts[0]["discount"] == "50%" and any(g["brand"] == "Home Depot" for g in gifts)
 
 
-def test_gift_cards_in_stock_first_and_a_listed_card_shows_its_price():
-    props = {"cardDepotOffers": [
+def test_gift_cards_in_stock_first_then_discount_then_miles():
+    props = {"giftCardOffers": [
         {"provider": "CardDepot", "provider_brand": "Gone", "discount_bps": 9000, "in_stock": False},
-        {"provider": "CardDepot", "provider_brand": "Shown", "discount_bps": 425, "in_stock": True,
-         "face_value_cents": 10000, "price_cents": 9575, "last_seen_at": "2026-11-12T01:14:46.046Z"}]}
+        {"provider": "Rove", "provider_brand": "Miles", "miles_multiplier": 4, "miles_is_up_to": True, "in_stock": True},
+        {"provider": "Rove", "provider_brand": "More miles", "miles_multiplier": 17, "miles_is_up_to": False,
+         "in_stock": True},
+        {"provider": "CardDepot", "provider_brand": "Shown", "discount_bps": 425, "in_stock": True}]}
     rows = gift_rows(props)
-    assert [r["brand"] for r in rows] == ["Shown", "Gone"]
-    assert {k: rows[0][k] for k in ("discount", "face", "price", "seen")} == {
-        "discount": "4.25%", "face": "$100", "price": "$95.75", "seen": "2026-11-12 01:14"}
+    assert [r["brand"] for r in rows] == ["Shown", "More miles", "Miles", "Gone"]
+    assert [(r["discount"], r["miles"]) for r in rows[:3]] == [("4.25%", ""), ("", "17 miles/$"), ("", "up to 4 miles/$")]
 
 
 def test_a_changed_page_or_answer_is_named_without_its_content():
@@ -178,9 +179,13 @@ def test_top_stack_and_giftcards_filter_and_page(action_runner, fake_http, savew
     assert "top[2]{merchant,portal,rate,domain}:" in out and "--offset 2 --limit 2" in out
     rove = run(action_runner, savewise, "stack", {"portal": "rove", "bank": "chase"}, json_out=True)["stack"]
     assert rove and {(r["bank"], r["portal"]) for r in rove} == {("chase", "Rove")}
-    assert "no discounted nosuch card listed" in run(action_runner, savewise, "giftcards", {"brand": "nosuch"})
+    assert "no nosuch card listed" in run(action_runner, savewise, "giftcards", {"brand": "nosuch"})
     hd = run(action_runner, savewise, "giftcards", {"brand": "home depot"}, json_out=True)["giftcards"]
     assert [r["brand"] for r in hd] == ["Home Depot"]
+    lowes = run(action_runner, savewise, "giftcards", {"brand": "lowe's"}, json_out=True)["giftcards"]
+    assert [(r["seller"], r["discount"], r["miles"]) for r in lowes] == [("CardDepot", "6%", ""), ("Rove", "", "1 miles/$")]
+    rove = run(action_runner, savewise, "giftcards", {"seller": "rove"}, json_out=True)["giftcards"]
+    assert {r["seller"] for r in rove} == {"Rove"} and len(rove) == 2
     assert all(r.credential is None for r in fake_http.requests)    # pages never get the token
 
 

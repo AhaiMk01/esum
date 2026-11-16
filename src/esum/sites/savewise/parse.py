@@ -199,27 +199,27 @@ def stack_rows(props: dict) -> list[dict]:
 
 
 def gift_rows(props: dict) -> list[dict]:
-    """The gift cards page: CardDepot's discounted cards, biggest discount first."""
-    cards = props.get("cardDepotOffers") if isinstance(props, dict) else None
+    """The gift cards page: CardDepot's discounted cards and Rove's miles-earning cards, in stock
+    first, then biggest discount, then most miles."""
+    cards = props.get("giftCardOffers") if isinstance(props, dict) else None
     if not isinstance(cards, list):
-        raise PageChanged("the gift cards page has no cardDepotOffers list")
+        raise PageChanged("the gift cards page has no giftCardOffers list")
     rows = []
     for c in cards:
         if not isinstance(c, dict):
             continue
-        bps = c.get("discount_bps")
-        cents = {k: c.get(k) for k in ("face_value_cents", "price_cents")}
+        bps, miles = c.get("discount_bps"), c.get("miles_multiplier")
         rows.append({
             "brand": one_line(c.get("provider_brand") or ""),
-            "discount": f"{_num(bps / 100)}%" if isinstance(bps, (int, float)) else "",
-            "stock": "yes" if c.get("in_stock") else "no",
             "seller": c.get("provider") or "",
-            "face": f"${_num(cents['face_value_cents'] / 100)}" if isinstance(cents["face_value_cents"], (int, float)) else "",
-            "price": f"${_num(cents['price_cents'] / 100)}" if isinstance(cents["price_cents"], (int, float)) else "",
-            "seen": (c.get("last_seen_at") or "")[:16].replace("T", " "),
+            "discount": f"{_num(bps / 100)}%" if isinstance(bps, (int, float)) else "",
+            "miles": (f"{'up to ' if c.get('miles_is_up_to') else ''}{_num(miles)} miles/$"
+                      if isinstance(miles, (int, float)) else ""),
+            "stock": "yes" if c.get("in_stock") else "no",
             "url": c.get("url_to_buy") or "",
             "_bps": bps if isinstance(bps, (int, float)) else -1,
+            "_miles": miles if isinstance(miles, (int, float)) else -1,
             "_stock": bool(c.get("in_stock")),
         })
-    rows.sort(key=lambda r: (not r["_stock"], -r["_bps"]))
+    rows.sort(key=lambda r: (not r["_stock"], -r["_bps"], -r["_miles"]))
     return rows

@@ -238,15 +238,17 @@ def stack(ctx, bank: Literal["amex", "chase", "citi", "simplymiles"] | None = No
 
 
 @action(savewise, tier=Tier.READ)
-def giftcards(ctx, brand: str | None = None, offset: int = 0, limit: int = 50):
-    """Discounted gift cards Savewise lists (from CardDepot), in stock first, biggest discount first.
+def giftcards(ctx, brand: str | None = None, seller: Literal["carddepot", "rove"] | None = None,
+              offset: int = 0, limit: int = 50):
+    """Gift cards Savewise lists: CardDepot's at a discount and Rove's that earn Rove miles.
 
-    Columns: brand, discount (off face value), stock and seller; `--fields` adds face and price
-    (when one card is listed), seen (when Savewise last saw it, UTC) and url (the seller's page).
-    A discount is the best one seen; the seller's page has the denominations and today's price.
+    In stock first, then biggest discount, then most miles. Columns: brand, seller, discount (off
+    face value, CardDepot), miles (Rove miles per dollar, Rove) and stock; `--fields` adds url (the
+    seller's page, which has the denominations and today's price). A discount is the best one seen.
 
     Args:
         brand: Only brands whose name contains this, e.g. `home depot`.
+        seller: Only this seller's cards.
         offset: Rows to skip.
         limit: Rows to show.
     """
@@ -255,9 +257,11 @@ def giftcards(ctx, brand: str | None = None, offset: int = 0, limit: int = 50):
     if brand:
         about["brand"] = brand
         rows = [r for r in rows if _matches(brand, r["brand"])]
+    if seller:
+        rows = [r for r in rows if r["seller"].lower() == seller]
     shown, more = _window(rows, offset, limit)
-    return Listing(name="giftcards", rows=shown, fields=("brand", "discount", "stock", "seller"), about=about,
-                   total=len(rows), more=more, empty=f"no discounted {brand} card listed" if brand else
-                   "Savewise lists no discounted gift cards right now",
-                   next=[] if rows else [Next("giftcards", {"brand": None, "offset": 0}, "list every discounted card",
+    return Listing(name="giftcards", rows=shown, fields=("brand", "seller", "discount", "miles", "stock"),
+                   about=about,
+                   total=len(rows), more=more, empty=f"no {brand} card listed" if brand else "Savewise lists no gift cards right now",
+                   next=[] if rows else [Next("giftcards", {"brand": None, "seller": None, "offset": 0}, "list every card",
                                               when_empty=True)])

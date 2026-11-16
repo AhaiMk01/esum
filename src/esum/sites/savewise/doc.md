@@ -40,19 +40,20 @@ esum savewise cards --merchant <str> [--bank <str>]
 
 Tier 0 (read) · from the site
 
-Discounted gift cards Savewise lists (from CardDepot), in stock first, biggest discount first.
+Gift cards Savewise lists: CardDepot's at a discount and Rove's that earn Rove miles.
 
-Columns: brand, discount (off face value), stock and seller; `--fields` adds face and price
-(when one card is listed), seen (when Savewise last saw it, UTC) and url (the seller's page).
-A discount is the best one seen; the seller's page has the denominations and today's price.
+In stock first, then biggest discount, then most miles. Columns: brand, seller, discount (off
+face value, CardDepot), miles (Rove miles per dollar, Rove) and stock; `--fields` adds url (the
+seller's page, which has the denominations and today's price). A discount is the best one seen.
 
 ```
-esum savewise giftcards [--brand <str>] [--offset <int>] [--limit <int>]
+esum savewise giftcards [--brand <str>] [--seller carddepot|rove] [--offset <int>] [--limit <int>]
 ```
 
 | Flag | Type | Default | Description |
 |---|---|---|---|
 | `--brand` | str |  | Only brands whose name contains this, e.g. `home depot`. |
+| `--seller` | carddepot\|rove |  | Only this seller's cards. |
 | `--offset` | int | `0` | Rows to skip. |
 | `--limit` | int | `50` | Rows to show. |
 
@@ -148,5 +149,6 @@ esum savewise top [--by cashback|miles|points|multipliers] [--portal <str>] [--m
   `--merchant` rather than paging through.
 - `cashback` mixes per-sign-up payouts (finance, VPN, software) with purchase cash back; the
   stores at the top are rarely shopping stores.
-- `giftcards` lists CardDepot only, with the best discount seen; face and price are empty unless
-  one card is listed. `seen` is UTC.
+- `giftcards` lists two sellers: CardDepot sells at a discount (the best one seen), Rove at face
+  value with Rove miles per dollar. A brand can appear once for each (`Lowe's`). Today's price and
+  denominations are on the seller's page (`--fields url`).

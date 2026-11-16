@@ -144,7 +144,7 @@ ESUM 按 `~/.esum/sites/` 下的文件夹发现站点，自定义代码只在你
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | 制造消费（MS）、礼品卡；几乎每天一篇快讯 | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | 航空、酒店和信用卡计划论坛 | T3 |
 | [Offer.love](https://offer.love) | `offerlove` | 各银行信用卡商家 offer（Amex Offers、Chase Offers 等），按商家或银行查 | T1→T3 |
-| [Savewise](https://getsavewise.com) | `savewise` | 某商家在各返利站的返现率（Rakuten、TopCashBack、C1 Shopping、航空商城等）、卡 offer、Top Offers 榜单、银行 offer 叠加和折扣礼品卡 | T1 |
+| [Savewise](https://getsavewise.com) | `savewise` | 某商家在各返利站的返现率（Rakuten、TopCashBack、C1 Shopping、航空商城等）、卡 offer、Top Offers 榜单、银行 offer 叠加和礼品卡（CardDepot 折扣、Rove 里程） | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | 礼品卡回收：按品牌和面值查当前收购价及对应 deal（需登录，只读） | T2 |
 | [Aligned Incentives](https://alignedincentiv.es) | `alignedincentives` | 礼品卡回收：当前 deal、收购价和每个面值的利润（需登录，只读） | T2 |
 | **机票与航班** | | | |
