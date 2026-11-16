@@ -597,6 +597,16 @@ def test_thorough_stops_a_pair_when_a_round_finds_no_new_carrier(action_runner, 
     assert "failed" not in out and "count: 5" in out
 
 
+def test_thorough_says_which_named_carriers_matrix_lists_no_fares_for(action_runner, matrix):
+    # ZIPAIR on SFO-Tokyo (2026-11-15): Matrix doesn't sell it, and its own search lists nothing
+    seen = []
+    answers = {**_beijing(_answer("X2", [], carriers={})), ("BJS", None, "ZG+"): _answer("Z1", [], carriers={})}
+    action_runner.backend = _thorough_backend(answers, seen)
+    out = run(action_runner, matrix, "search", {"origin": "HNL", "dest": "BJS", "depart": "2026-11-16",
+                                                "thorough": True, "carriers": "ke,zg"})
+    assert 'no_fares: "Matrix lists no fares for ZG on this trip' in out and "KE," not in out.split("no_fares")[1][:40]
+
+
 def test_thorough_adds_the_exclusion_to_the_users_extension(action_runner, matrix):
     seen = []
     answers = {(d, "f bc=K" + (f"; {x}" if x else ""), r): v

@@ -151,7 +151,7 @@ esum flightconnections route --origin <str> --dest <str>
 | Flag | Type | Default | Description |
 |---|---|---|---|
 | `--origin` | str | required | Departure airport, a 3-letter IATA code (JFK). |
-| `--dest` | str | required | Arrival airport, a 3-letter IATA code (LHR). |
+| `--dest` | str | required | Arrival airport, a 3-letter IATA code (LHR); a city code such as TYO has no page. |
 
 ### `schedule`
 

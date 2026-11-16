@@ -106,8 +106,9 @@ def _route(ctx, origin: str, dest: str, *, missing_ok: bool = False):
     try:
         html, url = _page(ctx, path, _missing(
             f"FlightConnections has no page for {origin} to {dest}: no nonstop or one-stop route it knows",
-            f"Check both codes; `esum flightconnections connections --origin {origin} --dest {dest}` still looks "
-            f"for one-stop hubs from the two airport pages"))
+            f"Check both codes: they are airports, so a city code (TYO, NYC, LON) has no page; give each of its "
+            f"airports (NRT, HND). `esum flightconnections connections --origin {origin} --dest {dest}` still "
+            f"looks for one-stop hubs from the two airport pages"))
     except NoSuchItem:
         if missing_ok:
             return None
@@ -219,7 +220,7 @@ def route(ctx, origin: str, dest: str):
 
     Args:
         origin: Departure airport, a 3-letter IATA code (JFK).
-        dest: Arrival airport, a 3-letter IATA code (LHR).
+        dest: Arrival airport, a 3-letter IATA code (LHR); a city code such as TYO has no page.
     """
     origin, dest = _airport(origin, "--origin"), _airport(dest, "--dest")
     found = _route(ctx, origin, dest)

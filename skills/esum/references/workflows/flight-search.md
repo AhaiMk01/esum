@@ -117,6 +117,12 @@ an agency's, below the airline's basic fare. Google's prices and Matrix's differ
 now and then, so quote each with its source, and the brand's terms are a summary: the fare's
 rules decide.
 
+A carrier Matrix doesn't sell (often a low-cost one, such as ZIPAIR) has no fare basis, kind or
+rules to read: `matrix search --thorough --carriers` says so in `no_fares`, and `fares` may list
+no brands for it. Don't call such a fare basic or not basic from its price; say its kind is
+unread and name the airline's site for what its fare includes. The ladder's answer covers the
+carriers Matrix sells.
+
 ## 4. Seats
 
 ```

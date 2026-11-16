@@ -498,6 +498,13 @@ def _thorough(ctx, o: list[str], d: list[str], trip, body, wanted: list[str], ab
              "failed": "; ".join(f"{label}: {why}" for label, why in failed) or None, "sort": sort,
              "currency": next((p.currency for _, p in pages if p.currency), None) or about.get("currency"),
              "by_carrier": summary(carrier_min, by_price=True) or None, "by_stops": summary(stops_min) or None}
+    # a carrier's own search that lists nothing: Matrix doesn't sell some carriers (low-cost ones often)
+    unsold = [label[:-1] for label, page in ran if label in {f"{c}+" for c in wanted}
+              and not isinstance(page, str) and not page.rows]
+    if unsold:
+        about["no_fares"] = (f"Matrix lists no fares for {', '.join(unsold)} on this trip: it doesn't sell some "
+                             f"carriers (low-cost ones often), so their fares, kind and rules can't be read here; "
+                             f"Google Flights' price and the airline's own site are the sources")
     steps = list(empty_steps)
     if shown:
         top = shown[0]
