@@ -180,7 +180,7 @@ def test_stories_fetches_items_concurrently_in_feed_order(hn_run, monkeypatch):
     code, out, _ = hn_run("stories", "--limit", "2", "--fields", "author,date")
     assert code == 0 and "stories[2]{id,title,points,comments,author,date}:" in out
     code, out, _ = hn_run("stories", "--limit", "2", "--fields", "nope")
-    assert code == 2 and out.startswith("error: unknown field nope for stories; fields: id, title,")
+    assert code == 2 and out.startswith("error: unknown field nope for stories; fields with values: id, title,")
     assert "help: Name columns from that list, or use `--fields all`" in out
     code, out, _ = hn_run("stories", "--limit", "2", "--json")
     assert code == 0 and [s["id"] for s in json.loads(out)["data"]["stories"]] and json.loads(out)["data"]["total"] == 3
@@ -530,7 +530,7 @@ def test_comment_hits_have_no_comment_count(hn_run):
     code, out, _ = hn_run("search", "--type", "comment", responses=hits)
     assert code == 0 and "comments" not in out.split("help[", 1)[1]
     code, out, _ = hn_run("search", "--type", "comment", "--fields", "comments", responses=hits)
-    assert code == 2 and "unknown field comments" in out
+    assert code == 2 and "comments is empty in every row shown" in out
 
 
 def test_a_newest_first_search_reads_further_back_with_before_not_days(hn_run):

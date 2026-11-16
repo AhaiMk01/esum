@@ -717,7 +717,7 @@ def test_search_dates_are_whole_days_so_hours_are_refused(cli, backend):
 
 def test_a_field_with_no_values_is_an_error_not_a_column_of_nulls(cli, backend):
     code, out, _ = cli("forum", "search", "--query", "bookmark reminder", "--fields", "likes")
-    assert code == EXIT_USAGE and "unknown field likes" in out
+    assert code == EXIT_USAGE and "likes is empty in every row shown" in out
 
 
 def test_thread_hint_names_the_posts_it_left_out(cli, backend):

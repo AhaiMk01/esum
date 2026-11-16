@@ -201,9 +201,14 @@ def columns(listing: Listing, fields: str | None) -> list[str]:
     if fields.strip() == "all":
         return known
     extra = [f.strip() for f in fields.split(",") if f.strip()]
-    unknown = [f for f in extra if f not in known]
-    if unknown and listing.rows:
-        raise FieldsError(f"unknown field {', '.join(unknown)} for {listing.name}; fields: {', '.join(known)}",
+    # a field every shown row leaves empty is not printed as a column of nulls, but it is not unknown
+    empty = [f for f in extra if f in keys and f not in known]
+    unknown = [f for f in extra if f not in keys]
+    if (unknown or empty) and listing.rows:
+        said = [f"unknown field {', '.join(unknown)}"] if unknown else []
+        if empty:
+            said.append(f"{', '.join(empty)} {'is' if len(empty) == 1 else 'are'} empty in every row shown")
+        raise FieldsError(f"{'; '.join(said)} for {listing.name}; fields with values: {', '.join(known)}",
                           help="Name columns from that list, or use `--fields all`")
     return list(dict.fromkeys([*(f for f in listing.fields if f in keys or not listing.rows), *extra]))
 
