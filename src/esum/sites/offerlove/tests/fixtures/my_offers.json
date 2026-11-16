@@ -1,0 +1,29 @@
+{
+ "_note": "What myoffers.js hands back, shaped after a live read of the My Offers page; card numbers, card labels and the account's offers are made up.",
+ "signed_in": true,
+ "signed_out": false,
+ "synced": true,
+ "header": "6 offers from 4 merchants",
+ "updated": "2026-11-15T02:46:00.000Z",
+ "offers": [
+  {"merchant": "lowes", "bank": "Amex", "merchantName": "Lowe's", "title": "Spend $250 or more, earn $50 back",
+   "details": "<p>Get a one-time $50 statement credit after you spend $250+ in one or more purchases at <b>Lowe's</b>.</p><p>See terms</p>",
+   "expiresAt": "2026-12-14T04:59:59.000Z", "startedAt": "2026-11-01T07:00:00.000Z",
+   "cardNumber": "11111", "enrollmentStatus": "ENROLLED"},
+  {"merchant": "lowes", "bank": "Amex", "merchantName": "Lowe's", "title": "Spend $250 or more, earn $50 back",
+   "details": "<p>Get a one-time $50 statement credit.</p>",
+   "expiresAt": "2026-12-14T04:59:59.000Z", "cardNumber": "22222", "enrollmentStatus": "ELIGIBLE"},
+  {"merchant": "lowes", "bank": "Chase", "merchantName": "Lowe's", "title": "10% cash back",
+   "details": "Earn 10% cash back, up to $50.", "expiresAt": "2027-01-02T04:59:59.000Z",
+   "cardNumber": "3333", "accountLabel": "Sapphire Preferred (...3333)", "offerStatus": "ACTIVATED"},
+  {"merchant": "staples", "bank": "Chase", "merchantName": "Staples", "title": "5% cash back",
+   "expiresAt": "2026-11-20T04:59:59.000Z", "cardNumber": "3333",
+   "accountLabel": "Sapphire Preferred (...3333)", "offerStatus": "NEW"},
+  {"merchant": "cafe-x", "bank": "BoA", "merchantName": "CafÃ© X", "title": "15% cash back",
+   "expiresAt": "2026-12-01T04:59:59.000Z", "cardNumber": "4444",
+   "accountLabel": "Customized Cash Rewards (...4444)", "offerStatus": "NO_ACTIVATION_REQUIRED",
+   "activationRequired": false},
+  {"merchant": "old-shop", "bank": "Amex", "merchantName": "Old Shop", "title": "Spend $10, earn $2",
+   "expiresAt": "2026-10-01T03:59:59.000Z", "cardNumber": "11111", "enrollmentStatus": "ENROLLED"}
+ ]
+}

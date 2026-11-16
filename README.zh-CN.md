@@ -89,7 +89,7 @@ npx -y skills add AhaiMk01/esum -g -y
 uv tool run --from patchright-cli patchright install chrome   # 只在没有 Chrome 时需要
 ```
 
-Doctor of Credit、美国信用卡指南、Miles Earn and Burn、Savewise、Hacker News、V2EX、Substack、ITA Matrix 和 AeroLOPA 从不启动浏览器。Google Flights 只在 `fares` 和 `search --all` 时启动。Offer.love 和 USCardForum 只在读取被 Cloudflare 拦下时（USCardForum 还有一种情况：已保存的 key 做不了收藏时）、FlightConnections 只在被 AWS WAF 拦下时才启动浏览器（从 T2 退到 T3）。
+Doctor of Credit、美国信用卡指南、Miles Earn and Burn、Savewise、Hacker News、V2EX、Substack、ITA Matrix 和 AeroLOPA 从不启动浏览器。Google Flights 只在 `fares` 和 `search --all` 时启动，Offer.love 在 `my-offers`（从 My Offers 页读你自己的 offer）时启动。Offer.love 和 USCardForum 只在读取被 Cloudflare 拦下时（USCardForum 还有一种情况：已保存的 key 做不了收藏时）、FlightConnections 只在被 AWS WAF 拦下时才启动浏览器（从 T2 退到 T3）。
 
 </details>
 
@@ -143,7 +143,7 @@ ESUM 按 `~/.esum/sites/` 下的文件夹发现站点，自定义代码只在你
 | [美国信用卡指南](https://www.uscreditcardguide.com) | `uscreditcardguide` | 中文信用卡与银行奖励博客 | T1 |
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | 制造消费（MS）、礼品卡；几乎每天一篇快讯 | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | 航空、酒店和信用卡计划论坛 | T3 |
-| [Offer.love](https://offer.love) | `offerlove` | 各银行信用卡商家 offer（Amex Offers、Chase Offers 等），按商家或银行查 | T1→T3 |
+| [Offer.love](https://offer.love) | `offerlove` | 各银行信用卡商家 offer（Amex Offers、Chase Offers 等），按商家或银行查，也能读你自己每张卡上的 offer | T1→T3 |
 | [Savewise](https://getsavewise.com) | `savewise` | 某商家在各返利站的返现率（Rakuten、TopCashBack、C1 Shopping、航空商城等）、卡 offer、Top Offers 榜单、银行 offer 叠加和礼品卡（CardDepot 折扣、Rove 里程） | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | 礼品卡回收：按品牌和面值查当前收购价及对应 deal（需登录，只读） | T2 |
 | [Aligned Incentives](https://alignedincentiv.es) | `alignedincentives` | 礼品卡回收：当前 deal、收购价和每个面值的利润（需登录，只读） | T2 |

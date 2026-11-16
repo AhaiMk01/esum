@@ -18,6 +18,8 @@ from esum import ArgumentError, html_to_body, html_to_label, one_line, text_of
 
 BASE = "https://offer.love"
 PACIFIC = ZoneInfo("America/Los_Angeles")
+# My Offers prints each expiry as a New York date
+EASTERN = ZoneInfo("America/New_York")
 
 # CLI bank value -> (the bank's page slug, the label the site prints on its badges)
 BANKS = {
@@ -82,16 +84,19 @@ def merchant_slug(slug: str) -> str:
     return s
 
 
-def pacific_date(instant: str | None) -> str | None:
+def _instant(instant: str | None) -> datetime | None:
     if not instant:
         return None
     try:
-        when = datetime.fromisoformat(instant.replace("Z", "+00:00"))
+        when = datetime.fromisoformat(str(instant).replace("Z", "+00:00"))
     except ValueError:
         return None
-    if when.tzinfo is None:
-        when = when.replace(tzinfo=timezone.utc)
-    return when.astimezone(PACIFIC).date().isoformat()
+    return when if when.tzinfo else when.replace(tzinfo=timezone.utc)
+
+
+def pacific_date(instant: str | None) -> str | None:
+    when = _instant(instant)
+    return when.astimezone(PACIFIC).date().isoformat() if when else None
 
 
 def slug_path(merchant: str, title: str, merchant_name: str, expires_at: str | None) -> str:
@@ -290,3 +295,56 @@ def _added(text: str) -> str:
         return datetime.strptime(text, "%B %d, %Y").date().isoformat()
     except ValueError:
         return text
+
+
+class PageChanged(RuntimeError):
+    """The My Offers page no longer looks the way its page script expects."""
+
+
+# What each bank's status says about the offer being on the card (My Offers keeps the bank's own
+# words): Amex enrolls, Chase activates, BoA either activates or needs nothing.
+_ADDED = {"ENROLLED": "yes", "ACTIVATED": "yes", "NO_ACTIVATION_REQUIRED": "not needed",
+          "ELIGIBLE": "no", "NEW": "no", "SERVED": "no"}
+
+
+def _card(o: dict) -> str:
+    """The card as My Offers names it (`Sapphire Preferred (...8503)`); Amex rows carry only the
+    card number's last digits."""
+    if o.get("accountLabel"):
+        return one_line(str(o["accountLabel"]))
+    number = str(o.get("cardNumber") or "")
+    return f"{o.get('bank') or 'card'} (...{number})" if number else ""
+
+
+def my_offer_rows(page: dict, now: datetime | None = None) -> tuple[list[dict[str, Any]], int]:
+    """`(one row per offer and card that has not expired by `now`, number left out as expired)`,
+    from what `myoffers.js` read out of the My Offers store, in the store's order (by merchant).
+    Dates are New York dates, as the page prints them."""
+    now = now or datetime.now(timezone.utc)
+    rows, expired = [], 0
+    for o in page.get("offers") or []:
+        ends = _instant(o.get("expiresAt"))
+        if ends and ends < now:
+            expired += 1
+            continue
+        started = _instant(o.get("startedAt"))
+        status = str(o.get("enrollmentStatus") or o.get("offerStatus") or "")
+        rows.append({
+            "merchant": one_line(unmangle(str(o.get("merchantName") or o.get("merchant") or ""))),
+            "slug": str(o.get("merchant") or ""),
+            "bank": str(o.get("bank") or ""),
+            "card": _card(o),
+            "title": one_line(unmangle(str(o.get("title") or ""))),
+            "expires": ends.astimezone(EASTERN).date().isoformat() if ends else None,
+            "started": started.astimezone(EASTERN).date().isoformat() if started else None,
+            "added": _ADDED.get(status, ""),
+            "status": status,
+            "terms": unmangle(html_to_body(_markup(str(o.get("details") or "")), keep_links=False)),
+        })
+    return rows, expired
+
+
+def matches(row: dict[str, Any], query: str) -> bool:
+    """Whether `query` is in the row's merchant name, slug or title, ignoring case and spaces."""
+    want = re.sub(r"\s+", "", query.lower())
+    return any(want in re.sub(r"\s+", "", str(row.get(k) or "").lower()) for k in ("merchant", "slug", "title"))

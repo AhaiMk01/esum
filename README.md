@@ -92,7 +92,7 @@ ESUM rejects an older daemon before opening Chrome.
 uv tool run --from patchright-cli patchright install chrome   # only if Chrome is missing
 ```
 
-Doctor of Credit, 美国信用卡指南, Miles Earn and Burn, Savewise, Hacker News, V2EX, Substack, ITA Matrix and AeroLOPA never start a browser. Google Flights starts one only for `fares` and `search --all`. Offer.love and USCardForum
+Doctor of Credit, 美国信用卡指南, Miles Earn and Burn, Savewise, Hacker News, V2EX, Substack, ITA Matrix and AeroLOPA never start a browser. Google Flights starts one only for `fares` and `search --all`. Offer.love starts one for `my-offers` (your own offers, read from its My Offers page). Offer.love and USCardForum
 start one only when Cloudflare challenges a read (USCardForum also for a bookmark its saved key can't make), and FlightConnections only when its AWS WAF does (falling back to T3).
 
 </details>
@@ -160,7 +160,7 @@ and [module-format.md](skills/esum-site-author/references/module-format.md) is t
 | [美国信用卡指南](https://www.uscreditcardguide.com) | `uscreditcardguide` | Chinese-language card and bank-bonus blog | T1 |
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | Manufactured spending, gift cards; near-daily roundups | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | Airline, hotel and card program forums | T3 |
-| [Offer.love](https://offer.love) | `offerlove` | Card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi…) by merchant or bank | T1→T3 |
+| [Offer.love](https://offer.love) | `offerlove` | Card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi…) by merchant or bank, and your own offers on every card | T1→T3 |
 | [Savewise](https://getsavewise.com) | `savewise` | Shopping portal rates at a store (Rakuten, TopCashBack, C1 Shopping, airline malls…), its card-linked offers, Top Offers lists, bank-offer stacks and gift cards (CardDepot discounts, Rove miles) | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | Gift card buyer: current buy rates by brand and card value, and the deals behind them (login; read-only) | T2 |
 | [Aligned Incentives](https://alignedincentiv.es) | `alignedincentives` | Gift card buyer: current deals, what it pays and the profit per card value (login; read-only) | T2 |

@@ -113,6 +113,33 @@ esum offerlove merchant --slug <str> [--bank amex|boa|chase|citi|paypal|us-bank|
 | `--bank` | amex\|boa\|chase\|citi\|paypal\|us-bank\|wells-fargo |  | Only this bank's offers. |
 | `--past` | flag | `False` | Also list the merchant's recently expired offers (the site's Past Offers). |
 
+### `my-offers`
+
+Tier 0 (read) · from the site
+
+The signed-in user's own offers, every bank and card linked on Offer.love, from its My Offers page.
+
+Opens the page in a background browser tab, waits until the page has synced the offers, and reads
+them all from the site's own store in the page (the page itself shows 50 at a time). One row per
+offer and card. Offers past their expiry are left out (`hidden`). Columns: merchant, bank, card,
+title, expiry (a New York date, as the page prints it) and added (yes: on the card; no: still to
+add; not needed: the bank applies it without adding); `--fields` adds slug, started, status (the
+bank's own word) and terms. Needs the user signed in to Offer.love in ESUM's browser.
+
+```
+esum offerlove my-offers [--query <str>] [--bank amex|boa|chase|citi|paypal|us-bank|wells-fargo] [--card <str>] [--added yes|no] [--sort site|expires] [--offset <int>] [--limit <int>]
+```
+
+| Flag | Type | Default | Description |
+|---|---|---|---|
+| `--query` | str |  | Only offers whose merchant or title contains this (case and spaces ignored). |
+| `--bank` | amex\|boa\|chase\|citi\|paypal\|us-bank\|wells-fargo |  | Only this bank's offers. |
+| `--card` | str |  | Only cards whose name contains this, such as 8503 or Sapphire. |
+| `--added` | yes\|no |  | yes for offers already on the card, no for ones still to add. |
+| `--sort` | site\|expires | `'site'` | site (the page's order, by merchant) or expires (soonest first). |
+| `--offset` | int | `0` | Rows to skip. |
+| `--limit` | int | `50` | Rows to show. |
+
 ### `offer`
 
 Tier 0 (read) · from the site
@@ -192,6 +219,11 @@ esum offerlove search --query <str>
   `bank --name <bank> --sort expires` (within the page's first 100) or `latest --sort expires`.
 - Some titles come from the site double-encoded (`cafÃ©`); ESUM repairs those to `café`. Citi
   offers often carry a merchant description as their title, with the reward only in the terms.
-- A user's own synced offers (the site's My Offers page) are not read. The API for them only
-  searches and stops at 50 offer-card pairs with no paging, and the page itself loads its list
-  over a WebSocket after a browser sign-in.
+- `my-offers` always opens a background browser tab: the My Offers page loads the user's offers
+  over a WebSocket after a browser sign-in and keeps them in the site's IndexedDB store, which the
+  page script reads in full (the page's own pager stops working past page 22). Not signed in ends
+  as LOGIN NEEDED; sign in to Offer.love in ESUM's browser and rerun. The site's API for these
+  offers only searches and stops at 50 offer-card pairs, so ESUM keeps no key for it.
+- My Offers rows are one per offer and card, so one Amex offer on three cards is three rows. Amex
+  rows name the card only by its last five digits; Chase and BoA carry the card's name. BoA's
+  `not needed` offers apply without adding.

@@ -1,22 +1,28 @@
 """Offer.love: card-linked merchant offers (Amex Offers, Chase Offers, BankAmeriDeals…) from the public
 v1 API (search, bank counts) and the site's server-rendered pages (merchant, bank, latest, expiring,
-one offer). Everything here is public: no login and no key (D-78)."""
+one offer), all public. `my-offers` reads the signed-in user's own offers from the My Offers page in
+the browser, through a page script (D-95); it needs no key (D-78)."""
 
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Literal
 
 from esum import Listing, NoSuchItem, Next, Result, Tier, Transport, action, site
 
 from . import parse
-from .parse import (BANKS, api_rows, bank_counts, list_rows, merchant_page, merchant_slug, merge,
-                    offer_id, offer_page, page_count, row_count, split_expired)
+from .parse import (BANKS, PageChanged, api_rows, bank_counts, list_rows, merchant_page, merchant_slug, merge,
+                    matches, my_offer_rows, offer_id, offer_page, page_count, row_count,
+                    split_expired)
 
 FORMAT = 1
 EXTRAS = ()
 
 API = "https://data.offer.love/v1"
+MY_OFFERS = "https://offer.love/myoffers/"
+MY_OFFERS_SCRIPT = (Path(__file__).parent / "myoffers.js").read_text(encoding="utf-8")
+MY_OFFERS_WAIT = 45   # seconds for the page to sign in and sync the offers
 
 Bank = Literal["amex", "boa", "chase", "citi", "paypal", "us-bank", "wells-fargo"]
 Sort = Literal["site", "expires"]
@@ -265,3 +271,68 @@ def offer(ctx, id: str):
              o["terms"]]
     return Result(data=o, text="\n".join(lines), summary=f"{o['title']} — {o['name']} ({o['bank']})",
                   next=[Next("merchant", {"slug": o["merchant"]}, "list every active offer at this merchant")])
+
+
+# My Offers names banks as its badges do; the CLI's bank values map onto those
+_MY_BANK = {"amex": "Amex", "boa": "BoA", "chase": "Chase", "citi": "Citi", "paypal": "Paypal",
+            "us-bank": "US Bank", "wells-fargo": "Wells Fargo"}
+
+
+@action(offerlove, tier=Tier.READ, name="my-offers")
+def my_offers(ctx, query: str | None = None, bank: Bank | None = None, card: str | None = None,
+              added: Literal["yes", "no"] | None = None, sort: Sort = "site", offset: int = 0,
+              limit: int = 50):
+    """The signed-in user's own offers, every bank and card linked on Offer.love, from its My Offers page.
+
+    Opens the page in a background browser tab, waits until the page has synced the offers, and reads
+    them all from the site's own store in the page (the page itself shows 50 at a time). One row per
+    offer and card. Offers past their expiry are left out (`hidden`). Columns: merchant, bank, card,
+    title, expiry (a New York date, as the page prints it) and added (yes: on the card; no: still to
+    add; not needed: the bank applies it without adding); `--fields` adds slug, started, status (the
+    bank's own word) and terms. Needs the user signed in to Offer.love in ESUM's browser.
+
+    Args:
+        query: Only offers whose merchant or title contains this (case and spaces ignored).
+        bank: Only this bank's offers.
+        card: Only cards whose name contains this, such as 8503 or Sapphire.
+        added: yes for offers already on the card, no for ones still to add.
+        sort: site (the page's order, by merchant) or expires (soonest first).
+        offset: Rows to skip.
+        limit: Rows to show.
+    """
+    page = ctx.page_script(MY_OFFERS, MY_OFFERS_SCRIPT, {"timeout_ms": MY_OFFERS_WAIT * 1000}) or {}
+    if page.get("signed_out"):
+        raise ctx.login_needed(detail="the My Offers page shows its sign-in button")
+    if not page.get("signed_in"):
+        raise PageChanged(f"the My Offers page showed neither its sign-in nor its sign-out button "
+                          f"within {MY_OFFERS_WAIT} s")
+    if page.get("offers") is None:
+        raise PageChanged("the My Offers page has no offersData in its OFFER_LOVE_DB store")
+    rows, expired = my_offer_rows(page)
+    about: dict = {"url": MY_OFFERS}
+    if page.get("header"):
+        about["site_total"] = page["header"]
+    if not page.get("synced"):
+        about["note"] = (f"the page had not said 'Offers synced' after {MY_OFFERS_WAIT} s; "
+                         "these are the offers it had stored, which may be out of date")
+    if page.get("updated"):
+        about["updated"] = page["updated"]
+    if expired:
+        about["hidden"] = f"{_rows(expired)} already past their expiry"
+    if query:
+        rows = [r for r in rows if matches(r, query)]
+    if bank:
+        rows = [r for r in rows if r["bank"].lower() == _MY_BANK[bank].lower()]
+    if card:
+        want = card.lower().replace(" ", "")
+        rows = [r for r in rows if want in r["card"].lower().replace(" ", "")]
+    if added:
+        rows = [r for r in rows if (r["added"] == "no") == (added == "no")]
+    rows = _sorted(rows, sort, about)
+    shown, more = _page(rows, offset, limit)
+    return Listing(name="offers", rows=shown, fields=("merchant", "bank", "card", "title", "expires", "added"),
+                   about=about, total=len(rows), more=more,
+                   empty="no offers of yours match" if (query or bank or card or added)
+                   else "Offer.love's My Offers lists no live offers for you",
+                   next=[Next("my-offers", {"query": "<merchant>"}, "list only that merchant's offers of yours"),
+                         Next("search", {"query": "<merchant>"}, "list every bank's public offers at that merchant")])

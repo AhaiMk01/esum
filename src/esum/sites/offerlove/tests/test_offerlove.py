@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import io
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pytest
@@ -327,7 +328,99 @@ def test_search_with_rows_names_the_merchant_once(action_runner, fake_http, offe
 
 
 def test_the_site_keeps_no_key_and_has_no_login():
-    # the API-key actions (my-offers, login, logout) were removed: the API could only search, 50 at most
+    # the API-key actions (login, logout) were removed: that API could only search, 50 at most;
+    # my-offers reads the signed-in page in the browser instead
     target = Registry.discover().get("offerlove")
-    assert sorted(target.all_actions) == ["bank", "banks", "expiring", "latest", "merchant", "offer", "search"]
+    assert sorted(target.all_actions) == ["bank", "banks", "expiring", "latest", "merchant", "my-offers",
+                                          "offer", "search"]
     assert "key_entry" not in target.extras
+
+
+# --- my-offers (page script) -----------------------------------------------------------------------
+
+class MyOffersTab:
+    def __init__(self, session, url):
+        self.session, self.url, self.closed = session, url, False
+
+    def evaluate(self, fn, arg=None):
+        self.session.scripts.append((fn, arg))
+        return self.session.page
+
+    def close(self):
+        self.closed = True
+
+
+class Browser:
+    """ESUM's browser session as a page script sees it: tabs opened on a URL, run in, closed."""
+
+    def __init__(self, page: dict):
+        self.page, self.tabs, self.scripts = page, [], []
+        self.where = "ESUM's browser (managed)"
+
+    def open_tab(self, url, cleared=None, *, site=""):
+        self.tabs.append(MyOffersTab(self, url))
+        return self.tabs[-1]
+
+
+NOW = datetime(2026, 11, 15, 12, tzinfo=timezone.utc)
+
+
+def my_offers(action_runner, target, browser, json_out=True, **kwargs):
+    output = io.StringIO()
+    action_runner(target, target.all_actions["my-offers"], kwargs, Options(json=json_out), stream=output,
+                  session=browser)
+    return json.loads(output.getvalue())["data"] if json_out else output.getvalue()
+
+
+@pytest.fixture
+def frozen(monkeypatch):
+    import esum.sites.offerlove.parse as parse
+    real = parse.my_offer_rows
+    monkeypatch.setattr("esum.sites.offerlove.my_offer_rows", lambda page, now=None: real(page, NOW))
+
+
+def test_my_offer_rows_name_the_card_say_whether_it_is_added_and_drop_expired_offers():
+    from esum.sites.offerlove.parse import my_offer_rows
+    rows, expired = my_offer_rows(json.loads(text("my_offers.json")), NOW)
+    assert expired == 1 and len(rows) == 5
+    assert [(r["bank"], r["card"], r["added"]) for r in rows] == [
+        ("Amex", "Amex (...11111)", "yes"), ("Amex", "Amex (...22222)", "no"),
+        ("Chase", "Sapphire Preferred (...3333)", "yes"), ("Chase", "Sapphire Preferred (...3333)", "no"),
+        ("BoA", "Customized Cash Rewards (...4444)", "not needed")]
+    # the page prints New York dates: 04:59 UTC on the 14th is still the 13th there
+    assert rows[0]["expires"] == "2026-12-13" and rows[0]["started"] == "2026-11-01"
+    assert rows[0]["terms"].startswith("Get a one-time $50 statement credit") and "<b>" not in rows[0]["terms"]
+    assert rows[4]["merchant"] == "Café X" and rows[4]["slug"] == "cafe-x"
+
+
+def test_my_offers_reads_the_page_store_in_a_background_tab_and_filters(action_runner, offerlove, frozen):
+    browser = Browser(json.loads(text("my_offers.json")))
+    data = my_offers(action_runner, offerlove, browser, query="LOWE S")
+    assert [(t.url, t.closed) for t in browser.tabs] == [("https://offer.love/myoffers/", True)]
+    assert browser.scripts[0][1] == {"timeout_ms": 45000} and "OFFER_LOVE_DB" in browser.scripts[0][0]
+    assert [r["card"] for r in data["offers"]] == ["Amex (...11111)", "Amex (...22222)", "Sapphire Preferred (...3333)"]
+    assert data["site_total"] == "6 offers from 4 merchants" and "1 row already past" in data["hidden"]
+    data = my_offers(action_runner, offerlove, Browser(json.loads(text("my_offers.json"))), added="no", sort="expires")
+    assert [r["merchant"] for r in data["offers"]] == ["Staples", "Lowe's"]
+    data = my_offers(action_runner, offerlove, Browser(json.loads(text("my_offers.json"))), bank="boa", card="4444")
+    assert [r["merchant"] for r in data["offers"]] == ["Café X"]
+    out = my_offers(action_runner, offerlove, Browser(json.loads(text("my_offers.json"))), json_out=False, bank="chase")
+    assert "offers[2]{merchant,bank,card,title,expires,added}:" in out and "Sapphire Preferred (...3333)" in out
+
+
+def test_my_offers_says_login_needed_only_when_the_page_shows_its_sign_in_button(action_runner, offerlove):
+    from esum import LoginNeeded
+    from esum.sites.offerlove.parse import PageChanged
+    out = {"signed_in": False, "signed_out": True, "synced": False, "header": "", "offers": None}
+    with pytest.raises(LoginNeeded):
+        my_offers(action_runner, offerlove, Browser(out))
+    # a page showing neither button (a check page, a redesign) is not a sign-out
+    with pytest.raises(PageChanged, match="neither its sign-in nor its sign-out"):
+        my_offers(action_runner, offerlove, Browser(dict(out, signed_out=False)))
+    with pytest.raises(PageChanged, match="no offersData"):
+        my_offers(action_runner, offerlove, Browser(dict(out, signed_in=True, signed_out=False)))
+
+
+def test_my_offers_notes_an_unsynced_page(action_runner, offerlove, frozen):
+    page = dict(json.loads(text("my_offers.json")), synced=False)
+    assert "had not said 'Offers synced'" in my_offers(action_runner, offerlove, Browser(page))["note"]
