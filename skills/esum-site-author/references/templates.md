@@ -352,12 +352,14 @@ Never use native mode.
 This is a small skill in the agent's skills folder that makes the agent think of `esum` when the
 user names the site. Write it only after the user agrees. Put it in the same skills folder as the
 installed `esum` skill (for Claude Code, `~/.claude/skills/esum-mysite/SKILL.md`). It points to
-the site doc rather than copying it, so it stays correct when actions change.
+the site doc rather than copying it, so it stays correct when actions change. Keep the
+`description` in double quotes: it holds a colon followed by a space, which a YAML reader takes
+for a nested key otherwise, and skill installers then skip the file.
 
 ```markdown
 ---
 name: esum-mysite
-description: Read My Site (mysite.example), <what it is>, through the esum CLI: latest topics, search, whole threads with every reply. Use when the user mentions My Site, mysite.example, or asks about <its topics>.
+description: "Read My Site (mysite.example), <what it is>, through the esum CLI: latest topics, search, whole threads with every reply. Use when the user mentions My Site, mysite.example, or asks about <its topics>."
 ---
 
 # My Site via esum
