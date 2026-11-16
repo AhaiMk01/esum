@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" font-family="system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="14">
+  <title>ESUM 一图看懂</title>
+  <style>
+    :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#8c959f; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#6e7681; } }
+    .bg { fill:var(--bg); }
+    text { fill:var(--fg); }
+    .t { font-size:22px; font-weight:700; }
+    .sub { fill:var(--muted); font-size:14px; }
+    .h { font-size:16px; font-weight:700; }
+    .m { fill:var(--muted); font-size:13px; }
+    .mono { font-family: ui-monospace, Consolas, monospace; font-size:13px; }
+    .lbl { fill:var(--muted); font-size:13px; font-style:italic; }
+    .box { fill:var(--bg); stroke:var(--line); stroke-width:1.5; }
+    .a { stroke:var(--line); stroke-width:1.8; fill:none; marker-end:url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1100" height="700"/>
+
+  <text x="40" y="46" class="t">ESUM 一图看懂</text>
+  <text x="40" y="70" class="sub">一个命令行工具：你的编程 agent 用它替你读网站。</text>
+
+  <!-- 1. the call -->
+  <rect class="box" x="40" y="100" width="200" height="86" rx="10"/>
+  <text x="60" y="130" class="h">你</text>
+  <text x="60" y="154" class="m">“大家怎么评价</text>
+  <text x="60" y="172" class="m">这张卡？”</text>
+
+  <rect class="box" x="300" y="100" width="240" height="86" rx="10"/>
+  <text x="320" y="130" class="h">你的 agent</text>
+  <text x="320" y="154" class="m">Claude Code, Codex, …</text>
+  <text x="320" y="172" class="m">负责思考，最后回答你</text>
+
+  <rect class="box" x="600" y="100" width="460" height="86" rx="10"/>
+  <text x="620" y="130" class="h">ESUM</text>
+  <text x="620" y="154" class="mono">esum uscf search --query "chase sapphire"</text>
+  <text x="620" y="172" class="m">输入是命令，输出是紧凑文本</text>
+
+  <path class="a" d="M240,130 L296,130"/>
+  <path class="a" d="M540,130 L596,130"/>
+  <path class="a" d="M596,166 L544,166"/>
+  <path class="a" d="M296,166 L244,166"/>
+  <text x="552" y="122" class="lbl">运行</text>
+  <text x="552" y="184" class="lbl">文字</text>
+  <text x="248" y="184" class="lbl">回答</text>
+
+  <!-- 2. how ESUM reaches a site -->
+  <path class="a" d="M830,186 L830,222"/>
+  <text x="40" y="244" class="h">ESUM 怎么访问网站：三种方式之一，按站点设定</text>
+
+  <rect class="box" x="40" y="260" width="330" height="56" rx="8"/>
+  <text x="56" y="283" class="h">T1 · httpx</text>
+  <text x="56" y="304" class="m">普通 HTTP；公开的 API 和网页</text>
+  <path class="a" d="M370,288 L426,288"/>
+  <rect class="box" x="430" y="260" width="630" height="56" rx="8"/>
+  <text x="450" y="293">适用于普通请求就能访问的站点</text>
+
+  <rect class="box" x="40" y="328" width="330" height="56" rx="8"/>
+  <text x="56" y="351" class="h">T2 · curl_cffi</text>
+  <text x="56" y="372" class="m">带 Chrome 指纹的 HTTP，需要时带上你的 cookie</text>
+  <path class="a" d="M370,356 L426,356"/>
+  <rect class="box" x="430" y="328" width="630" height="56" rx="8"/>
+  <text x="450" y="361">适用于有 Cloudflare 或需要登录的站点</text>
+
+  <rect class="box" x="40" y="396" width="330" height="56" rx="8"/>
+  <text x="56" y="419" class="h">T3 · patchright-cli</text>
+  <text x="56" y="440" class="m">Chrome 标签页：fetch() 或页面脚本</text>
+  <path class="a" d="M370,424 L426,424"/>
+  <rect class="box" x="430" y="396" width="630" height="56" rx="8"/>
+  <text x="450" y="429">适用于只有真实页面才能访问的站点，以及被人机验证拦下的 T1/T2 站点</text>
+
+  <rect class="box" x="40" y="468" width="1020" height="62" rx="8"/>
+  <text x="56" y="492">网站返回 JSON 或 HTML → ESUM 解析 → 给 agent 的精简文字：</text>
+  <text x="56" y="516" class="mono">[alice #3] (2026-11-02 · 👍12 · ↩#1): 两天就批了，没打电话</text>
+
+  <!-- 3. rules -->
+  <text x="40" y="572" class="h">规则</text>
+  <text x="56" y="598">•  <tspan font-weight="700">Tier 0 读取：</tspan>任务需要时随时可读，包括登录后的页面。</text>
+  <text x="56" y="622">•  <tspan font-weight="700">Tier 1 写入</tspan>（只有一种：论坛收藏）：agent 一定先问你；每次写入都有记录。</text>
+  <text x="56" y="646">•  <tspan font-weight="700">永远不做：</tspan>动钱或积分（没有这一级），看到你的密码。</text>
+  <text x="56" y="670">•  <tspan font-weight="700">想加别的网站？</tspan>让 agent 去加，esum-site-author skill 会搞定。</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+ "by": "adamnemecek",
+ "descendants": 17,
+ "id": 50248371,
+ "kids": [
+  50249708,
+  50249007,
+  50249554
+ ],
+ "score": 69,
+ "time": 1793038489,
+ "title": "Microsoft Announces Type Server Protocol, Extension of Language Server Protocol",
+ "type": "story",
+ "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md"
+}

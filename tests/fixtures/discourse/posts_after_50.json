@@ -1,0 +1,457 @@
+{
+ "post_stream": {
+  "posts": [
+   {
+    "id": 1943985,
+    "username": "user7",
+    "created_at": "2026-02-25T13:52:03.554Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user7\" data-post=\"37\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>There is a black dot to the right of the small handle</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b.png\" data-download-href=\"/uploads/short-url/tO7roSZojfrNQ3JB4U2u6dZfGMb.png?dl=1\" title=\"screenshot_20260214_130446\"><img src=\"//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2_690x243.png\" alt=\"screenshot_20260214_130446\" data-ba…</p>",
+    "post_number": 51,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1944815,
+    "username": "user1",
+    "created_at": "2026-02-26T15:28:30.914Z",
+    "cooked": "<p>This is not happening for me. Here is what I am seeing locally:<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4.png\" data-download-href=\"/uploads/short-url/lczXJ2j3hH3MvHBL6qXAxuL5qhC.png?dl=1\" title=\"CleanShot 2026-02-26 at 09.44.46@2x\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4_2_345x177.png\" alt=\"CleanShot 2026-02-26 at 09.44.46@2x\" data-base62-sha1=\"lczXJ2j3hH3MvHBL6qXAxuL5qhC\" width=\"345\" height=\"177\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4_2_345x1…</p>",
+    "post_number": 52,
+    "post_type": 1,
+    "reply_to_post_number": 47,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1944878,
+    "username": "user3",
+    "created_at": "2026-02-26T16:31:31.490Z",
+    "cooked": "<p>It doesn’t happen anymore. No clue why.</p>",
+    "post_number": 53,
+    "post_type": 1,
+    "reply_to_post_number": 52,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1946017,
+    "username": "user7",
+    "created_at": "2026-02-28T02:57:30.691Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user7\" data-post=\"37\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>There is a black dot to the right of the small handle.</p>\n</blockquote>\n</aside>\n<p>Uh~ I just celebrated that this issue was fixed these few days. But after I rebuilt just now, this problem appeared again.</p>",
+    "post_number": 55,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949171,
+    "username": "user14",
+    "created_at": "2026-03-05T05:11:42.317Z",
+    "cooked": "<p>Specifically, only the post-approval will hit this bug:</p>\n<p>Left is the original, right is the one without <code>padding-inline</code> set, seems that the No button is shorter than the Edit Post button.</p>\n<div class=\"d-image-grid\">\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/b/d/6/bd6e39a553b13696b2975eef5f69a65ab29f031c.png\" data-download-href=\"/uploads/short-url/r1MoGXh3WyQH0cRwU11veglKUuo.png?dl=1\" title=\"屏幕截图 2026-03-05 130823\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/b/d/6/bd6e39a553b13696b2975eef5f69a65ab29f031c_2_485x500.png\" alt=\"屏幕截图 2026-03-05 130823\" data-base62…</p>",
+    "post_number": 56,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1948465,
+    "username": "user14",
+    "created_at": "2026-03-05T10:17:56.832Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168.png\" data-download-href=\"/uploads/short-url/hvosv46gCgc8oYk3hORN9Y7auDu.png?dl=1\" title=\"IMG_9277\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168_2_689x336.png\" alt=\"IMG_9277\" data-base62-sha1=\"hvosv46gCgc8oYk3hORN9Y7auDu\" width=\"689\" height=\"336\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168_2_689x336.png, https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4…</p>",
+    "post_number": 57,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1948976,
+    "username": "user14",
+    "created_at": "2026-03-06T05:52:59.707Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/c/9/e/c9ee476cba0584b2f16481d67898a2e8ab74672e.png\" data-download-href=\"/uploads/short-url/sOmtSGM3dNgjAXblNQFFKtesLRY.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/c/9/e/c9ee476cba0584b2f16481d67898a2e8ab74672e.png\" alt=\"image\" data-base62-sha1=\"sOmtSGM3dNgjAXblNQFFKtesLRY\" width=\"608\" height=\"334\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">608×334 12.5 KB</span><svg class=\"fa d-ic…</p>",
+    "post_number": 59,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949074,
+    "username": "user14",
+    "created_at": "2026-03-06T11:34:23.502Z",
+    "cooked": "<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/9/4/9/949251352d3c02bcb2cfc2c0883ff3f89fa428ce.png\" alt=\"image\" data-base62-sha1=\"lck9e3Rp1yg6HVz8CJ9efhrPmvY\" width=\"349\" height=\"68\"></p>\n<p>The card at the end of a PM is also misaligned in height.</p>\n<p>(The “x” button expand the card’s height)</p>",
+    "post_number": 60,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949628,
+    "username": "user15",
+    "created_at": "2026-03-07T14:45:13.586Z",
+    "cooked": "<p>hello，It seems like this hasn’t been fully fixed yet.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79.jpeg\" data-download-href=\"/uploads/short-url/wudk1w71YACBec7QBpbz6a3hsQ9.jpeg?dl=1\" title=\"IMG_4202\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79_2_230x500.jpeg\" alt=\"IMG_4202\" data-base62-sha1=\"wudk1w71YACBec7QBpbz6a3hsQ9\" width=\"230\" height=\"500\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79_2_230x500.jpeg, https://global.discou…</p>",
+    "post_number": 61,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 15,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1962836,
+    "username": "user3",
+    "created_at": "2026-04-07T10:07:21.394Z",
+    "cooked": "<p>On mobile, the notification button’s transparent background cause issues:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/a/6/9/a69eae936720edb490f7731386ff69eb5cbc93b4.png\" data-download-href=\"/uploads/short-url/nLZexI16s9akhV1oFHnMCTq4RYU.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/a/6/9/a69eae936720edb490f7731386ff69eb5cbc93b4.png\" alt=\"image\" data-base62-sha1=\"nLZexI16s9akhV1oFHnMCTq4RYU\" width=\"596\" height=\"320\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"in…</p>",
+    "post_number": 62,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1964893,
+    "username": "user2",
+    "created_at": "2026-04-10T13:32:15.643Z",
+    "cooked": "<p>when is this actually going to be made official? having 2 foundations with different classes is a pain for theme and component dev.</p>",
+    "post_number": 63,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965083,
+    "username": "user3",
+    "created_at": "2026-04-10T18:41:43.554Z",
+    "cooked": "<p>I’m curious as well to know if there’s an estimated release date, and if the release will need <code>.uc-modernize-foundation-theme</code> as a parent selector or if it’s just temporary.</p>",
+    "post_number": 64,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965271,
+    "username": "user1",
+    "created_at": "2026-04-10T23:56:56.664Z",
+    "cooked": "<p>Thanks for the pings everyone. This project is still in the works, amidst a ton of other things we are trying to keep in check. My plan is to merge some of the smaller items into core while keeping things like buttons, header, and anti aliased font behind the feature flag for now.</p>\n<p>I have made room for this next week and will begin sharing some more updates then.</p>\n<aside class=\"quote no-group\" data-username=\"user2\" data-post=\"63\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>having 2 foundations with different classes is a pain for theme and component dev.</p>\n</blockquote>\n</aside>\n<p>What sort of issues have you run …</p>",
+    "post_number": 65,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1965274,
+    "username": "user2",
+    "created_at": "2026-04-11T00:19:43.392Z",
+    "cooked": "<aside class=\"quote group-team\" data-username=\"user1\" data-post=\"65\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>What sort of issues have you run into with your theme and component work with this feature turned on or off?</p>\n</blockquote>\n</aside>\n<p>mostly the buttons!  lately i have been formatting buttons for new foundation not realizing they look different in old foundation until a certain awesome robot pointed it out recently lol.  <img src=\"https://emoji.discourse-cdn.com/twitter/woman_facepalming.png?v=15\" title=\":woman_facepalming:\" class=\"emoji\" alt=\":woman_facepalming:\" loading=\"lazy\" width=\"20\" height=\"20\">  new foun…</p>",
+    "post_number": 66,
+    "post_type": 1,
+    "reply_to_post_number": 65,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965285,
+    "username": "user3",
+    "created_at": "2026-04-11T01:06:16.116Z",
+    "cooked": "<p>Thank you for your reply!<br>\nI’ve been halting a custom theme for several weeks now because it will be based on the new foundation, and I don’t want to mess my code with temporary stuff, I prefer to wait and work from the final release <img src=\"https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=15\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 67,
+    "post_type": 1,
+    "reply_to_post_number": 65,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967457,
+    "username": "user3",
+    "created_at": "2026-04-16T14:50:48.395Z",
+    "cooked": "<p>How it looks on Foundation and Meta Branded:</p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/2/f/1/2f1d17a09764fa1e14fce22a7a07081dac8662b3.png\" alt=\"image\" data-base62-sha1=\"6IMLNY7BZlLUnNDVTeQ2LOWS1tV\" width=\"80\" height=\"80\"> <img src=\"https://global.discourse-cdn.com/meta/original/4X/e/2/9/e296452dd5ca41170aaa92e35c6e2b5db0cfbdd6.png\" alt=\"image\" data-base62-sha1=\"wktRmW7J9191N7gfKJ352TgHcR8\" width=\"78\" height=\"77\"></p>\n<p>The number and arrow containers should be the same size.</p>",
+    "post_number": 68,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967437,
+    "username": "user16",
+    "created_at": "2026-04-16T15:07:22.276Z",
+    "cooked": "<p>I do not see this on mobile. I assume this is <a class=\"hashtag-cooked\" href=\"/tag/desktop/450\" data-type=\"tag\" data-slug=\"desktop\" data-id=\"450\" data-style-type=\"icon\" data-icon=\"tag\"><span class=\"hashtag-icon-placeholder\"><svg class=\"fa d-icon d-icon-square-full svg-icon svg-node\"><use href=\"#square-full\"></use></svg></span><span>desktop</span></a>?</p>",
+    "post_number": 69,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 16,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967445,
+    "username": "user3",
+    "created_at": "2026-04-16T15:16:05.502Z",
+    "cooked": "<p>Thanks, I dug more: It’s because of the new foundation theme, which is also used on Meta Branded, and happens both on desktop and mobile.</p>\n<p>I’m not sure if it should be moved to <a href=\"https://meta.discourse.org/t/modernizing-the-foundation-theme/395331\" class=\"inline-onebox\">Modernizing the Foundation theme</a> or not.</p>",
+    "post_number": 70,
+    "post_type": 1,
+    "reply_to_post_number": 69,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967460,
+    "username": "user12",
+    "created_at": "2026-04-16T15:41:09.586Z",
+    "cooked": "<p>Made the exec decision to do so <img src=\"https://emoji.discourse-cdn.com/twitter/wink.png?v=15\" title=\":wink:\" class=\"emoji\" alt=\":wink:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 71,
+    "post_type": 1,
+    "reply_to_post_number": 70,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1967576,
+    "username": "user1",
+    "created_at": "2026-04-16T19:08:07.765Z",
+    "cooked": "<p>This has been fixed &amp; will be updated soon</p>",
+    "post_number": 72,
+    "post_type": 1,
+    "reply_to_post_number": 68,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   }
+  ]
+ },
+ "id": 395331
+}

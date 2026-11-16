@@ -1,0 +1,480 @@
+{
+ "calendarOneWay": {
+  "months": [
+   {
+    "weeks": [
+     {
+      "days": [
+       {
+        "date": 14,
+        "solutionCount": 0
+       },
+       {
+        "date": 15,
+        "solutionCount": 0
+       },
+       {
+        "date": 16,
+        "solutionCount": 0
+       },
+       {
+        "date": 17,
+        "solutionCount": 0
+       },
+       {
+        "date": 18,
+        "solutionCount": 0
+       },
+       {
+        "date": 19,
+        "solutionCount": 0
+       },
+       {
+        "date": 20,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-21T10:55+00:00"
+         }
+        },
+        "minPrice": "USD380.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       }
+      ]
+     },
+     {
+      "days": [
+       {
+        "date": 21,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-22T10:55+00:00"
+         }
+        },
+        "minPrice": "USD330.00",
+        "minPriceInCalendar": true,
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 22,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-23T10:55+00:00"
+         }
+        },
+        "minPrice": "USD330.00",
+        "minPriceInCalendar": true,
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 23,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-24T10:55+00:00"
+         }
+        },
+        "minPrice": "USD330.00",
+        "minPriceInCalendar": true,
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 24,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-25T10:55+00:00"
+         }
+        },
+        "minPrice": "USD330.00",
+        "minPriceInCalendar": true,
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 25,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-26T10:55+00:00"
+         }
+        },
+        "minPrice": "USD380.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 26,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-27T11:50+00:00"
+         }
+        },
+        "minPrice": "USD455.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 27,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-28T11:55+01:00"
+         }
+        },
+        "minPrice": "USD380.00",
+        "solutionCount": 2
+       }
+      ]
+     },
+     {
+      "days": [
+       {
+        "date": 28,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-29T13:55+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 29,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-30T11:00+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 30,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-31T13:55+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 31,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-01T11:00+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 1,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-02T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 2,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-03T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 3,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-04T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       }
+      ]
+     }
+    ],
+    "month": 3,
+    "year": 2027
+   },
+   {
+    "weeks": [
+     {
+      "days": [
+       {
+        "date": 28,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-29T13:55+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 29,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-30T11:00+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 30,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-03-31T13:55+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 31,
+        "disabled": true,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-01T11:00+01:00"
+         }
+        },
+        "minPrice": "USD359.00",
+        "minPriceInMonth": true,
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 1,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-02T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 2,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-03T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       },
+       {
+        "date": 3,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-04T11:00+01:00"
+         }
+        },
+        "minPrice": "USD776.00",
+        "solutionCount": 2
+       }
+      ]
+     },
+     {
+      "days": [
+       {
+        "date": 4,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-05T11:00+01:00"
+         }
+        },
+        "minPrice": "USD726.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 5,
+        "solution": {
+         "ext": {
+          "warnings": {
+           "overnight": true
+          }
+         },
+         "itinerary": {
+          "arrival": "2027-04-06T11:00+01:00"
+         }
+        },
+        "minPrice": "USD726.00",
+        "minPriceInWeek": true,
+        "solutionCount": 2
+       },
+       {
+        "date": 6,
+        "solutionCount": 0
+       },
+       {
+        "date": 7,
+        "solutionCount": 0
+       },
+       {
+        "date": 8,
+        "solutionCount": 0
+       },
+       {
+        "date": 9,
+        "solutionCount": 0
+       },
+       {
+        "date": 10,
+        "solutionCount": 0
+       }
+      ]
+     }
+    ],
+    "month": 4,
+    "year": 2027
+   }
+  ]
+ },
+ "session": "SESSION0",
+ "solutionSet": "SOLSET0",
+ "solutionCount": 34,
+ "id": "REQ0"
+}

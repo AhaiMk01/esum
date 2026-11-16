@@ -1,0 +1,303 @@
+{
+ "solutionList": {
+  "pages": {
+   "count": 2,
+   "current": 2
+  },
+  "solutions": [
+   {
+    "ext": {
+     "price": "USD7221.00",
+     "pricePerMile": "USD0.5209205021",
+     "totalPrice": "USD7220.99"
+    },
+    "itinerary": {
+     "ext": {
+      "dominantCarrier": {
+       "code": "JL",
+       "shortName": "JAL"
+      }
+     },
+     "slices": [
+      {
+       "origin": {
+        "code": "JFK",
+        "name": "New York John F Kennedy International"
+       },
+       "destination": {
+        "code": "NRT",
+        "name": "Tokyo Narita International"
+       },
+       "arrival": "2027-02-17T14:50+09:00",
+       "departure": "2027-02-16T07:31-05:00",
+       "flights": [
+        "AA2759",
+        "JL55"
+       ],
+       "stops": [
+        {
+         "code": "ORD",
+         "name": "Chicago O'Hare International"
+        }
+       ],
+       "cabins": [
+        "FIRST",
+        "BUSINESS"
+       ],
+       "segments": [
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        },
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        }
+       ],
+       "duration": 1039
+      },
+      {
+       "origin": {
+        "code": "NRT",
+        "name": "Tokyo Narita International"
+       },
+       "destination": {
+        "code": "JFK",
+        "name": "New York John F Kennedy International"
+       },
+       "arrival": "2027-02-23T21:36-05:00",
+       "departure": "2027-02-23T18:50+09:00",
+       "flights": [
+        "JL8",
+        "JL7453"
+       ],
+       "stops": [
+        {
+         "code": "BOS",
+         "name": "Boston Edward L. Logan International"
+        }
+       ],
+       "cabins": [
+        "BUSINESS"
+       ],
+       "segments": [
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        },
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        }
+       ],
+       "duration": 1006,
+       "ext": {
+        "warnings": {
+         "types": [
+          "LONG_LAYOVER",
+          "CHANGE_OF_TERMINAL",
+          "OVERNIGHT"
+         ],
+         "overnight": true
+        }
+       }
+      }
+     ],
+     "carriers": [
+      {
+       "code": "AA",
+       "shortName": "American"
+      },
+      {
+       "code": "JL",
+       "shortName": "JAL"
+      }
+     ],
+     "singleCarrier": {
+      "code": "*",
+      "shortName": "Multiple Carriers"
+     },
+     "distance": {
+      "units": "MI",
+      "value": 13862
+     }
+    },
+    "pricings": [
+     {
+      "ext": {
+       "pax": {
+        "adults": 1
+       }
+      },
+      "displayPrice": "USD7220.99"
+     }
+    ],
+    "displayTotal": "USD7220.99",
+    "id": "GVaDLw2ZdHCLfxaQ1oVkxE00R",
+    "passengerCount": 1
+   },
+   {
+    "ext": {
+     "price": "USD7221.00",
+     "pricePerMile": "USD0.5209205021",
+     "totalPrice": "USD7220.99"
+    },
+    "itinerary": {
+     "ext": {
+      "dominantCarrier": {
+       "code": "JL",
+       "shortName": "JAL"
+      }
+     },
+     "slices": [
+      {
+       "origin": {
+        "code": "JFK",
+        "name": "New York John F Kennedy International"
+       },
+       "destination": {
+        "code": "NRT",
+        "name": "Tokyo Narita International"
+       },
+       "arrival": "2027-02-17T14:50+09:00",
+       "departure": "2027-02-16T07:31-05:00",
+       "flights": [
+        "AA2759",
+        "JL55"
+       ],
+       "stops": [
+        {
+         "code": "ORD",
+         "name": "Chicago O'Hare International"
+        }
+       ],
+       "cabins": [
+        "FIRST",
+        "BUSINESS"
+       ],
+       "segments": [
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        },
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        }
+       ],
+       "duration": 1039
+      },
+      {
+       "origin": {
+        "code": "NRT",
+        "name": "Tokyo Narita International"
+       },
+       "destination": {
+        "code": "JFK",
+        "name": "New York John F Kennedy International"
+       },
+       "arrival": "2027-02-23T21:36-05:00",
+       "departure": "2027-02-23T18:50+09:00",
+       "flights": [
+        "JL8",
+        "AA4441"
+       ],
+       "stops": [
+        {
+         "code": "BOS",
+         "name": "Boston Edward L. Logan International"
+        }
+       ],
+       "cabins": [
+        "FIRST",
+        "BUSINESS"
+       ],
+       "segments": [
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        },
+        {
+         "pricings": [
+          {
+           "paxCount": 1
+          }
+         ]
+        }
+       ],
+       "duration": 1006,
+       "ext": {
+        "warnings": {
+         "types": [
+          "LONG_LAYOVER",
+          "CHANGE_OF_TERMINAL",
+          "OVERNIGHT"
+         ],
+         "overnight": true
+        }
+       }
+      }
+     ],
+     "carriers": [
+      {
+       "code": "AA",
+       "shortName": "American"
+      },
+      {
+       "code": "JL",
+       "shortName": "JAL"
+      }
+     ],
+     "singleCarrier": {
+      "code": "*",
+      "shortName": "Multiple Carriers"
+     },
+     "distance": {
+      "units": "MI",
+      "value": 13862
+     }
+    },
+    "pricings": [
+     {
+      "ext": {
+       "pax": {
+        "adults": 1
+       }
+      },
+      "displayPrice": "USD7220.99"
+     }
+    ],
+    "displayTotal": "USD7220.99",
+    "id": "GVaDLw2ZdHCLfxaQ1oVkxE00T",
+    "passengerCount": 1
+   }
+  ],
+  "minPrice": "USD7213.00",
+  "solutionCount": 30
+ },
+ "id": "REQ0",
+ "session": "SESSION0",
+ "solutionCount": 30,
+ "solutionSet": "SOLSET0"
+}

@@ -1,0 +1,184 @@
+{
+ "data": [
+  {
+   "id": 0,
+   "_id": "other",
+   "name": "网事杂谈",
+   "groups": [
+    {
+     "name": "网事杂谈",
+     "id": 10004,
+     "info": "",
+     "forums": [
+      {
+       "fid": -7,
+       "name": "网事杂谈",
+       "bit": 1,
+       "is_forumlist": false,
+       "id": -7,
+       "icon": ""
+      },
+      {
+       "fid": "-7955747",
+       "name": "晴风村",
+       "info": "情感生活",
+       "is_forumlist": false,
+       "id": "-7955747",
+       "icon": ""
+      },
+      {
+       "fid": "-343809",
+       "name": "寂寞的车",
+       "info": "车迷俱乐部",
+       "is_forumlist": false,
+       "id": "-343809",
+       "icon": ""
+      },
+      {
+       "fid": "843",
+       "name": "国际新闻",
+       "is_forumlist": false,
+       "id": "843",
+       "icon": ""
+      },
+      {
+       "fid": -7,
+       "name": "考研讨论",
+       "stid": "39827852",
+       "is_forumlist": false,
+       "id": "39827852",
+       "icon": ""
+      }
+     ]
+    },
+    {
+     "name": "IT软硬件",
+     "id": 10005,
+     "info": "",
+     "forums": [
+      {
+       "fid": 436,
+       "name": "消费电子 IT新闻",
+       "is_forumlist": false,
+       "id": 436,
+       "icon": ""
+      },
+      {
+       "fid": 334,
+       "name": "PC硬件配置",
+       "info": "装机讨论",
+       "is_forumlist": false,
+       "id": 334,
+       "icon": ""
+      },
+      {
+       "fid": 722,
+       "name": "手机研究所",
+       "info": "软硬件讨论",
+       "is_forumlist": false,
+       "id": 722,
+       "icon": ""
+      },
+      {
+       "fid": 773,
+       "name": "外设硬件",
+       "is_forumlist": false,
+       "id": 773,
+       "icon": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 0,
+   "_id": "wow",
+   "name": "魔兽世界",
+   "groups": [
+    {
+     "name": "艾泽拉斯议事厅",
+     "id": 10000,
+     "info": "",
+     "forums": [
+      {
+       "fid": 7,
+       "name": "艾泽拉斯议事厅",
+       "info": "魔兽主讨论区",
+       "nameS": "议事厅",
+       "bit": 9,
+       "is_forumlist": false,
+       "id": 7,
+       "icon": ""
+      },
+      {
+       "fid": 230,
+       "name": "艾泽拉斯风纪委员会",
+       "info": "曝光违背公认准则的行为",
+       "nameS": "风纪委员会",
+       "is_forumlist": false,
+       "id": 230,
+       "icon": ""
+      },
+      {
+       "fid": 310,
+       "name": "前瞻资讯",
+       "info": "新版本与高阶讨论",
+       "infoS": "高阶讨论",
+       "is_forumlist": false,
+       "id": 310,
+       "icon": ""
+      },
+      {
+       "fid": 510569,
+       "name": "魔兽世界：无限",
+       "info": "",
+       "is_forumlist": false,
+       "id": 510569,
+       "icon": ""
+      }
+     ]
+    },
+    {
+     "name": "职业讨论区",
+     "id": 10001,
+     "info": "",
+     "forums": [
+      {
+       "fid": 390,
+       "name": "五晨寺",
+       "info": "武僧",
+       "is_forumlist": false,
+       "id": 390,
+       "icon": ""
+      },
+      {
+       "fid": 320,
+       "name": "黑锋要塞",
+       "info": "死亡骑士",
+       "is_forumlist": false,
+       "id": 320,
+       "icon": ""
+      },
+      {
+       "fid": 181,
+       "name": "铁血沙场",
+       "info": "战士",
+       "is_forumlist": false,
+       "id": 181,
+       "icon": ""
+      },
+      {
+       "fid": 182,
+       "name": "魔法圣堂",
+       "info": "法师",
+       "is_forumlist": false,
+       "id": 182,
+       "icon": ""
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "time": 1793128884
+}

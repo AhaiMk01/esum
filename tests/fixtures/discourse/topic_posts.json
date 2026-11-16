@@ -1,0 +1,1799 @@
+{
+ "post_stream": {
+  "posts": [
+   {
+    "id": 1935885,
+    "username": "user7",
+    "created_at": "2026-02-11T10:31:27.227Z",
+    "cooked": "<p>I’m using it and it feels great……………………………..</p>",
+    "post_number": 21,
+    "post_type": 1,
+    "reply_to_post_number": 20,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1935902,
+    "username": "user8",
+    "created_at": "2026-02-11T11:01:56.506Z",
+    "cooked": "<p>I was using the Foundation theme on my local, without the experimental new features enabled.</p>\n<p>Then I realized every once in a while the theme components I had enabled for the theme started to show up as unassigned, randomly.</p>\n<p>Has this happened to anyone?</p>",
+    "post_number": 22,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 8,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1935936,
+    "username": "user9",
+    "created_at": "2026-02-11T11:48:59.832Z",
+    "cooked": "<p>This looks fantastic and so modern!</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/5/5/0/550dd00b223bd99ee9bdd0e3b3b67edbd1752d02.png\" data-download-href=\"/uploads/short-url/c8qb48OrS5XnU3KvOpU60IzSCH0.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/5/5/0/550dd00b223bd99ee9bdd0e3b3b67edbd1752d02.png\" alt=\"image\" data-base62-sha1=\"c8qb48OrS5XnU3KvOpU60IzSCH0\" width=\"562\" height=\"401\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations…</p>",
+    "post_number": 23,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 9,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1935991,
+    "username": "user10",
+    "created_at": "2026-02-11T13:35:38.237Z",
+    "cooked": "<p>Not assigned:<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/3/6/d/36d5731309891ff9509c744e79be7c899713a8f1.png\" data-download-href=\"/uploads/short-url/7P560mw8OrrukFGosqqfqbneMmZ.png?dl=1\" title=\"msedge_pcmF2JqoZN\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/3/6/d/36d5731309891ff9509c744e79be7c899713a8f1_2_690x79.png\" alt=\"msedge_pcmF2JqoZN\" data-base62-sha1=\"7P560mw8OrrukFGosqqfqbneMmZ\" width=\"690\" height=\"79\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/3/6/d/36d5731309891ff9509c744e79be7c899713a8f1_2_690x79.png, https://global.discourse-cdn.com/meta/optimized/4X/3/6/d/36d5731309891ff9509c744e…</p>",
+    "post_number": 24,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 10,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1936143,
+    "username": "user11",
+    "created_at": "2026-02-11T16:43:19.781Z",
+    "cooked": "<p>there’s a problem when i try to search for a ip adress:<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" data-download-href=\"/uploads/short-url/vj2xwjjvyDRlr0cSw23Mhpyzb0A.png?dl=1\" title=\"Capture d'écran 2026-02-11 174145\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" alt=\"Capture d'écran 2026-02-11 174145\" data-base62-sha1=\"vj2xwjjvyDRlr0cSw23Mhpyzb0A\" width=\"387\" height=\"125\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"fi…</p>",
+    "post_number": 25,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1936530,
+    "username": "user12",
+    "created_at": "2026-02-12T07:07:24.766Z",
+    "cooked": "<p>4 posts were split to a new topic: <a href=\"/t/issue-with-enabling-upcoming-changes/395881\">Issue with enabling upcoming changes</a></p>",
+    "post_number": 26,
+    "post_type": 3,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 12,
+    "action_code": "split_topic",
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1936525,
+    "username": "user12",
+    "created_at": "2026-02-12T07:02:01.596Z",
+    "cooked": "<p>A post was merged into an existing topic: <a href=\"https://meta.discourse.org/t/horizon-theme/360486\">Horizon Theme</a></p>",
+    "post_number": 30,
+    "post_type": 3,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 12,
+    "action_code": "split_topic",
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937779,
+    "username": "user1",
+    "created_at": "2026-02-13T19:24:35.509Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user9\" data-post=\"23\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>The translation button seems to be too dark.</p>\n</blockquote>\n</aside>\n<aside class=\"quote group-VolunteerMods\" data-username=\"user10\" data-post=\"24\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>Not assigned:</p>\n</blockquote>\n</aside>\n<p>These issues have been addressed.</p>",
+    "post_number": 31,
+    "post_type": 1,
+    "reply_to_post_number": 23,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937790,
+    "username": "user1",
+    "created_at": "2026-02-13T19:33:30.550Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user11\" data-post=\"25\" data-topic=\"395331\" data-full=\"true\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>there’s a problem when i try to search for a ip adress:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" data-download-href=\"/uploads/short-url/vj2xwjjvyDRlr0cSw23Mhpyzb0A.png?dl=1\" title=\"Capture d'écran 2026-02-11 174145\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" alt=\"Capture d'écran 2026-02-11 174145\" data-base62-sha…</p>",
+    "post_number": 32,
+    "post_type": 1,
+    "reply_to_post_number": 25,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937791,
+    "username": "user12",
+    "created_at": "2026-02-13T19:34:33.506Z",
+    "cooked": "<p>That’s the admin-profile view I believe. Not sure related to the Foundation changes; saw it earlier today on another theme too.</p>",
+    "post_number": 33,
+    "post_type": 1,
+    "reply_to_post_number": 32,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937802,
+    "username": "user11",
+    "created_at": "2026-02-13T19:56:27.996Z",
+    "cooked": "<p>I can see it at /admin/users/id/USERHERE</p>",
+    "post_number": 35,
+    "post_type": 1,
+    "reply_to_post_number": 32,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937868,
+    "username": "user1",
+    "created_at": "2026-02-13T21:42:03.201Z",
+    "cooked": "<p>thanks! It was addressed in this PR → <a href=\"https://github.com/discourse/discourse/pull/37831\" class=\"inline-onebox\">FIX: Change @class to @triggerClass on ip lookup menu by jordanvidrine · Pull Request #37831 · discourse/discourse · GitHub</a></p>",
+    "post_number": 36,
+    "post_type": 1,
+    "reply_to_post_number": 35,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937947,
+    "username": "user7",
+    "created_at": "2026-02-14T05:06:00.815Z",
+    "cooked": "<p>There is a black dot to the right of the small handle</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b.png\" data-download-href=\"/uploads/short-url/tO7roSZojfrNQ3JB4U2u6dZfGMb.png?dl=1\" title=\"screenshot_20260214_130446\"><img src=\"//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2_690x243.png\" alt=\"screenshot_20260214_130446\" data-base62-sha1=\"tO7roSZojfrNQ3JB4U2u6dZfGMb\" width=\"690\" height=\"243\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2…</p>",
+    "post_number": 37,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937950,
+    "username": "user9",
+    "created_at": "2026-02-14T05:33:09.773Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/8/b/b/8bb950bf6f7a78e195f056894358e0c240cf25f4.png\" data-download-href=\"/uploads/short-url/jW3p6fjKo31r746WQTcHVqI1CFS.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/8/b/b/8bb950bf6f7a78e195f056894358e0c240cf25f4.png\" alt=\"image\" data-base62-sha1=\"jW3p6fjKo31r746WQTcHVqI1CFS\" width=\"558\" height=\"336\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">558×336 11.4 KB</span><svg class=\"fa d-ic…</p>",
+    "post_number": 38,
+    "post_type": 1,
+    "reply_to_post_number": 31,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 9,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937997,
+    "username": "user3",
+    "created_at": "2026-02-14T11:22:08.357Z",
+    "cooked": "<p>The compose icon is off-center:</p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/5/0/9/509e8b48a4eefbcd072446fb5d1778cdfd90597e.png\" alt=\"image\" data-base62-sha1=\"bvbSmfd5qXYsBXoj0irDTPCWsvs\" width=\"239\" height=\"55\"></p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/f/6/0/f60bd018abb0ded3b2de386a0b3801215ead46ce.png\" alt=\"image\" data-base62-sha1=\"z6CLxcrlZwUdDD1Qgb3wccwINga\" width=\"183\" height=\"51\"></p>",
+    "post_number": 39,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1938250,
+    "username": "user3",
+    "created_at": "2026-02-15T22:42:33.129Z",
+    "cooked": "<p>On an empty search page, there’s a floating border:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18.png\" data-download-href=\"/uploads/short-url/sVEiz1Ba5NI2AzTsk34rOz4BZuE.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18_2_690x453.png\" alt=\"image\" data-base62-sha1=\"sVEiz1Ba5NI2AzTsk34rOz4BZuE\" width=\"690\" height=\"453\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18_2_690x453.png, https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac1…</p>",
+    "post_number": 40,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1938273,
+    "username": "user3",
+    "created_at": "2026-02-16T00:59:50.788Z",
+    "cooked": "<p>On mobile, the post count container is too tall, or the translation button is too short, I don’t know which one should be tweaked <img src=\"https://emoji.discourse-cdn.com/twitter/face_with_tongue.png?v=15\" title=\":face_with_tongue:\" class=\"emoji\" alt=\":face_with_tongue:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/8/3/3/83373ec6ccbd0384ad831bd4da33496b7d9d61e3.jpeg\" data-download-href=\"/uploads/short-url/iIMUtLnjyeOr7ichuSU1Y3VVNtN.jpeg?dl=1\" title=\"Screenshot_20260216_015646_Chrome\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/8/3/3/83373ec6ccbd0384ad831bd4da33496b7…</p>",
+    "post_number": 41,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1939863,
+    "username": "user1",
+    "created_at": "2026-02-18T12:35:38.824Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"41\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>On mobile, the post count container is too tall, or the translation button is too short, I don’t know which one should be tweaked <img src=\"https://emoji.discourse-cdn.com/twitter/face_with_tongue.png?v=15\" title=\":face_with_tongue:\" class=\"emoji\" alt=\":face_with_tongue:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>\n</blockquote>\n</aside>\n<p><img src=\"https://emoji.discourse-cdn.com/twitter/winking_face_with_tongue.png?v=15\" title=\":winking_face_with_tongue:\" class=\"emoji only-emoji\" alt=\":winking_face_with_tongue:\" loadi…</p>",
+    "post_number": 42,
+    "post_type": 1,
+    "reply_to_post_number": 41,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1940147,
+    "username": "user11",
+    "created_at": "2026-02-18T17:33:03.339Z",
+    "cooked": "<p>it’s the same if i try to remove a tc at /admin/config/customize/components</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc4897ee5.jpeg\" data-download-href=\"/uploads/short-url/z4oYJBCDn7G06tsXWZjYQxIXd7T.jpeg?dl=1\" title=\"Screenshot_20260218_183014_Brave\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc4897ee5_2_690x304.jpeg\" alt=\"Screenshot_20260218_183014_Brave\" data-base62-sha1=\"z4oYJBCDn7G06tsXWZjYQxIXd7T\" width=\"690\" height=\"304\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc489…</p>",
+    "post_number": 43,
+    "post_type": 1,
+    "reply_to_post_number": 25,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1940414,
+    "username": "user1",
+    "created_at": "2026-02-18T23:55:20.716Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"40\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>On an empty search page, there’s a floating border:</p>\n</blockquote>\n</aside>\n<p>This is actually an issue with AI search not with these foundation improvements.</p>",
+    "post_number": 44,
+    "post_type": 1,
+    "reply_to_post_number": 40,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1940417,
+    "username": "user1",
+    "created_at": "2026-02-19T00:02:14.264Z",
+    "cooked": "<p>What page is this on?</p>",
+    "post_number": 45,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1940452,
+    "username": "user11",
+    "created_at": "2026-02-19T04:45:50.159Z",
+    "cooked": "<p>It’s on the /categories page. I have the same</p>",
+    "post_number": 46,
+    "post_type": 1,
+    "reply_to_post_number": 45,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1941759,
+    "username": "user3",
+    "created_at": "2026-02-20T18:48:45.184Z",
+    "cooked": "<p>Avatars have a higher z-index than the category list when we edit a topic’s title:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b.png\" data-download-href=\"/uploads/short-url/czg1it5drIHqVKjSR75l7hp8jX5.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b_2_690x446.png\" alt=\"image\" data-base62-sha1=\"czg1it5drIHqVKjSR75l7hp8jX5\" width=\"690\" height=\"446\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b_2_690x446.png, https://global.discourse-cdn.c…</p>",
+    "post_number": 47,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1943417,
+    "username": "user13",
+    "created_at": "2026-02-24T17:10:06.726Z",
+    "cooked": "<p>I’m trying to activate the theme but I don’t see how to proceed!</p>\n<p>I have activated the Foundation theme in upcoming, but in my themes, there is only the old Foundation theme.</p>\n<p>Is this normal? <img src=\"https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=15\" title=\":sweat_smile:\" class=\"emoji\" alt=\":sweat_smile:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 48,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 13,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1943418,
+    "username": "user4",
+    "created_at": "2026-02-24T17:11:26.352Z",
+    "cooked": "<p>Yes that’s normal. The upcoming changes affect how the Foundation theme looks like. It’s not a different theme.</p>",
+    "post_number": 49,
+    "post_type": 1,
+    "reply_to_post_number": 48,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1943985,
+    "username": "user7",
+    "created_at": "2026-02-25T13:52:03.554Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user7\" data-post=\"37\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>There is a black dot to the right of the small handle</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b.png\" data-download-href=\"/uploads/short-url/tO7roSZojfrNQ3JB4U2u6dZfGMb.png?dl=1\" title=\"screenshot_20260214_130446\"><img src=\"//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2_690x243.png\" alt=\"screenshot_20260214_130446\" data-ba…</p>",
+    "post_number": 51,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1944815,
+    "username": "user1",
+    "created_at": "2026-02-26T15:28:30.914Z",
+    "cooked": "<p>This is not happening for me. Here is what I am seeing locally:<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4.png\" data-download-href=\"/uploads/short-url/lczXJ2j3hH3MvHBL6qXAxuL5qhC.png?dl=1\" title=\"CleanShot 2026-02-26 at 09.44.46@2x\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4_2_345x177.png\" alt=\"CleanShot 2026-02-26 at 09.44.46@2x\" data-base62-sha1=\"lczXJ2j3hH3MvHBL6qXAxuL5qhC\" width=\"345\" height=\"177\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/9/4/9/9499b2d68f1b8aa93cf1710dbfb04e0239d475f4_2_345x1…</p>",
+    "post_number": 52,
+    "post_type": 1,
+    "reply_to_post_number": 47,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1944878,
+    "username": "user3",
+    "created_at": "2026-02-26T16:31:31.490Z",
+    "cooked": "<p>It doesn’t happen anymore. No clue why.</p>",
+    "post_number": 53,
+    "post_type": 1,
+    "reply_to_post_number": 52,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1946017,
+    "username": "user7",
+    "created_at": "2026-02-28T02:57:30.691Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user7\" data-post=\"37\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>There is a black dot to the right of the small handle.</p>\n</blockquote>\n</aside>\n<p>Uh~ I just celebrated that this issue was fixed these few days. But after I rebuilt just now, this problem appeared again.</p>",
+    "post_number": 55,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949171,
+    "username": "user14",
+    "created_at": "2026-03-05T05:11:42.317Z",
+    "cooked": "<p>Specifically, only the post-approval will hit this bug:</p>\n<p>Left is the original, right is the one without <code>padding-inline</code> set, seems that the No button is shorter than the Edit Post button.</p>\n<div class=\"d-image-grid\">\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/b/d/6/bd6e39a553b13696b2975eef5f69a65ab29f031c.png\" data-download-href=\"/uploads/short-url/r1MoGXh3WyQH0cRwU11veglKUuo.png?dl=1\" title=\"屏幕截图 2026-03-05 130823\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/b/d/6/bd6e39a553b13696b2975eef5f69a65ab29f031c_2_485x500.png\" alt=\"屏幕截图 2026-03-05 130823\" data-base62…</p>",
+    "post_number": 56,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1948465,
+    "username": "user14",
+    "created_at": "2026-03-05T10:17:56.832Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168.png\" data-download-href=\"/uploads/short-url/hvosv46gCgc8oYk3hORN9Y7auDu.png?dl=1\" title=\"IMG_9277\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168_2_689x336.png\" alt=\"IMG_9277\" data-base62-sha1=\"hvosv46gCgc8oYk3hORN9Y7auDu\" width=\"689\" height=\"336\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4bea5a910168_2_689x336.png, https://global.discourse-cdn.com/meta/optimized/4X/7/a/b/7ab175ffd6e52f04663bf9d5dcdd4…</p>",
+    "post_number": 57,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1948976,
+    "username": "user14",
+    "created_at": "2026-03-06T05:52:59.707Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/c/9/e/c9ee476cba0584b2f16481d67898a2e8ab74672e.png\" data-download-href=\"/uploads/short-url/sOmtSGM3dNgjAXblNQFFKtesLRY.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/c/9/e/c9ee476cba0584b2f16481d67898a2e8ab74672e.png\" alt=\"image\" data-base62-sha1=\"sOmtSGM3dNgjAXblNQFFKtesLRY\" width=\"608\" height=\"334\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">608×334 12.5 KB</span><svg class=\"fa d-ic…</p>",
+    "post_number": 59,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949074,
+    "username": "user14",
+    "created_at": "2026-03-06T11:34:23.502Z",
+    "cooked": "<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/9/4/9/949251352d3c02bcb2cfc2c0883ff3f89fa428ce.png\" alt=\"image\" data-base62-sha1=\"lck9e3Rp1yg6HVz8CJ9efhrPmvY\" width=\"349\" height=\"68\"></p>\n<p>The card at the end of a PM is also misaligned in height.</p>\n<p>(The “x” button expand the card’s height)</p>",
+    "post_number": 60,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 14,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1949628,
+    "username": "user15",
+    "created_at": "2026-03-07T14:45:13.586Z",
+    "cooked": "<p>hello，It seems like this hasn’t been fully fixed yet.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79.jpeg\" data-download-href=\"/uploads/short-url/wudk1w71YACBec7QBpbz6a3hsQ9.jpeg?dl=1\" title=\"IMG_4202\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79_2_230x500.jpeg\" alt=\"IMG_4202\" data-base62-sha1=\"wudk1w71YACBec7QBpbz6a3hsQ9\" width=\"230\" height=\"500\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/e/3/a/e3afef24a080036444529b993f7c4c64ae09cf79_2_230x500.jpeg, https://global.discou…</p>",
+    "post_number": 61,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 15,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1962836,
+    "username": "user3",
+    "created_at": "2026-04-07T10:07:21.394Z",
+    "cooked": "<p>On mobile, the notification button’s transparent background cause issues:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/a/6/9/a69eae936720edb490f7731386ff69eb5cbc93b4.png\" data-download-href=\"/uploads/short-url/nLZexI16s9akhV1oFHnMCTq4RYU.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/a/6/9/a69eae936720edb490f7731386ff69eb5cbc93b4.png\" alt=\"image\" data-base62-sha1=\"nLZexI16s9akhV1oFHnMCTq4RYU\" width=\"596\" height=\"320\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"in…</p>",
+    "post_number": 62,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1964893,
+    "username": "user2",
+    "created_at": "2026-04-10T13:32:15.643Z",
+    "cooked": "<p>when is this actually going to be made official? having 2 foundations with different classes is a pain for theme and component dev.</p>",
+    "post_number": 63,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965083,
+    "username": "user3",
+    "created_at": "2026-04-10T18:41:43.554Z",
+    "cooked": "<p>I’m curious as well to know if there’s an estimated release date, and if the release will need <code>.uc-modernize-foundation-theme</code> as a parent selector or if it’s just temporary.</p>",
+    "post_number": 64,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965271,
+    "username": "user1",
+    "created_at": "2026-04-10T23:56:56.664Z",
+    "cooked": "<p>Thanks for the pings everyone. This project is still in the works, amidst a ton of other things we are trying to keep in check. My plan is to merge some of the smaller items into core while keeping things like buttons, header, and anti aliased font behind the feature flag for now.</p>\n<p>I have made room for this next week and will begin sharing some more updates then.</p>\n<aside class=\"quote no-group\" data-username=\"user2\" data-post=\"63\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>having 2 foundations with different classes is a pain for theme and component dev.</p>\n</blockquote>\n</aside>\n<p>What sort of issues have you run …</p>",
+    "post_number": 65,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1965274,
+    "username": "user2",
+    "created_at": "2026-04-11T00:19:43.392Z",
+    "cooked": "<aside class=\"quote group-team\" data-username=\"user1\" data-post=\"65\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>What sort of issues have you run into with your theme and component work with this feature turned on or off?</p>\n</blockquote>\n</aside>\n<p>mostly the buttons!  lately i have been formatting buttons for new foundation not realizing they look different in old foundation until a certain awesome robot pointed it out recently lol.  <img src=\"https://emoji.discourse-cdn.com/twitter/woman_facepalming.png?v=15\" title=\":woman_facepalming:\" class=\"emoji\" alt=\":woman_facepalming:\" loading=\"lazy\" width=\"20\" height=\"20\">  new foun…</p>",
+    "post_number": 66,
+    "post_type": 1,
+    "reply_to_post_number": 65,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1965285,
+    "username": "user3",
+    "created_at": "2026-04-11T01:06:16.116Z",
+    "cooked": "<p>Thank you for your reply!<br>\nI’ve been halting a custom theme for several weeks now because it will be based on the new foundation, and I don’t want to mess my code with temporary stuff, I prefer to wait and work from the final release <img src=\"https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=15\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 67,
+    "post_type": 1,
+    "reply_to_post_number": 65,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967457,
+    "username": "user3",
+    "created_at": "2026-04-16T14:50:48.395Z",
+    "cooked": "<p>How it looks on Foundation and Meta Branded:</p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/2/f/1/2f1d17a09764fa1e14fce22a7a07081dac8662b3.png\" alt=\"image\" data-base62-sha1=\"6IMLNY7BZlLUnNDVTeQ2LOWS1tV\" width=\"80\" height=\"80\"> <img src=\"https://global.discourse-cdn.com/meta/original/4X/e/2/9/e296452dd5ca41170aaa92e35c6e2b5db0cfbdd6.png\" alt=\"image\" data-base62-sha1=\"wktRmW7J9191N7gfKJ352TgHcR8\" width=\"78\" height=\"77\"></p>\n<p>The number and arrow containers should be the same size.</p>",
+    "post_number": 68,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967437,
+    "username": "user16",
+    "created_at": "2026-04-16T15:07:22.276Z",
+    "cooked": "<p>I do not see this on mobile. I assume this is <a class=\"hashtag-cooked\" href=\"/tag/desktop/450\" data-type=\"tag\" data-slug=\"desktop\" data-id=\"450\" data-style-type=\"icon\" data-icon=\"tag\"><span class=\"hashtag-icon-placeholder\"><svg class=\"fa d-icon d-icon-square-full svg-icon svg-node\"><use href=\"#square-full\"></use></svg></span><span>desktop</span></a>?</p>",
+    "post_number": 69,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 16,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967445,
+    "username": "user3",
+    "created_at": "2026-04-16T15:16:05.502Z",
+    "cooked": "<p>Thanks, I dug more: It’s because of the new foundation theme, which is also used on Meta Branded, and happens both on desktop and mobile.</p>\n<p>I’m not sure if it should be moved to <a href=\"https://meta.discourse.org/t/modernizing-the-foundation-theme/395331\" class=\"inline-onebox\">Modernizing the Foundation theme</a> or not.</p>",
+    "post_number": 70,
+    "post_type": 1,
+    "reply_to_post_number": 69,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967460,
+    "username": "user12",
+    "created_at": "2026-04-16T15:41:09.586Z",
+    "cooked": "<p>Made the exec decision to do so <img src=\"https://emoji.discourse-cdn.com/twitter/wink.png?v=15\" title=\":wink:\" class=\"emoji\" alt=\":wink:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 71,
+    "post_type": 1,
+    "reply_to_post_number": 70,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1967576,
+    "username": "user1",
+    "created_at": "2026-04-16T19:08:07.765Z",
+    "cooked": "<p>This has been fixed &amp; will be updated soon</p>",
+    "post_number": 72,
+    "post_type": 1,
+    "reply_to_post_number": 68,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1967684,
+    "username": "user3",
+    "created_at": "2026-04-16T21:51:45.529Z",
+    "cooked": "<p>On dark theme, the <code>active</code> state on certain buttons (mostly visible with keyboard navigation, only transient when using mouse/touch) is dark purple on dark background and harsh to the eyes:<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/d/c/4/dc44910abc696b1ea6b542b3803b57ac0f253a32.png\" alt=\"image\" data-base62-sha1=\"vqzWH6yBdIHg3ZMW8Jed2pLstEu\" width=\"91\" height=\"47\"></p>\n<p>Red <code>hover</code> state as well:<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/0/6/e/06e13ad5e62249b0666c85196cbf5f19b0724e99.png\" alt=\"image\" data-base62-sha1=\"YRpSRY0nMWTcc5MC4VvnlAA17z\" width=\"95\" height=\"39\"></p>\n<p>But the worst is the “danger” button with a re…</p>",
+    "post_number": 73,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1967947,
+    "username": "user1",
+    "created_at": "2026-04-17T14:02:44.989Z",
+    "cooked": "<p>Is this only on this meta theme?</p>",
+    "post_number": 74,
+    "post_type": 1,
+    "reply_to_post_number": 73,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1967997,
+    "username": "user3",
+    "created_at": "2026-04-17T15:16:02.956Z",
+    "cooked": "<p>Yeah. On foundation:</p>\n<p>active<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/0/0/9/009130144c6b6e725e96563ad60ff9138c6c31b0.png\" alt=\"image\" data-base62-sha1=\"513VTn6ISQ88Rz7J1kbKK15ENa\" width=\"93\" height=\"42\"></p>\n<p>hover<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/b/e/6/be684aca052f77166aa731b03897f858e67dc27f.png\" alt=\"image\" data-base62-sha1=\"raqabtu9tgUcVCdNyKX325ou6Pt\" width=\"91\" height=\"44\"></p>\n<p>danger<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/a/4/0/a405bc20f7140914d8ec3171e4af0c24f627f782.png\" alt=\"image\" data-base62-sha1=\"np0AHVBdF439VjU8JxZeFMDM6xY\" width=\"133\" height=\"69\"></p>\n<p>Better contrasts than Meta Bran…</p>",
+    "post_number": 75,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1974904,
+    "username": "user4",
+    "created_at": "2026-05-01T16:47:11.224Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user4\" data-post=\"8\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>It seems some icon colors don’t work well with the wcag palette.<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/8/e/b/8eb2d0b87de9391c14c7a1681793545f4b59e9ba.png\" alt=\"image\" data-base62-sha1=\"kmmUtiWHpVmq9r1mA3IM5snnaFI\" width=\"228\" height=\"73\"></p>\n</blockquote>\n</aside>\n<p>This is still the case:<br>\n</p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/9/6/6/966be39b4a29d551122a1e64269535ac601ff9fe.png\" data-download-href=\"/uploads/short-url/ls…</p>",
+    "post_number": 76,
+    "post_type": 1,
+    "reply_to_post_number": 8,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975175,
+    "username": "user17",
+    "created_at": "2026-05-02T08:19:55.992Z",
+    "cooked": "<p>I think the navbar text size is too small on mobile (less legible than it looks like in the screenshot as it’s at the top of the page). The Suggested/Related font is too small too.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/0/e/7/0e7b4dd078d977613e3629adf9e1103ef740b6c4.jpeg\" data-download-href=\"/uploads/short-url/246RrWgbKua4XN47vR2XZ10ieTG.jpeg?dl=1\" title=\"New font sizes too small\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/0/e/7/0e7b4dd078d977613e3629adf9e1103ef740b6c4_2_290x500.jpeg\" alt=\"New font sizes too small\" data-base62-sha1=\"246RrWgbKua4XN47vR2XZ10ieTG\" width=\"29…</p>",
+    "post_number": 77,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 17,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975187,
+    "username": "user2",
+    "created_at": "2026-05-02T12:43:11.346Z",
+    "cooked": "<p>i think this is clearly a matter of taste because i think exactly the opposite of the old vs new.  the old foundation fonts and buttons feel too chunky, while the new foundation sleeker elements look much nicer in the overall layout comparitively.  i have no complaints about functional usage on desktop or mobile, nor have any of my users since i enabled it.  <img src=\"https://emoji.discourse-cdn.com/twitter/woman_shrugging/2.png?v=15\" title=\":woman_shrugging:t2:\" class=\"emoji\" alt=\":woman_shrugging:t2:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>\n<p>i think you could give feedback to your admins as well and perhaps they could create another theme with the old changes?  enlarging those font…</p>",
+    "post_number": 78,
+    "post_type": 1,
+    "reply_to_post_number": 77,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975247,
+    "username": "user17",
+    "created_at": "2026-05-03T00:54:15.254Z",
+    "cooked": "<p>Theres a small gap under the Related button</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/f/4/8/f48513bd5e5f37f6cc877879e2ba064b01b0d6be.jpeg\" data-download-href=\"/uploads/short-url/yT7Co7IRdt5Or00y09EI9gaY3rE.jpeg?dl=1\" title=\"Related button\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/f/4/8/f48513bd5e5f37f6cc877879e2ba064b01b0d6be.jpeg\" alt=\"Related button\" data-base62-sha1=\"yT7Co7IRdt5Or00y09EI9gaY3rE\" width=\"577\" height=\"320\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">Related …</p>",
+    "post_number": 79,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 17,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975248,
+    "username": "user2",
+    "created_at": "2026-05-03T01:26:52.945Z",
+    "cooked": "<p>yea that is why i said “something like”, because they may have some other things going on with their theme.  i was using meta, not Rust forum.  i’ll have a look for you because i am nice.  but i have to wait until there is some new and unread items to get the full footer header. i assume from the screenshot with avatar that that is in mobile viewport?</p>",
+    "post_number": 80,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975257,
+    "username": "user17",
+    "created_at": "2026-05-03T03:12:11.702Z",
+    "cooked": "<p>The quirk is visible here</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/6/c/8/6c8b2c7f5678eb029d77caad2351f0b534a4bbaf.jpeg\" data-download-href=\"/uploads/short-url/fudKd50X5iRfrQWGgMx9sH0uq8D.jpeg?dl=1\" title=\"Screenshot\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/6/c/8/6c8b2c7f5678eb029d77caad2351f0b534a4bbaf_2_690x203.jpeg\" alt=\"Screenshot\" data-base62-sha1=\"fudKd50X5iRfrQWGgMx9sH0uq8D\" width=\"690\" height=\"203\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/6/c/8/6c8b2c7f5678eb029d77caad2351f0b534a4bbaf_2_690x203.jpeg, https://global.discourse-cdn.com/meta/optimiz…</p>",
+    "post_number": 81,
+    "post_type": 1,
+    "reply_to_post_number": 80,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 17,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1975258,
+    "username": "user2",
+    "created_at": "2026-05-03T03:12:47.873Z",
+    "cooked": "<p>OK this looks like a UX bug with the new foundation theme and the injected AI related topic button.  the button classes are a bit different:</p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/3/7/3/373e36ef1c63c2c438a0613ffe6b99f76ab6de83.png\" alt=\"image\" data-base62-sha1=\"7SHypsylBYMmAqXJiXDdav1mFyz\" width=\"194\" height=\"55\"></p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/6/e/4/6e4c5a422d4f85e0f8ed598521191d86d60f1993.png\" data-download-href=\"/uploads/short-url/fJK6AVAkHXLwHpWdPD4lmcSnz3B.png?dl=1\" title=\"Screenshot from 2026-05-02 18-53-50\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/6/e/4/6…</p>",
+    "post_number": 82,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1981193,
+    "username": "user16",
+    "created_at": "2026-05-14T15:41:49.682Z",
+    "cooked": "<p>For the pinned state menu, the options overlap severely:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/4/4/7/4470776d04afcc58a5e4a8d94ca318356602d766.jpeg\" data-download-href=\"/uploads/short-url/9LrqqY9cVtcTfbsr6XOwtdGr0ZU.jpeg?dl=1\" title=\"Screenshot20260514233946Chrome\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/4/4/7/4470776d04afcc58a5e4a8d94ca318356602d766_2_224x500.jpeg\" alt=\"Screenshot20260514233946Chrome\" data-base62-sha1=\"9LrqqY9cVtcTfbsr6XOwtdGr0ZU\" width=\"224\" height=\"500\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/4/4/7/4470776d04afcc58a5e4a8d94ca318356602d766_2_224x500.jpeg, ht…</p>",
+    "post_number": 83,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 16,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1982428,
+    "username": "user7",
+    "created_at": "2026-05-18T07:23:42.516Z",
+    "cooked": "<p><a href=\"https://meta.discourse.org/t/topic/403180\">Opening the Manage Tag Groups page in a mobile browser displays layout issues - Contributions / User Experience - Discourse Meta</a></p>",
+    "post_number": 84,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1989088,
+    "username": "user4",
+    "created_at": "2026-06-02T12:32:34.995Z",
+    "cooked": "<p>Is it still possible to opt out of this change here on Meta? I haven’t joined the group, but the change seems to be enabled for me now, which results in my barely seeing the button borders even though I am using the WCAG palette.</p>",
+    "post_number": 85,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1989095,
+    "username": "user12",
+    "created_at": "2026-06-02T13:04:26.176Z",
+    "cooked": "<p>No, it’s no longer opt-out on Meta, the group is now obsolete.</p>\n<p>But you can keep reporting the issues you notice, as I’m sure you will, to discover what still needs to be polished.</p>",
+    "post_number": 86,
+    "post_type": 1,
+    "reply_to_post_number": 85,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1989108,
+    "username": "user4",
+    "created_at": "2026-06-02T13:24:08.790Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user12\" data-post=\"86\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>I’m sure you will</p>\n</blockquote>\n</aside>\n<p>You are wrong. I’ll wait until the issues I’ve reported so far are fixed, so you can focus entirely on those <img src=\"https://emoji.discourse-cdn.com/twitter/wink.png?v=15\" title=\":wink:\" class=\"emoji\" alt=\":wink:\" loading=\"lazy\" width=\"20\" height=\"20\"> Seriously, it doesn’t seem to make much sense to me to spend time writing down what I notice when what I wrote in February hasn’t been addressed yet. Besides, I’m sure you’ll understand that it’s not much fun to use a sit…</p>",
+    "post_number": 87,
+    "post_type": 1,
+    "reply_to_post_number": 86,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 5
+     }
+    ],
+    "reaction_users_count": 5,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1989140,
+    "username": "user17",
+    "created_at": "2026-06-02T14:36:45.552Z",
+    "cooked": "<p>Is this issue still going to be fixed?</p>\n<aside class=\"quote quote-modified\" data-post=\"79\" data-topic=\"395331\">\n  <div class=\"title\">\n    <div class=\"quote-controls\"></div>\n    \n    <div class=\"quote-title__text-content\">\n      <a href=\"https://meta.discourse.org/t/modernizing-the-foundation-theme/395331/79\">Modernizing the Foundation theme</a> <a class=\"badge-category__wrapper \" href=\"/c/news-and-events/announcements/67\"><span data-category-id=\"67\" style=\"--category-badge-color: #ED207B; --category-badge-text-color: #000000; --parent-category-badge-color: #00AEEF;\" data-parent-category-id=\"207\" data-drop-close=\"true\" class=\"badge-category --style-emoji --has-parent\" title=\"Important u…</p>",
+    "post_number": 88,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 17,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1989149,
+    "username": "user12",
+    "created_at": "2026-06-02T14:44:04.725Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user4\" data-post=\"87\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>It’s a shame that accessibility is such a low priority for you.</p>\n</blockquote>\n</aside>\n<p>That’s quite a leap you’re making. I just said “keep reporting issues” – what part of that makes it sound I don’t care about accessibility?</p>\n<p>As it happens, on <a href=\"https://meta.discourse.org/t/why-did-our-home-page-topic-links-font-shrink/404203/8\">this same issue reported elsewhere</a>, I have replied</p>\n<aside class=\"quote no-group\" data-username=\"user12\" data-post=\"9\" data-topic=\"404203\" data-full=\"true\">\n<div cla…</p>",
+    "post_number": 90,
+    "post_type": 1,
+    "reply_to_post_number": 87,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1989161,
+    "username": "user1",
+    "created_at": "2026-06-02T14:51:21.271Z",
+    "cooked": "<p>@someone I want to apologize for the lack of addressing your early feedback here. It’s not a great excuse but I am the “owner” of this project in the sense that it was my idea. I have also taken on a lot of other projects / tasks as the design manager since then and let this project fall to the back of the line.</p>\n<p>I will make a priority this week to address the feedback stated about these changes here and give you an update soon.</p>",
+    "post_number": 95,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1989295,
+    "username": "user1",
+    "created_at": "2026-06-02T18:24:32.793Z",
+    "cooked": "<aside class=\"onebox githubpullrequest\" data-onebox-src=\"https://github.com/discourse/discourse/pull/40494\">\n  <header class=\"source\">\n\n      <a href=\"https://github.com/discourse/discourse/pull/40494\" target=\"_blank\" rel=\"noopener\">github.com/discourse/discourse</a>\n  </header>\n\n  <article class=\"onebox-body\">\n    <div class=\"github-row\" data-github-private-repo=\"false\">\n\n\n\n    <div class=\"github-icon-container\" title=\"Pull Request\">\n      <svg width=\"60\" height=\"60\" class=\"github-icon\" viewBox=\"0 0 12 16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10…</p>",
+    "post_number": 98,
+    "post_type": 1,
+    "reply_to_post_number": 8,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 8
+     }
+    ],
+    "reaction_users_count": 8,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1991525,
+    "username": "user18",
+    "created_at": "2026-06-07T21:25:07.276Z",
+    "cooked": "<p>I hate to start a topic for this. But what did you guys change recently to the UI of these forums? I logged in today, and the font and layout feel MUCH better but in a subtle way. Was this announced somewhere? Am I imagining things? <img src=\"https://emoji.discourse-cdn.com/twitter/laughing.png?v=15\" title=\":laughing:\" class=\"emoji\" alt=\":laughing:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 99,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 18,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1991528,
+    "username": "user18",
+    "created_at": "2026-06-07T21:28:04.596Z",
+    "cooked": "<p>Thanks! Looks beautiful! <em>Less</em> is <strong>more</strong>. <img src=\"https://emoji.discourse-cdn.com/twitter/heart.png?v=15\" title=\":heart:\" class=\"emoji\" alt=\":heart:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 101,
+    "post_type": 1,
+    "reply_to_post_number": 100,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 18,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1991700,
+    "username": "user7",
+    "created_at": "2026-06-08T10:49:27.605Z",
+    "cooked": "<p>The issue with the small font and tight spacing has persisted. Will this be optimized?</p>\n<p><a href=\"https://meta.discourse.org/t/rebuild/403614/18\">After the recent rebuild update, the homepage font became very small - Contributions / User Experience - Discourse Meta</a></p>",
+    "post_number": 102,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1993452,
+    "username": "user4",
+    "created_at": "2026-06-10T21:15:32.263Z",
+    "cooked": "<p>The border around tags is larger than the tag field itself<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/8/4/3/84359bdc65715326b484e68f106b4ab249102f9e.png\" data-download-href=\"/uploads/short-url/iRzSIirzYIJx1wrT73LB6GeqzlI.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/8/4/3/84359bdc65715326b484e68f106b4ab249102f9e_2_690x252.png\" alt=\"image\" data-base62-sha1=\"iRzSIirzYIJx1wrT73LB6GeqzlI\" width=\"690\" height=\"252\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/8/4/3/84359bdc65715326b484e68f106b4ab249102f9e_2_690x252.png, https://global.discourse-cdn.com/meta/original/4X/8/4/3/8…</p>",
+    "post_number": 103,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1994466,
+    "username": "user17",
+    "created_at": "2026-06-12T09:35:41.021Z",
+    "cooked": "<aside class=\"quote quote-modified\" data-post=\"77\" data-topic=\"395331\">\n  <div class=\"title\">\n    <div class=\"quote-controls\"></div>\n    \n    <div class=\"quote-title__text-content\">\n      <a href=\"https://meta.discourse.org/t/modernizing-the-foundation-theme/395331/77\">Modernizing the Foundation theme</a> <a class=\"badge-category__wrapper \" href=\"/c/news-and-events/announcements/67\"><span data-category-id=\"67\" style=\"--category-badge-color: #ED207B; --category-badge-text-color: #000000; --parent-category-badge-color: #00AEEF;\" data-parent-category-id=\"207\" data-drop-close=\"true\" class=\"badge-category --style-emoji --has-parent\" title=\"Important updates from the Discourse team.\"><img src=\"htt…</p>",
+    "post_number": 105,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 17,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1994910,
+    "username": "user1",
+    "created_at": "2026-06-12T21:38:27.031Z",
+    "cooked": "<aside class=\"quote no-group quote-modified\" data-username=\"user4\" data-post=\"103\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>I noticed that the colored border of the category boxes is smaller now, mentioning it in case that was not intentional because the first post says</p>\n<aside class=\"quote group-team\" data-username=\"user1\" data-post=\"1\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<ul>\n<li>removal of thicc left colored border</li>\n</ul>\n</blockquote>\n</aside>\n<div class=\"d-image-grid\" data-mode=\"carousel\">\n<p></p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" …</p>",
+    "post_number": 106,
+    "post_type": 1,
+    "reply_to_post_number": 103,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 2002871,
+    "username": "user4",
+    "created_at": "2026-07-01T15:02:34.649Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user4\" data-post=\"10\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>I think the icon in the language dropdown is now very large in relation to the text.<br>\nBefore:<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/d/f/9/df9b8a31185bf9a93c29cb208fbd6056a9871733.png\" alt=\"image\" data-base62-sha1=\"vU7IxBwl1BTVW6zQ3zJjJ78V1Yf\" width=\"163\" height=\"66\"></p>\n<p>After:<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/7/f/b/7fb11897947ff93c4c54ee2fc4681f9c1a9f46b6.png\" alt=\"image\" data-base62-sha1=\"idC433FqrpMY59g24mr0s5Gi6Ka\" width=\"163\" height=\"53\"></p>\n</blockquo…</p>",
+    "post_number": 107,
+    "post_type": 1,
+    "reply_to_post_number": 10,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2003150,
+    "username": "user5",
+    "created_at": "2026-07-01T19:31:42.792Z",
+    "cooked": "<p>we added a missing wrapper to the language toggle and that changed some css specificity, will be fixed by</p>\n<aside class=\"onebox githubpullrequest\" data-onebox-src=\"https://github.com/discourse/discourse/pull/41348\">\n  <header class=\"source\">\n\n      <a href=\"https://github.com/discourse/discourse/pull/41348\" target=\"_blank\" rel=\"noopener\">github.com/discourse/discourse</a>\n  </header>\n\n  <article class=\"onebox-body\">\n    <div class=\"github-row --gh-status-merged\" data-github-private-repo=\"false\">\n\n\n\n    <div class=\"github-icon-container\" title=\"Merged Pull Request\">\n      <svg width=\"60\" height=\"60\" class=\"github-icon\" viewBox=\"0 0 12 16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"…</p>",
+    "post_number": 108,
+    "post_type": 1,
+    "reply_to_post_number": 107,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 5,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 2013903,
+    "username": "user19",
+    "created_at": "2026-07-24T10:37:43.687Z",
+    "cooked": "<p>Is it expected that enabling “<strong>Modernize Foundation theme</strong>” in a Discourse forum’s “<strong>Upcoming changes</strong>” will affect the forum’s theme when that forum is not using the Foundation theme?</p>\n<p>My forum has a lovely custom theme that was crafted by the Discourse team. We are very happy with the theme as it is. I enabled the “<strong>Modernize Foundation theme</strong>” in “<strong>Upcoming changes</strong>” today because I am trying to make a general habit of intentionally introducing  the upcoming changes rather letting them later get rolled out automatically. However, I didn’t expect it to have any effect. However, it did result in various changes, such as th…</p>",
+    "post_number": 109,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 19,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2013923,
+    "username": "user4",
+    "created_at": "2026-07-24T11:15:17.567Z",
+    "cooked": "<p>I think every theme is based on Foundation. It’s how a forum looks by default. There is no need for your theme to change a button color that already looks like it should by default. These defaults change now, which is why it affects all themes - even the Horizon theme is affected:<br>\nYou can see that the header is thinner, the chat icon is darker, and the button is no longer filled.<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/7/0/d/70daf984d4efe44621b76652c6975bd0cea153ed.jpeg\" data-download-href=\"/uploads/short-url/g6mCVcM92NXUiLWGwvoWFUrzVG5.jpeg?dl=1\" title=\"Screenshot_20260724_130429_Firefox\"><img src=\"https://global.d…</p>",
+    "post_number": 110,
+    "post_type": 1,
+    "reply_to_post_number": 109,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2013924,
+    "username": "user12",
+    "created_at": "2026-07-24T11:15:28.511Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"109\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>“<strong>Upcoming changes</strong>” will affect the forum’s theme when that forum is not using the Foundation theme?</p>\n</blockquote>\n</aside>\n<p>Yes, this is a common point of understandable confusion, but <em>all</em> themes use the Foundation basis.</p>\n<p>So yes, if your buttons don’t have any “own” styling (owned by your theme), they will inherit the basic styling and be impacted by things such as this:</p>\n<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"109\" data-topic=\"395331\">\n<div class=\"titl…</p>",
+    "post_number": 111,
+    "post_type": 1,
+    "reply_to_post_number": 109,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 2014281,
+    "username": "user19",
+    "created_at": "2026-07-24T22:10:35.694Z",
+    "cooked": "<p>Thanks for your explanation!</p>\n<p>Am I correct to conclude that, although the change to the Foundation theme is currently only an “opt in”, it will eventually be rolled out to my forum without an site setting for configuring the site to use the non-modernized Foundation theme?</p>\n<p>Obviously the theme changes I experienced earlier were entirely self-inflicted, as I was the one who enabled the change. If the ability to avoid the introduction of the changes will always remain under my control then I don’t need to worry about taking any action in anticipation of this “upcoming change” reaching its production roll out stage.</p>\n<p>Conversely, if there is not going to be a site setting to…</p>",
+    "post_number": 113,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 19,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2014727,
+    "username": "user12",
+    "created_at": "2026-07-27T09:04:10.009Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"113\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>Am I correct to conclude that, although the change to the Foundation theme is currently only an “opt in”, it will eventually be rolled out to my forum without an site setting for configuring the site to use the non-modernized Foundation theme?</p>\n</blockquote>\n</aside>\n<p>This is correct.</p>\n<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"113\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>I should instead start working now on carefully eva…</p>",
+    "post_number": 114,
+    "post_type": 1,
+    "reply_to_post_number": 113,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 2014750,
+    "username": "user19",
+    "created_at": "2026-07-27T09:44:33.324Z",
+    "cooked": "<p>Thanks for the clarification.</p>\n<aside class=\"quote no-group\" data-username=\"user12\" data-post=\"114\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>we have sent you a PM to follow up on it.</p>\n</blockquote>\n</aside>\n<p><img src=\"https://emoji.discourse-cdn.com/twitter/heart.png?v=15\" title=\":heart:\" class=\"emoji\" alt=\":heart:\" loading=\"lazy\" width=\"20\" height=\"20\"> Excellent support from the Discourse team, as always!</p>\n<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"113\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>the ability to avoid the intro…</p>",
+    "post_number": 115,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 5
+     }
+    ],
+    "reaction_users_count": 5,
+    "user_id": 19,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2019104,
+    "username": "user19",
+    "created_at": "2026-08-04T22:22:17.818Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user19\" data-post=\"113\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>I should instead start working now on carefully evaluating the impact of the change and determining which adjustments might be needed to maintain the current consistency of design of our bespoke theme.</p>\n</blockquote>\n</aside>\n<p>An update: I was a bit concerned because I had noticed a minor regression in my forum’s theme immediately after enabling “<strong>Modernize Foundation theme</strong>”, and feared this might indicate the introduction of even more significant regressions. Fortunately, after careful evaluation…</p>",
+    "post_number": 116,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 7
+     }
+    ],
+    "reaction_users_count": 7,
+    "user_id": 19,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 2019960,
+    "username": "user1",
+    "created_at": "2026-08-06T10:26:58.144Z",
+    "cooked": "<p>Thanks a bunch for sharing this feedback <img src=\"https://emoji.discourse-cdn.com/twitter/heart_hands.png?v=15\" title=\":heart_hands:\" class=\"emoji\" alt=\":heart_hands:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 117,
+    "post_type": 1,
+    "reply_to_post_number": 116,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   }
+  ]
+ },
+ "id": 395331
+}

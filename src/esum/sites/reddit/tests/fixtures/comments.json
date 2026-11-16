@@ -1,0 +1,141 @@
+[
+ {
+  "kind": "Listing",
+  "data": {
+   "children": [
+    {
+     "kind": "t3",
+     "data": {
+      "id": "fix001",
+      "name": "t3_fix001",
+      "title": "Sapphire Preferred retention offer DP",
+      "author": "example_op",
+      "subreddit": "churning",
+      "subreddit_name_prefixed": "r/churning",
+      "created_utc": 1790000000,
+      "score": 42,
+      "num_comments": 9,
+      "permalink": "/r/churning/comments/fix001/sapphire_preferred_retention_o/",
+      "url": "https://www.reddit.com/r/churning/comments/fix001/",
+      "is_self": true,
+      "selftext": "Called today, got 10k points after 1 year.",
+      "link_flair_text": "Data Point",
+      "locked": false,
+      "archived": false,
+      "over_18": false
+     }
+    }
+   ]
+  }
+ },
+ {
+  "kind": "Listing",
+  "data": {
+   "children": [
+    {
+     "kind": "t1",
+     "data": {
+      "id": "ca1",
+      "name": "t1_ca1",
+      "author": "user_a",
+      "body": "Same here, 10k for $95 fee.",
+      "created_utc": 1790000300,
+      "score": 12,
+      "parent_id": "t3_fix001",
+      "link_id": "t3_fix001",
+      "permalink": "/r/churning/comments/fix001/_/ca1/",
+      "replies": {
+       "kind": "Listing",
+       "data": {
+        "children": [
+         {
+          "kind": "t1",
+          "data": {
+           "id": "ca2",
+           "name": "t1_ca2",
+           "author": "example_op",
+           "body": "Nice, which month did you open?",
+           "created_utc": 1790000600,
+           "score": 3,
+           "parent_id": "t1_ca1",
+           "link_id": "t3_fix001",
+           "permalink": "/r/churning/comments/fix001/_/ca2/",
+           "replies": {
+            "kind": "Listing",
+            "data": {
+             "children": [
+              {
+               "kind": "more",
+               "data": {
+                "count": 0,
+                "name": "t1__",
+                "id": "_",
+                "parent_id": "t1_ca2",
+                "depth": 10,
+                "children": []
+               }
+              }
+             ]
+            }
+           }
+          }
+         }
+        ]
+       }
+      }
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "id": "cb1",
+      "name": "t1_cb1",
+      "author": "[deleted]",
+      "body": "[deleted]",
+      "created_utc": 1790000400,
+      "score": 1,
+      "parent_id": "t3_fix001",
+      "link_id": "t3_fix001",
+      "permalink": "/r/churning/comments/fix001/_/cb1/",
+      "replies": {
+       "kind": "Listing",
+       "data": {
+        "children": [
+         {
+          "kind": "t1",
+          "data": {
+           "id": "cb2",
+           "name": "t1_cb2",
+           "author": "user_b",
+           "body": "Got nothing, only the 'we value you' line.",
+           "created_utc": 1790000900,
+           "score": 5,
+           "parent_id": "t1_cb1",
+           "link_id": "t3_fix001",
+           "permalink": "/r/churning/comments/fix001/_/cb2/",
+           "replies": ""
+          }
+         }
+        ]
+       }
+      }
+     }
+    },
+    {
+     "kind": "more",
+     "data": {
+      "count": 2,
+      "name": "t1_cc1",
+      "id": "cc1",
+      "parent_id": "t3_fix001",
+      "depth": 0,
+      "children": [
+       "cc1",
+       "cc2"
+      ]
+     }
+    }
+   ]
+  }
+ }
+]

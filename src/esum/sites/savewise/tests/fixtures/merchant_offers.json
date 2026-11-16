@@ -1,0 +1,217 @@
+{
+ "data": {
+  "merchant": {
+   "logo_url": "https://api.getsavewise.com/logos/v1/d58ea89b7d90ff68.webp",
+   "merchant_id": 3419,
+   "merchant_name": "Walmart",
+   "normalized_merchant_name": "walmart",
+   "website_url": "walmart.com"
+  },
+  "offers": [
+   {
+    "offer": {
+     "additional_details": "",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T13:07:09.977907",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 600.0,
+     "offer_rate_raw": "600 Miles",
+     "offer_type": "Static Miles Earned",
+     "offer_type_enum": "SME",
+     "offer_type_symbol": "Miles",
+     "portal_merchant_url": "https://rove.com/shopping?merchantId=b948bba8-bb46-4ef2-a046-9c33f6fa4fef&referralCode=N3WR3NR2",
+     "unit_spent": null
+    },
+    "portal": {
+     "affiliate_link": "https://www.rovemiles.com/?signup&referralCode=N3WR3NR2",
+     "name": "Rove",
+     "sign_up_bonus": "1,500 miles (new users)",
+     "url": "https://www.rovemiles.com"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "Apparel, Accessories, and Jewelry: 12.0% | Beauty: 7.8% | Home Decor, Bath & Shower, Bedding, Home Management and Furniture: 7.5% | Electronics, Toys, Seasonal, Books and Celebration: 6.6% | Stationery, Sporting Goods, Auto, Hardware, Tools, DIY and Patio: 5.7% | All Other Purchases: 0.9%",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T12:37:06.159831",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 12.0,
+     "offer_rate_raw": "12.0% cashback",
+     "offer_type": "Static Percentage Cashback",
+     "offer_type_enum": "SPC",
+     "offer_type_symbol": "%",
+     "portal_merchant_url": "https://price.com/coupons/walmart?campaign=KC4UUBQSHS",
+     "unit_spent": null
+    },
+    "portal": {
+     "affiliate_link": "https://price.com/?campaign=KC4UUBQSHS",
+     "name": "Price.com",
+     "sign_up_bonus": "$10 (new users)",
+     "url": "https://www.price.com"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "",
+     "bonus_offer_rate": 16.5,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T13:10:24.503101",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 11.0,
+     "offer_rate_raw": "Up to 11% Cash Back",
+     "offer_type": "Static Percentage Cashback",
+     "offer_type_enum": "SPC",
+     "offer_type_symbol": "%",
+     "portal_merchant_url": "https://www.befrugal.com/store/walmart/?ref=VXQCXLN",
+     "unit_spent": null
+    },
+    "portal": {
+     "affiliate_link": "https://www.befrugal.com/rs/VXQCXLN/",
+     "name": "BeFrugal",
+     "sign_up_bonus": "$10 (new users)",
+     "url": "https://www.befrugal.com"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T11:49:08.691379",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 8.0,
+     "offer_rate_raw": "8%",
+     "offer_type": "Static Percentage Cashback",
+     "offer_type_enum": "SPC",
+     "offer_type_symbol": "%",
+     "portal_merchant_url": "https://www.topcashback.com/ref/getsavewise/walmart?ihr=INsw/",
+     "unit_spent": 1.0
+    },
+    "portal": {
+     "affiliate_link": "https://www.topcashback.com/join-us/save-wise/ref/getsavewise",
+     "name": "TopCashBack",
+     "sign_up_bonus": "$15 (new users)",
+     "url": "https://www.topcashback.com/"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T12:13:16.006276",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 8.0,
+     "offer_rate_raw": "Up to $8",
+     "offer_type": "Static Dollar Cashback",
+     "offer_type_enum": "SDC",
+     "offer_type_symbol": "$",
+     "portal_merchant_url": "https://www.activejunky.com/retailer/walmart?inviter_id=1942448",
+     "unit_spent": 1.0
+    },
+    "portal": {
+     "affiliate_link": "https://www.activejunky.com/invite/1942448",
+     "name": "ActiveJunky",
+     "sign_up_bonus": "$5.00 (new users)",
+     "url": "https://www.activejunky.com/"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "You won't get Cashback on:Bulk purchases (over 10 units per item)Food, Pets and Supplies, Cook and DinePharmacy/OTC, Personal Care, BeautyHousehold Paper/Household ChemicalsBaby Consumables, Baby HardlinesBaby Consumables Hardlines, ToysBaby/Toddler/Boys/Girls Apparel, ShoesIntimate Apparel/Womens Apparel, JewelryMens Apparel, AccessoriesPrecious Metals Ecomm, D82 CollectiblesElectronics, Wireless, Media & GamingCameras and Supplies, Photo ServicesVideo Game Hardware, Books & MagazinesArts, Crafts, Sewing & Fabric, FurnitureHome Decor, Bath and Shower, CelebrationHome Management, Patio and GardenHardware & Tools/Do It Yourself, BeddingSporting Goods, Horticulture, SeasonalAutomotive, Automotive Tires, StationerySelect Apple, WeatherTech, Sonos & BeatsAny Gift Card, Voucher or store credit purchaseAny Gift Card or Voucher redemptionAny store credit redemptionPurchases made with Vouchers or Promo codes not featured on our platformTaxes \u00b7 Service charges \u00b7 Shipping and delivery",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T13:05:08.028416",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 8.0,
+     "offer_rate_raw": "Up to $8 Cashback",
+     "offer_type": "Static Dollar Cashback",
+     "offer_type_enum": "SDC",
+     "offer_type_symbol": "$",
+     "portal_merchant_url": "https://shopback.com/walmart?raf=TooHWL",
+     "unit_spent": null
+    },
+    "portal": {
+     "affiliate_link": "https://app.shopback.com/0gFmCl2L5Ub",
+     "name": "Shopback",
+     "sign_up_bonus": "$15 (new users)",
+     "url": "https://www.shopback.com"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "Walmart carries an amazing targeted selection of electronics, home improvement, movies, toys, fitness, jewelry, sporting goods, books, and more for yo...",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T13:15:36.743365",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 8.0,
+     "offer_rate_raw": "8 SB/$",
+     "offer_type": "Points Per Dollar",
+     "offer_type_enum": "PPD",
+     "offer_type_symbol": "Points/$",
+     "portal_merchant_url": "https://www.swagbucks.com/shop/walmart-coupons",
+     "unit_spent": 1.0
+    },
+    "portal": {
+     "affiliate_link": "https://www.swagbucks.com/profile/r_219238070?rp=1",
+     "name": "Swagbucks",
+     "sign_up_bonus": "1,000 points (new users)",
+     "url": "https://www.swagbucks.com"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "Online",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T12:47:05.379100",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 5.0,
+     "offer_rate_raw": "5X miles",
+     "offer_type": "Points Per Dollar",
+     "offer_type_enum": "PPD",
+     "offer_type_symbol": "Points/$",
+     "portal_merchant_url": "https://capitaloneoffers.com",
+     "unit_spent": 1.0
+    },
+    "portal": {
+     "affiliate_link": "",
+     "name": "CapitalOneOffers",
+     "sign_up_bonus": "",
+     "url": "https://capitaloneoffers.com/"
+    }
+   },
+   {
+    "offer": {
+     "additional_details": "",
+     "bonus_offer_rate": null,
+     "merchant_id": 3419,
+     "offer_date": "2026-11-11T13:02:47.486556",
+     "offer_date_iso": "2026-11-11",
+     "offer_rate": 2.0,
+     "offer_rate_raw": "200",
+     "offer_type": "Static Percentage Cashback",
+     "offer_type_enum": "SPC",
+     "offer_type_symbol": "%",
+     "portal_merchant_url": "https://capitaloneshopping.com/s/walmart.com/coupon",
+     "unit_spent": 1.0
+    },
+    "portal": {
+     "affiliate_link": "https://capitaloneshopping.com/r/c8572613-b04f-4f07-8194-c66a553c3456",
+     "name": "CapitalOneShopping",
+     "sign_up_bonus": "$80 (new users)",
+     "url": "https://www.capitaloneshopping.com/"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "dataDate": "2026-11-11",
+  "isStaleData": false,
+  "message": null,
+  "nextUpdateTime": null
+ }
+}

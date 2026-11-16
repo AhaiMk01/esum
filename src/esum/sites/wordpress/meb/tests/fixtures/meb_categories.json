@@ -1,0 +1,37 @@
+[
+ {
+  "id": 54,
+  "count": 781,
+  "name": "Credit Cards",
+  "slug": "credit-cards",
+  "parent": 0
+ },
+ {
+  "id": 53,
+  "count": 533,
+  "name": "Gift Cards",
+  "slug": "gift-cards",
+  "parent": 0
+ },
+ {
+  "id": 6,
+  "count": 411,
+  "name": "Quick Hits",
+  "slug": "quick-hits",
+  "parent": 0
+ },
+ {
+  "id": 12,
+  "count": 250,
+  "name": "MS Hints",
+  "slug": "ms-hints",
+  "parent": 0
+ },
+ {
+  "id": 19,
+  "count": 136,
+  "name": "Miles",
+  "slug": "miles",
+  "parent": 0
+ }
+]

@@ -1,0 +1,102 @@
+{
+ "button": true,
+ "expanded": true,
+ "rows": [
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-NRT-ZG-25-20270120",
+   "label": "From 706 US dollars round trip total. Nonstop flight with ZIPAIR Tokyo. Leaves San Francisco International Airport at 3:45 PM on Wednesday, January 20 and arrives at Narita International Airport at 7:55 PM on Thursday, January 21. Total duration 11 hr 10 min.   Select flight",
+   "price": "706 US dollars",
+   "token": "CghTRVNTSU9OMBIEWkcyNRoLCMinBBACGgNVU0Q4HHDIpwQ=",
+   "co2": "430000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-HKG-CX-873-20270120,HKG-NRT-CX-526-20270122",
+   "label": "From 865 US dollars round trip total. 1 stop flight with Cathay Pacific. Leaves San Francisco International Airport at 10:55 PM on Wednesday, January 20 and arrives at Narita International Airport at 1:10 PM on Friday, January 22. Total duration 21 hr 15 min.  Layover (1 of 1) is a 1 hr 55 min layover at Hong Kong International Airport in Hong Kong. Select flight",
+   "price": "865 US dollars",
+   "token": "CghTRVNTSU9OMBILQ1g4NzN8Q1g1MjYaCwiTowUQAhoDVVNEOBxwk6MF",
+   "co2": "1061000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-SEA-AS-68-20270120,SEA-NRT-AS-123-20270120",
+   "label": "From 1132 US dollars round trip total. 1 stop flight with Alaska. Leaves San Francisco International Airport at 7:00 AM on Wednesday, January 20 and arrives at Narita International Airport at 3:25 PM on Thursday, January 21. Total duration 15 hr 25 min.  Layover (1 of 1) is a 2 hr 45 min layover at Seattle-Tacoma International Airport in Seattle. Select flight",
+   "price": "1132 US dollars",
+   "token": "CghTRVNTSU9OMBIKQVM2OHxBUzEyMxoLCN/zBhACGgNVU0Q4HHDf8wY=",
+   "co2": "575000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-NRT-UA-837-20270120",
+   "label": "From 1175 US dollars round trip total. Nonstop flight with United. Leaves San Francisco International Airport at 10:45 AM on Wednesday, January 20 and arrives at Narita International Airport at 3:05 PM on Thursday, January 21. Total duration 11 hr 20 min.   Select flight",
+   "price": "1175 US dollars",
+   "token": "CghTRVNTSU9OMBIFVUE4MzcaCwj8lQcQAhoDVVNEOBxw/JUH",
+   "co2": "561000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-NRT-NH-7-20270120",
+   "label": "From 1175 US dollars round trip total. Nonstop flight with ANA. Leaves San Francisco International Airport at 11:05 AM on Wednesday, January 20 and arrives at Narita International Airport at 3:25 PM on Thursday, January 21. Total duration 11 hr 20 min.   Select flight",
+   "price": "1175 US dollars",
+   "token": "CghTRVNTSU9OMBIDTkg3GgsI/JUHEAIaA1VTRDgccPyVBw==",
+   "co2": "621000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-NRT-JL-57-20270120",
+   "label": "From 1175 US dollars round trip total. Nonstop flight with JAL. Leaves San Francisco International Airport at 11:50 AM on Wednesday, January 20 and arrives at Narita International Airport at 4:00 PM on Thursday, January 21. Total duration 11 hr 10 min.   Select flight",
+   "price": "1175 US dollars",
+   "token": "CghTRVNTSU9OMBIESkw1NxoLCPyVBxACGgNVU0Q4HHD8lQc=",
+   "co2": "532000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-HKG-CX-873-20270120,HKG-NRT-CX-504-20270122",
+   "label": "From 865 US dollars round trip total. 1 stop flight with Cathay Pacific. Leaves San Francisco International Airport at 10:55 PM on Wednesday, January 20 and arrives at Narita International Airport at 2:05 PM on Friday, January 22. Total duration 22 hr 10 min.  Layover (1 of 1) is a 2 hr 45 min layover at Hong Kong International Airport in Hong Kong. Select flight",
+   "price": "865 US dollars",
+   "token": "CghTRVNTSU9OMBILQ1g4NzN8Q1g1MDQaCwiTowUQAhoDVVNEOBxwk6MF",
+   "co2": "1049000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-HKG-CX-879-20270120,HKG-NRT-CX-520-20270122",
+   "label": "From 903 US dollars round trip total. 1 stop flight with Cathay Pacific. Leaves San Francisco International Airport at 11:25 AM on Wednesday, January 20 and arrives at Narita International Airport at 3:30 PM on Friday, January 22. Total duration 35 hr 5 min.  Layover (1 of 1) is a 15 hr 35 min layover at Hong Kong International Airport in Hong Kong. Select flight",
+   "price": "903 US dollars",
+   "token": "CghTRVNTSU9OMBILQ1g4Nzl8Q1g1MjAaCwjrwAUQAhoDVVNEOBxw68AF",
+   "co2": "1049000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-ICN-OZ-211-20270120,ICN-NRT-OZ-102-20270122",
+   "label": "From 1154 US dollars round trip total. 1 stop flight with Asiana Airlines. Leaves San Francisco International Airport at 11:00 PM on Wednesday, January 20 and arrives at Narita International Airport at 11:20 AM on Friday, January 22. Total duration 19 hr 20 min.  Layover (1 of 1) is a 3 hr 50 min layover at Incheon International Airport in Seoul. Select flight",
+   "price": "1154 US dollars",
+   "token": "CghTRVNTSU9OMBILT1oyMTF8T1oxMDIaCwiphQcQAhoDVVNEOBxwqYUH",
+   "co2": "603000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-CTS-UA-234-20270120,CTS-NRT-GK-120-20270121",
+   "label": "From 1602 US dollars round trip total. 1 stop flight with United and Jetstar. Leaves San Francisco International Airport at 10:30 AM on Wednesday, January 20 and arrives at Narita International Airport at 10:25 PM on Thursday, January 21. Total duration 18 hr 55 min.  Layover (1 of 1) is a 6 hr 25 min layover at New Chitose Airport in Sapporo. Select flight",
+   "price": "1602 US dollars",
+   "token": "CghTRVNTSU9OMBILVUEyMzR8R0sxMjAaCwip4wkQAhoDVVNEOBxwqeMJ",
+   "co2": "483000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-SEA-DL-2721-20270120,SEA-ICN-DL-197-20270120,ICN-NRT-KE-705-20270121",
+   "label": "From 1222 US dollars round trip total. 2 stops flight with Delta and Korean Air. Leaves San Francisco International Airport at 6:05 AM on Wednesday, January 20 and arrives at Narita International Airport at 9:25 PM on Thursday, January 21. Total duration 22 hr 20 min.  Layover (1 of 2) is a 4 hr 20 min layover at Seattle-Tacoma International Airport in Seattle. Layover (2 of 2) is a 1 hr 10 min layover at Incheon International Airport in Seoul. Select flight",
+   "price": "1222 US dollars",
+   "token": "CghTRVNTSU9OMBISREwyNzIxfERMMTk3fEtFNzA1GgsIuboHEAIaA1VTRDgccLm6Bw==",
+   "co2": "858000",
+   "co2_typical": "630000"
+  },
+  {
+   "flights": "https://www.travelimpactmodel.org/lookup/flight?itinerary=SFO-SAN-AS-2358-20270120,SAN-NRT-JL-65-20270120",
+   "label": "From 1193 US dollars round trip total. 1 stop flight with Alaska and JAL. Operated by Horizon Air as Alaska Horizon. Leaves San Francisco International Airport at 6:40 AM on Wednesday, January 20 and arrives at Narita International Airport at 4:45 PM on Thursday, January 21. Total duration 17 hr 5 min.  Layover (1 of 1) is a 3 hr 25 min layover at San Diego International Airport in San Diego. Select flight",
+   "price": "1193 US dollars",
+   "token": "CghTRVNTSU9OMBILQVMyMzU4fEpMNjUaCwjbowcQAhoDVVNEOBxw26MH",
+   "co2": "674000",
+   "co2_typical": "630000"
+  }
+ ]
+}

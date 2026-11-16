@@ -1,0 +1,72 @@
+[
+ {
+  "id": 2322250,
+  "parent": 0,
+  "author": 0,
+  "author_name": "Bh77",
+  "date_gmt": "2026-05-14T21:02:05",
+  "content": {
+   "rendered": "<p>Let the games&#8230; begin.</p>\n"
+  }
+ },
+ {
+  "id": 2322256,
+  "parent": 0,
+  "author": 0,
+  "author_name": "Jeff K",
+  "date_gmt": "2026-05-14T21:10:39",
+  "content": {
+   "rendered": "<p>Anyone know if this is calendar month or by bubbling cycle? Not called out in T&amp;C.</p>\n"
+  }
+ },
+ {
+  "id": 2322259,
+  "parent": 0,
+  "author": 0,
+  "author_name": "Young",
+  "date_gmt": "2026-05-14T21:15:45",
+  "content": {
+   "rendered": "<p>OMG this is a gold mine!!</p>\n"
+  }
+ },
+ {
+  "id": 2322264,
+  "parent": 0,
+  "author": 0,
+  "author_name": "David",
+  "date_gmt": "2026-05-14T21:22:49",
+  "content": {
+   "rendered": "<p>Honestly,  not as good as the previous deal of 50 off 100 but still can be good if combined with an active Newegg promo if applicable.  The 50 off 100 with additional $5 for first Paze transaction was really good.  I got a 1TB NvME SSD for $50 after 50 off. The same 1TB NvME is being sold at $300 today&#8230;&#8212;6 times.</p>\n"
+  }
+ },
+ {
+  "id": 2322265,
+  "parent": 2322259,
+  "author": 0,
+  "author_name": "minnu",
+  "date_gmt": "2026-05-14T21:22:56",
+  "content": {
+   "rendered": "<p>sarcasm?</p>\n"
+  }
+ },
+ {
+  "id": 2442505,
+  "parent": 0,
+  "author": 0,
+  "author_name": "RAM",
+  "date_gmt": "2026-10-25T23:09:48",
+  "content": {
+   "rendered": "<p><a class='hint hint--right' data-ucm_user_id='6' href='https://www.doctorofcredit.com/author/chucksithe/' rel='author external'><img alt='' src='https://secure.gravatar.com/avatar/SCRUBBED?s=30&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/SCRUBBED?s=60&#038;d=mm&#038;r=g 2x' class='avatar avatar-30 photo' height='30' width='30' loading='lazy' decoding='async'/>&nbsp;Chuck</a>  typo in update: should read <span>1,500$/month  and not 15,000/month (also different than 15,000 points/month)</span></p>\n"
+  }
+ },
+ {
+  "id": 2442528,
+  "parent": 2442505,
+  "author": 1,
+  "author_name": "William Charles",
+  "date_gmt": "2026-10-25T23:56:55",
+  "content": {
+   "rendered": "<p>I don&#8217;t think it&#8217;s a typo? Seems accurate to me</p>\n"
+  }
+ }
+]

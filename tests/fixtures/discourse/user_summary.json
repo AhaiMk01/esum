@@ -1,0 +1,33 @@
+{
+ "user_summary": {
+  "likes_given": 56011,
+  "likes_received": 44063,
+  "topics_entered": 85504,
+  "posts_read_count": 292884,
+  "days_visited": 3359,
+  "topic_count": 226,
+  "post_count": 19071,
+  "time_read": 16808964,
+  "recent_time_read": 0,
+  "top_categories": [
+   {
+    "id": 2,
+    "name": "Feature",
+    "topic_count": 52,
+    "post_count": 6239
+   },
+   {
+    "id": 6,
+    "name": "Product Support",
+    "topic_count": 0,
+    "post_count": 4720
+   },
+   {
+    "id": 1,
+    "name": "Bug",
+    "topic_count": 4,
+    "post_count": 2651
+   }
+  ]
+ }
+}

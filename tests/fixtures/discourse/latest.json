@@ -1,0 +1,152 @@
+{
+ "topic_list": {
+  "more_topics_url": "/latest?no_definitions=true&order=created&page=1",
+  "per_page": 30,
+  "topics": [
+   {
+    "id": 415745,
+    "title": "Webinar: Building High-Impact Communities with Lean Teams",
+    "slug": "webinar-building-high-impact-communities-with-lean-teams",
+    "posts_count": 1,
+    "reply_count": 0,
+    "highest_post_number": 1,
+    "created_at": "2026-10-26T14:43:45.190Z",
+    "last_posted_at": "2026-10-26T14:43:45.333Z",
+    "bumped_at": "2026-10-26T14:43:45.333Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 35,
+    "like_count": 3,
+    "category_id": 216,
+    "excerpt": "📅 November 12, 2026 11:00 AM → November 12, 2026 12:00 PM (America/New_York) · https://zoom.us/j/95332228937\n Community professionals are being asked to think more strategically, demonstrate measurabl"
+   },
+   {
+    "id": 415723,
+    "title": "Group page `og:title` lowercases everything after the first letter of the Full name",
+    "slug": "group-page-og-title-lowercases-everything-after-the-first-letter-of-the-full-name",
+    "posts_count": 2,
+    "reply_count": 0,
+    "highest_post_number": 2,
+    "created_at": "2026-10-26T11:34:14.954Z",
+    "last_posted_at": "2026-10-26T14:38:23.561Z",
+    "bumped_at": "2026-10-26T14:38:23.561Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 43,
+      "name": "embedding",
+      "slug": "embedding"
+     }
+    ],
+    "views": 35,
+    "like_count": 0,
+    "category_id": 1,
+    "excerpt": "What’s happening \nWe have a group whose Full name is set to “Utah - St. George”. On the group page itself, the name displays correctly. But when the group link is pasted into Slack, the preview shows "
+   },
+   {
+    "id": 415698,
+    "title": "Perspective shutdown Dec 31: what happens to scores when the API returns an error?",
+    "slug": "perspective-shutdown-dec-31-what-happens-to-scores-when-the-api-returns-an-error",
+    "posts_count": 1,
+    "reply_count": 0,
+    "highest_post_number": 1,
+    "created_at": "2026-10-26T04:49:45.226Z",
+    "last_posted_at": "2026-10-26T04:49:45.332Z",
+    "bumped_at": "2026-10-26T04:49:45.332Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 228,
+      "name": "perspective-api",
+      "slug": "perspective-api"
+     }
+    ],
+    "views": 30,
+    "like_count": 1,
+    "category_id": 6,
+    "excerpt": "For the admins here running the Perspective plugin: with the Dec 31 shutdown approaching, I looked at how the plugin handles responses without attributeScores, and it defaults them to 0.0 — silently t"
+   },
+   {
+    "id": 415529,
+    "title": "Anonymous visitors can now browse public chat channels on new sites by default",
+    "slug": "anonymous-visitors-can-now-browse-public-chat-channels-on-new-sites-by-default",
+    "posts_count": 2,
+    "reply_count": 0,
+    "highest_post_number": 2,
+    "created_at": "2026-10-26T02:36:49.399Z",
+    "last_posted_at": "2026-10-26T12:53:53.417Z",
+    "bumped_at": "2026-10-26T12:53:53.417Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 317,
+      "name": "chat",
+      "slug": "chat"
+     }
+    ],
+    "views": 60,
+    "like_count": 9,
+    "category_id": 67,
+    "excerpt": "On new Discourse sites, chat channels are now visible to everyone by default, including anonymous visitors in a read-only view. \nThis means visitors can discover your community’s chat activity without"
+   },
+   {
+    "id": 415692,
+    "title": "Markdown Endpoints: Your Community, in a Format That AI Agents Can Read",
+    "slug": "markdown-endpoints-your-community-in-a-format-that-ai-agents-can-read",
+    "posts_count": 1,
+    "reply_count": 0,
+    "highest_post_number": 1,
+    "created_at": "2026-10-26T00:45:27.168Z",
+    "last_posted_at": "2026-10-26T00:45:27.222Z",
+    "bumped_at": "2026-10-26T00:45:27.222Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 30,
+    "like_count": 3,
+    "category_id": 13,
+    "excerpt": "Discourse now serves every topic and topic list as Markdown, so people and AI agents can read your community&#39;s answers without the HTML clutter. \n\nThis is a companion discussion topic for the orig"
+   },
+   {
+    "id": 415684,
+    "title": "What’s your go-to user theme on Discourse?",
+    "slug": "what-s-your-go-to-user-theme-on-discourse",
+    "posts_count": 8,
+    "reply_count": 1,
+    "highest_post_number": 8,
+    "created_at": "2026-10-25T19:33:35.225Z",
+    "last_posted_at": "2026-10-26T17:02:45.212Z",
+    "bumped_at": "2026-10-26T17:02:45.212Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 146,
+    "like_count": 5,
+    "category_id": 124,
+    "excerpt": "Mine is Foundation."
+   }
+  ]
+ }
+}

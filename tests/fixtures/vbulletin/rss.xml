@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>FlyerTalk Forums</title>
+		<link>https://www.flyertalk.com/forum/</link>
+		<description>FlyerTalk is a living, growing community where frequent travelers around the world come to exchange knowledge and experiences about everything miles and points related.</description>
+		<language>en</language>
+		<lastBuildDate>Sun, 08 Nov 2026 04:15:47 GMT</lastBuildDate>
+		<generator>vBulletin</generator>
+		<ttl>5</ttl>
+		<image>
+			<url>https://www.flyertalk.com/forum/images/misc/rss.jpg</url>
+			<title>FlyerTalk Forums</title>
+			<link>https://www.flyertalk.com/forum/</link>
+		</image>
+		<item>
+			<title>Stunned</title>
+			<link>https://www.flyertalk.com/forum/american-airlines-aadvantage/2226141-stunned.html</link>
+			<pubDate>Sun, 08 Nov 2026 01:40:35 GMT</pubDate>
+			<description>I had a business trip to Chicago Friday with return today...paid F on united on the way from MSP to ORD and F paid on the way back on AA (Republic AE)....Ok on united but great on the AE.....predeparture drinks of your choice...in the air asked for...</description>
+			<content:encoded><![CDATA[<div>I had a business trip to Chicago Friday with return today...paid F on united on the way from MSP to ORD and F paid on the way back on AA (Republic AE)....Ok on united but great on the AE.....predeparture drinks of your choice...in the air asked for white wine and the cabin attendant brought out the bottle (regular full bottle) to show me if I liked it...I did and it was good....great service and on a Saturday return 22 minutes early.....my United flight did not come close!!!!!  Old seats....so so service.....so yes stunned but I thanked the cabin attendant for great service....</div>
+
+]]></content:encoded>
+			<category domain="https://www.flyertalk.com/forum/american-airlines-aadvantage-733/">American Airlines | AAdvantage</category>
+			<dc:creator>bcj1949</dc:creator>
+			<guid isPermaLink="true">https://www.flyertalk.com/forum/american-airlines-aadvantage/2226141-stunned.html</guid>
+		</item>
+		<item>
+			<title>Error on View Premier Status…?</title>
+			<link>https://www.flyertalk.com/forum/united-airlines-mileageplus/2226139-error-view-premier-statuso.html</link>
+			<pubDate>Sun, 08 Nov 2026 00:02:27 GMT</pubDate>
+			<description>Sorry if this was reported before… 
+ 
+When I log into my account and go to View Premier Status and Future Flights… the website says I’ll have 10,730 but the bar graph shows me below 10K.   I’ve done the math and 10,730 is correct (whew Gold for one...</description>
+			<content:encoded><![CDATA[<div>Sorry if this was reported before…<br />
+<br />
+When I log into my account and go to View Premier Status and Future Flights… the website says I’ll have 10,730 but the bar graph shows me below 10K.   I’ve done the math and 10,730 is correct (whew Gold for one more year).    Just wondering if the visual bar error is leading others to think they’re not reaching milestones.<br />
+<br />
+<img src="https://cimg5.ibsrv.net/gimg/www.flyertalk.com-vbulletin/1020x2000/img_8427_c61cc5d6f282ebeddfb661168f25da43d738f49a.jpeg" alt="" class="post_inline_image" loading="lazy" /><br />
+ </div>
+
+]]></content:encoded>
+			<category domain="https://www.flyertalk.com/forum/united-airlines-mileageplus-681/">United Airlines | MileagePlus</category>
+			<dc:creator>clintonuws</dc:creator>
+			<guid isPermaLink="true">https://www.flyertalk.com/forum/united-airlines-mileageplus/2226139-error-view-premier-statuso.html</guid>
+		</item>
+		<item>
+			<title>UK to EU on LH - EES on stopover at FRA</title>
+			<link>https://www.flyertalk.com/forum/lufthansa-austrian-swiss-brussels-lot-ita-other-partners-miles-more/2226131-uk-eu-lh-ees-stopover-fra.html</link>
+			<pubDate>Sat, 07 Nov 2026 19:40:02 GMT</pubDate>
+			<description>Hi -  have a rather convoluted itinerary coming up in December which takes me three flights in order to get to my final destination. Beginning in the UK, the stopovers and final stop are all EU and there is 1.5 to 2 hours connection time at each...</description>
+			<content:encoded><![CDATA[<div>Hi - <span style="color:#000000"> have a rather convoluted itinerary coming up in December which takes me three flights in order to get to my final destination. Beginning in the UK, the stopovers and final stop are all EU and there is 1.5 to 2 hours connection time at each stopover, all on the one ticket.</span><br />
+<br />
+As I understand it, I need to go thru the EES at my first port of call, which is a stopover at FRA, scheduled for 80 mins. Do I stay airside for this EES entry? If so, what is the process from leaving the first flight to getting to the second? If it helps, I have SEN status with LH, arriving on LH and departing FRA on LH codeshare operated by Air Dolomiti.</div>
+
+]]></content:encoded>
+			<category domain="https://www.flyertalk.com/forum/lufthansa-austrian-swiss-brussels-lot-ita-other-partners-miles-more-495/"><![CDATA[Lufthansa, Austrian, Swiss, Brussels, LOT, ITA and Other Partners | Miles & More]]></category>
+			<dc:creator>PAL62V</dc:creator>
+			<guid isPermaLink="true">https://www.flyertalk.com/forum/lufthansa-austrian-swiss-brussels-lot-ita-other-partners-miles-more/2226131-uk-eu-lh-ees-stopover-fra.html</guid>
+		</item>
+	</channel>
+</rss>

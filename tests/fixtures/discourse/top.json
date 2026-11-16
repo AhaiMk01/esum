@@ -1,0 +1,158 @@
+{
+ "topic_list": {
+  "more_topics_url": "/top?page=1&per_page=50&period=yearly",
+  "per_page": 50,
+  "topics": [
+   {
+    "id": 393915,
+    "title": "Self-Hosting Discourse Just Got a Whole Lot Easier",
+    "slug": "self-hosting-discourse-just-got-a-whole-lot-easier",
+    "posts_count": 40,
+    "reply_count": 24,
+    "highest_post_number": 49,
+    "created_at": "2026-01-20T19:28:56.796Z",
+    "last_posted_at": "2026-10-12T18:06:32.916Z",
+    "bumped_at": "2026-10-12T18:06:32.916Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 824,
+      "name": "install",
+      "slug": "install"
+     }
+    ],
+    "views": 4380,
+    "like_count": 326,
+    "category_id": 67,
+    "excerpt": "We’re excited to announce a major update to how you can self-host Discourse. Whether you’ve been curious about running your own Discourse instance or found the setup process daunting in the past, toda"
+   },
+   {
+    "id": 411337,
+    "title": "Live: Discord-style voice and video rooms, now bundled with Discourse :studio_microphone:",
+    "slug": "live-discord-style-voice-and-video-rooms-now-bundled-with-discourse",
+    "posts_count": 80,
+    "reply_count": 59,
+    "highest_post_number": 88,
+    "created_at": "2026-09-01T18:11:51.603Z",
+    "last_posted_at": "2026-10-26T09:54:26.941Z",
+    "bumped_at": "2026-10-26T09:54:26.941Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 1199,
+      "name": "voice",
+      "slug": "voice"
+     }
+    ],
+    "views": 3577,
+    "like_count": 277,
+    "category_id": 67,
+    "excerpt": ":warning: We have just renamed this from Voice to Live. The plugin is now called Discourse Live, or just Live. \n\nLate last year we shared Resenha, an experiment that added Discord-style voice and vide"
+   },
+   {
+    "id": 400863,
+    "title": "Discourse is Not Going Closed Source",
+    "slug": "discourse-is-not-going-closed-source",
+    "posts_count": 20,
+    "reply_count": 4,
+    "highest_post_number": 21,
+    "created_at": "2026-04-17T03:20:48.297Z",
+    "last_posted_at": "2026-06-25T16:20:05.393Z",
+    "bumped_at": "2026-06-25T16:20:05.393Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 4995,
+    "like_count": 257,
+    "category_id": 13,
+    "excerpt": "Cal.com have announced they’re closing their codebase and will no longer be an open-source product. Their reasoning is that AI has made open source too dangerous for SaaS companies. Code gets scanned "
+   },
+   {
+    "id": 389056,
+    "title": "Resenha - Add Discord-style Video and Voice Rooms and Calls to Your Community :studio_microphone:",
+    "slug": "resenha-add-discord-style-video-and-voice-rooms-and-calls-to-your-community",
+    "posts_count": 84,
+    "reply_count": 51,
+    "highest_post_number": 88,
+    "created_at": "2025-11-19T16:34:26.221Z",
+    "last_posted_at": "2026-10-10T12:28:41.771Z",
+    "bumped_at": "2026-10-10T12:28:41.771Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 7045,
+    "like_count": 425,
+    "category_id": 22,
+    "excerpt": "IMPORTANT: As of 1st of September 2026, this is now a bundled plugin in Discourse core, and renamed to “Voice”. You now just need to enable it from the admin page. As of 2026-10-20 it is now called “L"
+   },
+   {
+    "id": 399743,
+    "title": "Embed Discourse as a full comment system on your site",
+    "slug": "embed-discourse-as-a-full-comment-system-on-your-site",
+    "posts_count": 28,
+    "reply_count": 16,
+    "highest_post_number": 39,
+    "created_at": "2026-04-01T18:30:10.932Z",
+    "last_posted_at": "2026-10-10T17:04:43.045Z",
+    "bumped_at": "2026-10-10T17:04:43.045Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 43,
+      "name": "embedding",
+      "slug": "embedding"
+     }
+    ],
+    "views": 3336,
+    "like_count": 137,
+    "category_id": 67,
+    "excerpt": "Discourse’s embedding system lets you show topic comments on external sites via an iframe — but until now, the experience was read-only. Visitors had to click through to your Discourse site to reply, "
+   },
+   {
+    "id": 395632,
+    "title": "You're invited to try the Discourse Free plan beta!",
+    "slug": "youre-invited-to-try-the-discourse-free-plan-beta",
+    "posts_count": 41,
+    "reply_count": 22,
+    "highest_post_number": 45,
+    "created_at": "2026-02-10T19:37:41.381Z",
+    "last_posted_at": "2026-08-24T12:16:49.839Z",
+    "bumped_at": "2026-08-24T12:16:49.839Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 1109,
+      "name": "free-plan",
+      "slug": "free-plan"
+     }
+    ],
+    "views": 3065,
+    "like_count": 274,
+    "category_id": 67,
+    "excerpt": "From the very early days of Discourse, our mission has always been to empower communities of all sizes and budgets. Today, we are making it even easier to get started with Discourse on our brand new F"
+   }
+  ]
+ }
+}

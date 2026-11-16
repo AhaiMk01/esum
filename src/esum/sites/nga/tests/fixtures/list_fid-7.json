@@ -1,0 +1,170 @@
+{
+ "data": {
+  "__GLOBAL": {
+   "_ATTACH_BASE_VIEW": "img.nga.cn/attachments"
+  },
+  "__ROWS": 10083248,
+  "__T": [
+   {
+    "tid": 44191387,
+    "fid": -7,
+    "quote_from": 0,
+    "icon": 0,
+    "topic_misc": "AQAAACE",
+    "author": null,
+    "authorid": 0,
+    "subject": "帖子发布或回复时间超过限制",
+    "type": 0,
+    "postdate": 0,
+    "lastpost": 0,
+    "lastposter": "",
+    "replies": 0,
+    "lastmodify": 1793115904,
+    "recommend": 10,
+    "jdata": null,
+    "attachs": "",
+    "content": "",
+    "ispage": "",
+    "parent": null,
+    "author_info": null,
+    "denied": true,
+    "error": "帖子发布或回复时间超过限制"
+   },
+   {
+    "tid": 47795676,
+    "fid": 843,
+    "quote_from": 0,
+    "topic_misc": null,
+    "author": "Jason2012514",
+    "authorid": 64744590,
+    "subject": "[欧洲]无尼古丁一代：这不尼古丁随便获取嘛",
+    "type": 0,
+    "postdate": 1793093900,
+    "lastpost": 1793128863,
+    "lastposter": "书墨点山河",
+    "replies": 9,
+    "lastmodify": 1793128863,
+    "recommend": 0,
+    "jdata": null,
+    "tpcurl": "/read.php?tid=47795676",
+    "parent": {
+     "0": 843,
+     "2": "国际新闻"
+    }
+   },
+   {
+    "tid": 47797960,
+    "fid": -7955747,
+    "quote_from": 0,
+    "topic_misc": null,
+    "author": "labolo",
+    "authorid": 66911093,
+    "subject": "感觉很烦，为什么每一段恋爱都想要我给她的生活兜底",
+    "type": 0,
+    "postdate": 1793126872,
+    "lastpost": 1793128834,
+    "lastposter": "淋淋漓漓",
+    "replies": 6,
+    "lastmodify": 1793128834,
+    "recommend": 0,
+    "jdata": null,
+    "tpcurl": "/read.php?tid=47797960",
+    "parent": {
+     "0": -7955747,
+     "2": "晴风村"
+    }
+   },
+   {
+    "tid": 47796488,
+    "fid": 524,
+    "quote_from": 0,
+    "topic_misc": null,
+    "author": "青杏果子",
+    "authorid": 67319660,
+    "subject": "《临高启明》好像是极少数在热带开局的种田文故事",
+    "type": 0,
+    "postdate": 1793103051,
+    "lastpost": 1793128807,
+    "lastposter": "白胖子啊呀呀",
+    "replies": 15,
+    "lastmodify": 1793128807,
+    "recommend": 0,
+    "jdata": null,
+    "tpcurl": "/read.php?tid=47796488",
+    "parent": {
+     "0": 524,
+     "2": "漩涡书院"
+    }
+   },
+   {
+    "tid": 47791040,
+    "fid": -7,
+    "quote_from": 0,
+    "topic_misc": null,
+    "author": "懒原柚子",
+    "authorid": 67145218,
+    "subject": "我说现在禁烟是假，找男人茬是真",
+    "type": 8224,
+    "postdate": 1793038872,
+    "lastpost": 1793128856,
+    "lastposter": "卡bug之王",
+    "replies": 142,
+    "lastmodify": 1793128856,
+    "recommend": 0,
+    "jdata": null,
+    "tpcurl": "/read.php?tid=47791040"
+   },
+   {
+    "tid": 47797838,
+    "fid": -7,
+    "quote_from": 0,
+    "topic_misc": null,
+    "author": "懲戒",
+    "authorid": 2276343,
+    "subject": "老美有集体诉讼制裁企业，小日子有领导鞠躬，我们有什么？活该消费者没权利？",
+    "type": 0,
+    "postdate": 1793121612,
+    "lastpost": 1793128832,
+    "lastposter": "sean081",
+    "replies": 20,
+    "lastmodify": 1793128843,
+    "recommend": 0,
+    "jdata": null,
+    "tpcurl": "/read.php?tid=47797838"
+   }
+  ],
+  "__T__ROWS": 46,
+  "__T__ROWS_PAGE": 35,
+  "__R__ROWS_PAGE": 20,
+  "__F": {
+   "fid": -7,
+   "name": "网事杂谈",
+   "topped_topic": 3593852,
+   "sub_forums": {
+    "570": [
+     570,
+     "优惠信息 购物指南",
+     null,
+     12700430,
+     4654
+    ],
+    "-522474": [
+     -522474,
+     "体育综合讨论",
+     "2024年巴黎夏季奥运会",
+     27604851,
+     4654
+    ],
+    "524": [
+     524,
+     "漩涡书院",
+     null,
+     15947599,
+     4654
+    ]
+   },
+   "__SELECTED_FORUM": null
+  }
+ },
+ "time": 1793128881
+}

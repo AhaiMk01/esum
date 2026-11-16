@@ -1,0 +1,71 @@
+{
+ "errno": 0,
+ "msg": "OK",
+ "sticky_posts": [],
+ "thread": {
+  "anonymous": false,
+  "attachment": 2,
+  "attachment_list": [
+   {
+    "aid": 629207,
+    "filename": "",
+    "height": 863,
+    "isimage": 1,
+    "pid": 21262445,
+    "url": "https://oss.1p3a.com/forum/202611/08/13932vx1gusf5atoeskgs.jpeg",
+    "width": 823
+   }
+  ],
+  "author": "微信用户_n1kan",
+  "authorid": 1291848,
+  "bgcolor": "",
+  "close_status": 0,
+  "dateline": 1794102067,
+  "digest": 0,
+  "displayorder": 0,
+  "favtimes": 0,
+  "fid": 78,
+  "forum_name": {
+   "name": "中国",
+   "section": {
+    "id": 379,
+    "name": "世界公民"
+   }
+  },
+  "heats": 3,
+  "highlight": 0,
+  "is_favorite": -1,
+  "lastpost": 1794112265,
+  "lastposter": "地理暱名佣沪YDRQS",
+  "magics": [],
+  "message_bbcode": "11月6日，自由亚洲电台报道，维吾尔族女孩热伊莱·吾马尔（Rahile Omer）在新疆监狱中死亡，年仅23岁。\n\n2017年，14岁的热伊莱在父亲被拘押后，也被送入再教育营。\n当地司法人员向自由亚洲电台透露，她在教育营期间，因被认为“教育无效”、拒绝交代其他涉案人员，以及在宿舍做礼拜等原因，被转入看守所。\n2021年，她在18岁时被判处12年监禁。\n\n自由亚洲电台近日致电当地警察及司法部门，多名工作人员证实其死讯。\n一名警察称她死于心脏病，但未说明具体病情及死亡经过。\n\n[url=https://link.1p3a.com/?url=https%3A%2F%2Fx.com%2Fwhyyoutouzhele%2Fstatus%2F2118971715598598472]https://x.com/whyyoutouzhele/status/2118971715598598472[/url]\n\n[attach]629207[/attach]",
+  "message_html": null,
+  "pid": 21262445,
+  "poll_info": {},
+  "post_domain": "",
+  "post_status": 8192,
+  "rate": 0,
+  "rates": [],
+  "ratetimes": 0,
+  "reactions": [],
+  "recommend_add": 0,
+  "replies": 1,
+  "sortid": 0,
+  "special": 0,
+  "stamp": -1,
+  "status": 32,
+  "subject": "14岁被送进新疆再教育营的维吾尔族女孩热伊莱·吾马尔在监狱中死亡，年仅23岁",
+  "tags": [],
+  "thread_type": "",
+  "threadpay": null,
+  "tid": 1196209,
+  "typeid": 0,
+  "videos": [],
+  "views": 367,
+  "votes": {
+   "attitude": -1,
+   "downvote": 3,
+   "upvote": 0
+  }
+ }
+}

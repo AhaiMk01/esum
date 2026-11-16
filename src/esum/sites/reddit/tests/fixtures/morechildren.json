@@ -1,0 +1,39 @@
+{
+ "json": {
+  "errors": [],
+  "data": {
+   "things": [
+    {
+     "kind": "t1",
+     "data": {
+      "id": "cc1",
+      "name": "t1_cc1",
+      "author": "user_c",
+      "body": "Data point: no offer, chat agent.",
+      "created_utc": 1790001000,
+      "score": 2,
+      "parent_id": "t3_fix001",
+      "link_id": "t3_fix001",
+      "permalink": "/r/churning/comments/fix001/_/cc1/",
+      "replies": ""
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "id": "cc2",
+      "name": "t1_cc2",
+      "author": "user_d",
+      "body": "Try again next month.",
+      "created_utc": 1790001200,
+      "score": 1,
+      "parent_id": "t1_cc1",
+      "link_id": "t3_fix001",
+      "permalink": "/r/churning/comments/fix001/_/cc2/",
+      "replies": ""
+     }
+    }
+   ]
+  }
+ }
+}

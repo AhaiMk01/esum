@@ -1,0 +1,125 @@
+{
+ "author": "philipwhiuk",
+ "children": [
+  {
+   "author": "harryvederci",
+   "children": [
+    {
+     "author": "killingtime74",
+     "children": [
+      {
+       "author": "benreesman",
+       "children": [
+        {
+         "author": "michaelsbradley",
+         "children": [],
+         "created_at": "2022-09-06T03:34:02.000Z",
+         "created_at_i": 1662435242,
+         "id": 32732504,
+         "options": [],
+         "parent_id": 32730286,
+         "points": null,
+         "story_id": 32726011,
+         "text": "For what it&#x27;s worth, SQLite works just fine for some blockchains without Rust extensions, e.g. nimbus-eth2[+] uses SQLite with `journal_mode = WAL` to locally persist Beacon Chain data.<p>Other Beacon Chain client implementations (there are several in wide use) may use SQLite, or something else, I&#x27;m not sure at the moment.<p>[+] <a href=\"https:&#x2F;&#x2F;github.com&#x2F;status-im&#x2F;nimbus-eth2#readme\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;status-im&#x2F;nimbus-eth2#readme</a>",
+         "title": null,
+         "type": "comment",
+         "url": null
+        }
+       ],
+       "created_at": "2022-09-05T22:33:02.000Z",
+       "created_at_i": 1662417182,
+       "id": 32730286,
+       "options": [],
+       "parent_id": 32728865,
+       "points": null,
+       "story_id": 32726011,
+       "text": "Years ago there was a brief vogue for “How X Saved My Startup”.<p>“How Rust Extensions to SQLite Saved The Blockchain” would be a banger in 2022! Someone do it!",
+       "title": null,
+       "type": "comment",
+       "url": null
+      }
+     ],
+     "created_at": "2022-09-05T20:10:10.000Z",
+     "created_at_i": 1662408610,
+     "id": 32728865,
+     "options": [],
+     "parent_id": 32727293,
+     "points": null,
+     "story_id": 32726011,
+     "text": "Give the people what they want",
+     "title": null,
+     "type": "comment",
+     "url": null
+    }
+   ],
+   "created_at": "2022-09-05T18:09:55.000Z",
+   "created_at_i": 1662401395,
+   "id": 32727293,
+   "options": [],
+   "parent_id": 32726011,
+   "points": null,
+   "story_id": 32726011,
+   "text": "Fun to see this on the front page right after reading this comment:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=32725455\" rel=\"nofollow\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=32725455</a>",
+   "title": null,
+   "type": "comment",
+   "url": null
+  },
+  {
+   "author": "bob1029",
+   "children": [
+    {
+     "author": "polyrand",
+     "children": [],
+     "created_at": "2022-09-05T18:56:07.000Z",
+     "created_at_i": 1662404167,
+     "id": 32727854,
+     "options": [],
+     "parent_id": 32727699,
+     "points": null,
+     "story_id": 32726011,
+     "text": "Yes! I love UDFs in SQLite:<p>1. I can just write functions in whatever programming language I want.<p>2. Not having to worry as much about overwriting other UDFs, since different connections can have the same UDF with a different implementation.<p>3. Having the DB (SQLite) and the function definitions in the same application code and in the same process makes some things a lot easier and flexible.<p>I actually wrote about that too:<p><a href=\"https:&#x2F;&#x2F;ricardoanderegg.com&#x2F;posts&#x2F;sqlite-developer-experience&#x2F;#user-defined-functions\" rel=\"nofollow\">https:&#x2F;&#x2F;ricardoanderegg.com&#x2F;posts&#x2F;sqlite-developer-experienc...</a>",
+     "title": null,
+     "type": "comment",
+     "url": null
+    },
+    {
+     "author": "bear24rw",
+     "children": [],
+     "created_at": "2022-09-06T04:21:04.000Z",
+     "created_at_i": 1662438064,
+     "id": 32732799,
+     "options": [],
+     "parent_id": 32727699,
+     "points": null,
+     "story_id": 32726011,
+     "text": "&gt; You can also do some crazy stuff with recursive SQL evaluation. I.e. a UDF that executes raw SQL command text, which itself can contain the same invocation. Bonus points if this command text resides in the same database and can reflect&#x2F;edit itself at runtime...<p>This is super intriguing, would love to see more details &#x2F; examples of this.",
+     "title": null,
+     "type": "comment",
+     "url": null
+    }
+   ],
+   "created_at": "2022-09-05T18:42:39.000Z",
+   "created_at_i": 1662403359,
+   "id": 32727699,
+   "options": [],
+   "parent_id": 32726011,
+   "points": null,
+   "story_id": 32726011,
+   "text": "This is great to see. We&#x27;ve been using UDFs with SQLite and .NET for about 3 years now.<p>With just a little bit of imagination, you can build a very powerful domain-specific language on top of a SQL dialect. There is nothing that says your new SQL functions have to be free from side effects either.<p>You can also do some <i>crazy</i> stuff with recursive SQL evaluation. I.e. a UDF that executes raw SQL command text, which itself can contain the same invocation. Bonus points if this command text resides in the same database and can reflect&#x2F;edit itself at runtime...",
+   "title": null,
+   "type": "comment",
+   "url": null
+  }
+ ],
+ "created_at": "2022-09-05T16:18:17.000Z",
+ "created_at_i": 1662394697,
+ "id": 32726011,
+ "options": [],
+ "parent_id": null,
+ "points": 137,
+ "story_id": 32726011,
+ "text": null,
+ "title": "Extending SQLite with Rust",
+ "type": "story",
+ "url": "https://ricardoanderegg.com/posts/extending-sqlite-with-rust/"
+}

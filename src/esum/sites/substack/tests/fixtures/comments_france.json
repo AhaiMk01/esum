@@ -1,0 +1,313 @@
+{
+ "comments": [
+  {
+   "id": 367245528,
+   "name": "Bruce Raben",
+   "body": "I always wish I can find something to quibble with but I cant. While it isnt just one issue, the retirement age of 62 is ridiculous and this is a powerful variable. would love to see the projections if moved to 65? And 65 is not old when LE is 80.",
+   "date": "2026-10-22T08:25:58.681Z",
+   "reaction_count": 77,
+   "children": [
+    {
+     "id": 367281562,
+     "name": "Jon",
+     "body": "The problem is that biological ageing accelerates after 60 and this fact is amplified in people's minds by the media to the point where it's assumed that in your 70's you'll be battling ill-health and fending off the Reaper. Add to that a previous generation where the middle classes often retired in their mid-50's and the demand for earlier retirement is working in the opposite direction to our fiscal requirements.",
+     "date": "2026-10-22T09:50:13.512Z",
+     "reaction_count": 9,
+     "children": [
+      {
+       "id": 367708055,
+       "name": "Impossible Santa Wife",
+       "body": "The other big problem, at least in the US, is ageism. If nobody wants to *hire* older people or keep them on at a company, they might wind up retiring when in fact they still want to work. And then we hear younger people howling about how “Boomers” are “clogging the pipeline.”\n\nWe can make it easier for older people to work (and pay taxes) OR we can spend a ton of money on old age entitlements. We can’t simultaneously deny older people jobs and then complain about how much of our budget is eaten",
+       "date": "2026-10-22T19:21:27.472Z",
+       "reaction_count": 21,
+       "children": [
+        {
+         "id": 368101577,
+         "name": "Jon",
+         "body": "Absolutely. Society can't fret about an adverse ratio of older-retired to younger-working people and then deny working opportunities to older people. Even if we do insist on working from home, keeping a lot of medical appointments and slowing down meetings with irrelevant ponderings.\n\nBut AI's not a problem. When you've spent much of your working life having to use technical books to learn things and google searches to find out facts, using AI is like having superpowers.",
+         "date": "2026-10-23T08:35:06.344Z",
+         "reaction_count": 7,
+         "children": [
+          {
+           "id": 368160930,
+           "name": "Shabby Tigers",
+           "body": "Claude, even basic Sonnet, is like having functional google search back but even better. It’s underappreciated that AI has literally fixed search enshittification. I more or less built an entire career on intrepid googling (high-science specialty healthcare marketing strategy, on humanities degrees from back when that wasn’t an implausible choice) and I for one appreciate the shit out of it",
+           "date": "2026-10-23T10:47:33.093Z",
+           "reaction_count": 6,
+           "children": []
+          }
+         ]
+        },
+        {
+         "id": 367716940,
+         "name": "Bruce Raben",
+         "body": "Agree completely. Ageism is a thing. Hard to fix culturally but clearly there should not be barriers to working. I think there is resentment towards boomers, some deserved but none of us had any control over when we were born. And then there is AI which is a challenge for all of society. But old dogs need to learn new tricks including using AI in a non trivial way.",
+         "date": "2026-10-22T19:32:35.619Z",
+         "reaction_count": 3,
+         "children": [
+          {
+           "id": 367790986,
+           "name": "DougAz",
+           "body": "I'm 73. Fortunately on DARPANET in 1973. Yes agesim is there. However I use CoPilot AI for some sophisticated analysis, spreadsheet development, some physics and math's. I'm pretty good at questions",
+           "date": "2026-10-22T21:11:41.210Z",
+           "reaction_count": 4,
+           "children": [
+            {
+             "id": 368012343,
+             "name": "Bayesian",
+             "body": "A mere pup of 68 here - commercial technology industry in a sector where I *don't* see any *explicit* agism other than Boomer-bemoaning from the capital poor Millenials, rather \"kids these days\" laments but woe betide she who doesn't get on the Claude program (our particular corporate choice; better in my A/B testing for our style of hardcore engineering than ChatGPT or CoPilot - YMMV of course).\n\nAFAIK it was always ARPANET, even after ARPA was renamed DARPA in 1972 (then ARPA in 93 and back to",
+             "date": "2026-10-23T04:32:54.123Z",
+             "reaction_count": 1,
+             "children": [
+              {
+               "id": 368016480,
+               "name": "DougAz",
+               "body": "We used ARPANET. But for some reason at Cambridge geek school, we had the D in front.",
+               "date": "2026-10-23T04:44:52.300Z",
+               "reaction_count": 1,
+               "children": [
+                {
+                 "id": 368045467,
+                 "name": "Bayesian",
+                 "body": "*Interesting*. I didn't notice that usage during my time at the Pasadena, Berkeley, or Palo Alto geek schools (obviously a few years after your time at the more proper/demanding geek school). But the Left Coast creation was more the Westwood geek school, plus it was a running concern when I showed up at Pasadena in 1976.\n\nI salute one of the Great Old Ones :)",
+                 "date": "2026-10-23T06:07:59.592Z",
+                 "reaction_count": 2,
+                 "children": [
+                  {
+                   "id": 368048597,
+                   "name": "DougAz",
+                   "body": "Very kind of you Bayesian. I worked in Pasadena for 7 years in one lifetime. Those that couldn't get in there went to Cambridge 😀",
+                   "date": "2026-10-23T06:16:42.640Z",
+                   "reaction_count": 1,
+                   "children": []
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "id": 367791733,
+             "name": "Bruce Raben",
+             "body": "DARPANET was the first. Very cool.",
+             "date": "2026-10-22T21:12:46.943Z",
+             "reaction_count": 1,
+             "children": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": 367294628,
+       "name": "Fallingknife",
+       "body": "I don't buy that mid 50s retirement was common anywhere (at least in the era since life expectancy has increased into the high 70s / low 80s). That's a 25 year retirement. With 22 years in childhood / education that's 47 years out of 80 not working. It's simply not sustainable at anything close to our current standard of living.",
+       "date": "2026-10-22T10:18:23.394Z",
+       "reaction_count": 18,
+       "children": []
+      },
+      {
+       "id": 367287369,
+       "name": "Falous",
+       "body": "Bollocks.\n\nIf one is not working in heavy physical labor (which most covered people are not) there is not under a general healthy population with access to good, if stereotypically rude and bureaucratic health care, to work until 70.\n\nthe mediatised image is retiring down to the countryside to run a B&B or other idealised countryside type hobby-job after you retire from your office job",
+       "date": "2026-10-22T10:03:01.414Z",
+       "reaction_count": 7,
+       "children": [
+        {
+         "id": 367329502,
+         "name": "Jon",
+         "body": "It's true of the European middle class that I was referring to. Here in the UK in 1996 for example, 20% of 50-56 year olds and 50% of 50-59 year-olds, were retired. My dad retired in 1995 at the age of 55 and died at 86 - no B&Bs, no 'consultancy work'. You can work well into your 70's (my dad's dad did). But why would you if you've got other stuff you want to do and you've got enough money to do them? Probably not true of the US where people tend to work till they drop. But in Europe early reti",
+         "date": "2026-10-22T11:25:49.961Z",
+         "reaction_count": 1,
+         "children": [
+          {
+           "id": 367349600,
+           "name": "Falous",
+           "body": "Amigo, my reference was French. I have operations in France.\n\n\"You've got money\" -fine if you have own retirement savings, up to you.\n\nDriving unsustainable state level debt that with overall policy is chocking opportunity off for younger workers, is not a valid option - and pretextual arguments around health are very pretextual even in European circles, leverging as pretext an increasingly small number of industrial workers who really do of course face more physical challenge (but movement to a",
+           "date": "2026-10-22T11:58:41.555Z",
+           "reaction_count": 5,
+           "children": [
+            {
+             "id": 367432515,
+             "name": "Jon",
+             "body": "I didn't say it was sustainable. It obviously isn't because the average age of retirement in the UK has increased by 4 years in the last 30 years and will continue to increase. I just said that the fact that the previous generation retired so early is part of the reason why younger generations might be resistant to the idea of the state pension age being raised.\n\nI've never have operations in France. I always use the NHS.",
+             "date": "2026-10-22T13:51:56.924Z",
+             "reaction_count": 1,
+             "children": []
+            }
+           ]
+          },
+          {
+           "id": 367330185,
+           "name": "Bruce Raben",
+           "body": "Yeah but why should society pay for a 25 year vacation",
+           "date": "2026-10-22T11:27:00.612Z",
+           "reaction_count": 2,
+           "children": [
+            {
+             "id": 367433526,
+             "name": "Jon",
+             "body": "They shouldn't, they probably won't and they almost certainly can't given the ageing population. Unless there's a miraculous productivity increase, which is very unlikely.",
+             "date": "2026-10-22T13:53:10.871Z",
+             "reaction_count": 1,
+             "children": [
+              {
+               "id": 368286039,
+               "name": "Milton Soong",
+               "body": "I thought your last sentence was going to say “AI to the rescue” as a productivity gain.",
+               "date": "2026-10-23T13:52:56.813Z",
+               "reaction_count": 1,
+               "children": [
+                {
+                 "id": 368411815,
+                 "name": "Jon",
+                 "body": "Remarkable though it is to be able to talk to a machine as if it's an extremely well-read and articulate person (it really is seriously impressive), I don't think AI is going to have much effect on the bottom-line until they start to integrate it effectively with servo-motors and levers and gears in ways which go significantly beyond current industrial and commercial robotics.",
+                 "date": "2026-10-23T16:20:50.607Z",
+                 "reaction_count": 1,
+                 "children": [
+                  {
+                   "id": 368494037,
+                   "name": "Milton Soong",
+                   "body": "I myself see robotics teaching the same level of usefulness as LLM in at least 3+ more years.",
+                   "date": "2026-10-23T17:58:12.270Z",
+                   "reaction_count": 1,
+                   "children": []
+                  }
+                 ]
+                },
+                {
+                 "id": 368301030,
+                 "name": "Bruce Raben",
+                 "body": "There will be an AI productivity increase but probably not fast enough to support the valuation of the recent capx. we won't be saved by magic beans.\n\nAlso there is how the AI benefit is allocated. It will not go to the lower half",
+                 "date": "2026-10-23T14:10:49.508Z",
+                 "reaction_count": 0,
+                 "children": [
+                  {
+                   "id": 370584906,
+                   "name": "Jon",
+                   "body": "It never has gone to the lower half, so why would it be any different this time?",
+                   "date": "2026-10-26T09:56:36.015Z",
+                   "reaction_count": 0,
+                   "children": [
+                    {
+                     "id": 370728598,
+                     "name": "Bruce Raben",
+                     "body": "It won’t. The merging of the military industrial complex with the techno lords will make it worse",
+                     "date": "2026-10-26T13:47:46.157Z",
+                     "reaction_count": 0,
+                     "children": []
+                    }
+                   ]
+                  },
+                  {
+                   "id": 368301584,
+                   "name": "Milton Soong",
+                   "body": "I agree",
+                   "date": "2026-10-23T14:11:30.992Z",
+                   "reaction_count": 0,
+                   "children": []
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 367286126,
+   "name": "Falous",
+   "body": "Noah: an item you neglect in the overview is (I speak from direct experience in addition to the econometrics) is how unfriendly the overall French regulatory, tax, employment low etc. set-up is (in its ensemble, not analysed piecemeal) to new growith firm creation and entrepreneurial firms.\n\nThere is corrolary to the Abundance concept in the USA - recognition of the effect of bureaucracy cruft and death from a thousand cuts. France needs the Draghi reforms as badly, even worse than his native It",
+   "date": "2026-10-22T10:00:24.492Z",
+   "reaction_count": 64,
+   "children": []
+  },
+  {
+   "id": 367293103,
+   "name": "Fallingknife",
+   "body": "I question whether a sustainable welfare state can exist over the long term in a democracy. It is based on the fundamental conflict of interest that the people receiving welfare benefits also get to vote on the amount of those benefits. There do seem to be a significant number of counterexamples in Europe e.g. Germany, but this model still hasn't hit 100 years and I am not optimistic that the fundamental flaw will not reveal itself there too.\n\nAs for the immigration issue it seems like there is ",
+   "date": "2026-10-22T10:15:12.994Z",
+   "reaction_count": 39,
+   "children": [
+    {
+     "id": 367640034,
+     "name": "Gilgamesh N.",
+     "body": "Don’t leaders vote on their own raises? I live in Los Angeles and my city council has the highest pay I think of any in the country. Those are the raises they voted on for themselves and shocker of the century, they passed! Who does not vote for their own raises?",
+     "date": "2026-10-22T17:57:11.261Z",
+     "reaction_count": 3,
+     "children": []
+    },
+    {
+     "id": 369419183,
+     "name": "Swami",
+     "body": "I think this comment really captures the issue. The model of throwing half our income in a pot and then paying collectively has a natural attractor that ends somewhere beyond where France seems to be going.",
+     "date": "2026-10-24T20:50:49.087Z",
+     "reaction_count": 2,
+     "children": []
+    },
+    {
+     "id": 367398888,
+     "name": "Joseph",
+     "body": "Sweden",
+     "date": "2026-10-22T13:09:29.348Z",
+     "reaction_count": 1,
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": 367362195,
+   "name": "Mark_J_Ryan",
+   "body": "I think that essentially all of the challenges and dysfunctions of most modern western nations boil down, in one way or another, to the fact that we have lost our collective ability to ever say NO to anything.",
+   "date": "2026-10-22T12:18:22.767Z",
+   "reaction_count": 26,
+   "children": [
+    {
+     "id": 367411174,
+     "name": "Belisarius",
+     "body": "It's an electoral loser. People want the government to give them stuff and not make them pay for it.\n\nFor the last few generations, they have been able to get away with it largely via deficit spending, and now they are addicted to it.\n\nAny party or politician that says \"No\" will not be elected or reelected.\n\nWe basically have an orderly form of mob rule. No real discipline, wisdom, or foresight is possible.",
+     "date": "2026-10-22T13:25:43.671Z",
+     "reaction_count": 20,
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": 367324649,
+   "name": "SM",
+   "body": "While I fully agree with what you say about France's fiscal policy and the limits of the welfare state, I'm confused as to why you threw in migrants at the end. You even noted that there was no obvious link to mass migration and the current riots and that past disturbances included those that were mostly migrants and those that were mostly white French. All you noted was that a growing number of French voters were blaming migrants, as if that is indicative of anything other than the human tenden",
+   "date": "2026-10-22T11:16:57.441Z",
+   "reaction_count": 18,
+   "children": [
+    {
+     "id": 368095069,
+     "name": "Marcel",
+     "body": "my thoughts as well.",
+     "date": "2026-10-23T08:18:37.539Z",
+     "reaction_count": 1,
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": 367263878,
+   "name": "Alex Potts",
+   "body": "Unfortunately, I suspect denial of fiscal reality can outlast the Fifth Republic.",
+   "date": "2026-10-22T09:09:42.996Z",
+   "reaction_count": 17,
+   "children": []
+  }
+ ]
+}

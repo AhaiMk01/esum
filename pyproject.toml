@@ -1,0 +1,40 @@
+[project]
+name = "esum"
+version = "0.1.0"
+description = "ESUM (Every Site, Unwrapped for Models): agent-agnostic CLI and skills for reading websites and making gated, reversible account actions."
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{ name = "Ahai" }]
+dependencies = [
+    "cryptography>=42",
+    "curl-cffi>=0.17",
+    "filelock>=3.12",
+    "httpx>=0.27",
+    "keyring>=25",
+    "pyobjc-framework-localauthentication>=10 ; sys_platform == 'darwin'",
+    "toon-format>=1.2.0",
+    "tzdata; sys_platform == 'win32'",   # zoneinfo has no system time zone data on Windows
+]
+
+[project.scripts]
+esum = "esum.entry:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-xdist>=3.8.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/esum"]   # ships each built-in site's doc.md (and page scripts) beside its module
+exclude = ["src/esum/sites/**/tests/"]   # a site's offline tests and fixtures stay in the checkout
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "src/esum/sites"]
+pythonpath = ["tests"]   # `support`: helpers shared by tests/ and each site's own tests/

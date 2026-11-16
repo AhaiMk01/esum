@@ -1,0 +1,454 @@
+{
+ "post_stream": {
+  "posts": [
+   {
+    "id": 1943418,
+    "username": "user4",
+    "created_at": "2026-02-24T17:11:26.352Z",
+    "cooked": "<p>Yes that’s normal. The upcoming changes affect how the Foundation theme looks like. It’s not a different theme.</p>",
+    "post_number": 49,
+    "post_type": 1,
+    "reply_to_post_number": 48,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1943417,
+    "username": "user13",
+    "created_at": "2026-02-24T17:10:06.726Z",
+    "cooked": "<p>I’m trying to activate the theme but I don’t see how to proceed!</p>\n<p>I have activated the Foundation theme in upcoming, but in my themes, there is only the old Foundation theme.</p>\n<p>Is this normal? <img src=\"https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=15\" title=\":sweat_smile:\" class=\"emoji\" alt=\":sweat_smile:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>",
+    "post_number": 48,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 13,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1941759,
+    "username": "user3",
+    "created_at": "2026-02-20T18:48:45.184Z",
+    "cooked": "<p>Avatars have a higher z-index than the category list when we edit a topic’s title:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b.png\" data-download-href=\"/uploads/short-url/czg1it5drIHqVKjSR75l7hp8jX5.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b_2_690x446.png\" alt=\"image\" data-base62-sha1=\"czg1it5drIHqVKjSR75l7hp8jX5\" width=\"690\" height=\"446\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/5/8/1/581667cdfc5b3133bc3a473b3861348ab824b10b_2_690x446.png, https://global.discourse-cdn.c…</p>",
+    "post_number": 47,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1940452,
+    "username": "user11",
+    "created_at": "2026-02-19T04:45:50.159Z",
+    "cooked": "<p>It’s on the /categories page. I have the same</p>",
+    "post_number": 46,
+    "post_type": 1,
+    "reply_to_post_number": 45,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1940417,
+    "username": "user1",
+    "created_at": "2026-02-19T00:02:14.264Z",
+    "cooked": "<p>What page is this on?</p>",
+    "post_number": 45,
+    "post_type": 1,
+    "reply_to_post_number": 37,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1940414,
+    "username": "user1",
+    "created_at": "2026-02-18T23:55:20.716Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"40\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>On an empty search page, there’s a floating border:</p>\n</blockquote>\n</aside>\n<p>This is actually an issue with AI search not with these foundation improvements.</p>",
+    "post_number": 44,
+    "post_type": 1,
+    "reply_to_post_number": 40,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1940147,
+    "username": "user11",
+    "created_at": "2026-02-18T17:33:03.339Z",
+    "cooked": "<p>it’s the same if i try to remove a tc at /admin/config/customize/components</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc4897ee5.jpeg\" data-download-href=\"/uploads/short-url/z4oYJBCDn7G06tsXWZjYQxIXd7T.jpeg?dl=1\" title=\"Screenshot_20260218_183014_Brave\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc4897ee5_2_690x304.jpeg\" alt=\"Screenshot_20260218_183014_Brave\" data-base62-sha1=\"z4oYJBCDn7G06tsXWZjYQxIXd7T\" width=\"690\" height=\"304\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/f/5/c/f5cb804fbfafe4ce5b47b25ed3c43e2cc489…</p>",
+    "post_number": 43,
+    "post_type": 1,
+    "reply_to_post_number": 25,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1939863,
+    "username": "user1",
+    "created_at": "2026-02-18T12:35:38.824Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"41\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>On mobile, the post count container is too tall, or the translation button is too short, I don’t know which one should be tweaked <img src=\"https://emoji.discourse-cdn.com/twitter/face_with_tongue.png?v=15\" title=\":face_with_tongue:\" class=\"emoji\" alt=\":face_with_tongue:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>\n</blockquote>\n</aside>\n<p><img src=\"https://emoji.discourse-cdn.com/twitter/winking_face_with_tongue.png?v=15\" title=\":winking_face_with_tongue:\" class=\"emoji only-emoji\" alt=\":winking_face_with_tongue:\" loadi…</p>",
+    "post_number": 42,
+    "post_type": 1,
+    "reply_to_post_number": 41,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1938273,
+    "username": "user3",
+    "created_at": "2026-02-16T00:59:50.788Z",
+    "cooked": "<p>On mobile, the post count container is too tall, or the translation button is too short, I don’t know which one should be tweaked <img src=\"https://emoji.discourse-cdn.com/twitter/face_with_tongue.png?v=15\" title=\":face_with_tongue:\" class=\"emoji\" alt=\":face_with_tongue:\" loading=\"lazy\" width=\"20\" height=\"20\"></p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/8/3/3/83373ec6ccbd0384ad831bd4da33496b7d9d61e3.jpeg\" data-download-href=\"/uploads/short-url/iIMUtLnjyeOr7ichuSU1Y3VVNtN.jpeg?dl=1\" title=\"Screenshot_20260216_015646_Chrome\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/8/3/3/83373ec6ccbd0384ad831bd4da33496b7…</p>",
+    "post_number": 41,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1938250,
+    "username": "user3",
+    "created_at": "2026-02-15T22:42:33.129Z",
+    "cooked": "<p>On an empty search page, there’s a floating border:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18.png\" data-download-href=\"/uploads/short-url/sVEiz1Ba5NI2AzTsk34rOz4BZuE.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18_2_690x453.png\" alt=\"image\" data-base62-sha1=\"sVEiz1Ba5NI2AzTsk34rOz4BZuE\" width=\"690\" height=\"453\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac129cc41e4aace6ddea3ad48e1b879bb516e18_2_690x453.png, https://global.discourse-cdn.com/meta/optimized/4X/c/a/c/cac1…</p>",
+    "post_number": 40,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937997,
+    "username": "user3",
+    "created_at": "2026-02-14T11:22:08.357Z",
+    "cooked": "<p>The compose icon is off-center:</p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/5/0/9/509e8b48a4eefbcd072446fb5d1778cdfd90597e.png\" alt=\"image\" data-base62-sha1=\"bvbSmfd5qXYsBXoj0irDTPCWsvs\" width=\"239\" height=\"55\"></p>\n<p><img src=\"https://global.discourse-cdn.com/meta/original/4X/f/6/0/f60bd018abb0ded3b2de386a0b3801215ead46ce.png\" alt=\"image\" data-base62-sha1=\"z6CLxcrlZwUdDD1Qgb3wccwINga\" width=\"183\" height=\"51\"></p>",
+    "post_number": 39,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937950,
+    "username": "user9",
+    "created_at": "2026-02-14T05:33:09.773Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/8/b/b/8bb950bf6f7a78e195f056894358e0c240cf25f4.png\" data-download-href=\"/uploads/short-url/jW3p6fjKo31r746WQTcHVqI1CFS.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/8/b/b/8bb950bf6f7a78e195f056894358e0c240cf25f4.png\" alt=\"image\" data-base62-sha1=\"jW3p6fjKo31r746WQTcHVqI1CFS\" width=\"558\" height=\"336\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">558×336 11.4 KB</span><svg class=\"fa d-ic…</p>",
+    "post_number": 38,
+    "post_type": 1,
+    "reply_to_post_number": 31,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 9,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937947,
+    "username": "user7",
+    "created_at": "2026-02-14T05:06:00.815Z",
+    "cooked": "<p>There is a black dot to the right of the small handle</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b.png\" data-download-href=\"/uploads/short-url/tO7roSZojfrNQ3JB4U2u6dZfGMb.png?dl=1\" title=\"screenshot_20260214_130446\"><img src=\"//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2_690x243.png\" alt=\"screenshot_20260214_130446\" data-base62-sha1=\"tO7roSZojfrNQ3JB4U2u6dZfGMb\" width=\"690\" height=\"243\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/d/0/e/d0e96edf7949ad3925d3d330d2ea0659f56e098b_2…</p>",
+    "post_number": 37,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937868,
+    "username": "user1",
+    "created_at": "2026-02-13T21:42:03.201Z",
+    "cooked": "<p>thanks! It was addressed in this PR → <a href=\"https://github.com/discourse/discourse/pull/37831\" class=\"inline-onebox\">FIX: Change @class to @triggerClass on ip lookup menu by jordanvidrine · Pull Request #37831 · discourse/discourse · GitHub</a></p>",
+    "post_number": 36,
+    "post_type": 1,
+    "reply_to_post_number": 35,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937802,
+    "username": "user11",
+    "created_at": "2026-02-13T19:56:27.996Z",
+    "cooked": "<p>I can see it at /admin/users/id/USERHERE</p>",
+    "post_number": 35,
+    "post_type": 1,
+    "reply_to_post_number": 32,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 11,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1937791,
+    "username": "user12",
+    "created_at": "2026-02-13T19:34:33.506Z",
+    "cooked": "<p>That’s the admin-profile view I believe. Not sure related to the Foundation changes; saw it earlier today on another theme too.</p>",
+    "post_number": 33,
+    "post_type": 1,
+    "reply_to_post_number": 32,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 12,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937790,
+    "username": "user1",
+    "created_at": "2026-02-13T19:33:30.550Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user11\" data-post=\"25\" data-topic=\"395331\" data-full=\"true\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>there’s a problem when i try to search for a ip adress:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" data-download-href=\"/uploads/short-url/vj2xwjjvyDRlr0cSw23Mhpyzb0A.png?dl=1\" title=\"Capture d'écran 2026-02-11 174145\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/d/b/6/db6a68090f83b0bbbaf07b9a0c37c73c1a0ddb78.png\" alt=\"Capture d'écran 2026-02-11 174145\" data-base62-sha…</p>",
+    "post_number": 32,
+    "post_type": 1,
+    "reply_to_post_number": 25,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1937779,
+    "username": "user1",
+    "created_at": "2026-02-13T19:24:35.509Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user9\" data-post=\"23\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>The translation button seems to be too dark.</p>\n</blockquote>\n</aside>\n<aside class=\"quote group-VolunteerMods\" data-username=\"user10\" data-post=\"24\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>Not assigned:</p>\n</blockquote>\n</aside>\n<p>These issues have been addressed.</p>",
+    "post_number": 31,
+    "post_type": 1,
+    "reply_to_post_number": 23,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1936525,
+    "username": "user12",
+    "created_at": "2026-02-12T07:02:01.596Z",
+    "cooked": "<p>A post was merged into an existing topic: <a href=\"https://meta.discourse.org/t/horizon-theme/360486\">Horizon Theme</a></p>",
+    "post_number": 30,
+    "post_type": 3,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 12,
+    "action_code": "split_topic",
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1936530,
+    "username": "user12",
+    "created_at": "2026-02-12T07:07:24.766Z",
+    "cooked": "<p>4 posts were split to a new topic: <a href=\"/t/issue-with-enabling-upcoming-changes/395881\">Issue with enabling upcoming changes</a></p>",
+    "post_number": 26,
+    "post_type": 3,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 12,
+    "action_code": "split_topic",
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   }
+  ]
+ },
+ "id": 395331
+}

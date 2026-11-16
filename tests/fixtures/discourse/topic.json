@@ -1,0 +1,577 @@
+{
+ "id": 395331,
+ "title": "Modernizing the Foundation theme",
+ "slug": "modernizing-the-foundation-theme",
+ "posts_count": 97,
+ "highest_post_number": 117,
+ "created_at": "2026-02-06T17:52:14.128Z",
+ "last_posted_at": "2026-08-06T10:26:58.144Z",
+ "views": 5690,
+ "like_count": 288,
+ "reply_count": 52,
+ "category_id": 67,
+ "tags": [],
+ "closed": false,
+ "archived": false,
+ "archetype": "regular",
+ "user_id": 1,
+ "pinned": false,
+ "details": {
+  "created_by": {
+   "id": 1,
+   "username": "user1"
+  }
+ },
+ "post_stream": {
+  "posts": [
+   {
+    "id": 1933050,
+    "username": "user1",
+    "created_at": "2026-02-06T17:52:14.128Z",
+    "cooked": "<p>The design team are in the process of making small but powerful changes/tweaks to the foundation theme to align a bit closer to modern web standards. To view these changes live on meta, join this group:</p>\n<p><a href=\"https://meta.discourse.org/g/modernized-foundation\">https://meta.discourse.org/g/modernized-foundation</a></p>\n<div class=\"d-image-grid\" data-mode=\"carousel\">\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/e/2/f/e2f5e596a85acbea02b90b671acf6869f82145be.jpeg\" data-download-href=\"/uploads/short-url/wnMJRZ22JHXRSFW0Kr0epAbMqL4.jpeg?dl=1\" title=\"CleanShot 2026-02-05 at 16.42.34@2x\"><img src=\"https://global.discourse-…</p>",
+    "post_number": 1,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 38
+     }
+    ],
+    "reaction_users_count": 38,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1933498,
+    "username": "user1",
+    "created_at": "2026-02-06T17:52:35.442Z",
+    "cooked": "",
+    "post_number": 2,
+    "post_type": 3,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 1,
+    "action_code": "pinned_globally.enabled",
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1933533,
+    "username": "user2",
+    "created_at": "2026-02-06T19:17:43.331Z",
+    "cooked": "<p>the gist button dropdown has a scrollbar (<code>overflow</code> on the <code>fk-d-menu</code> maybe?), and probably doesn’t need the same <code>min-width: 200px</code> as other such <code>dropdown-menu</code> classes.<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/3/a/9/3a964be6ee91f9fcd306dec92d86f437586dc41e.png\" data-download-href=\"/uploads/short-url/8mhHwCRAfNPvWTy30hkt5Jxd80S.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/original/4X/3/a/9/3a964be6ee91f9fcd306dec92d86f437586dc41e.png\" alt=\"image\" data-base62-sha1=\"8mhHwCRAfNPvWTy30hkt5Jxd80S\" width=\"267\" height=\"153\"><div class=\"meta\"><svg class=\"…</p>",
+    "post_number": 3,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 6
+     }
+    ],
+    "reaction_users_count": 6,
+    "user_id": 2,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933624,
+    "username": "user3",
+    "created_at": "2026-02-06T22:46:11.171Z",
+    "cooked": "<aside class=\"quote group-team quote-modified\" data-username=\"user1\" data-post=\"1\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<h3>Categories</h3>\n</blockquote>\n</aside>\n<p>I can see the modern foundation theme, but why do I still have the old categories layout?</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/b/8/2/b82e0d0fa624f6b58eaa48b9d08dd41fc3005894.png\" data-download-href=\"/uploads/short-url/qhkw8NwOwKVIl2HZ6FKksSdgnQg.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/b/8/2/b82e0d0fa624f6b58eaa48b9d08dd41fc3005894_2_615x500.pn…</p>",
+    "post_number": 4,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933632,
+    "username": "user4",
+    "created_at": "2026-02-06T22:50:01.956Z",
+    "cooked": "<p>I think Meta doesn’t use “Boxes with subcategories” but “Categories only” in their <code>Desktop category page style</code> site setting.</p>",
+    "post_number": 5,
+    "post_type": 1,
+    "reply_to_post_number": 4,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933636,
+    "username": "user3",
+    "created_at": "2026-02-06T22:52:15.903Z",
+    "cooked": "<p>Oops, I assumed the screenshots were taken on meta but I didn’t even think of checking it.</p>\n<hr>\n<p><s>Small but weird behavior. On the regular theme, when we release the mouse button on <span class=\"d-wrap\" data-id=\"bars\" data-wrap=\"icon\"></span>, it instantly triggers the show or close sidebar’s animation.</s></p>\n<p><s>On the new theme, when we release the mouse button on <span class=\"d-wrap\" data-id=\"bars\" data-wrap=\"icon\"></span> when the sidebar is closed, there’s a split second of waiting before the sliding animation is triggered. Doesn’t happen if we click the icon when the sidebar is visible.</s></p>\n<p>I’m probably hallucinating <img src=\"https://emoji.discourse-cdn.com/twitt…</p>",
+    "post_number": 6,
+    "post_type": 1,
+    "reply_to_post_number": 5,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 2
+     }
+    ],
+    "reaction_users_count": 2,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933648,
+    "username": "user5",
+    "created_at": "2026-02-06T22:55:42.989Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"6\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>Can I leave the group to compare changes with the old theme? I don’t see the leave option.</p>\n</blockquote>\n</aside>\n<p>oh yes, fixed that… should be able to leave at will now</p>",
+    "post_number": 7,
+    "post_type": 1,
+    "reply_to_post_number": 6,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 5,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1933649,
+    "username": "user4",
+    "created_at": "2026-02-06T22:55:58.371Z",
+    "cooked": "<p><s>Would you please allow me to leave the <a class=\"mention-group\" href=\"/groups/modernized-foundation\">@modernized-foundation</a> group.</s><br>\nEdit: Now, after leaving the group, I can add a comparison screenshot of the new topic button.<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/e/7/6/e76a4a6ef6a8a18dcb6f7ede986b4eb2d244e86a.png\" alt=\"image\" data-base62-sha1=\"x1c1oKsLhfehswrOeC8aqZjBj98\" width=\"229\" height=\"62\"></p>\n<p>It seems some icon colors don’t work well with the wcag palette.<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/8/e/b/8eb2d0b87de9391c14c7a1681793545f4b59e9ba.png\" alt=\"image\" data-base62-sha1=\"kmmUtiWHpVmq9r1mA3IM5snnaFI\" width=\"22…</p>",
+    "post_number": 8,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933677,
+    "username": "user3",
+    "created_at": "2026-02-06T23:14:54.805Z",
+    "cooked": "<p>I like most of the changes. They are subtle. Some I don’t even see the difference unless I look at the CSS values <img src=\"https://emoji.discourse-cdn.com/twitter/smile.png?v=15\" title=\":smile:\" class=\"emoji\" alt=\":smile:\" loading=\"lazy\" width=\"20\" height=\"20\"> (sidebar icon and text colors, topic list read and unread colors)</p>\n<p>Before / After<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/e/2/9/e292160b000bc5e4b9060099187a72f9d433cb18.png\" alt=\"image\" data-base62-sha1=\"wkkTzBnv4Pda0Yqt5Ngupc48lx6\" width=\"235\" height=\"61\"> <img src=\"https://global.discourse-cdn.com/meta/original/4X/6/5/0/6500ad43ccdd2bcc28822912470c0e76b81ec79d.png\" alt=\"image\" data-base62-sha1=\"epvF…</p>",
+    "post_number": 9,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 7
+     }
+    ],
+    "reaction_users_count": 7,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933678,
+    "username": "user4",
+    "created_at": "2026-02-06T23:25:07.295Z",
+    "cooked": "<aside class=\"quote group-team\" data-username=\"user1\" data-post=\"1\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>decrease font size of table header data</p>\n</blockquote>\n</aside>\n<p>This seems to work on the read and topics activity in some screen sizes<br>\n<div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/e/e/b/eeb6b95b17582568a70f8a535cafd55f181a7608.png\" data-download-href=\"/uploads/short-url/y3L7ACzJ54kGHR7cs49CywSv1l6.png?dl=1\" title=\"image\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/e/e/b/eeb6b95b17582568a70f8a535cafd55f181a7608_2_690x206.png\" alt=\"i…</p>",
+    "post_number": 10,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 7
+     }
+    ],
+    "reaction_users_count": 7,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933700,
+    "username": "user6",
+    "created_at": "2026-02-07T01:12:23.382Z",
+    "cooked": "<p>Thank you so much for the before/after. I thought it was missing from the OP.</p>\n<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"9\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>Before / After<br>\n<img src=\"https://global.discourse-cdn.com/meta/original/4X/e/2/9/e292160b000bc5e4b9060099187a72f9d433cb18.png\" alt=\"image\" data-base62-sha1=\"wkkTzBnv4Pda0Yqt5Ngupc48lx6\" width=\"235\" height=\"61\"> <img src=\"https://global.discourse-cdn.com/meta/original/4X/6/5/0/6500ad43ccdd2bcc28822912470c0e76b81ec79d.png\" alt=\"image\" data-base62-sha1=\"epvFP6R2Lh9eqKfyAuf39kJA16R\" width=\"225\" height=\"63\"></p>\n</blockquote>\n</aside>\n<as…</p>",
+    "post_number": 11,
+    "post_type": 1,
+    "reply_to_post_number": 9,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 6,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933817,
+    "username": "user4",
+    "created_at": "2026-02-07T17:25:52.079Z",
+    "cooked": "<p>The word “link” in the topic map is only partly shown after I join the group:</p>\n<div class=\"d-image-grid\" data-mode=\"carousel\">\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/0/4/c/04cd25362e6666a38693d4ad242f1386103e09a3.png\" data-download-href=\"/uploads/short-url/GtqLMgXWpwpVwtw7yAOhIytYIj.png?dl=1\" title=\"now\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/0/4/c/04cd25362e6666a38693d4ad242f1386103e09a3_2_690x189.png\" alt=\"now\" data-base62-sha1=\"GtqLMgXWpwpVwtw7yAOhIytYIj\" width=\"690\" height=\"189\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/0/4/c/04cd25362e6666a38693d4ad242f1386103e09a3_2_690x18…</p>",
+    "post_number": 12,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1933949,
+    "username": "user7",
+    "created_at": "2026-02-08T06:18:42.734Z",
+    "cooked": "<p>I’m really looking forward to the changes to the default style, when will it be released approximately?</p>",
+    "post_number": 13,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 1
+     }
+    ],
+    "reaction_users_count": 1,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1934323,
+    "username": "user3",
+    "created_at": "2026-02-09T12:02:09.353Z",
+    "cooked": "<p>Search input and submit are squished!</p>\n<p><img src=\"https://emoji.discourse-cdn.com/twitter/melting_face.png?v=15\" alt=\"squish!\" width=\"50\" height=\"20\"></p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/9/9/0/990b028ebab539c56331e262081c6d47fe7b7097.jpeg\" data-download-href=\"/uploads/short-url/lPSDMYME3es21XzyAfxbxT2TTyT.jpeg?dl=1\" title=\"Screenshot_20260209_125824_Chrome\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/9/9/0/990b028ebab539c56331e262081c6d47fe7b7097_2_230x500.jpeg\" alt=\"Screenshot_20260209_125824_Chrome\" data-base62-sha1=\"lPSDMYME3es21XzyAfxbxT2TTyT\" width=\"230\" height=\"500\" srcset=\"https://glo…</p>",
+    "post_number": 14,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 5
+     }
+    ],
+    "reaction_users_count": 5,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1934439,
+    "username": "user1",
+    "created_at": "2026-02-09T15:35:11.550Z",
+    "cooked": "<p>All great feedback / bug finding so far. Thanks for the updates.</p>",
+    "post_number": 15,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 5
+     }
+    ],
+    "reaction_users_count": 5,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1934496,
+    "username": "user1",
+    "created_at": "2026-02-09T17:14:40.532Z",
+    "cooked": "<aside class=\"quote no-group\" data-username=\"user3\" data-post=\"9\" data-topic=\"395331\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>While I like the new button style, I feel they lack contrast with the background in certain areas, especially the topic footer.</p>\n</blockquote>\n</aside>\n<p>This is a good callout. I think the new button style is quite nice as well, but for some reason in this section (with so many of them together), it doesn’t feel quite right.</p>",
+    "post_number": 16,
+    "post_type": 1,
+    "reply_to_post_number": 9,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 5
+     }
+    ],
+    "reaction_users_count": 5,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1934742,
+    "username": "user3",
+    "created_at": "2026-02-09T23:28:06.255Z",
+    "cooked": "<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/a/3/2/a32a8ab85f2511040bb7f99f2c82d7b9eab49af2.jpeg\" data-download-href=\"/uploads/short-url/nhqYl6mNBIALznbCSYHPQWkDxtw.jpeg?dl=1\" title=\"Screenshot_20260210_002050_Chrome\"><img src=\"https://global.discourse-cdn.com/meta/optimized/4X/a/3/2/a32a8ab85f2511040bb7f99f2c82d7b9eab49af2_2_230x500.jpeg\" alt=\"Screenshot_20260210_002050_Chrome\" data-base62-sha1=\"nhqYl6mNBIALznbCSYHPQWkDxtw\" width=\"230\" height=\"500\" srcset=\"https://global.discourse-cdn.com/meta/optimized/4X/a/3/2/a32a8ab85f2511040bb7f99f2c82d7b9eab49af2_2_230x500.jpeg, https://global.discourse-cdn.com/meta/optimized/4X/a/3/2/a32…</p>",
+    "post_number": 17,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 3
+     }
+    ],
+    "reaction_users_count": 3,
+    "user_id": 3,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1935010,
+    "username": "user1",
+    "created_at": "2026-02-10T10:56:01.896Z",
+    "cooked": "<p>Latest round of changes should be live soon from the PR here:</p>\n<p><a href=\"https://github.com/discourse/discourse/pull/37653\" class=\"onebox\" target=\"_blank\" rel=\"noopener\">https://github.com/discourse/discourse/pull/37653</a></p>",
+    "post_number": 18,
+    "post_type": 1,
+    "reply_to_post_number": null,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 1,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": true,
+    "moderator": false,
+    "admin": true
+   },
+   {
+    "id": 1935636,
+    "username": "user7",
+    "created_at": "2026-02-11T03:25:03.422Z",
+    "cooked": "<p>When is the final version expected to be released? I am really looking forward to this style upgrade.</p>",
+    "post_number": 19,
+    "post_type": 1,
+    "reply_to_post_number": 18,
+    "topic_id": 395331,
+    "actions_summary": [],
+    "reaction_users_count": 0,
+    "user_id": 7,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   },
+   {
+    "id": 1935745,
+    "username": "user4",
+    "created_at": "2026-02-11T07:21:21.239Z",
+    "cooked": "<aside class=\"quote\" data-post=\"13\" data-topic=\"395331\">\n  <div class=\"title\">\n    <div class=\"quote-controls\"></div>\n    \n    <div class=\"quote-title__text-content\">\n      <a href=\"https://meta.discourse.org/t/modernizing-the-foundation-theme/395331/13\">Modernizing the Foundation theme</a> <a class=\"badge-category__wrapper \" href=\"/c/news-and-events/announcements/67\"><span data-category-id=\"67\" style=\"--category-badge-color: #ED207B; --category-badge-text-color: #000000; --parent-category-badge-color: #00AEEF;\" data-parent-category-id=\"207\" data-drop-close=\"true\" class=\"badge-category --style-emoji --has-parent\" title=\"Important updates from the Discourse team.\"><img src=\"https://emoji.disc…</p>",
+    "post_number": 20,
+    "post_type": 1,
+    "reply_to_post_number": 19,
+    "topic_id": 395331,
+    "actions_summary": [
+     {
+      "id": 2,
+      "count": 4
+     }
+    ],
+    "reaction_users_count": 4,
+    "user_id": 4,
+    "hidden": false,
+    "deleted_at": null,
+    "staff": false,
+    "moderator": false,
+    "admin": false
+   }
+  ],
+  "stream": [
+   1933050,
+   1933498,
+   1933533,
+   1933624,
+   1933632,
+   1933636,
+   1933648,
+   1933649,
+   1933677,
+   1933678,
+   1933700,
+   1933817,
+   1933949,
+   1934323,
+   1934439,
+   1934496,
+   1934742,
+   1935010,
+   1935636,
+   1935745,
+   1935885,
+   1935902,
+   1935936,
+   1935991,
+   1936143,
+   1936530,
+   1936525,
+   1937779,
+   1937790,
+   1937791,
+   1937802,
+   1937868,
+   1937947,
+   1937950,
+   1937997,
+   1938250,
+   1938273,
+   1939863,
+   1940147,
+   1940414,
+   1940417,
+   1940452,
+   1941759,
+   1943417,
+   1943418,
+   1943985,
+   1944815,
+   1944878,
+   1946017,
+   1949171,
+   1948465,
+   1948976,
+   1949074,
+   1949628,
+   1962836,
+   1964893,
+   1965083,
+   1965271,
+   1965274,
+   1965285,
+   1967457,
+   1967437,
+   1967445,
+   1967460,
+   1967576,
+   1967684,
+   1967947,
+   1967997,
+   1974904,
+   1975175,
+   1975187,
+   1975247,
+   1975248,
+   1975257,
+   1975258,
+   1981193,
+   1982428,
+   1989088,
+   1989095,
+   1989108,
+   1989140,
+   1989149,
+   1989161,
+   1989295,
+   1991525,
+   1991528,
+   1991700,
+   1993452,
+   1994466,
+   1994910,
+   2002871,
+   2003150,
+   2013903,
+   2013923,
+   2013924,
+   2014281,
+   2014727,
+   2014750,
+   2019104,
+   2019960
+  ]
+ }
+}

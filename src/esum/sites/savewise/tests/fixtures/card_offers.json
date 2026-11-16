@@ -1,0 +1,172 @@
+{
+ "data": {
+  "offers": [
+   {
+    "cards": [
+     {
+      "bank_name": "Citi",
+      "card_name": "Citi Strata Premier Card",
+      "pretty_card_name": "Citi Strata Premier℠ Card",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Citi",
+      "card_name": "Citi/AAdvantage Platinum Select World Elite Mastercard",
+      "pretty_card_name": "Citi/AAdvantage Platinum Select World Elite Mastercard",
+      "user_specific": false
+     }
+    ],
+    "merchant": {
+     "logo_url": "https://api.getsavewise.com/logos/v1/d58ea89b7d90ff68.webp",
+     "merchant_id": 3419,
+     "merchant_url": "walmart.com",
+     "name": "Walmart",
+     "normalized_merchant_name": "walmart"
+    },
+    "offer_details": {
+     "description": "",
+     "expiration_date": "N/A",
+     "expiration_date_iso": null,
+     "maximum_reward": "N/A",
+     "minimum_reward": "N/A",
+     "offer_category": "SHOPPING",
+     "offer_rate": 4.0,
+     "offer_type": "Static Percentage Cashback",
+     "start_date": null,
+     "symbol": "%",
+     "terms": null
+    },
+    "offer_id": 108309
+   },
+   {
+    "cards": [
+     {
+      "bank_name": "Amex",
+      "card_name": "American Express Gold Card",
+      "pretty_card_name": "Gold",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Amex",
+      "card_name": "Platinum Card",
+      "pretty_card_name": "Platinum",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Amex",
+      "card_name": "Business Platinum Card",
+      "pretty_card_name": "Business Platinum",
+      "user_specific": false
+     }
+    ],
+    "merchant": {
+     "logo_url": "https://api.getsavewise.com/logos/v1/d58ea89b7d90ff68.webp",
+     "merchant_id": 3419,
+     "merchant_url": "walmart.com",
+     "name": "Walmart",
+     "normalized_merchant_name": "walmart"
+    },
+    "offer_details": {
+     "description": "Spend $50 or more, earn $10 back",
+     "expiration_date": "2026-11-22",
+     "expiration_date_iso": "2026-11-22",
+     "maximum_reward": 10.0,
+     "minimum_reward": 50.0,
+     "offer_category": "SHOPPING",
+     "offer_rate": 10.0,
+     "offer_type": "Static Dollar Cashback",
+     "start_date": "2026-10-15",
+     "symbol": "$",
+     "terms": "By enrolling in this offer, you agree to these terms and the Amex Offers® Program Terms. Eligibility and Enrollment Enrollment is limited. Eligible Card Members must first add offer to their Card and then use same enrolled Card for qualifying purchases. Any Cards issued outside of the US are not eli"
+    },
+    "offer_id": 206045179
+   },
+   {
+    "cards": [
+     {
+      "bank_name": "Citi",
+      "card_name": "Citi Strata Premier Card",
+      "pretty_card_name": "Citi Strata Premier℠ Card",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Citi",
+      "card_name": "Citi Strata Elite Card",
+      "pretty_card_name": "Citi Strata Elite Card",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Citi",
+      "card_name": "Citi Strata Card",
+      "pretty_card_name": "Citi Strata Card",
+      "user_specific": false
+     }
+    ],
+    "merchant": {
+     "logo_url": "https://api.getsavewise.com/logos/v1/d58ea89b7d90ff68.webp",
+     "merchant_id": 3419,
+     "merchant_url": "walmart.com",
+     "name": "Walmart",
+     "normalized_merchant_name": "walmart"
+    },
+    "offer_details": {
+     "description": "",
+     "expiration_date": "2026-11-30",
+     "expiration_date_iso": "2026-11-30",
+     "maximum_reward": "N/A",
+     "minimum_reward": "N/A",
+     "offer_category": "SHOPPING",
+     "offer_rate": 5.0,
+     "offer_type": "Static Dollar Cashback",
+     "start_date": null,
+     "symbol": "$",
+     "terms": null
+    },
+    "offer_id": 196709654
+   },
+   {
+    "cards": [
+     {
+      "bank_name": "Amex",
+      "card_name": "American Express Gold Card",
+      "pretty_card_name": "Gold",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Amex",
+      "card_name": "Additional Gold Card",
+      "pretty_card_name": "Gold",
+      "user_specific": false
+     },
+     {
+      "bank_name": "Amex",
+      "card_name": "Amex EveryDay Preferred",
+      "pretty_card_name": "Everyday Preferred",
+      "user_specific": false
+     }
+    ],
+    "merchant": {
+     "logo_url": "https://api.getsavewise.com/logos/v1/d8cb7c0c8073dedb.webp",
+     "merchant_id": 18741,
+     "merchant_url": "walmart.com",
+     "name": "Walmart+ Annual Membership",
+     "normalized_merchant_name": "walmart+ annual membership"
+    },
+    "offer_details": {
+     "description": "Spend $98 on Walmart+ Annual Membership, earn $49 back",
+     "expiration_date": "2026-11-14",
+     "expiration_date_iso": "2026-11-14",
+     "maximum_reward": 49.0,
+     "minimum_reward": 98.0,
+     "offer_category": "SHOPPING",
+     "offer_rate": 49.0,
+     "offer_type": "Static Dollar Cashback",
+     "start_date": "2026-06-01",
+     "symbol": "$",
+     "terms": "By enrolling in this offer, you agree to these terms and the Amex Offers® Program Terms. Eligibility and Enrollment Enrollment is limited. Eligible Card Members must first add offer to their Card and then use same enrolled Card for qualifying purchases. Any Cards issued outside of the US are not eli"
+    },
+    "offer_id": 61915483
+   }
+  ]
+ }
+}

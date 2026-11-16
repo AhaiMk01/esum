@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14">
+  <title>ESUM at a glance</title>
+  <style>
+    :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#8c959f; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#6e7681; } }
+    .bg { fill:var(--bg); }
+    text { fill:var(--fg); }
+    .t { font-size:22px; font-weight:700; }
+    .sub { fill:var(--muted); font-size:14px; }
+    .h { font-size:16px; font-weight:700; }
+    .m { fill:var(--muted); font-size:13px; }
+    .mono { font-family: ui-monospace, Consolas, monospace; font-size:13px; }
+    .lbl { fill:var(--muted); font-size:13px; font-style:italic; }
+    .box { fill:var(--bg); stroke:var(--line); stroke-width:1.5; }
+    .a { stroke:var(--line); stroke-width:1.8; fill:none; marker-end:url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1100" height="700"/>
+
+  <text x="40" y="46" class="t">ESUM at a glance</text>
+  <text x="40" y="70" class="sub">A command-line tool your coding agent uses to read websites for you.</text>
+
+  <!-- 1. the call -->
+  <rect class="box" x="40" y="100" width="200" height="86" rx="10"/>
+  <text x="60" y="130" class="h">You</text>
+  <text x="60" y="154" class="m">"What are people saying</text>
+  <text x="60" y="172" class="m">about this card?"</text>
+
+  <rect class="box" x="300" y="100" width="240" height="86" rx="10"/>
+  <text x="320" y="130" class="h">Your agent</text>
+  <text x="320" y="154" class="m">Claude Code, Codex, …</text>
+  <text x="320" y="172" class="m">does the thinking, answers you</text>
+
+  <rect class="box" x="600" y="100" width="460" height="86" rx="10"/>
+  <text x="620" y="130" class="h">ESUM</text>
+  <text x="620" y="154" class="mono">esum uscf search --query "chase sapphire"</text>
+  <text x="620" y="172" class="m">commands in, compact text out</text>
+
+  <path class="a" d="M240,130 L296,130"/>
+  <path class="a" d="M540,130 L596,130"/>
+  <path class="a" d="M596,166 L544,166"/>
+  <path class="a" d="M296,166 L244,166"/>
+  <text x="552" y="122" class="lbl">runs</text>
+  <text x="552" y="184" class="lbl">text</text>
+  <text x="248" y="184" class="lbl">answer</text>
+
+  <!-- 2. how ESUM reaches a site -->
+  <path class="a" d="M830,186 L830,222"/>
+  <text x="40" y="244" class="h">How ESUM reaches a website: one of three ways, set per site</text>
+
+  <rect class="box" x="40" y="260" width="330" height="56" rx="8"/>
+  <text x="56" y="283" class="h">T1 · httpx</text>
+  <text x="56" y="304" class="m">plain HTTP; public APIs and pages</text>
+  <path class="a" d="M370,288 L426,288"/>
+  <rect class="box" x="430" y="260" width="630" height="56" rx="8"/>
+  <text x="450" y="293">for sites that answer a plain request</text>
+
+  <rect class="box" x="40" y="328" width="330" height="56" rx="8"/>
+  <text x="56" y="351" class="h">T2 · curl_cffi</text>
+  <text x="56" y="372" class="m">HTTP with Chrome's fingerprint; your cookies if needed</text>
+  <path class="a" d="M370,356 L426,356"/>
+  <rect class="box" x="430" y="328" width="630" height="56" rx="8"/>
+  <text x="450" y="361">for sites behind Cloudflare or a login</text>
+
+  <rect class="box" x="40" y="396" width="330" height="56" rx="8"/>
+  <text x="56" y="419" class="h">T3 · patchright-cli</text>
+  <text x="56" y="440" class="m">a Chrome tab: fetch() or a page script</text>
+  <path class="a" d="M370,424 L426,424"/>
+  <rect class="box" x="430" y="396" width="630" height="56" rx="8"/>
+  <text x="450" y="429">for sites only a real page can reach, or a T1/T2 site after a bot check</text>
+
+  <rect class="box" x="40" y="468" width="1020" height="62" rx="8"/>
+  <text x="56" y="492">The site answers with JSON or HTML → ESUM parses it → short text for the agent:</text>
+  <text x="56" y="516" class="mono">[alice #3] (2026-11-02 · 👍12 · ↩#1): approved after two days, no call needed</text>
+
+  <!-- 3. rules -->
+  <text x="40" y="572" class="h">Rules</text>
+  <text x="56" y="598">•  <tspan font-weight="700">Tier 0, read:</tspan> any time the task needs it, logged-in pages included.</text>
+  <text x="56" y="622">•  <tspan font-weight="700">Tier 1, write</tspan> (only one: a forum bookmark): your agent asks you first; every write is logged.</text>
+  <text x="56" y="646">•  <tspan font-weight="700">Never:</tspan> moving money or points (there is no tier for it), seeing your passwords.</text>
+  <text x="56" y="670">•  <tspan font-weight="700">Another site?</tspan> Ask your agent; the esum-site-author skill adds it.</text>
+</svg>

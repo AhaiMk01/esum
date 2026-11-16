@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1144" width="1280" height="1144" font-family="system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="12">
+  <title>ESUM v1 系统架构</title>
+  <style>
+    :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#8c959f;
+      --core:#eef4ff; --core-s:#4a72c4; --tr:#eefaf1; --tr-s:#3f8f57; --br:#fff6e8; --br-s:#c08a2e;
+      --gate:#fdeeee; --gate-s:#c0504d; --ext:#f4f1fb; --ext-s:#7a62b8; --st:#f3f4f6; --st-s:#8c959f; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#6e7681;
+      --core:#13233f; --core-s:#6f97e0; --tr:#12291a; --tr-s:#5cb879; --br:#2e2410; --br-s:#d9a64a;
+      --gate:#341617; --gate-s:#e06b67; --ext:#221b36; --ext-s:#a08ae0; --st:#1c2128; --st-s:#6e7681; } }
+    .bg { fill:var(--bg); }
+    text { fill:var(--fg); }
+    .h { font-weight:600; font-size:13px; }
+    .t { font-size:15px; font-weight:700; }
+    .m { fill:var(--muted); font-size:11px; }
+    .mono { font-family: ui-monospace, Consolas, 'Microsoft YaHei', monospace; font-size:11px; white-space:pre; }
+    .core { fill:var(--core); stroke:var(--core-s); }
+    .tr { fill:var(--tr); stroke:var(--tr-s); }
+    .br { fill:var(--br); stroke:var(--br-s); }
+    .gate { fill:var(--gate); stroke:var(--gate-s); }
+    .ext { fill:var(--ext); stroke:var(--ext-s); }
+    .st { fill:var(--st); stroke:var(--st-s); }
+    rect { stroke-width:1.4; }
+    .a { stroke:var(--line); stroke-width:1.6; fill:none; marker-end:url(#arr); }
+    .d { stroke-dasharray:5 4; }
+    .lbl { fill:var(--muted); font-size:11px; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1280" height="1144"/>
+
+  <text x="40" y="38" class="t">ESUM v1：系统架构</text>
+  <text x="40" y="56" class="m">图中自上而下是一次 `esum &lt;site&gt; &lt;action&gt;` 调用的流程。</text>
+
+  <!-- Row A: agent, skills, user -->
+  <rect class="ext" x="40" y="76" width="380" height="80" rx="8"/>
+  <text x="56" y="98" class="h">宿主编程 agent</text>
+  <text x="56" y="116">Claude Code、Codex、omp…（任何会读 SKILL.md 的 agent）</text>
+  <text x="56" y="134" class="m">在 shell 里运行 CLI，读取 stdout 或 ./esum-out/ 文件。</text>
+  <text x="56" y="148" class="m">ESUM 把网页内容标为不可信数据。</text>
+
+  <rect class="ext" x="450" y="76" width="370" height="80" rx="8"/>
+  <text x="466" y="98" class="h">skills/</text>
+  <text x="466" y="116"><tspan class="mono">esum/SKILL.md</tspan> 路由与规则，<tspan class="mono">references/workflows/*.md</tspan></text>
+  <text x="466" y="132"><tspan class="mono">esum docs &lt;site&gt;</tspan> 打印站点文档（由代码生成）</text>
+  <text x="466" y="148"><tspan class="mono">esum-site-author/</tspan> + module-format.md 模块约定</text>
+
+  <rect class="ext" x="860" y="76" width="380" height="80" rx="8"/>
+  <text x="876" y="98" class="h">用户</text>
+  <text x="876" y="116">写入前 agent 先问，用户同意后才执行。</text>
+  <text x="876" y="132">在 ESUM 的 Chrome 窗口里自己登录网站。</text>
+  <text x="876" y="148" class="m">ESUM 和 agent 从不接触密码。</text>
+
+  <path class="a" d="M450,116 L424,116"/>
+  <text x="426" y="108" class="lbl">加载</text>
+
+  <!-- Row B: CLI -->
+  <rect class="core" x="40" y="196" width="780" height="70" rx="8"/>
+  <text x="56" y="218" class="h">src/esum/cli.py</text>
+  <text x="56" y="236">CLI 按每个 Action 的类型化参数生成命令行参数，不为每个站点手写 argparse。</text>
+  <text x="56" y="254" class="m">全局参数：--json --browser=managed|attach|native --cdp · 子命令：list、docs [--write]、keys [ui]</text>
+  <path class="a" d="M230,156 L230,192"/>
+  <text x="238" y="180" class="lbl">esum &lt;site&gt; &lt;action&gt; --flags</text>
+
+  <!-- Row C: registry + model/docs -->
+  <rect class="core" x="40" y="306" width="380" height="150" rx="8"/>
+  <text x="56" y="328" class="h">core/registry.py：自动发现（D-22，无中心列表）</text>
+  <text x="56" y="348" class="mono">engines/  discourse · wordpress · vbulletin · discuz</text>
+  <text x="56" y="364" class="mono">sites/    内置站点（esum list）：</text>
+  <text x="56" y="378" class="mono">          论坛、羊毛博客、HN、Reddit、</text>
+  <text x="56" y="392" class="mono">          信用卡优惠、返利、礼品卡、机票</text>
+  <text x="56" y="410" class="mono">~/.esum/sites/  自定义：site.py 或 SITE.md</text>
+  <text x="56" y="425" class="m">registry 到 get() 时才导入自定义 Python（D-25），</text>
+  <text x="56" y="438" class="m">所以内置写入从不和它在同一个进程里。</text>
+  <text x="56" y="450" class="m">自定义站点不能替换内置站点（D-96）。</text>
+
+  <rect class="core" x="450" y="306" width="370" height="150" rx="8"/>
+  <text x="466" y="328" class="h">core/model.py + core/docs.py</text>
+  <text x="466" y="348" class="mono">engine() · site(transport=…) · @action(owner, tier)</text>
+  <text x="466" y="366">@action 把类型化函数和 docstring 变成 Action(Param…)</text>
+  <text x="466" y="384">Tier：READ = 0，REVERSIBLE = 1（永远没有 tier 3）</text>
+  <text x="466" y="402">每个站点声明一种传输：DIRECT · BROWSER_HTTP · IN_PAGE</text>
+  <text x="466" y="424" class="m">docs.py 用同一批 Action 生成站点文档；</text>
+  <text x="466" y="438" class="m">两者不一致时 test_docs_in_sync.py 会失败。</text>
+
+  <path class="a" d="M230,266 L230,302"/>
+  <text x="238" y="290" class="lbl">get(site)</text>
+  <path class="a" d="M635,306 L635,270"/>
+  <text x="643" y="290" class="lbl">Action 参数生成命令行参数</text>
+
+  <!-- Row D: runner -->
+  <rect class="core" x="40" y="496" width="780" height="80" rx="8"/>
+  <text x="56" y="518" class="h">core/runner.py：run_action</text>
+  <text x="56" y="536" class="mono">ctx = Context(site, action, options, http)  →  returned = act.func(ctx, **kwargs)</text>
+  <text x="56" y="554">Tier 0：返回的数据就是 Result。Tier 1：动作本身不写入，只返回 Write(description, run) 列表。</text>
+  <text x="56" y="570" class="m">Tier 0 的 HttpClient 在同一次调用内复用相同的 GET；tier 1 的读取总是实时的。</text>
+  <path class="a" d="M230,456 L230,492"/>
+
+  <!-- Right column: gate -->
+  <rect class="gate" x="860" y="306" width="380" height="150" rx="8"/>
+  <text x="876" y="328" class="h">core/gate.py：写入（D-85、D-26）</text>
+  <text x="876" y="348">只有 tier 1 动作能写入；读取动作返回写入时闸门拒绝。</text>
+  <text x="876" y="366">ESUM 不弹确认框。每次写入前 agent 先问用户，</text>
+  <text x="876" y="384">用户同意后才执行（D-85）。</text>
+  <text x="876" y="402">闸门把每个结果追加到 ~/.esum/writes.jsonl。</text>
+  <text x="876" y="424" class="m">没有任何参数、计划 ID 或配置能让 ESUM 自行写入。</text>
+  <text x="876" y="438" class="m">v1 唯一的 tier 1 动作：Discourse 收藏。</text>
+  <path class="a" d="M1050,156 L1050,302"/>
+  <text x="1058" y="236" class="lbl">agent 问时同意</text>
+
+  <path class="a" d="M820,514 L840,514 L840,400 L856,400"/>
+  <text x="742" y="488" class="lbl">tier ≥ 1：Write[]</text>
+
+  <!-- Right column: output -->
+  <rect class="core" x="860" y="496" width="380" height="80" rx="8"/>
+  <text x="876" y="518" class="h">core/output.py · posts.py · paging.py</text>
+  <text x="876" y="536" class="mono">[user #N] (date · 👍likes · OP · ↩#M): text</text>
+  <text x="876" y="552">紧凑文本或 --json；省略处标 [... omitted …]。</text>
+  <text x="876" y="568" class="m">结果太大时写入 ./esum-out/，stdout 只给摘要。</text>
+  <path class="a" d="M820,556 L856,556"/>
+  <text x="822" y="548" class="lbl">tier 0</text>
+  <path class="a" d="M1050,456 L1050,492"/>
+  <text x="1058" y="478" class="lbl">结果</text>
+
+  <!-- Row E: HttpClient -->
+  <rect class="tr" x="40" y="616" width="780" height="100" rx="8"/>
+  <text x="56" y="638" class="h">transport/__init__.py：HttpClient（ctx.http）</text>
+  <text x="56" y="656">站点代码调用 ctx.http.get_json(path)，从不直接接触后端。HttpClient 负责其余工作：</text>
+  <text x="56" y="672">相对 base_url 解析 URL；按站点拉开请求间隔（跨进程，默认 0.5 秒）；同一次读取调用内复用相同的 GET；</text>
+  <text x="56" y="688">遇到 429 重试三次，读取遇到 502/503/504 或超时重试两次；按声明的字符集解码。</text>
+  <text x="56" y="706" class="m">错误原样透传，退出码 1。遇到未登录响应时抛出 LoginNeeded，输出固定的 LOGIN NEEDED 提示，退出码 3。</text>
+  <path class="a" d="M230,576 L230,612"/>
+  <text x="238" y="600" class="lbl">ctx.http</text>
+
+  <!-- Row F: backends -->
+  <rect class="tr" x="40" y="744" width="250" height="96" rx="8"/>
+  <text x="56" y="766" class="h">T1 direct.py</text>
+  <text x="56" y="784">httpx，不用浏览器。</text>
+  <text x="56" y="800">用于公开 API。</text>
+  <text x="56" y="820" class="m">从不导入浏览器层。</text>
+
+  <rect class="tr" x="305" y="744" width="250" height="96" rx="8"/>
+  <text x="321" y="766" class="h">T2 browser_http.py</text>
+  <text x="321" y="784">curl_cffi 模拟 Chrome 的 TLS 指纹，</text>
+  <text x="321" y="800">可附带浏览器会话的 cookie 和 UA。</text>
+  <text x="321" y="820" class="m">cookie 只留在内存里，不写入日志。</text>
+
+  <rect class="tr" x="570" y="744" width="250" height="96" rx="8"/>
+  <text x="586" y="766" class="h">T3 in_page.py</text>
+  <text x="586" y="784">FETCH_JS 在该站点的标签页里</text>
+  <text x="586" y="800">执行通用 fetch()，先等反爬检查通过。</text>
+  <text x="586" y="820" class="m">通用路径。页面脚本见 D-95。</text>
+
+  <path class="a" d="M165,716 L165,740"/>
+  <path class="a" d="M430,716 L430,740"/>
+  <path class="a" d="M695,716 L695,740"/>
+
+  <!-- Browser layer -->
+  <rect class="br" x="305" y="876" width="515" height="84" rx="8"/>
+  <text x="321" y="898" class="h">browser/：daemon.py · session.py · login.py</text>
+  <text x="321" y="916">patchright-cli 守护进程（:9321）的客户端；第一次需要浏览器时才启动守护进程。</text>
+  <text x="321" y="932">模式：managed `esum`（默认）· attach · native（你日常用的 Chrome）。</text>
+  <text x="321" y="950" class="m">每次调用用自己的命名标签页，抓取时不加锁；ESUM 只断开附加的 Chrome，从不关闭它。</text>
+  <path class="a" d="M430,840 L430,872"/>
+  <path class="a" d="M695,840 L695,872"/>
+
+  <!-- Websites -->
+  <rect class="st" x="40" y="1000" width="250" height="104" rx="8"/>
+  <text x="56" y="1022" class="h">T1 站点</text>
+  <text x="56" y="1040">开放 API、博客和订阅源。</text>
+  <text x="56" y="1056">从不启动浏览器。</text>
+  <text x="56" y="1072">各站点的方式见 `esum list`。</text>
+  <text x="56" y="1094" class="m">引擎：wordpress · 独立模块</text>
+
+  <rect class="st" x="305" y="1000" width="250" height="104" rx="8"/>
+  <text x="321" y="1022" class="h">T2 站点</text>
+  <text x="321" y="1040">有 Cloudflare 或需要登录的站点。</text>
+  <text x="321" y="1056">有些把 T3 设为后备：</text>
+  <text x="321" y="1072">被人机验证拦下后，</text>
+  <text x="321" y="1088">这次调用改用真实标签页。</text>
+
+  <rect class="st" x="570" y="1000" width="250" height="104" rx="8"/>
+  <text x="586" y="1022" class="h">T3 站点</text>
+  <text x="586" y="1040">只有真实页面才能访问的站点，</text>
+  <text x="586" y="1056">以及被人机验证拦下后的后备</text>
+  <text x="586" y="1072">（Cloudflare、AWS WAF；D-40）</text>
+  <text x="586" y="1094" class="m">有 Cloudflare 和指纹检查</text>
+
+  <path class="a" d="M165,840 L165,996"/>
+  <path class="a" d="M430,960 L430,996"/>
+  <path class="a" d="M695,960 L695,996"/>
+
+  <!-- Local state -->
+  <rect class="st" x="860" y="616" width="380" height="158" rx="8"/>
+  <text x="876" y="638" class="h">本地状态</text>
+  <text x="876" y="658" class="mono">~/.esum/throttle/        各站点请求时间戳</text>
+  <text x="876" y="676" class="mono">~/.esum/writes.jsonl     写入日志（闸门）</text>
+  <text x="876" y="694" class="mono">~/.esum/sites/           自定义站点</text>
+  <text x="876" y="712" class="mono">~/.esum/browser/         浏览器配置 + 标签页锁</text>
+  <text x="876" y="730" class="mono">./esum-out/              溢出的输出</text>
+  <text x="876" y="748" class="mono">系统凭据库                Discourse 密钥（D-79）</text>
+  <text x="876" y="766" class="m">路径定义在 core/paths.py；仓库的 .gitignore 排除了它们。</text>
+
+  <!-- Legend -->
+  <rect class="st" x="860" y="796" width="380" height="308" rx="8" fill-opacity="0.5"/>
+  <text x="876" y="818" class="h">图例</text>
+  <rect class="ext" x="876" y="830" width="16" height="12" rx="2"/><text x="900" y="840">包外部分（agent、skill、用户）</text>
+  <rect class="core" x="876" y="850" width="16" height="12" rx="2"/><text x="900" y="860">src/esum/core + cli</text>
+  <rect class="gate" x="876" y="870" width="16" height="12" rx="2"/><text x="900" y="880">写入闸门</text>
+  <rect class="tr" x="876" y="890" width="16" height="12" rx="2"/><text x="900" y="900">src/esum/transport</text>
+  <rect class="br" x="876" y="910" width="16" height="12" rx="2"/><text x="900" y="920">src/esum/browser（按需启动；T1 从不启动）</text>
+  <rect class="st" x="876" y="930" width="16" height="12" rx="2"/><text x="900" y="940">网站 / 磁盘上的状态</text>
+  <text x="876" y="970" class="h">退出码</text>
+  <text x="876" y="990">0 成功 · 1 错误（原样透传）· 2 用法错误</text>
+  <text x="876" y="1008">3 LOGIN NEEDED · 5 CHECK NEEDED（4 已停用）</text>
+  <text x="876" y="1038" class="h">v1 不包含</text>
+  <text x="876" y="1058">MCP 服务器（D-10）、模型调用（D-15）、</text>
+  <text x="876" y="1074">涉及钱或积分的 tier 3 动作（D-16）</text>
+</svg>

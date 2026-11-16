@@ -1,0 +1,78 @@
+{
+ "errno": 0,
+ "msg": "OK",
+ "sticky_posts": [],
+ "thread": {
+  "anonymous": true,
+  "attachment": 0,
+  "attachment_list": [],
+  "author": "地里匿名用户Z6MTF",
+  "authorid": 0,
+  "bgcolor": "",
+  "close_status": 0,
+  "dateline": 1794073371,
+  "digest": 0,
+  "displayorder": 0,
+  "favtimes": 4,
+  "fid": 145,
+  "forum_name": {
+   "name": "海外面经",
+   "section": {
+    "id": 38,
+    "name": "海外求职"
+   }
+  },
+  "heats": 10,
+  "highlight": 0,
+  "is_favorite": -1,
+  "lastpost": 1794110964,
+  "lastposter": "I0l",
+  "magics": [],
+  "message_bbcode": "[hide=200]本帖内容需要积分高于 200 才可浏览。\n[url=https://www.1point3acres.com/bbs/thread-71069-1-1.html]查看如何攒积分[/url][/hide]",
+  "message_html": null,
+  "pid": 21261901,
+  "poll_info": {},
+  "post_domain": "",
+  "post_status": 8192,
+  "rate": 1,
+  "rates": [
+   {
+    "dateline": 1794077828,
+    "extcredits": 1,
+    "pid": 21261901,
+    "reason": "给你点个赞！",
+    "score": 1,
+    "uid": 824103,
+    "username": "小亩_29c04ea"
+   }
+  ],
+  "ratetimes": 1,
+  "reactions": [],
+  "recommend_add": 2,
+  "replies": 7,
+  "sortid": 311,
+  "special": 0,
+  "stamp": -1,
+  "status": 32,
+  "subject": "很可惜的OAI挂经",
+  "tags": [
+   {
+    "displayname": "Openai",
+    "image": "https://oss.1p3a.com/logo/openai.png!d",
+    "tagid": 9407,
+    "tagname": "openai"
+   }
+  ],
+  "thread_type": "",
+  "threadpay": null,
+  "tid": 1196170,
+  "typeid": 0,
+  "videos": [],
+  "views": 0,
+  "votes": {
+   "attitude": -1,
+   "downvote": 0,
+   "upvote": 2
+  }
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "topic_list": {
+  "more_topics_url": "/hot?page=1",
+  "per_page": 30,
+  "topics": [
+   {
+    "id": 1,
+    "title": "New to Discourse? Start here!",
+    "slug": "new-to-discourse-start-here",
+    "posts_count": 1,
+    "reply_count": 5,
+    "highest_post_number": 1,
+    "created_at": "2013-02-01T04:52:28.073Z",
+    "last_posted_at": "2013-02-01T04:52:28.397Z",
+    "bumped_at": "2025-09-23T19:13:50.543Z",
+    "archetype": "regular",
+    "pinned": true,
+    "visible": true,
+    "closed": true,
+    "archived": false,
+    "tags": [],
+    "views": 120646,
+    "like_count": 447,
+    "category_id": 67,
+    "excerpt": ":waving_hand: We’re so glad you’re here! This is our official community, where you can connect, ask questions, and share ideas about Discourse, a powerful platform for support, teamwork, and everythin"
+   },
+   {
+    "id": 415745,
+    "title": "Webinar: Building High-Impact Communities with Lean Teams",
+    "slug": "webinar-building-high-impact-communities-with-lean-teams",
+    "posts_count": 1,
+    "reply_count": 0,
+    "highest_post_number": 1,
+    "created_at": "2026-10-26T14:43:45.190Z",
+    "last_posted_at": "2026-10-26T14:43:45.333Z",
+    "bumped_at": "2026-10-26T14:43:45.333Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 35,
+    "like_count": 3,
+    "category_id": 216,
+    "excerpt": "📅 November 12, 2026 11:00 AM → November 12, 2026 12:00 PM (America/New_York) · https://zoom.us/j/95332228937\n Community professionals are being asked to think more strategically, demonstrate measurabl"
+   },
+   {
+    "id": 415529,
+    "title": "Anonymous visitors can now browse public chat channels on new sites by default",
+    "slug": "anonymous-visitors-can-now-browse-public-chat-channels-on-new-sites-by-default",
+    "posts_count": 2,
+    "reply_count": 0,
+    "highest_post_number": 2,
+    "created_at": "2026-10-26T02:36:49.399Z",
+    "last_posted_at": "2026-10-26T12:53:53.417Z",
+    "bumped_at": "2026-10-26T12:53:53.417Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 317,
+      "name": "chat",
+      "slug": "chat"
+     }
+    ],
+    "views": 60,
+    "like_count": 9,
+    "category_id": 67,
+    "excerpt": "On new Discourse sites, chat channels are now visible to everyone by default, including anonymous visitors in a read-only view. \nThis means visitors can discover your community’s chat activity without"
+   },
+   {
+    "id": 414624,
+    "title": "AI agents signing up for accounts",
+    "slug": "ai-agents-signing-up-for-accounts",
+    "posts_count": 17,
+    "reply_count": 13,
+    "highest_post_number": 17,
+    "created_at": "2026-10-13T22:44:25.334Z",
+    "last_posted_at": "2026-10-26T13:14:17.181Z",
+    "bumped_at": "2026-10-26T13:14:17.181Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 393,
+    "like_count": 26,
+    "category_id": 65,
+    "excerpt": "I am concerned that there could be a big wave of AI agents coming that will be making accounts.  We just got one today from ilands.app which is some kind of LLM agent.  They posted some random strange"
+   },
+   {
+    "id": 415684,
+    "title": "What’s your go-to user theme on Discourse?",
+    "slug": "what-s-your-go-to-user-theme-on-discourse",
+    "posts_count": 8,
+    "reply_count": 1,
+    "highest_post_number": 8,
+    "created_at": "2026-10-25T19:33:35.225Z",
+    "last_posted_at": "2026-10-26T17:02:45.212Z",
+    "bumped_at": "2026-10-26T17:02:45.212Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [],
+    "views": 146,
+    "like_count": 5,
+    "category_id": 124,
+    "excerpt": "Mine is Foundation."
+   },
+   {
+    "id": 415679,
+    "title": "Sentiment analysis - useful or pointless?",
+    "slug": "sentiment-analysis-useful-or-pointless",
+    "posts_count": 6,
+    "reply_count": 3,
+    "highest_post_number": 6,
+    "created_at": "2026-10-25T17:46:24.680Z",
+    "last_posted_at": "2026-10-26T01:58:59.591Z",
+    "bumped_at": "2026-10-26T01:58:59.591Z",
+    "archetype": "regular",
+    "pinned": false,
+    "visible": true,
+    "closed": false,
+    "archived": false,
+    "tags": [
+     {
+      "id": 543,
+      "name": "ai",
+      "slug": "ai"
+     },
+     {
+      "id": 636,
+      "name": "ai-sentiment",
+      "slug": "ai-sentiment"
+     }
+    ],
+    "views": 88,
+    "like_count": 5,
+    "category_id": 2,
+    "excerpt": "Evening all, or possibly morning/afternoon. \nI turned on sentiment analysis quite some time back, but to me it just seems to not add anything of value. The data is just lacking or at best ambiguous. \n"
+   }
+  ]
+ }
+}

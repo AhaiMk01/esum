@@ -1,0 +1,112 @@
+{
+ "categories": [
+  {
+   "id": 207,
+   "name": "News and Events",
+   "slug": "news-and-events",
+   "parent_category_id": null,
+   "position": 0,
+   "topic_count": 2,
+   "read_restricted": false
+  },
+  {
+   "id": 67,
+   "name": "Announcements",
+   "slug": "announcements",
+   "parent_category_id": 207,
+   "position": 1,
+   "topic_count": 644,
+   "read_restricted": false
+  },
+  {
+   "id": 13,
+   "name": "Blog",
+   "slug": "blog",
+   "parent_category_id": 207,
+   "position": 2,
+   "topic_count": 255,
+   "read_restricted": false
+  },
+  {
+   "id": 157,
+   "name": "Forum summaries",
+   "slug": "forum-summaries",
+   "parent_category_id": 207,
+   "position": 3,
+   "topic_count": 5,
+   "read_restricted": false
+  },
+  {
+   "id": 216,
+   "name": "Events",
+   "slug": "events",
+   "parent_category_id": 207,
+   "position": 4,
+   "topic_count": 19,
+   "read_restricted": false
+  },
+  {
+   "id": 65,
+   "name": "Community Building",
+   "slug": "community-building",
+   "parent_category_id": null,
+   "position": 5,
+   "topic_count": 1073,
+   "read_restricted": false
+  },
+  {
+   "id": 148,
+   "name": "Data & reporting",
+   "slug": "data-reporting",
+   "parent_category_id": 65,
+   "position": 6,
+   "topic_count": 768,
+   "read_restricted": false
+  },
+  {
+   "id": 35,
+   "name": "Praise",
+   "slug": "praise",
+   "parent_category_id": 65,
+   "position": 7,
+   "topic_count": 354,
+   "read_restricted": false
+  },
+  {
+   "id": 63,
+   "name": "Comparison",
+   "slug": "comparison",
+   "parent_category_id": 65,
+   "position": 8,
+   "topic_count": 11,
+   "read_restricted": false
+  },
+  {
+   "id": 219,
+   "name": "Enterprise",
+   "slug": "enterprise",
+   "parent_category_id": 65,
+   "position": 9,
+   "topic_count": 13,
+   "read_restricted": false
+  },
+  {
+   "id": 124,
+   "name": "General",
+   "slug": "general",
+   "parent_category_id": null,
+   "position": 11,
+   "topic_count": 266,
+   "read_restricted": false
+  },
+  {
+   "id": 6,
+   "name": "Product Support",
+   "slug": "support",
+   "parent_category_id": null,
+   "position": 12,
+   "topic_count": 20607,
+   "read_restricted": false
+  }
+ ]
+}

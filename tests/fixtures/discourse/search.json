@@ -1,0 +1,191 @@
+{
+ "posts": [
+  {
+   "id": 728117,
+   "username": "user20",
+   "created_at": "2020-04-05T18:21:49.394Z",
+   "like_count": 1,
+   "blurb": "This is awesome guys!! :clap: :clap: As a fan of https://meta.discourse.org/t/improved-bookmarks-with-reminders/144542 bookmark reminders , I'd like to suggest an additional feature I think will be quite useful. A common use of reminders is to do follow ups. The problem when they are u...",
+   "post_number": 1,
+   "topic_id": 146924
+  },
+  {
+   "id": 1087193,
+   "username": "user21",
+   "created_at": "2022-04-10T15:42:07.368Z",
+   "like_count": 1,
+   "blurb": "I noticed two things about the bookmark reminder that seem like bugs. Choosing a date for the reminder autosaves and closes the popup. I suppose this could be considered /c/contribute/ux/9 #square-f...",
+   "post_number": 1,
+   "topic_id": 223850
+  },
+  {
+   "id": 1326005,
+   "username": "user12",
+   "created_at": "2023-07-13T14:49:14.150Z",
+   "like_count": 2,
+   "blurb": "Our current bookmark modal is due for a little redesign. Among other things being considered, we think the amount of reminder options offered is maybe a bit overkill. In this topic we'd like to gage what the most used timeframes are. Current design image Polls In the current design… I often use… ...",
+   "post_number": 1,
+   "topic_id": 271548
+  },
+  {
+   "id": 1517103,
+   "username": "user22",
+   "created_at": "2024-05-14T12:52:30.093Z",
+   "like_count": 0,
+   "blurb": "Tested on both Chrome and Firefox. Bookmark a post or topic, then configure or edit the bookmark and set a custom reminder. The last custom date time is hidden and appears only when selecting \"Custom date and time\". Furthermore, the last custom date time is always the current time Also changing t...",
+   "post_number": 1,
+   "topic_id": 307897
+  },
+  {
+   "id": 1841900,
+   "username": "user23",
+   "created_at": "2025-08-22T16:29:43.905Z",
+   "like_count": 4,
+   "blurb": "image I knew this existed and wanted to change it. I looked on the /my/preferences/notifications Notifications tab first, but found it on Interface instead.",
+   "post_number": 1,
+   "topic_id": 379938
+  }
+ ],
+ "topics": [
+  {
+   "id": 146924,
+   "title": "Auto-dismiss bookmark reminders based on replies",
+   "slug": "auto-dismiss-bookmark-reminders-based-on-replies",
+   "posts_count": 17,
+   "reply_count": 8,
+   "highest_post_number": 17,
+   "created_at": "2020-04-05T18:21:49.394Z",
+   "last_posted_at": "2020-04-08T08:35:24.745Z",
+   "bumped_at": "2020-04-08T08:35:24.745Z",
+   "archetype": "regular",
+   "pinned": false,
+   "visible": true,
+   "closed": false,
+   "archived": false,
+   "tags": [
+    {
+     "id": 565,
+     "name": "bookmarks",
+     "slug": "bookmarks"
+    }
+   ],
+   "category_id": 2,
+   "excerpt": "This is awesome guys!! :clap: :clap: \nAs a fan of bookmark reminders, I’d like to suggest an additional feature I think will be quite useful. \nA common use of reminders is to do follow ups. The problem when they are used&hellip;",
+   "bumped": true
+  },
+  {
+   "id": 223850,
+   "title": "Bookmark reminder is always changed to custom and autosaves",
+   "slug": "bookmark-reminder-is-always-changed-to-custom-and-autosaves",
+   "posts_count": 9,
+   "reply_count": 7,
+   "highest_post_number": 10,
+   "created_at": "2022-04-10T15:42:07.285Z",
+   "last_posted_at": "2022-09-21T00:56:26.284Z",
+   "bumped_at": "2022-09-21T00:56:26.284Z",
+   "archetype": "regular",
+   "pinned": false,
+   "visible": true,
+   "closed": false,
+   "archived": false,
+   "tags": [
+    {
+     "id": 565,
+     "name": "bookmarks",
+     "slug": "bookmarks"
+    }
+   ],
+   "category_id": 9,
+   "excerpt": "I noticed two things about the bookmark reminder that seem like bugs. \n\nChoosing a date for the reminder autosaves and closes the popup. I suppose this could be considered <span class=\"hashtag-icon-placeholder\"></span>Contribute &gt; UX</span>, but why have a save button if i&hellip;",
+   "bumped": true
+  },
+  {
+   "id": 271548,
+   "title": "[feedback wanted] bookmark reminders poll",
+   "slug": "feedback-wanted-bookmark-reminders-poll",
+   "posts_count": 5,
+   "reply_count": 0,
+   "highest_post_number": 5,
+   "created_at": "2023-07-13T14:49:13.910Z",
+   "last_posted_at": "2023-07-14T13:52:46.361Z",
+   "bumped_at": "2023-07-14T13:59:04.337Z",
+   "archetype": "regular",
+   "pinned": false,
+   "visible": true,
+   "closed": false,
+   "archived": false,
+   "tags": [
+    {
+     "id": 74,
+     "name": "feedback",
+     "slug": "feedback"
+    },
+    {
+     "id": 565,
+     "name": "bookmarks",
+     "slug": "bookmarks"
+    }
+   ],
+   "category_id": 2,
+   "excerpt": "Our current bookmark modal is due for a little redesign. \nAmong other things being considered, we think the amount of reminder options offered is maybe a bit overkill. \nIn this topic we’d like to gage what the most used &hellip;",
+   "bumped": true
+  },
+  {
+   "id": 307897,
+   "title": "Custom bookmark reminder is unusable",
+   "slug": "custom-bookmark-reminder-is-unusable",
+   "posts_count": 14,
+   "reply_count": 9,
+   "highest_post_number": 15,
+   "created_at": "2024-05-14T12:52:30.032Z",
+   "last_posted_at": "2024-05-17T11:57:29.703Z",
+   "bumped_at": "2024-05-17T11:57:29.703Z",
+   "archetype": "regular",
+   "pinned": false,
+   "visible": true,
+   "closed": false,
+   "archived": false,
+   "tags": [
+    {
+     "id": 565,
+     "name": "bookmarks",
+     "slug": "bookmarks"
+    }
+   ],
+   "category_id": 1,
+   "excerpt": "Tested on both Chrome and Firefox. Bookmark a post or topic, then configure or edit the bookmark and set a custom reminder. \n\nThe last custom date time is hidden and appears only when selecting “Custom date and time”. Fu&hellip;",
+   "bumped": true
+  },
+  {
+   "id": 379938,
+   "title": "I disagree with the location of the bookmark reminder notification preference",
+   "slug": "i-disagree-with-the-location-of-the-bookmark-reminder-notification-preference",
+   "posts_count": 1,
+   "reply_count": 0,
+   "highest_post_number": 1,
+   "created_at": "2025-08-22T16:29:43.847Z",
+   "last_posted_at": "2025-08-22T16:29:43.905Z",
+   "bumped_at": "2025-08-22T16:29:43.905Z",
+   "archetype": "regular",
+   "pinned": false,
+   "visible": true,
+   "closed": false,
+   "archived": false,
+   "tags": [
+    {
+     "id": 565,
+     "name": "bookmarks",
+     "slug": "bookmarks"
+    }
+   ],
+   "category_id": 9,
+   "excerpt": "I knew this existed and wanted to change it. I looked on the Notifications tab first, but found it on Interface instead.",
+   "bumped": true
+  }
+ ],
+ "grouped_search_result": {
+  "term": "bookmark reminder",
+  "more_full_page_results": true,
+  "error": null
+ }
+}

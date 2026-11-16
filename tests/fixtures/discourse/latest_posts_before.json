@@ -1,0 +1,49 @@
+{
+ "latest_posts": [
+  {
+   "id": 2059344,
+   "created_at": "2026-10-30T14:17:12.411Z",
+   "username": "user5",
+   "topic_id": 416145,
+   "topic_slug": "imagemagick-replaced-with-libvips-for-image-processing",
+   "topic_title": "ImageMagick replaced with libvips for image processing",
+   "post_number": 8,
+   "post_type": 1,
+   "reply_to_post_number": 6,
+   "category_id": 7,
+   "cooked": "<aside class=\"quote no-group\" data-username=\"someone\" data-post=\"6\" data-topic=\"416145\" data-full=\"true\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n someone:</div>\n<blockquote>\n<p>out of interest, what was the rationale for this chang…</p>\n</blockquote>\n</aside>\n<p>(reply cut for the fixture)</p>",
+   "hidden": false,
+   "deleted_at": null
+  },
+  {
+   "id": 2059333,
+   "created_at": "2026-10-30T13:57:42.529Z",
+   "username": "user6",
+   "topic_id": 415845,
+   "topic_slug": "live-background-blur-always-fails-in-brave-browser-background-blur-couldnt-be-started-detached-video-play-is-aborted",
+   "topic_title": "Live: background blur always fails in Brave Browser (\"Background blur couldn't be started\") - detached `<video>`.play() is aborted",
+   "post_number": 4,
+   "post_type": 1,
+   "reply_to_post_number": 3,
+   "category_id": 1,
+   "cooked": "<p>Thanks, PR is now merged!</p>",
+   "hidden": false,
+   "deleted_at": null
+  },
+  {
+   "id": 2059331,
+   "created_at": "2026-10-30T13:52:25.846Z",
+   "username": "user7",
+   "topic_id": 416145,
+   "topic_slug": "imagemagick-replaced-with-libvips-for-image-processing",
+   "topic_title": "ImageMagick replaced with libvips for image processing",
+   "post_number": 7,
+   "post_type": 1,
+   "reply_to_post_number": 5,
+   "category_id": 7,
+   "cooked": "<p>Right. Missed the link. Should the ImageMagick link be removed then?</p>",
+   "hidden": false,
+   "deleted_at": null
+  }
+ ]
+}

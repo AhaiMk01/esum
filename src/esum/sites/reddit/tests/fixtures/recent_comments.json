@@ -1,0 +1,8 @@
+{"kind": "Listing", "data": {"after": "t1_cj2", "children": [
+ {"kind": "t1", "data": {"id": "cj1", "name": "t1_cj1", "author": "user_a", "body": "Called today, got 10k.",
+  "created_utc": 1793937946, "score": 5, "score_hidden": false, "subreddit": "churning", "link_id": "t3_fix001",
+  "link_title": "Sapphire & retention", "parent_id": "t3_fix001", "permalink": "/r/churning/comments/fix001/sapphire_retention/cj1/"}},
+ {"kind": "t1", "data": {"id": "cj2", "name": "t1_cj2", "author": "user_b", "body": "No, it posts in 2 days.\n\nSecond line.",
+  "created_utc": 1793937000, "score": 1, "score_hidden": true, "subreddit": "awardtravel", "link_id": "t3_fix002",
+  "link_title": "Question Thread", "parent_id": "t1_cj1", "permalink": "/r/awardtravel/comments/fix002/question_thread/cj2/"}}
+]}}

@@ -1,0 +1,49 @@
+{
+ "locations": [
+  {
+   "displayName": "Tokyo, Japan - All airports",
+   "type": "city",
+   "code": "TYO",
+   "cityCode": "TYO",
+   "cityName": "Tokyo",
+   "latLng": {
+    "latitude": 35.66530397924529,
+    "longitude": 140.10044043396226
+   },
+   "timezone": "Asia/Tokyo",
+   "distance": {
+    "unit": "KILOMETER"
+   }
+  },
+  {
+   "displayName": "Tokyo Narita International, Japan (NRT)",
+   "type": "airport",
+   "code": "NRT",
+   "cityCode": "TYO",
+   "cityName": "Tokyo",
+   "latLng": {
+    "latitude": 35.7652778,
+    "longitude": 140.385556
+   },
+   "timezone": "Asia/Tokyo",
+   "distance": {
+    "unit": "KILOMETER"
+   }
+  },
+  {
+   "displayName": "Tokyo International (Haneda), Japan (HND)",
+   "type": "airport",
+   "code": "HND",
+   "cityCode": "TYO",
+   "cityName": "Tokyo",
+   "latLng": {
+    "latitude": 35.5533333,
+    "longitude": 139.781111
+   },
+   "timezone": "Asia/Tokyo",
+   "distance": {
+    "unit": "KILOMETER"
+   }
+  }
+ ]
+}

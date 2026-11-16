@@ -1,0 +1,114 @@
+{
+ "title": "Buy $50 Ace Gift Card and Get $10 Ace Gift Card Free",
+ "vendor": {
+  "name": "Ace Hardware",
+  "id": 1559
+ },
+ "availableOnline": true,
+ "availableInStore": false,
+ "alwaysAvailable": false,
+ "brand": {
+  "name": "Ace Hardware",
+  "type": "Standard",
+  "slug": "ace-hardware",
+  "id": 1981
+ },
+ "url": "https://acehardware.gift.solutions/design-choice/acehardware?cardFormat=digital",
+ "startDate": "2026-11-02T01:13:34.943Z",
+ "endDate": "2026-12-01T05:59:00Z",
+ "notes": "",
+ "lastConfirmedAt": "2026-11-02T01:15:19.357802Z",
+ "users": [
+  {
+   "role": "Myself",
+   "user": {
+    "id": 2,
+    "email": "user@example.invalid"
+   },
+   "status": "Buying",
+   "priority": "None",
+   "purchaseLimit": 0,
+   "snoozeType": "None",
+   "rates": [],
+   "permissions": {}
+  },
+  {
+   "role": "Broker",
+   "user": {
+    "id": 1,
+    "email": "user@example.invalid"
+   },
+   "category": {
+    "user": {
+     "id": 1,
+     "email": "user@example.invalid"
+    },
+    "name": "Online (Other)",
+    "description": "Vendors that do not have deals frequently enough to warrant a dedicated deal source name.",
+    "subscribeNewSellers": true,
+    "permissions": {},
+    "id": "01000000-83ff-36fc-1135-08dbe24b33f6"
+   },
+   "status": "Buying",
+   "rates": [
+    {
+     "buyer": {
+      "id": 1,
+      "displayName": "CardCenter",
+      "email": "buyer@example.invalid"
+     },
+     "brand": {
+      "name": "Ace Hardware",
+      "slug": "ace-hardware",
+      "type": "Standard",
+      "id": 1981
+     },
+     "value": 10,
+     "rate": 0.77,
+     "purchaseRate": 0.833,
+     "margin": -0.08181818181818182,
+     "paymentTerms": 14,
+     "maximumPaymentTerms": 60,
+     "flexType": "None",
+     "autoApproveOffersUntil": "2026-12-01T05:59:00Z",
+     "maximumSubmissionTerms": 2,
+     "unfulfilledPerSellerCap": 100.0,
+     "availableCap": 2140.0,
+     "startDate": "2026-11-02T17:36:34.404118Z",
+     "permissions": {},
+     "id": 30393
+    },
+    {
+     "buyer": {
+      "id": 1,
+      "displayName": "CardCenter",
+      "email": "buyer@example.invalid"
+     },
+     "brand": {
+      "name": "Ace Hardware",
+      "slug": "ace-hardware",
+      "type": "Standard",
+      "id": 1981
+     },
+     "value": 100,
+     "rate": 0.825,
+     "purchaseRate": 0.833,
+     "margin": -0.009696969696969697,
+     "paymentTerms": 14,
+     "maximumPaymentTerms": 60,
+     "flexType": "None",
+     "autoApproveOffersUntil": "2026-12-01T05:59:00Z",
+     "maximumSubmissionTerms": 2,
+     "unfulfilledPerSellerCap": 500.0,
+     "availableCap": 21700.0,
+     "startDate": "2026-11-02T17:36:34.404118Z",
+     "permissions": {},
+     "id": 30392
+    }
+   ],
+   "permissions": {}
+  }
+ ],
+ "permissions": {},
+ "id": 894500
+}

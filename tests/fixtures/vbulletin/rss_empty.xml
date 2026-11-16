@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>FlyerTalk Forums - Airlines and Mileage Programs</title>
+		<link>https://www.flyertalk.com/forum/</link>
+		<description />
+		<language>en</language>
+		<lastBuildDate>Sun, 08 Nov 2026 04:19:40 GMT</lastBuildDate>
+		<generator>vBulletin</generator>
+		<ttl>5</ttl>
+		<image>
+			<url>https://www.flyertalk.com/forum/images/misc/rss.jpg</url>
+			<title>FlyerTalk Forums - Airlines and Mileage Programs</title>
+			<link>https://www.flyertalk.com/forum/</link>
+		</image>
+	</channel>
+</rss>

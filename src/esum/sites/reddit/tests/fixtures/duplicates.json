@@ -1,0 +1,16 @@
+[
+ {"kind": "Listing", "data": {"children": [{"kind": "t3", "data": {"id": "fixdup", "title": "Card portal news & more",
+   "author": "example_op", "subreddit": "news", "subreddit_name_prefixed": "r/news", "created_utc": 1793763396, "score": 104919,
+   "num_comments": 2797, "num_duplicates": 2, "permalink": "/r/news/comments/fixdup/card_portal_news/",
+   "url": "https://example.com/portal-news", "is_self": false}}]}},
+ {"kind": "Listing", "data": {"after": "t3_fixdu3", "children": [
+   {"kind": "t3", "data": {"id": "fixdu2", "title": "Card portal news", "author": "user_b", "subreddit": "politics",
+    "subreddit_name_prefixed": "r/politics", "created_utc": 1793763818, "score": 2547, "num_comments": 145,
+    "permalink": "/r/politics/comments/fixdu2/card_portal_news/", "url": "https://example.com/portal-news", "is_self": false,
+    "link_flair_text": "News"}},
+   {"kind": "t3", "data": {"id": "fixdu3", "title": "Portal news discussion", "author": "user_c", "subreddit": "churning",
+    "subreddit_name_prefixed": "r/churning", "created_utc": 1793765770, "score": -4, "num_comments": 60,
+    "permalink": "/r/churning/comments/fixdu3/portal_news_discussion/",
+    "url": "https://www.reddit.com/r/churning/comments/fixdu3/portal_news_discussion/", "is_self": true, "selftext": "Thoughts?"}}
+ ]}}
+]

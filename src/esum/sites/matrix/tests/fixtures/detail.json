@@ -1,0 +1,540 @@
+{
+ "bookingDetails": {
+  "ext": {
+   "totalPrice": "USD7212.99"
+  },
+  "itinerary": {
+   "distance": {
+    "units": "MI",
+    "value": 13862
+   },
+   "slices": [
+    {
+     "destination": {
+      "city": {
+       "name": "Tokyo"
+      },
+      "code": "NRT",
+      "name": "Tokyo Narita International"
+     },
+     "ext": {
+      "warnings": "LONG_LAYOVER,CHANGE_OF_TERMINAL"
+     },
+     "origin": {
+      "city": {
+       "name": "New York"
+      },
+      "code": "JFK",
+      "name": "New York John F Kennedy International"
+     },
+     "segments": [
+      {
+       "bookingInfos": [
+        {
+         "bookingCode": "I",
+         "cabin": "FIRST"
+        }
+       ],
+       "carrier": {
+        "code": "AA",
+        "shortName": "American"
+       },
+       "connection": {
+        "changeOfTerminal": true,
+        "duration": 245
+       },
+       "destination": {
+        "city": {
+         "name": "Boston"
+        },
+        "code": "BOS"
+       },
+       "ext": {
+        "operationalDisclosure": "OPERATED BY REPUBLIC AIRWAYS AS AMERICAN EAGLE"
+       },
+       "flight": {
+        "number": 4645
+       },
+       "legs": [
+        {
+         "aircraft": {
+          "shortName": "Embraer 175"
+         },
+         "destination": {
+          "city": {
+           "name": "Boston"
+          },
+          "code": "BOS",
+          "name": "Boston Edward L. Logan International"
+         },
+         "origin": {
+          "city": {
+           "name": "New York"
+          },
+          "code": "JFK"
+         },
+         "services": [
+          {
+           "amenities": [
+            "Wi-Fi"
+           ]
+          }
+         ],
+         "arrival": "2027-02-16T07:55-05:00",
+         "departure": "2027-02-16T06:30-05:00",
+         "duration": 85
+        }
+       ],
+       "origin": {
+        "city": {
+         "name": "New York"
+        },
+        "code": "JFK"
+       },
+       "arrival": "2027-02-16T07:55-05:00",
+       "codeshare": true,
+       "departure": "2027-02-16T06:30-05:00",
+       "duration": 85
+      },
+      {
+       "bookingInfos": [
+        {
+         "bookingCode": "I",
+         "cabin": "BUSINESS"
+        }
+       ],
+       "carrier": {
+        "code": "AA",
+        "shortName": "American"
+       },
+       "destination": {
+        "city": {
+         "name": "Tokyo"
+        },
+        "code": "NRT"
+       },
+       "ext": {
+        "operationalDisclosure": "OPERATED BY JAL"
+       },
+       "flight": {
+        "number": 8475
+       },
+       "legs": [
+        {
+         "aircraft": {
+          "shortName": "Boeing 787"
+         },
+         "destination": {
+          "city": {
+           "name": "Tokyo"
+          },
+          "code": "NRT",
+          "name": "Tokyo Narita International"
+         },
+         "origin": {
+          "city": {
+           "name": "Boston"
+          },
+          "code": "BOS"
+         },
+         "services": [
+          {
+           "amenities": [
+            "Non-smoking",
+            "Wi-Fi"
+           ],
+           "meals": [
+            "Meal"
+           ]
+          }
+         ],
+         "arrival": "2027-02-17T16:00+09:00",
+         "departure": "2027-02-16T12:00-05:00",
+         "duration": 840
+        }
+       ],
+       "origin": {
+        "city": {
+         "name": "Boston"
+        },
+        "code": "BOS"
+       },
+       "arrival": "2027-02-17T16:00+09:00",
+       "codeshare": true,
+       "departure": "2027-02-16T12:00-05:00",
+       "duration": 840,
+       "operationalFlight": {
+        "number": 7,
+        "carrier": {
+         "code": "JL",
+         "shortName": "JAL"
+        }
+       }
+      }
+     ],
+     "arrival": "2027-02-17T16:00+09:00",
+     "departure": "2027-02-16T06:30-05:00",
+     "stopCount": 1
+    },
+    {
+     "destination": {
+      "city": {
+       "name": "New York"
+      },
+      "code": "JFK",
+      "name": "New York John F Kennedy International"
+     },
+     "ext": {
+      "warnings": "LONG_LAYOVER,CHANGE_OF_TERMINAL,OVERNIGHT"
+     },
+     "origin": {
+      "city": {
+       "name": "Tokyo"
+      },
+      "code": "NRT",
+      "name": "Tokyo Narita International"
+     },
+     "segments": [
+      {
+       "bookingInfos": [
+        {
+         "bookingCode": "I",
+         "cabin": "BUSINESS"
+        }
+       ],
+       "carrier": {
+        "code": "AA",
+        "shortName": "American"
+       },
+       "connection": {
+        "changeOfTerminal": true,
+        "duration": 185
+       },
+       "destination": {
+        "city": {
+         "name": "Chicago"
+        },
+        "code": "ORD"
+       },
+       "ext": {
+        "operationalDisclosure": "OPERATED BY JAL"
+       },
+       "flight": {
+        "number": 8460
+       },
+       "legs": [
+        {
+         "aircraft": {
+          "shortName": "Boeing 787"
+         },
+         "destination": {
+          "city": {
+           "name": "Chicago"
+          },
+          "code": "ORD",
+          "name": "Chicago O'Hare International"
+         },
+         "origin": {
+          "city": {
+           "name": "Tokyo"
+          },
+          "code": "NRT"
+         },
+         "services": [
+          {
+           "amenities": [
+            "Non-smoking",
+            "Wi-Fi"
+           ],
+           "meals": [
+            "Meal"
+           ]
+          }
+         ],
+         "arrival": "2027-02-23T07:30-06:00",
+         "departure": "2027-02-23T10:40+09:00",
+         "duration": 710
+        }
+       ],
+       "origin": {
+        "city": {
+         "name": "Tokyo"
+        },
+        "code": "NRT"
+       },
+       "arrival": "2027-02-23T07:30-06:00",
+       "codeshare": true,
+       "departure": "2027-02-23T10:40+09:00",
+       "duration": 710,
+       "operationalFlight": {
+        "number": 56,
+        "carrier": {
+         "code": "JL",
+         "shortName": "JAL"
+        }
+       }
+      },
+      {
+       "bookingInfos": [
+        {
+         "bookingCode": "I",
+         "cabin": "FIRST"
+        }
+       ],
+       "carrier": {
+        "code": "AA",
+        "shortName": "American"
+       },
+       "destination": {
+        "city": {
+         "name": "New York"
+        },
+        "code": "JFK"
+       },
+       "flight": {
+        "number": 1529
+       },
+       "legs": [
+        {
+         "aircraft": {
+          "shortName": "Airbus A319"
+         },
+         "destination": {
+          "city": {
+           "name": "New York"
+          },
+          "code": "JFK",
+          "name": "New York John F Kennedy International"
+         },
+         "origin": {
+          "city": {
+           "name": "Chicago"
+          },
+          "code": "ORD"
+         },
+         "services": [
+          {
+           "amenities": [
+            "In-seat power source",
+            "Wi-Fi",
+            "110V AC Power",
+            "110V AC Power First",
+            "110V AC Power Economy"
+           ],
+           "meals": [
+            "Refreshments"
+           ]
+          }
+         ],
+         "arrival": "2027-02-23T13:59-05:00",
+         "departure": "2027-02-23T10:35-06:00",
+         "duration": 144
+        }
+       ],
+       "origin": {
+        "city": {
+         "name": "Chicago"
+        },
+        "code": "ORD"
+       },
+       "arrival": "2027-02-23T13:59-05:00",
+       "departure": "2027-02-23T10:35-06:00",
+       "duration": 144
+      }
+     ],
+     "arrival": "2027-02-23T13:59-05:00",
+     "departure": "2027-02-23T10:40+09:00",
+     "stopCount": 1
+    }
+   ]
+  },
+  "pricings": [
+   {
+    "ext": {
+     "pax": {
+      "adults": 1
+     },
+     "totalPrice": "USD7212.99"
+    },
+    "displayPrice": "USD7212.99"
+   }
+  ],
+  "tickets": [
+   {
+    "pricings": [
+     {
+      "ext": {
+       "pax": {
+        "adults": 1
+       },
+       "taxTotals": [
+        {
+         "tax": {
+          "key": "0/0",
+          "name": "United States Passenger Civil Aviation Security Service Fee"
+         },
+         "code": "AY",
+         "totalDisplayPrice": "USD11.20"
+        },
+        {
+         "tax": {
+          "key": "0/1",
+          "name": "US International Departure Tax"
+         },
+         "code": "US",
+         "totalDisplayPrice": "USD46.80"
+        },
+        {
+         "tax": {
+          "key": "0/2",
+          "name": "US Passenger Facility Charge"
+         },
+         "code": "XF",
+         "totalDisplayPrice": "USD13.50"
+        },
+        {
+         "tax": {
+          "key": "0/4",
+          "name": "AA YR surcharge"
+         },
+         "code": "YR",
+         "totalDisplayPrice": "USD762.00"
+        },
+        {
+         "tax": {
+          "key": "0/6",
+          "name": "Japan Passenger Security Service Charge"
+         },
+         "code": "OI",
+         "totalDisplayPrice": "USD4.40"
+        },
+        {
+         "tax": {
+          "key": "0/7",
+          "name": "Japan Passenger Service Facilities Charge International"
+         },
+         "code": "SW",
+         "totalDisplayPrice": "USD15.50"
+        },
+        {
+         "tax": {
+          "key": "0/8",
+          "name": "Japan International Tourist Tax"
+         },
+         "code": "TK",
+         "totalDisplayPrice": "USD19.00"
+        },
+        {
+         "tax": {
+          "key": "0/10",
+          "name": "United States APHIS Passenger Fee Passengers"
+         },
+         "code": "XA",
+         "totalDisplayPrice": "USD3.98"
+        },
+        {
+         "tax": {
+          "key": "0/12",
+          "name": "United States Immigration User Fee"
+         },
+         "code": "XY",
+         "totalDisplayPrice": "USD7.00"
+        },
+        {
+         "tax": {
+          "key": "0/13",
+          "name": "United States Customs User Fee"
+         },
+         "code": "YC",
+         "totalDisplayPrice": "USD7.61"
+        }
+       ],
+       "totalPrice": "USD7212.99"
+      },
+      "fareCalculations": [
+       {
+        "lines": [
+         "NYC AA X/BOS AA TYO M 3161.00ILX67IN4 AA X/CHI AA NYC M 3161.00ILX67IN4 NUC 6322.00 END ROE 1.00 XT 7.61YC 7.00XY 3.98XA 46.80US 11.20AY 4.40OI 15.50SW 19.00TK 762.00YR 13.50XF JFK4.50 BOS4.50 ORD4.50"
+        ]
+       }
+      ],
+      "fares": [
+       {
+        "bookingInfos": [
+         {
+          "segment": {
+           "destination": "BOS",
+           "origin": "JFK"
+          },
+          "bookingCode": "I",
+          "cabin": "FIRST"
+         },
+         {
+          "segment": {
+           "destination": "NRT",
+           "origin": "BOS"
+          },
+          "bookingCode": "I",
+          "cabin": "BUSINESS"
+         }
+        ],
+        "ptcs": [
+         "ADT"
+        ],
+        "carrier": "AA",
+        "code": "ILX67IN4",
+        "destinationCity": "TYO",
+        "displayAdjustedPrice": "USD3161.00",
+        "key": "0/0",
+        "originCity": "NYC",
+        "tag": "ROUND-TRIP"
+       },
+       {
+        "bookingInfos": [
+         {
+          "segment": {
+           "destination": "ORD",
+           "origin": "NRT"
+          },
+          "bookingCode": "I",
+          "cabin": "BUSINESS"
+         },
+         {
+          "segment": {
+           "destination": "JFK",
+           "origin": "ORD"
+          },
+          "bookingCode": "I",
+          "cabin": "FIRST"
+         }
+        ],
+        "ptcs": [
+         "ADT"
+        ],
+        "carrier": "AA",
+        "code": "ILX67IN4",
+        "destinationCity": "NYC",
+        "displayAdjustedPrice": "USD3161.00",
+        "key": "0/1",
+        "originCity": "TYO",
+        "tag": "ROUND-TRIP"
+       }
+      ],
+      "notes": [
+       "This ticket is non-refundable."
+      ],
+      "displayPrice": "USD7212.99"
+     }
+    ],
+    "displayPrice": "USD7212.99"
+   }
+  ],
+  "displayTotal": "USD7212.99",
+  "id": "GVaDLw2ZdHCLfxaQ1oVkxE009",
+  "passengerCount": 1
+ },
+ "id": "REQ0",
+ "session": "SESSION0",
+ "solutionCount": 30,
+ "solutionSet": "SOLSET0"
+}

@@ -1,0 +1,80 @@
+{
+ "errno": 0,
+ "msg": "OK",
+ "sticky_posts": [],
+ "thread": {
+  "anonymous": true,
+  "attachment": 0,
+  "attachment_list": [],
+  "author": "地里匿名用户QYUD2",
+  "authorid": 0,
+  "bgcolor": "",
+  "close_status": 0,
+  "dateline": 1793985760,
+  "digest": 0,
+  "displayorder": 0,
+  "favtimes": 4,
+  "fid": 98,
+  "forum_name": {
+   "name": "职场达人",
+   "section": {
+    "id": 345,
+    "name": "职场达人"
+   }
+  },
+  "heats": 70,
+  "highlight": 0,
+  "is_favorite": -1,
+  "lastpost": 1794111241,
+  "lastposter": "地里匿名用户",
+  "magics": [],
+  "message_bbcode": "楼主现在在aws一个oncall load比较高的组，一周40个sev-2左右。但是不oncall的时候工作时间不长，一周40-50小时之间。现在拿到tiktok的一个offer，钱上面多了40%，非常心动。oncall压力应该比不上aws，因为组里的业务只服务于公司本身，不像云计算要服务全世界的客户。但是tiktok的工作时间、绩效压力会不会显著大于aws？在aws里面感觉还行，但是害怕跳槽过去以后撑不住。没有身份问题。",
+  "message_html": null,
+  "pid": 21260093,
+  "poll_info": {},
+  "post_domain": "",
+  "post_status": 8192,
+  "rate": 0,
+  "rates": [],
+  "ratetimes": 0,
+  "reactions": [
+   {
+    "my": false,
+    "reaction_id": 51,
+    "total": 3
+   }
+  ],
+  "recommend_add": 1,
+  "replies": 48,
+  "sortid": 0,
+  "special": 0,
+  "stamp": -1,
+  "status": 32,
+  "subject": "aws和tiktok哪个压力更大",
+  "tags": [
+   {
+    "displayname": "Amazon",
+    "image": "https://oss.1p3a.com/logo/amazon.png!d",
+    "tagid": 56,
+    "tagname": "amazon"
+   },
+   {
+    "displayname": "Bytedance",
+    "image": "https://oss.1p3a.com/logo/bytedance.png!d",
+    "tagid": 4142,
+    "tagname": "bytedance"
+   }
+  ],
+  "thread_type": "跳槽",
+  "threadpay": null,
+  "tid": 1196058,
+  "typeid": 945,
+  "videos": [],
+  "views": 4853,
+  "votes": {
+   "attitude": -1,
+   "downvote": 0,
+   "upvote": 1
+  }
+ }
+}

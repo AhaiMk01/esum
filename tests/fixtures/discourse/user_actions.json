@@ -1,0 +1,79 @@
+{
+ "user_actions": [
+  {
+   "action_type": 5,
+   "created_at": "2023-08-21T18:29:32.726Z",
+   "topic_id": 2678,
+   "post_id": 1349644,
+   "post_number": 45,
+   "title": "Why would Discourse's business model work when Stack Exchange v1's failed?",
+   "slug": "why-would-discourses-business-model-work-when-stack-exchange-v1s-failed",
+   "excerpt": "<img src=\"https://emoji.discourse-cdn.com/twitter/clap.png?v=15\" title=\":clap:\" class=\"emoji\" alt=\":clap:\" loading=\"lazy\" width=\"20\" height=\"20\"> that’s very well stated and I completely agree. I hope we can convince even more people to eventually share this level of insight!",
+   "reply_to_post_number": 44,
+   "category_id": 124,
+   "deleted": false,
+   "hidden": false,
+   "username": "user1"
+  },
+  {
+   "action_type": 5,
+   "created_at": "2023-06-13T17:05:40.258Z",
+   "topic_id": 268156,
+   "post_id": 1308380,
+   "post_number": 4,
+   "title": "What is the \"best\" way to put a forum on \"static\" mode?",
+   "slug": "what-is-the-best-way-to-put-a-forum-on-static-mode",
+   "excerpt": "This is a feature that I still view as quite important – the ability to switch a Discourse site entirely to static HTML “archived” mode for permanent storage long term, say, in the Internet Archive. \nWe have something close to this with the web crawler view, so it’s not entirely far off..",
+   "reply_to_post_number": null,
+   "category_id": 6,
+   "deleted": false,
+   "hidden": false,
+   "username": "user1"
+  },
+  {
+   "action_type": 5,
+   "created_at": "2023-06-01T14:28:25.616Z",
+   "topic_id": 90921,
+   "post_id": 1301223,
+   "post_number": 124,
+   "title": "Federation support for Discourse",
+   "slug": "federation-support-for-discourse",
+   "excerpt": "Well, let’s make sure this is working at least. \nI’m still not totally sure federation makes sense for Discourse (paragraphs/stories) in quite the way that it does for Twitter (sentences/chat) but we should support it for those that want to try.",
+   "reply_to_post_number": null,
+   "category_id": 2,
+   "deleted": false,
+   "hidden": false,
+   "username": "user1"
+  },
+  {
+   "action_type": 5,
+   "created_at": "2023-06-01T14:24:16.338Z",
+   "topic_id": 266173,
+   "post_id": 1301218,
+   "post_number": 26,
+   "title": "Allowing posts that direct users to other forums",
+   "slug": "allowing-posts-that-direct-users-to-other-forums",
+   "excerpt": "Exactly! Thank you! <img src=\"https://emoji.discourse-cdn.com/twitter/hugs.png?v=15\" title=\":hugs:\" class=\"emoji\" alt=\":hugs:\" loading=\"lazy\" width=\"20\" height=\"20\">",
+   "reply_to_post_number": 23,
+   "category_id": 65,
+   "deleted": false,
+   "hidden": false,
+   "username": "user1"
+  },
+  {
+   "action_type": 5,
+   "created_at": "2023-03-16T01:04:55.868Z",
+   "topic_id": 180212,
+   "post_id": 1255995,
+   "post_number": 11,
+   "title": "Editing a post takes me back many posts (redux)",
+   "slug": "editing-a-post-takes-me-back-many-posts-redux",
+   "excerpt": "I have experienced this as well, though I don’t have a specific repro.",
+   "reply_to_post_number": null,
+   "category_id": 1,
+   "deleted": false,
+   "hidden": false,
+   "username": "user1"
+  }
+ ]
+}

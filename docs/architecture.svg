@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1144" width="1280" height="1144" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+  <title>ESUM v1 system architecture</title>
+  <style>
+    :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#8c959f;
+      --core:#eef4ff; --core-s:#4a72c4; --tr:#eefaf1; --tr-s:#3f8f57; --br:#fff6e8; --br-s:#c08a2e;
+      --gate:#fdeeee; --gate-s:#c0504d; --ext:#f4f1fb; --ext-s:#7a62b8; --st:#f3f4f6; --st-s:#8c959f; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#6e7681;
+      --core:#13233f; --core-s:#6f97e0; --tr:#12291a; --tr-s:#5cb879; --br:#2e2410; --br-s:#d9a64a;
+      --gate:#341617; --gate-s:#e06b67; --ext:#221b36; --ext-s:#a08ae0; --st:#1c2128; --st-s:#6e7681; } }
+    .bg { fill:var(--bg); }
+    text { fill:var(--fg); }
+    .h { font-weight:600; font-size:13px; }
+    .t { font-size:15px; font-weight:700; }
+    .m { fill:var(--muted); font-size:11px; }
+    .mono { font-family: ui-monospace, Consolas, monospace; font-size:11px; white-space:pre; }
+    .core { fill:var(--core); stroke:var(--core-s); }
+    .tr { fill:var(--tr); stroke:var(--tr-s); }
+    .br { fill:var(--br); stroke:var(--br-s); }
+    .gate { fill:var(--gate); stroke:var(--gate-s); }
+    .ext { fill:var(--ext); stroke:var(--ext-s); }
+    .st { fill:var(--st); stroke:var(--st-s); }
+    rect { stroke-width:1.4; }
+    .a { stroke:var(--line); stroke-width:1.6; fill:none; marker-end:url(#arr); }
+    .d { stroke-dasharray:5 4; }
+    .lbl { fill:var(--muted); font-size:11px; font-style:italic; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1280" height="1144"/>
+
+  <text x="40" y="38" class="t">ESUM v1: system architecture</text>
+  <text x="40" y="56" class="m">One `esum &lt;site&gt; &lt;action&gt;` call, top to bottom.</text>
+
+  <!-- Row A: agent, skills, user -->
+  <rect class="ext" x="40" y="76" width="380" height="80" rx="8"/>
+  <text x="56" y="98" class="h">Host coding agent</text>
+  <text x="56" y="116">Claude Code, Codex, omp… (anything that reads SKILL.md)</text>
+  <text x="56" y="134" class="m">Runs the CLI in a shell; reads stdout / ./esum-out/ files.</text>
+  <text x="56" y="148" class="m">Page content is labelled untrusted data.</text>
+
+  <rect class="ext" x="450" y="76" width="370" height="80" rx="8"/>
+  <text x="466" y="98" class="h">skills/</text>
+  <text x="466" y="116"><tspan class="mono">esum/SKILL.md</tspan> router + rules, <tspan class="mono">references/workflows/*.md</tspan></text>
+  <text x="466" y="132"><tspan class="mono">esum docs &lt;site&gt;</tspan> prints a site's doc (generated)</text>
+  <text x="466" y="148"><tspan class="mono">esum-site-author/</tspan> + module-format.md contract</text>
+
+  <rect class="ext" x="860" y="76" width="380" height="80" rx="8"/>
+  <text x="876" y="98" class="h">Human user</text>
+  <text x="876" y="116">Says yes when the agent asks before a write.</text>
+  <text x="876" y="132">Logs in to sites in the ESUM Chrome window.</text>
+  <text x="876" y="148" class="m">ESUM and the agent never handle passwords.</text>
+
+  <path class="a" d="M450,116 L424,116"/>
+  <text x="426" y="108" class="lbl">loads</text>
+
+  <!-- Row B: CLI -->
+  <rect class="core" x="40" y="196" width="780" height="70" rx="8"/>
+  <text x="56" y="218" class="h">src/esum/cli.py</text>
+  <text x="56" y="236">Flags generated from each Action's typed params (no hand-written argparse per site).</text>
+  <text x="56" y="254" class="m">Globals: --json --browser=managed|attach|native --cdp · Subcommands: list, docs [--write], keys [ui]</text>
+  <path class="a" d="M230,156 L230,192"/>
+  <text x="238" y="180" class="lbl">esum &lt;site&gt; &lt;action&gt; --flags</text>
+
+  <!-- Row C: registry + model/docs -->
+  <rect class="core" x="40" y="306" width="380" height="150" rx="8"/>
+  <text x="56" y="328" class="h">core/registry.py: discovery (D-22, no central list)</text>
+  <text x="56" y="348" class="mono">engines/  discourse · wordpress · vbulletin · discuz</text>
+  <text x="56" y="364" class="mono">sites/    built-in (esum list): forums,</text>
+  <text x="56" y="378" class="mono">          deal blogs, HN, Reddit, card offers,</text>
+  <text x="56" y="392" class="mono">          portals, gift cards, airfares</text>
+  <text x="56" y="410" class="mono">~/.esum/sites/  custom: site.py or SITE.md</text>
+  <text x="56" y="425" class="m">Custom Python imported lazily on get() (D-25), so built-in</text>
+  <text x="56" y="438" class="m">writes never share a process with it.</text>
+  <text x="56" y="450" class="m">A custom site never replaces a built-in one (D-96).</text>
+
+  <rect class="core" x="450" y="306" width="370" height="150" rx="8"/>
+  <text x="466" y="328" class="h">core/model.py + core/docs.py</text>
+  <text x="466" y="348" class="mono">engine() · site(transport=…) · @action(owner, tier)</text>
+  <text x="466" y="366">Typed function + docstring → Action(Param…)</text>
+  <text x="466" y="384">Tier: READ = 0, REVERSIBLE = 1 (no tier 3, ever)</text>
+  <text x="466" y="402">Transport per site: DIRECT · BROWSER_HTTP · IN_PAGE</text>
+  <text x="466" y="424" class="m">docs.py renders site docs from the same Actions;</text>
+  <text x="466" y="438" class="m">test_docs_in_sync.py fails if they drift.</text>
+
+  <path class="a" d="M230,266 L230,302"/>
+  <text x="238" y="290" class="lbl">get(site)</text>
+  <path class="a" d="M635,306 L635,270"/>
+  <text x="643" y="290" class="lbl">Action params → flags</text>
+
+  <!-- Row D: runner -->
+  <rect class="core" x="40" y="496" width="780" height="80" rx="8"/>
+  <text x="56" y="518" class="h">core/runner.py: run_action</text>
+  <text x="56" y="536" class="mono">ctx = Context(site, action, options, http)  →  returned = act.func(ctx, **kwargs)</text>
+  <text x="56" y="554">Tier 0: returned data becomes the Result. Tier 1: the action does not write; it returns Write(description, run) items.</text>
+  <text x="56" y="570" class="m">Tier-0 HttpClient reuses identical GETs within the call; tier-1 reads are always live.</text>
+  <path class="a" d="M230,456 L230,492"/>
+
+  <!-- Right column: gate -->
+  <rect class="gate" x="860" y="306" width="380" height="150" rx="8"/>
+  <text x="876" y="328" class="h">core/gate.py: writes (D-85, D-26)</text>
+  <text x="876" y="348">Only tier-1 actions write; reads returning writes refused.</text>
+  <text x="876" y="366">No dialog: the agent asks the user before</text>
+  <text x="876" y="384">each write and runs it after their yes.</text>
+  <text x="876" y="402">Every outcome is appended to ~/.esum/writes.jsonl.</text>
+  <text x="876" y="424" class="m">No flag, plan ID or config writes on its own.</text>
+  <text x="876" y="438" class="m">Only tier-1 action in v1: the Discourse bookmark.</text>
+  <path class="a" d="M1050,156 L1050,302"/>
+  <text x="1058" y="236" class="lbl">yes, when the agent asks</text>
+
+  <path class="a" d="M820,514 L840,514 L840,400 L856,400"/>
+  <text x="742" y="488" class="lbl">tier ≥ 1: Write[]</text>
+
+  <!-- Right column: output -->
+  <rect class="core" x="860" y="496" width="380" height="80" rx="8"/>
+  <text x="876" y="518" class="h">core/output.py · posts.py · paging.py</text>
+  <text x="876" y="536" class="mono">[user #N] (date · 👍likes · OP · ↩#M): text</text>
+  <text x="876" y="552">Compact text or --json; [... omitted …] gap markers.</text>
+  <text x="876" y="568" class="m">Large result → ./esum-out/ file + summary on stdout.</text>
+  <path class="a" d="M820,556 L856,556"/>
+  <text x="822" y="548" class="lbl">tier 0</text>
+  <path class="a" d="M1050,456 L1050,492"/>
+  <text x="1058" y="478" class="lbl">result</text>
+
+  <!-- Row E: HttpClient -->
+  <rect class="tr" x="40" y="616" width="780" height="100" rx="8"/>
+  <text x="56" y="638" class="h">transport/__init__.py: HttpClient (ctx.http)</text>
+  <text x="56" y="656">Site code calls ctx.http.get_json(path) and never touches a backend. Resolves URLs against base_url,</text>
+  <text x="56" y="672">waits for per-site spacing (0.5 s by default, across processes), reuses identical GETs in one read call,</text>
+  <text x="56" y="688">retries 429 three times and (reads only) 502/503/504/timeouts twice, decodes by declared charset.</text>
+  <text x="56" y="706" class="m">Errors pass through raw (exit 1). Logged-out response → LoginNeeded → fixed LOGIN NEEDED message, exit 3.</text>
+  <path class="a" d="M230,576 L230,612"/>
+  <text x="238" y="600" class="lbl">ctx.http</text>
+
+  <!-- Row F: backends -->
+  <rect class="tr" x="40" y="744" width="250" height="96" rx="8"/>
+  <text x="56" y="766" class="h">T1 direct.py</text>
+  <text x="56" y="784">httpx, no browser.</text>
+  <text x="56" y="800">Public APIs.</text>
+  <text x="56" y="820" class="m">Never imports the browser layer.</text>
+
+  <rect class="tr" x="305" y="744" width="250" height="96" rx="8"/>
+  <text x="321" y="766" class="h">T2 browser_http.py</text>
+  <text x="321" y="784">curl_cffi, Chrome's TLS fingerprint,</text>
+  <text x="321" y="800">+ session cookies and UA (optional).</text>
+  <text x="321" y="820" class="m">Cookies in memory only, never logged.</text>
+
+  <rect class="tr" x="570" y="744" width="250" height="96" rx="8"/>
+  <text x="586" y="766" class="h">T3 in_page.py</text>
+  <text x="586" y="784">FETCH_JS: generic fetch() in a</text>
+  <text x="586" y="800">tab of the origin. Waits out anti-bot.</text>
+  <text x="586" y="820" class="m">The generic path. Page scripts: D-95.</text>
+
+  <path class="a" d="M165,716 L165,740"/>
+  <path class="a" d="M430,716 L430,740"/>
+  <path class="a" d="M695,716 L695,740"/>
+
+  <!-- Browser layer -->
+  <rect class="br" x="305" y="876" width="515" height="84" rx="8"/>
+  <text x="321" y="898" class="h">browser/: daemon.py · session.py · login.py</text>
+  <text x="321" y="916">Client of the patchright-cli daemon (:9321), started on first browser use.</text>
+  <text x="321" y="932">Modes: managed `esum` (default) · attach · native (your everyday Chrome).</text>
+  <text x="321" y="950" class="m">Named tab per call, no lock while fetching; attached Chromes never closed.</text>
+  <path class="a" d="M430,840 L430,872"/>
+  <path class="a" d="M695,840 L695,872"/>
+
+  <!-- Websites -->
+  <rect class="st" x="40" y="1000" width="250" height="104" rx="8"/>
+  <text x="56" y="1022" class="h">T1 sites</text>
+  <text x="56" y="1040">Open APIs, blogs and feeds.</text>
+  <text x="56" y="1056">No browser is ever started.</text>
+  <text x="56" y="1072">`esum list` shows each site's.</text>
+  <text x="56" y="1094" class="m">engine: wordpress · standalone modules</text>
+
+  <rect class="st" x="305" y="1000" width="250" height="104" rx="8"/>
+  <text x="321" y="1022" class="h">T2 sites</text>
+  <text x="321" y="1040">Sites behind Cloudflare or a login.</text>
+  <text x="321" y="1056">Some name T3 as a fallback:</text>
+  <text x="321" y="1072">after a bot check, the call</text>
+  <text x="321" y="1088">moves to a real tab.</text>
+
+  <rect class="st" x="570" y="1000" width="250" height="104" rx="8"/>
+  <text x="586" y="1022" class="h">T3 sites</text>
+  <text x="586" y="1040">Sites only a real page can reach,</text>
+  <text x="586" y="1056">and the fallback after a bot</text>
+  <text x="586" y="1072">check (Cloudflare, AWS WAF; D-40)</text>
+  <text x="586" y="1094" class="m">Cloudflare / fingerprint checks</text>
+
+  <path class="a" d="M165,840 L165,996"/>
+  <path class="a" d="M430,960 L430,996"/>
+  <path class="a" d="M695,960 L695,996"/>
+
+  <!-- Local state -->
+  <rect class="st" x="860" y="616" width="380" height="158" rx="8"/>
+  <text x="876" y="638" class="h">Local state</text>
+  <text x="876" y="658" class="mono">~/.esum/throttle/        per-site request stamps</text>
+  <text x="876" y="676" class="mono">~/.esum/writes.jsonl     write log (gate)</text>
+  <text x="876" y="694" class="mono">~/.esum/sites/           custom sites</text>
+  <text x="876" y="712" class="mono">~/.esum/browser/         profile + tab locks</text>
+  <text x="876" y="730" class="mono">./esum-out/              spilled output</text>
+  <text x="876" y="748" class="mono">OS credential store      Discourse keys (D-79)</text>
+  <text x="876" y="766" class="m">Paths from core/paths.py (gitignored in the repo).</text>
+
+  <!-- Legend -->
+  <rect class="st" x="860" y="796" width="380" height="308" rx="8" fill-opacity="0.5"/>
+  <text x="876" y="818" class="h">Legend</text>
+  <rect class="ext" x="876" y="830" width="16" height="12" rx="2"/><text x="900" y="840">outside the package (agent, skills, user)</text>
+  <rect class="core" x="876" y="850" width="16" height="12" rx="2"/><text x="900" y="860">src/esum/core + cli</text>
+  <rect class="gate" x="876" y="870" width="16" height="12" rx="2"/><text x="900" y="880">write gate</text>
+  <rect class="tr" x="876" y="890" width="16" height="12" rx="2"/><text x="900" y="900">src/esum/transport</text>
+  <rect class="br" x="876" y="910" width="16" height="12" rx="2"/><text x="900" y="920">src/esum/browser (lazy; T1 never starts it)</text>
+  <rect class="st" x="876" y="930" width="16" height="12" rx="2"/><text x="900" y="940">websites / on-disk state</text>
+  <text x="876" y="970" class="h">Exit codes</text>
+  <text x="876" y="990">0 ok · 1 error (raw) · 2 usage</text>
+  <text x="876" y="1008">3 LOGIN NEEDED · 5 CHECK NEEDED (4 retired)</text>
+  <text x="876" y="1038" class="h">Not in v1</text>
+  <text x="876" y="1058">MCP servers (D-10), model calls (D-15),</text>
+  <text x="876" y="1074">tier-3 actions that move money or points (D-16)</text>
+</svg>

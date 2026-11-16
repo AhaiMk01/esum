@@ -1,0 +1,54 @@
+{
+ "kind": "Listing",
+ "data": {
+  "after": "t3_fix002",
+  "before": null,
+  "dist": 2,
+  "children": [
+   {
+    "kind": "t3",
+    "data": {
+     "id": "fix001",
+     "name": "t3_fix001",
+     "title": "Sapphire Preferred retention offer DP",
+     "author": "example_op",
+     "subreddit": "churning",
+     "subreddit_name_prefixed": "r/churning",
+     "created_utc": 1790000000,
+     "score": 42,
+     "num_comments": 7,
+     "permalink": "/r/churning/comments/fix001/sapphire_preferred_retention_o/",
+     "url": "https://www.reddit.com/r/churning/comments/fix001/",
+     "is_self": true,
+     "selftext": "Called today, got 10k points after 1 year.",
+     "link_flair_text": "Data Point",
+     "locked": false,
+     "archived": false,
+     "over_18": false
+    }
+   },
+   {
+    "kind": "t3",
+    "data": {
+     "id": "fix002",
+     "name": "t3_fix002",
+     "title": "Chase announces new travel portal",
+     "author": "example_poster",
+     "subreddit": "churning",
+     "subreddit_name_prefixed": "r/churning",
+     "created_utc": 1790100000,
+     "score": 120,
+     "num_comments": 30,
+     "permalink": "/r/churning/comments/fix002/chase_announces_new_travel_por/",
+     "url": "https://example.com/chase-portal-news",
+     "is_self": false,
+     "selftext": "",
+     "link_flair_text": null,
+     "locked": false,
+     "archived": false,
+     "over_18": false
+    }
+   }
+  ]
+ }
+}

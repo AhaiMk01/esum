@@ -1,0 +1,3 @@
+{"id": 100, "type": "story", "title": "An invented story", "author": "asker", "points": 5, "created_at_i": 1700000000, "text": null, "url": null, "children": [
+  {"id": 101, "type": "comment", "author": "first", "text": "<p>A top comment</p>", "parent_id": 100, "created_at_i": 1700000010, "children": [
+    {"id": 106, "type": "comment", "author": "asker", "text": "A late reply", "parent_id": 101, "created_at_i": 1700000060, "children": []}]}]}

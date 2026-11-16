@@ -1,0 +1,64 @@
+{
+ "latest_posts": [
+  {
+   "id": 2059428,
+   "created_at": "2026-10-30T16:39:28.250Z",
+   "username": "user1",
+   "topic_id": 416118,
+   "topic_slug": "no-option-to-edit-a-category-tile",
+   "topic_title": "No option to edit a category tile",
+   "post_number": 4,
+   "post_type": 1,
+   "reply_to_post_number": 3,
+   "category_id": 6,
+   "cooked": "<p>Oh wow, somehow <a href=\"https://connect.superhuman.com/c/1/show.json\" rel=\"noopener nofollow ugc\">the topic_url is null for that category</a>.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/a/2/d/a2d4ac5b507234177cffe848c6282859367e6f2a.png\" data-download-href=\"/uploads/short-url/net02gjoqUNNhLg9UwgsqTISY6m.png?dl=1\" title=\"Clea</p>",
+   "hidden": false,
+   "deleted_at": null
+  },
+  {
+   "id": 2059424,
+   "created_at": "2026-10-30T16:32:12.623Z",
+   "username": "user2",
+   "topic_id": 416206,
+   "topic_slug": "discourse-s3-yml",
+   "topic_title": "Discourse: If S3 is enabled, is it recommended to configure in the yml or the admin panel?",
+   "post_number": 1,
+   "post_type": 1,
+   "reply_to_post_number": null,
+   "category_id": 65,
+   "cooked": "<p>Hi, for Discourse, if enabling S3, is it recommended to configure it in the YML file or via the admin UI (/admin/site_settings/category/files)?</p>",
+   "hidden": false,
+   "deleted_at": null
+  },
+  {
+   "id": 2059384,
+   "created_at": "2026-10-30T15:48:08.995Z",
+   "username": "user3",
+   "topic_id": 413610,
+   "topic_slug": "how-to-debug-email-sending-issues-some-recipients-dont-get-some-emails",
+   "topic_title": "How to debug email sending issues? (some recipients don't get some emails)",
+   "post_number": 6,
+   "post_type": 1,
+   "reply_to_post_number": 5,
+   "category_id": 6,
+   "cooked": "<p>Anyone else having an idea? Random lost emails erode users trust in the system, and I’d like to improve stability here.<br>\n<a class=\"mention\" href=\"/u/someone\">@someone</a> sorry for pinging you directly. As you were involved in the discussion of above topic covering an issue with the same effect, maybe do you have another pointer to dig deeper? Hope it’s not some rare 5 year old bug… ",
+   "hidden": false,
+   "deleted_at": null
+  },
+  {
+   "id": 2059380,
+   "created_at": "2026-10-30T15:33:39.297Z",
+   "username": "user4",
+   "topic_id": 392894,
+   "topic_slug": "introducing-upcoming-changes-a-system-to-manage-new-features-and-changes-to-existing-functionality-in-your-community",
+   "topic_title": "Introducing Upcoming Changes, a system to manage new features and changes to existing functionality in your community",
+   "post_number": 54,
+   "post_type": 1,
+   "reply_to_post_number": 19,
+   "category_id": 67,
+   "cooked": "<p>We’ve just added sorting, should be available soon!</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://global.discourse-cdn.com/meta/original/4X/1/8/e/18ec01b9794f10c6995ac29822c69fd912a6dfc2.png\" data-download-href=\"/uploads/short-url/3yt6hKpLax1nqdR4k4m5YXfFCdY.png?dl=1\" title=\"image\">",
+   "hidden": false,
+   "deleted_at": null
+  }
+ ]
+}
