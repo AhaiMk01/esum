@@ -15,6 +15,8 @@ The first public release.
 - Fare tools: `matrix ladder` finds the cheapest fare that meets a condition, `gflights fares`
   lists what the airline sells on the flights you name, `gflights search --all` reads the rows
   behind "View more flights".
+- `offerlove my-offers` reads every offer on your own cards from Offer.love's My Offers page, in a
+  background tab of the browser you signed in with, and says which ones are already added.
 - One write, behind the user's yes and logged: a Discourse forum bookmark.
 - Two skills: `esum`, which teaches an agent when and how to use the command, and
   `esum-site-author`, which lets an agent add a site of your own from its URL.
