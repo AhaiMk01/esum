@@ -4,18 +4,78 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   offline:
-    name: offline tests (${{ matrix.os }})
+    name: offline tests (${{ matrix.os }}, py${{ matrix.python }})
+    # public repo only: Actions minutes are free there; a private copy or fork would be billed
+    if: github.repository == 'AhaiMk01/esum'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
+        # the oldest Python pyproject allows and the newest release
+        python: ["3.12", "3.14"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: ${{ matrix.python }}
       - run: uv sync
       # the offline suite: no network (a guard fails any test that opens a socket), no browser
       - run: uv run pytest -n auto -q
+
+  package:
+    # what users get: INSTALL.md installs the built package with `uv tool install`, not the checkout
+    name: installed package (${{ matrix.os }})
+    if: github.repository == 'AhaiMk01/esum'
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - run: uv build --wheel -o dist
+      - name: wheel ships site docs and page scripts, no tests
+        run: |
+          uv run --no-project python - dist/*.whl <<'EOF'
+          import sys, zipfile
+          names = zipfile.ZipFile(sys.argv[1]).namelist()
+          tests = [n for n in names if "/tests/" in n]
+          docs = [n for n in names if n.endswith("/doc.md")]
+          scripts = [n for n in names if n.endswith(".js")]
+          print(f"{len(names)} files, {len(docs)} doc.md, {len(scripts)} .js")
+          assert not tests, tests
+          assert docs and scripts
+          EOF
+      - run: uv tool install dist/*.whl
+      - run: echo "$(uv tool dir --bin)" >> "$GITHUB_PATH"
+      - name: smoke checks outside the checkout
+        env:
+          ESUM_HOME: ${{ runner.temp }}/esum-home
+        working-directory: ${{ runner.temp }}
+        run: |
+          esum --version
+          # whole output to a file first: `| head` would break the pipe under pipefail
+          esum list > list.txt && head -n 3 list.txt
+          esum docs hn > hn.md && head -n 3 hn.md
+          esum hn stories --help > /dev/null
+          # a usage error exits 2 with a help line
+          set +e; out=$(esum nosuch x); code=$?; set -e
+          echo "$out"
+          test "$code" = 2
+          echo "$out" | grep -q '^help:'

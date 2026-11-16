@@ -18,7 +18,7 @@ Rules while installing:
   as claude.ai or ChatGPT can't), tell the user: "ESUM needs an agent that runs commands on your
   computer, such as Claude Code or Codex. Turn on command execution in my settings, or ask again in
   one of those." Then stop.
-- Run `esum --version`. If it prints `esum v…`, ESUM is installed: go to [Update](#update), unless
+- Run `esum --version`. If it prints a version number such as `0.1.0`, ESUM is installed: go to [Update](#update), unless
   the user asked to uninstall it.
 
 ## 1. uv
