@@ -143,7 +143,7 @@ ESUM 按 `~/.esum/sites/` 下的文件夹发现站点，自定义代码只在你
 | [美国信用卡指南](https://www.uscreditcardguide.com) | `uscreditcardguide` | 中文信用卡与银行奖励博客 | T1 |
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | 制造消费（MS）、礼品卡；几乎每天一篇快讯 | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | 航空、酒店和信用卡计划论坛 | T3 |
-| [Offer.love](https://offer.love) | `offerlove` | 各银行信用卡商家 offer（Amex Offers、Chase Offers 等），按商家或银行查，也能读你自己每张卡上的 offer | T1→T3 |
+| [Offer.love](https://offer.love) | `offerlove` | 各银行信用卡商家 offer（Amex Offers、Chase Offers 等），按商家或银行查，有所有带 offer 的商家目录，也能读你自己每张卡上的 offer | T1→T3 |
 | [Savewise](https://getsavewise.com) | `savewise` | 某商家在各返利站的返现率（Rakuten、TopCashBack、C1 Shopping、航空商城等）、卡 offer、Top Offers 榜单、银行 offer 叠加和礼品卡（CardDepot 折扣、Rove 里程） | T1 |
 | [Wings of the Points](https://uscreditcardguide.github.io/Wings-of-the-Points/) | `wotp` | 信用卡积分（Chase UR、AmEx MR、Citi TYP、Capital One、Bilt、Marriott）能转到哪些航司里程计划、比例多少，可按航司、积分或联盟查；附转点变更记录 | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | 礼品卡回收：按品牌和面值查当前收购价及对应 deal（需登录，只读） | T2 |

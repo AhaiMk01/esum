@@ -7,9 +7,11 @@ path that way, and the API's offers are turned into the same path here.
 
 from __future__ import annotations
 
+import difflib
 import html as htmllib
 import json
 import re
+import unicodedata
 from datetime import datetime, timezone
 from typing import Any
 from zoneinfo import ZoneInfo
@@ -298,7 +300,7 @@ def _added(text: str) -> str:
 
 
 class PageChanged(RuntimeError):
-    """The My Offers page no longer looks the way its page script expects."""
+    """A page no longer looks the way its parser or page script expects. Never carries page content."""
 
 
 # What each bank's status says about the offer being on the card (My Offers keeps the bank's own
@@ -348,3 +350,64 @@ def matches(row: dict[str, Any], query: str) -> bool:
     """Whether `query` is in the row's merchant name, slug or title, ignoring case and spaces."""
     want = re.sub(r"\s+", "", query.lower())
     return any(want in re.sub(r"\s+", "", str(row.get(k) or "").lower()) for k in ("merchant", "slug", "title"))
+
+
+_DIRECTORY = re.compile(r"\bconst\s+ALL\s*=\s*")
+
+
+def plain(text: str) -> str:
+    """Letters and digits only, lower case, accents dropped: `P.F. Chang's` and `pf changs`
+    compare equal, and so do `Âu Lạc` and `au lac`."""
+    bare = "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
+    return re.sub(r"[\W_]+", "", bare.casefold())
+
+
+def _count(value: Any) -> int | None:
+    """An offer count as a number; None for anything else (`true`, a name, nothing)."""
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    return int(value) if isinstance(value, str) and value.strip().isdigit() else None
+
+
+def directory(page: str) -> list[dict[str, Any]]:
+    """The Offer Directory's merchants, from the list the page embeds for its own filter box
+    (`const ALL=[[slug, name, logo, offers], …]`, the same on each of its pages), most offers
+    first. PageChanged when the list is missing, isn't JSON, has no merchant or has no counts."""
+    found = _DIRECTORY.search(page)
+    if not found:
+        raise PageChanged("the Offer Directory page has no merchant list (`const ALL=`)")
+    try:
+        data, _ = json.JSONDecoder().raw_decode(page, found.end())
+    except ValueError:
+        raise PageChanged("the Offer Directory page's merchant list is not JSON") from None
+    rows = [{"merchant": item[0], "name": unmangle(one_line(item[1] if isinstance(item[1], str) else "")),
+             "offers": _count(item[3]), "url": f"{BASE}/offers/{item[0]}/"}
+            for item in (data if isinstance(data, list) else [])
+            if isinstance(item, list) and len(item) >= 4 and isinstance(item[0], str) and item[0]]
+    if not rows:
+        raise PageChanged("the Offer Directory page's merchant list is empty")
+    if all(r["offers"] is None for r in rows):
+        raise PageChanged("the Offer Directory page's merchant list has no offer counts")
+    # the site lists them most offers first; sort anyway, keeping its order among equals
+    return sorted(rows, key=lambda r: -(r["offers"] or 0))
+
+
+def in_directory(row: dict[str, Any], query: str) -> bool:
+    """Whether every word of `query` is in the merchant's name or slug, ignoring case, spaces,
+    punctuation and accents."""
+    name, slug = plain(row["name"]), plain(row["merchant"])
+    words = [w for w in (plain(part) for part in query.split()) if w]
+    return bool(words) and all(w in name or w in slug for w in words)
+
+
+def nearest_merchants(rows: list[dict[str, Any]], query: str, n: int = 3) -> list[dict[str, Any]]:
+    """The merchants whose name or slug is nearly what was typed, nearest first: for a query that
+    matched none."""
+    by_key: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        by_key.setdefault(plain(row["name"]), row)
+        by_key.setdefault(plain(row["merchant"]), row)
+    near = difflib.get_close_matches(plain(query), [k for k in by_key if k], n=2 * n, cutoff=0.75)
+    return list({by_key[k]["merchant"]: by_key[k] for k in near}.values())[:n]

@@ -180,6 +180,7 @@ def test_unknown_merchant_is_an_empty_list_naming_search(action_runner, fake_htt
     out = run(action_runner, offerlove, "merchant", {"slug": "nosuchmerchantxyz"}, json_out=False)
     assert "no merchant with the slug 'nosuchmerchantxyz'" in out
     assert "esum offerlove search --query nosuchmerchantxyz" in out
+    assert "esum offerlove merchants --query nosuchmerchantxyz" in out
 
 
 def test_latest_action_filters_by_bank_and_pages(action_runner, fake_http, offerlove):
@@ -331,8 +332,8 @@ def test_the_site_keeps_no_key_and_has_no_login():
     # the API-key actions (login, logout) were removed: that API could only search, 50 at most;
     # my-offers reads the signed-in page in the browser instead
     target = Registry.discover().get("offerlove")
-    assert sorted(target.all_actions) == ["bank", "banks", "expiring", "latest", "merchant", "my-offers",
-                                          "offer", "search"]
+    assert sorted(target.all_actions) == ["bank", "banks", "expiring", "latest", "merchant", "merchants",
+                                          "my-offers", "offer", "search"]
     assert "key_entry" not in target.extras
 
 
@@ -424,3 +425,170 @@ def test_my_offers_says_login_needed_only_when_the_page_shows_its_sign_in_button
 def test_my_offers_notes_an_unsynced_page(action_runner, offerlove, frozen):
     page = dict(json.loads(text("my_offers.json")), synced=False)
     assert "had not said 'Offers synced'" in my_offers(action_runner, offerlove, Browser(page))["note"]
+
+
+# --- the merchant directory ------------------------------------------------------------------------
+# directory.html is the Offer Directory page of 2026-11-18 cut to its heading, three cards and 16 of
+# the 5,894 merchants its filter list held. The page showed "P.F. Chang's 57 offers", "Sprouts
+# Farmers Market 51 offers", "Shell 32 offers", "76 26 offers" … "The 13 offers".
+
+def test_directory_rows_read_as_the_page_lists_them():
+    from esum.sites.offerlove.parse import directory
+    rows = directory(text("directory.html"))
+    assert [(r["merchant"], r["name"], r["offers"]) for r in rows[:5]] == [
+        ("pfchangs", "P.F. Chang's", 57), ("sproutsfarmersmarket", "Sprouts Farmers Market", 51),
+        ("shell", "Shell", 32), ("76", "76", 26), ("sprouts", "Sprouts", 24)]
+    assert rows[7] == {"merchant": "jerseymikes", "name": "Jersey Mike's Subs - Altamonte Springs Cranes Roost",
+                       "offers": 20, "url": "https://offer.love/offers/jerseymikes/"}
+    assert [(r["name"], r["offers"]) for r in rows if r["merchant"] == "the"] == [("The", 13)]
+    assert len(rows) == 16 and next(r for r in rows if r["merchant"] == "ulcla")["name"] == "Âu Lạc LA"
+
+
+def test_directory_query_ignores_case_spaces_and_punctuation():
+    from esum.sites.offerlove.parse import directory, in_directory, nearest_merchants
+    rows = directory(text("directory.html"))
+
+    def found(query):
+        return [r["merchant"] for r in rows if in_directory(r, query)]
+
+    assert found("pf changs") == ["pfchangs"] and found("P.F. CHANG'S") == ["pfchangs"]
+    assert found("bagel") == ["ess-a-bagel", "marysbagelcafe", "zuckersbagelschelsea"]
+    assert found("bagel chelsea") == ["zuckersbagelschelsea"]
+    assert found("sprouts") == ["sproutsfarmersmarket", "sprouts"] and found("giftcards.com") == ["giftcards.com"]
+    assert found("  ") == [] and found("zzz") == []
+    assert [r["merchant"] for r in nearest_merchants(rows, "walmrt")] == ["walmart"]
+    assert nearest_merchants(rows, "qqqq") == []
+
+
+def test_a_directory_page_without_its_list_is_a_layout_failure():
+    from esum.sites.offerlove.parse import PageChanged, directory
+    for page in ("<html><body>Offer Directory</body></html>", "<script>const ALL=[oops];</script>",
+                 "<script>const ALL=[];</script>", '<script>const ALL={"a":1};</script>'):
+        with pytest.raises(PageChanged):
+            directory(page)
+
+
+def test_merchants_action_lists_filters_sorts_and_pages(action_runner, fake_http, offerlove):
+    url = "https://offer.love/offers/"
+    fake_http.routes[url] = html_response(url, "directory.html")
+    out = run(action_runner, offerlove, "merchants", {"limit": 3}, json_out=False)
+    assert 'site_total: "16 merchants, 279 offers"' in out and "count: 3 of 16 total" in out
+    assert "merchants[3]{merchant,name,offers}:" in out and "pfchangs,P.F. Chang's,57" in out
+    assert "note: \"offers is the directory's count; `merchant` shows one offer per title and bank" in out
+    assert "esum offerlove merchants --offset 3 --limit 3" in out and not any(
+        line.startswith("offers:") for line in out.splitlines())      # no filter, so no filtered sum
+    bagels = run(action_runner, offerlove, "merchants", {"query": "bagel"})
+    assert (bagels["total"], bagels["offers"]) == (3, 5)
+    one = run(action_runner, offerlove, "merchants", {"query": "pf changs"}, json_out=False)
+    assert "esum offerlove merchant --slug pfchangs" in one          # the hand-off names the one merchant
+    big = run(action_runner, offerlove, "merchants", {"min_offers": 20, "sort": "name"})
+    assert [r["merchant"] for r in big["merchants"]] == ["76", "britishairways", "giftcards.com", "jerseymikes",
+                                                        "pfchangs", "shell", "sprouts", "sproutsfarmersmarket"]
+    assert big["offers"] == 253 and big["min_offers"] == 20
+    assert len(fake_http.requests) == 4                              # one request a call, whatever the filter
+
+
+def test_merchants_action_with_nothing_to_show(action_runner, fake_http, offerlove):
+    url = "https://offer.love/offers/"
+    fake_http.routes[url] = html_response(url, "directory.html")
+    typo = run(action_runner, offerlove, "merchants", {"query": "walmrt"}, json_out=False)
+    assert "closest: walmart (Walmart)" in typo and "0 found: no merchant in the directory matches 'walmrt'" in typo
+    assert "esum offerlove search --query walmrt" in typo
+    assert "esum offerlove merchant --slug walmart` to list the offers at Walmart, the closest name" in typo
+    assert not any(line.startswith("offers:") for line in typo.splitlines())
+    none = run(action_runner, offerlove, "merchants", {"query": "bagel", "min_offers": 9}, json_out=False)
+    # the name matched three merchants; only the count filter emptied it, so no guess and no "not proof"
+    assert "0 found: 3 merchants match 'bagel', none with 9 or more offers" in none
+    assert "to drop the offer-count filter" in none and "merchant --slug bagel" not in none and "not proof" not in none
+    # nothing has the name: dropping the count filter would not help, so it isn't offered
+    both = run(action_runner, offerlove, "merchants", {"query": "walmrt", "min_offers": 10}, json_out=False)
+    assert "no merchant in the directory matches 'walmrt'" in both and "offer-count filter" not in both
+    assert "0 found: no merchant in the directory has 60 or more offers" in run(
+        action_runner, offerlove, "merchants", {"min_offers": 60}, json_out=False)
+    past = run(action_runner, offerlove, "merchants", {"offset": 50}, json_out=False)
+    assert "0 found: no row at offset 50: 16 matched" in past and "to start from the first row" in past
+
+
+def test_a_merchant_missing_from_the_directory_is_sent_to_its_own_page(action_runner, fake_http, offerlove):
+    # the directory is rebuilt about daily: Chipotle had a live Citi offer and no entry (2026-11-18)
+    url = "https://offer.love/offers/"
+    fake_http.routes[url] = html_response(url, "directory.html")
+    out = run(action_runner, offerlove, "merchants", {"query": "Chipotle"}, json_out=False)
+    assert "matches 'Chipotle'; the directory is a day behind at times, so this is not proof" in out
+    assert "esum offerlove merchant --slug chipotle` to read that merchant's own page, which is live" in out
+    typo = run(action_runner, offerlove, "merchants", {"query": "walmrt"}, json_out=False)
+    assert typo.index("merchant --slug walmart`") < typo.index("merchant --slug walmrt`")     # the closest name first
+
+
+def test_merchant_rows_say_what_a_row_is(action_runner, fake_http, offerlove):
+    url = "https://offer.love/offers/walmart/"
+    fake_http.routes[url] = html_response(url, "merchant_walmart.html")
+    out = run(action_runner, offerlove, "merchant", {"slug": "walmart"})
+    assert out["note"].startswith("one row per title and bank") and "`merchants`" in out["note"]
+
+
+def test_an_offset_past_the_last_row_is_not_an_empty_list(action_runner, fake_http, offerlove):
+    url = "https://offer.love/offers/bank/chase/"
+    fake_http.routes[url] = html_response(url, "bank_chase.html")
+    out = run(action_runner, offerlove, "bank", {"name": "chase", "offset": 98}, json_out=False)
+    assert "0 found: no row at offset 98: 8 matched" in out and "lists no active Chase offers" not in out
+    assert "Run `esum offerlove bank --name chase` to start from the first row" in out
+    url = "https://offer.love/latest/"
+    fake_http.routes[url] = html_response(url, "latest.html")
+    out = run(action_runner, offerlove, "latest", {"offset": 500}, json_out=False)
+    assert "0 found: no row at offset 500:" in out and "Run `esum offerlove latest` to start from the first row" in out
+
+
+def test_directory_queries_fold_accents_and_suggest_by_slug_too():
+    from esum.sites.offerlove.parse import directory, in_directory, nearest_merchants, plain
+    rows = directory(text("directory.html"))
+    assert [r["merchant"] for r in rows if in_directory(r, "au lac")] == ["ulcla"]        # the name is `Âu Lạc LA`
+    assert plain("P.F. Chang's") == "pfchangs" and plain("Âu Lạc") == "aulac" and plain("-- ") == ""
+    assert [r["merchant"] for r in nearest_merchants(rows, "pfchang")] == ["pfchangs"]    # near the slug, far from the name's words
+    assert [r["merchant"] for r in nearest_merchants(rows, "sproutz")] == ["sprouts"]
+
+
+def test_the_directory_list_in_other_shapes():
+    from esum.sites.offerlove.parse import PageChanged, directory
+    # spaces around `=`, a count written as text, a `true` where a count belongs, a row without a name
+    rows = directory('<script>const ALL = [["b","Bee","",2],["a","Ay","","7"],["c","Cee","",true],["d",null,"",1]];</script>')
+    assert [(r["merchant"], r["name"], r["offers"]) for r in rows] == [("a", "Ay", 7), ("b", "Bee", 2), ("d", "", 1),
+                                                                    ("c", "Cee", None)]      # most offers first
+    with pytest.raises(PageChanged, match="no offer counts"):
+        directory('<script>const ALL=[["a","Ay","","many"],["b","Bee","",null]];</script>')
+
+
+def test_merchants_refuses_a_count_below_one_and_a_query_with_nothing_to_look_for(action_runner, fake_http, capsys):
+    url = "https://offer.love/offers/"
+    fake_http.routes[url] = html_response(url, "directory.html")
+    reg = Registry.discover()
+    for argv, said in ((["--min-offers", "0"], "--min-offers 0 is below 1"),
+                       (["--min-offers=-5"], "--min-offers -5 is below 1"),
+                       (["--query=---"], "--query '---' has no letter or digit"),
+                       (["--query", "   "], "has no letter or digit"), (["--query", ""], "has no letter or digit")):
+        assert action_runner.cli(["offerlove", "merchants", *argv], registry=reg) == 2
+        assert said in capsys.readouterr().out
+    assert fake_http.requests == []                                    # refused before any request
+
+
+def test_merchants_next_steps_keep_the_typed_flags(action_runner, fake_http, capsys):
+    url = "https://offer.love/offers/"
+    fake_http.routes[url] = html_response(url, "directory.html")
+    reg = Registry.discover()
+    assert action_runner.cli(["offerlove", "merchants", "--query", "bagel", "--min-offers", "9"], registry=reg) == 0
+    assert "Run `esum offerlove merchants --query bagel --min-offers 1` to drop the offer-count filter" in capsys.readouterr().out
+    assert action_runner.cli(["offerlove", "merchants", "--sort", "name", "--offset", "40"], registry=reg) == 0
+    out = capsys.readouterr().out
+    assert "no row at offset 40: 16 matched" in out
+    assert "Run `esum offerlove merchants --sort name --offset 0` to start from the first row" in out
+
+
+def test_expiring_and_my_offers_past_the_last_row(action_runner, fake_http, offerlove, frozen):
+    url = "https://offer.love/expiring/"
+    fake_http.routes[url] = html_response(url, "expiring.html")
+    out = run(action_runner, offerlove, "expiring", {"bank": "amex", "offset": 900}, json_out=False)
+    listed = run(action_runner, offerlove, "expiring", {"bank": "amex"})["total"]
+    if listed:      # the fixture's Amex rows, after the ones past their date are left out
+        assert f"0 found: no row at offset 900: {listed} matched" in out and "to start from the first row" in out
+    mine = my_offers(action_runner, offerlove, Browser(json.loads(text("my_offers.json"))), json_out=False, offset=50)
+    assert "0 found: no row at offset 50: 5 matched" in mine and "to start from the first row" in mine

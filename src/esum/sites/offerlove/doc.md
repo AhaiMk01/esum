@@ -2,9 +2,9 @@
 
 # offerlove
 
-Offer.love: card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi, US Bank, Wells Fargo, PayPal): search by merchant, list by bank, newest and expiring, full terms
+Offer.love: card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi, US Bank, Wells Fargo, PayPal): search by merchant, list by bank, newest and expiring, full terms, and the directory of every merchant with an offer
 
-Offer.love：各银行信用卡商家 offer（Amex Offers、Chase Offers 等）聚合，按商家/银行查，最新与快到期 (zh)
+Offer.love：各银行信用卡商家 offer（Amex Offers、Chase Offers 等）聚合，按商家/银行查，最新与快到期，以及所有有 offer 的商家目录 (zh)
 
 - **Engine:** standalone module
 - **Base URL:** https://offer.love
@@ -21,8 +21,10 @@ Tier 0 (read) · from the site
 
 One bank's active offers as its page on the site lists them: the first 100, in the site's order.
 
-The header gives the bank's whole count; offers past the first 100 are reachable only through
-`search` or `merchant`. Rows already past their expiry date are left out (`hidden`), and rows
+The header gives the bank's whole count. The site lists no more than these 100 for a bank and
+its directory doesn't say which bank a merchant's offers are from, so the rest can't be listed:
+start from the merchant you care about (`merchant --slug <slug> --bank <bank>`; `merchants`
+finds the slug) or try `search`. Rows already past their expiry date are left out (`hidden`), and rows
 that repeat another row's offer page are merged (`merged`). Columns: offer id,
 merchant name, title and expiry date; `--fields` adds merchant, bank, excerpt (the start of the
 terms), due (the site's `Exp Dec 5` badge, a UTC date) and url.
@@ -101,7 +103,8 @@ Every active offer at one merchant, across banks, with its terms.
 
 Columns: offer id, bank, title and expiry date (and status with `--past`); `--fields` adds
 status, merchant (the slug), name (the merchant's name on that offer), age (since it was
-added), terms and url. Find a slug with `search`.
+added), terms and url. Find a slug with `merchants --query` (the site's directory) or `search`;
+a slug is usually the name without spaces, and the page is live, so guessing one is fine.
 
 ```
 esum offerlove merchant --slug <str> [--bank amex|boa|chase|citi|paypal|us-bank|wells-fargo] [--[no-]past]
@@ -112,6 +115,38 @@ esum offerlove merchant --slug <str> [--bank amex|boa|chase|citi|paypal|us-bank|
 | `--slug` | str | required | Merchant slug, the first part of an offer id (`walmart`), or the merchant page URL. |
 | `--bank` | amex\|boa\|chase\|citi\|paypal\|us-bank\|wells-fargo |  | Only this bank's offers. |
 | `--past` | flag | `False` | Also list the merchant's recently expired offers (the site's Past Offers). |
+
+### `merchants`
+
+Tier 0 (read) · from the site
+
+The merchants with an active offer and how many each has: the site's Offer Directory, whole.
+
+One request reads the whole directory (several thousand merchants), so filtering and paging
+cost no more. Columns: merchant (the slug `merchant --slug` takes), name and offers (the
+directory's count of the merchant's active offers; `merchant` can list fewer, since it shows
+one offer per title and bank). `--fields` adds url. The header gives the directory's size and,
+when you filter, the offers at the merchants found. This is the way to the site's offers as
+a whole: pick merchants here, then read each with `merchant`.
+
+The site rebuilds the directory about once a day, so it is not complete: a merchant whose
+offers were all added since then is missing (Chipotle was, with a live Citi offer), and banks
+name a merchant differently, so one brand can have two entries (`kiehls` on its Chase offer's
+page, `kiehlssince1851` here). A merchant missing here is not proof it has no offer: read its
+page with `merchant --slug <name without spaces>`. A name can also be a bank's own label for
+an offer rather than a store (`The`, `Earn`).
+
+```
+esum offerlove merchants [--query <str>] [--min-offers <int>] [--sort offers|name] [--offset <int>] [--limit <int>]
+```
+
+| Flag | Type | Default | Description |
+|---|---|---|---|
+| `--query` | str |  | Only merchants whose name or slug has every word of this, ignoring case, spaces, punctuation and accents (`pf changs`, `bagel`). |
+| `--min-offers` | int | `1` | Only merchants with at least this many active offers (1 or more). |
+| `--sort` | offers\|name | `'offers'` | offers (most offers first, in the site's order among equals) or name (A to Z). |
+| `--offset` | int | `0` | Rows to skip. |
+| `--limit` | int | `50` | Rows to show. |
 
 ### `my-offers`
 
@@ -201,8 +236,27 @@ esum offerlove search --query <str>
   pages show the UTC date, a day later for Chase. `offer` prints the exact instant; the terms carry
   the bank's own date.
 - `bank` lists only the first 100 of a bank's offers, in the site's order (Chase has about 1,900,
-  BoA about 4,100); `site_total` gives the real count. Reach the rest through `search` or
-  `merchant`.
+  BoA about 4,100); `site_total` gives the real count. Nothing on the site lists the rest of a
+  bank's offers: its bank page has no second page, and the directory doesn't say which bank a
+  merchant's offers are from. So a bank's other offers are reached from the merchant's side:
+  `merchant --slug <slug> --bank <bank>` for a merchant you care about (`merchants --query`
+  finds the slug), or `search`.
+- `merchants` reads the Offer Directory page (`/offers/`), whose filter box holds the site's whole
+  merchant list (about 5,900) in each of its 59 pages, so one request has them all. The site has
+  no list of every offer; reading them all would be one `merchant` call per merchant, so read the
+  merchants a question needs, not the whole site.
+- The directory is not complete. The site rebuilds it about once a day, and bank and merchant
+  pages are live: on 2026-11-18 it lacked 14 of the 96 merchants on Chase's bank page, 27 of
+  Citi's 98 and 24 of BoA's 88 (none of Amex's 78). The four checked had offers added 2 to 19
+  hours earlier (Chipotle, with a live Citi offer, was one), and some were there under another
+  slug, since banks name a merchant differently (`kiehls` on the Chase offer, `kiehlssince1851`
+  in the directory; `outbacksteakhouse` and `outback`). So a merchant `merchants` doesn't find
+  may still have offers: read `merchant --slug <name without spaces>`, whose page is live.
+- The directory's `offers` count is the site's and can be well above what `merchant` lists
+  (Shell: 32 in the directory, 6 on its page; Walmart 5 and 4), because the merchant page shows
+  one offer per title and bank and many offers differ only by location. Some directory names are
+  a bank's label for an offer, not a store (`The`, `Earn`, `Grocery stores, gas stations, and
+  restaurants`).
 - `latest` and `expiring` are the site's fixed 200-row lists, with repeated pages merged (often
   110 to 180 rows left). `expiring` is usually all offers due the same day. The site rebuilds
   these lists a few times a day, so they can hold offers already past their date; `latest`,
@@ -211,7 +265,7 @@ esum offerlove search --query <str>
   relative age (`16h ago`).
 - PayPal has a bank page but no offers lately (`bank --name paypal` is empty; `banks` omits it).
 - The site's pages sometimes answer HTTP 500 for a moment; rerun the call.
-- The site's pages (`latest`, `expiring`, `bank`, `merchant`, `offer`) sit behind a Cloudflare check
+- The site's pages (`latest`, `expiring`, `bank`, `merchant`, `merchants`, `offer`) sit behind a Cloudflare check
   at times. The call then switches to the browser by itself (a line on stderr says so) and can end
   as CHECK NEEDED when the check wants a click. `search` and `banks` use the API host,
   which has no such check.

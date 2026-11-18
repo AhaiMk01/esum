@@ -128,6 +128,9 @@ def test_offerlove_latest_offer_search_merchant(esum):
     assert all(r["id"].count("/") == 2 for r in found)
     shop = esum("offerlove", "merchant", "--slug", found[0]["merchant"], "--past")
     assert shop["offers"] and all(r["bank"] for r in shop["offers"])
+    listed = esum("offerlove", "merchants", "--query", "walmart")
+    assert listed["total"] >= 1 and "merchants" in listed["site_total"]
+    assert all(r["merchant"] and r["name"] and r["offers"] >= 1 for r in listed["merchants"])
 
 
 def test_matrix_airports_search_detail(esum):

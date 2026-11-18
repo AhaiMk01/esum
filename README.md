@@ -161,7 +161,7 @@ and [module-format.md](skills/esum-site-author/references/module-format.md) is t
 | [美国信用卡指南](https://www.uscreditcardguide.com) | `uscreditcardguide` | Chinese-language card and bank-bonus blog | T1 |
 | [Miles Earn and Burn](https://milesearnandburn.com) | `meb` | Manufactured spending, gift cards; near-daily roundups | T1 |
 | [FlyerTalk](https://www.flyertalk.com) | `flyertalk` | Airline, hotel and card program forums | T3 |
-| [Offer.love](https://offer.love) | `offerlove` | Card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi…) by merchant or bank, and your own offers on every card | T1→T3 |
+| [Offer.love](https://offer.love) | `offerlove` | Card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi…) by merchant or bank, the directory of every merchant with an offer, and your own offers on every card | T1→T3 |
 | [Savewise](https://getsavewise.com) | `savewise` | Shopping portal rates at a store (Rakuten, TopCashBack, C1 Shopping, airline malls…), its card-linked offers, Top Offers lists, bank-offer stacks and gift cards (CardDepot discounts, Rove miles) | T1 |
 | [Wings of the Points](https://uscreditcardguide.github.io/Wings-of-the-Points/) | `wotp` | Which card points (Chase UR, AmEx MR, Citi TYP, Capital One, Bilt, Marriott) transfer to which airline programs and at what ratio, by airline, currency or alliance; the chart's change log | T1 |
 | [CardCenter](https://cardcenter.cc) | `cardcenter` | Gift card buyer: current buy rates by brand and card value, and the deals behind them (login; read-only) | T2 |

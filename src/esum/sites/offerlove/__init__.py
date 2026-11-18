@@ -1,6 +1,6 @@
 """Offer.love: card-linked merchant offers (Amex Offers, Chase Offers, BankAmeriDeals…) from the public
 v1 API (search, bank counts) and the site's server-rendered pages (merchant, bank, latest, expiring,
-one offer), all public. `my-offers` reads the signed-in user's own offers from the My Offers page in
+one offer, the merchant directory), all public. `my-offers` reads the signed-in user's own offers from the My Offers page in
 the browser, through a page script (D-95); it needs no key (D-78)."""
 
 from __future__ import annotations
@@ -9,12 +9,12 @@ import re
 from pathlib import Path
 from typing import Literal
 
-from esum import Listing, NoSuchItem, Next, Result, Tier, Transport, action, site
+from esum import ArgumentError, Listing, NoSuchItem, Next, Result, Tier, Transport, action, site
 
 from . import parse
-from .parse import (BANKS, PageChanged, api_rows, bank_counts, list_rows, merchant_page, merchant_slug, merge,
-                    matches, my_offer_rows, offer_id, offer_page, page_count, row_count,
-                    split_expired)
+from .parse import (BANKS, PageChanged, api_rows, bank_counts, directory, in_directory, list_rows, merchant_page,
+                    merchant_slug, merge, matches, my_offer_rows, nearest_merchants, offer_id, offer_page,
+                    page_count, plain, row_count, split_expired)
 
 FORMAT = 1
 EXTRAS = ()
@@ -33,8 +33,10 @@ offerlove = site(
     transport=Transport.DIRECT,
     fallback=Transport.IN_PAGE,   # the site's pages sit behind a Cloudflare check at times; its API does not
     label={"en": "Offer.love: card-linked merchant offers (Amex Offers, Chase Offers, BoA, Citi, US Bank, "
-                 "Wells Fargo, PayPal): search by merchant, list by bank, newest and expiring, full terms",
-           "zh": "Offer.love：各银行信用卡商家 offer（Amex Offers、Chase Offers 等）聚合，按商家/银行查，最新与快到期"},
+                 "Wells Fargo, PayPal): search by merchant, list by bank, newest and expiring, full terms, "
+                 "and the directory of every merchant with an offer",
+           "zh": "Offer.love：各银行信用卡商家 offer（Amex Offers、Chase Offers 等）聚合，按商家/银行查，最新与快到期，"
+                 "以及所有有 offer 的商家目录"},
 )
 
 OFFER = Next("offer", {"id": "<id>"}, "read an offer's full terms")
@@ -62,6 +64,15 @@ def _sorted(rows: list[dict], sort: str, about: dict) -> list[dict]:
 def _page(rows: list[dict], offset: int, limit: int) -> tuple[list[dict], dict | None]:
     shown = rows[offset:offset + limit]
     return shown, {"offset": offset + limit} if offset + limit < len(rows) else None
+
+
+def _past(rows: list[dict], shown: list[dict], offset: int) -> str | None:
+    """Why a page is empty although rows matched: the offset is past the last of them."""
+    return f"no row at offset {offset}: {len(rows)} matched" if rows and not shown else None
+
+
+def _first_page(action_name: str) -> Next:
+    return Next(action_name, {"offset": 0}, "start from the first row", when_empty=True)
 
 
 @action(offerlove, tier=Tier.READ)
@@ -101,7 +112,8 @@ def merchant(ctx, slug: str, bank: Bank | None = None, past: bool = False):
 
     Columns: offer id, bank, title and expiry date (and status with `--past`); `--fields` adds
     status, merchant (the slug), name (the merchant's name on that offer), age (since it was
-    added), terms and url. Find a slug with `search`.
+    added), terms and url. Find a slug with `merchants --query` (the site's directory) or `search`;
+    a slug is usually the name without spaces, and the page is live, so guessing one is fine.
 
     Args:
         slug: Merchant slug, the first part of an offer id (`walmart`), or the merchant page URL.
@@ -114,7 +126,10 @@ def merchant(ctx, slug: str, bank: Bank | None = None, past: bool = False):
         return Listing(name="offers", rows=[], fields=_columns(False, "expires"),
                        about={"merchant": slug}, total=0,
                        empty=f"offer.love has no merchant with the slug {slug!r}",
-                       next=[Next("search", {"query": slug}, "find the merchant's slug", when_empty=True)])
+                       next=[Next("merchants", {"query": slug}, "find the merchant's slug in the directory",
+                                  when_empty=True),
+                             Next("search", {"query": slug}, "search offers' wording through the API",
+                                  when_empty=True)])
     name, rows = found
     if not past:
         rows = [r for r in rows if r["status"] == "active"]
@@ -122,13 +137,100 @@ def merchant(ctx, slug: str, bank: Bank | None = None, past: bool = False):
         rows = [r for r in rows if r["bank"] == BANKS[bank][1]]
     which = "active or past" if past else "active"
     fields = ("id", "bank", "title", "expires", "status") if past else ("id", "bank", "title", "expires")
-    return Listing(name="offers", rows=rows, fields=fields,
-                   about={"merchant": f"{name} ({slug})", "bank": BANKS[bank][1] if bank else "all",
-                          "url": f"{ctx.site.base_url}/offers/{slug}/"},
+    about = {"merchant": f"{name} ({slug})", "bank": BANKS[bank][1] if bank else "all",
+             "url": f"{ctx.site.base_url}/offers/{slug}/"}
+    if rows:
+        about["note"] = ("one row per title and bank, as the page lists them; the directory (`merchants`) can "
+                         "count more, since offers that differ only by location share a row")
+    return Listing(name="offers", rows=rows, fields=fields, about=about,
                    total=len(rows),
                    empty=f"{name} has no {which} {BANKS[bank][1] + ' ' if bank else ''}offers",
                    next=[OFFER] + ([] if past else [Next("merchant", {"slug": slug, "past": True},
                                                          "include recently expired offers", when_empty=True)]))
+
+
+@action(offerlove, tier=Tier.READ)
+def merchants(ctx, query: str | None = None, min_offers: int = 1, sort: Literal["offers", "name"] = "offers",
+              offset: int = 0, limit: int = 50):
+    """The merchants with an active offer and how many each has: the site's Offer Directory, whole.
+
+    One request reads the whole directory (several thousand merchants), so filtering and paging
+    cost no more. Columns: merchant (the slug `merchant --slug` takes), name and offers (the
+    directory's count of the merchant's active offers; `merchant` can list fewer, since it shows
+    one offer per title and bank). `--fields` adds url. The header gives the directory's size and,
+    when you filter, the offers at the merchants found. This is the way to the site's offers as
+    a whole: pick merchants here, then read each with `merchant`.
+
+    The site rebuilds the directory about once a day, so it is not complete: a merchant whose
+    offers were all added since then is missing (Chipotle was, with a live Citi offer), and banks
+    name a merchant differently, so one brand can have two entries (`kiehls` on its Chase offer's
+    page, `kiehlssince1851` here). A merchant missing here is not proof it has no offer: read its
+    page with `merchant --slug <name without spaces>`. A name can also be a bank's own label for
+    an offer rather than a store (`The`, `Earn`).
+
+    Args:
+        query: Only merchants whose name or slug has every word of this, ignoring case, spaces, punctuation and accents (`pf changs`, `bagel`).
+        min_offers: Only merchants with at least this many active offers (1 or more).
+        sort: offers (most offers first, in the site's order among equals) or name (A to Z).
+        offset: Rows to skip.
+        limit: Rows to show.
+    """
+    if min_offers < 1:
+        raise ArgumentError(f"--min-offers {min_offers} is below 1: every merchant in the directory has an offer",
+                            help="give 1 or more, e.g. `--min-offers 5`")
+    if query is not None and not plain(query):
+        raise ArgumentError(f"--query {query!r} has no letter or digit to look for",
+                            help="give a word from the merchant's name, e.g. `--query bagel`")
+    found = directory(ctx.http.get_text("/offers/"))
+    about: dict = {"url": f"{ctx.site.base_url}/offers/",
+                   "site_total": f"{len(found)} merchants, {sum(r['offers'] or 0 for r in found)} offers"}
+    named = [r for r in found if in_directory(r, query)] if query else found
+    near: list[dict] = []
+    if query:
+        about["query"] = query
+        if not named and (near := nearest_merchants(found, query)):
+            about["closest"] = ", ".join(f"{r['merchant']} ({r['name']})" for r in near)
+    rows = named
+    if min_offers > 1:
+        about["min_offers"] = min_offers
+        rows = [r for r in named if (r["offers"] or 0) >= min_offers]
+    if rows and len(rows) != len(found):
+        about["offers"] = sum(r["offers"] or 0 for r in rows)
+    if sort == "name":
+        about["sort"] = "name"
+        rows = sorted(rows, key=lambda r: r["name"].casefold())
+    shown, more = _page(rows, offset, limit)
+    if shown:
+        about["note"] = ("offers is the directory's count; `merchant` shows one offer per title and bank, "
+                         "often fewer (many differ only by location)")
+
+    past = _past(rows, shown, offset)
+    empty, steps = "the directory lists no merchant", []
+    if past:
+        empty, steps = past, [_first_page("merchants")]
+    elif query and not named:
+        # nothing has that name: the directory may be behind, so point at the merchant's own page
+        empty = (f"no merchant in the directory matches {query!r}; the directory is a day behind at times, "
+                 "so this is not proof")
+        guess = re.sub(r"[^a-z0-9]", "", query.lower())
+        if near:
+            steps.append(Next("merchant", {"slug": near[0]["merchant"]},
+                              f"list the offers at {near[0]['name']}, the closest name", when_empty=True))
+        if guess and not (near and near[0]["merchant"] == guess):
+            steps.append(Next("merchant", {"slug": guess}, "read that merchant's own page, which is live (a slug "
+                              "is usually the name without spaces)", when_empty=True))
+        steps += [Next("search", {"query": query}, "search offers' wording through the API", when_empty=True),
+                  Next("merchants", {"query": None, "min_offers": 1, "offset": 0}, "list the whole directory",
+                       when_empty=True)]
+    elif min_offers > 1:
+        # the name matched; only the count filter left nothing
+        empty = (f"{len(named)} {'merchant matches' if len(named) == 1 else 'merchants match'} {query!r}, "
+                 f"none with {min_offers} or more offers" if query
+                 else f"no merchant in the directory has {min_offers} or more offers")
+        steps = [Next("merchants", {"min_offers": 1, "offset": 0}, "drop the offer-count filter", when_empty=True)]
+    return Listing(name="merchants", rows=shown, fields=("merchant", "name", "offers"), about=about,
+                   total=len(rows), more=more, empty=empty,
+                   next=[_merchant_step(shown)] if shown else steps)
 
 
 def _rows(n: int) -> str:
@@ -149,8 +251,10 @@ def _live(rows: list[dict], about: dict, listed: int | None = None) -> list[dict
 def bank(ctx, name: Bank, sort: Sort = "site", offset: int = 0, limit: int = 30):
     """One bank's active offers as its page on the site lists them: the first 100, in the site's order.
 
-    The header gives the bank's whole count; offers past the first 100 are reachable only through
-    `search` or `merchant`. Rows already past their expiry date are left out (`hidden`), and rows
+    The header gives the bank's whole count. The site lists no more than these 100 for a bank and
+    its directory doesn't say which bank a merchant's offers are from, so the rest can't be listed:
+    start from the merchant you care about (`merchant --slug <slug> --bank <bank>`; `merchants`
+    finds the slug) or try `search`. Rows already past their expiry date are left out (`hidden`), and rows
     that repeat another row's offer page are merged (`merged`). Columns: offer id,
     merchant name, title and expiry date; `--fields` adds merchant, bank, excerpt (the start of the
     terms), due (the site's `Exp Dec 5` badge, a UTC date) and url.
@@ -170,10 +274,12 @@ def bank(ctx, name: Bank, sort: Sort = "site", offset: int = 0, limit: int = 30)
                                f"the page shows only its first {row_count(page)}")
     rows = _sorted(_live(list_rows(page), about, row_count(page)), sort, about)
     shown, more = _page(rows, offset, limit)
+    past = _past(rows, shown, offset)
     return Listing(name="offers", rows=shown, fields=_columns(True, "expires"), about=about,
-                   total=len(rows), more=more, empty=f"offer.love lists no active {label} offers",
+                   total=len(rows), more=more, empty=past or f"offer.love lists no active {label} offers",
                    next=[OFFER, _merchant_step(shown),
-                         Next("banks", {}, "see which banks have offers", when_empty=True)])
+                         _first_page("bank") if past else Next("banks", {}, "see which banks have offers",
+                                                              when_empty=True)])
 
 
 @action(offerlove, tier=Tier.READ)
@@ -193,10 +299,12 @@ def _feed(ctx, path: str, what: str, bank: str | None, offset: int, limit: int, 
         rows = [r for r in rows if r["bank"] == BANKS[bank][1]]
     rows = _sorted(_live(merge(rows), about, len(rows)), sort, about)
     shown, more = _page(rows, offset, limit)
+    past = _past(rows, shown, offset)
     return Listing(name="offers", rows=shown, fields=_columns(bool(bank), last), about=about,
                    total=len(rows), more=more,
-                   empty=f"no live {BANKS[bank][1] + ' ' if bank else ''}offers in the site's {what}",
-                   next=[OFFER, _merchant_step(shown)] if rows else empty_steps)
+                   empty=past or f"no live {BANKS[bank][1] + ' ' if bank else ''}offers in the site's {what}",
+                   next=[OFFER, _merchant_step(shown)] if shown else [_first_page(ctx.action.name)] if past
+                   else empty_steps)
 
 
 @action(offerlove, tier=Tier.READ)
@@ -333,11 +441,13 @@ def my_offers(ctx, query: str | None = None, bank: Bank | None = None, card: str
         rows = [r for r in rows if (r["added"] == "no") == (added == "no")]
     rows = _sorted(rows, sort, about)
     shown, more = _page(rows, offset, limit)
+    past = _past(rows, shown, offset)
     return Listing(name="offers", rows=shown, fields=("merchant", "bank", "card", "title", "expires", "added"),
                    about=about, total=len(rows), more=more,
-                   empty="no offers of yours match" if (query or bank or card or added)
-                   else "Offer.love's My Offers lists no live offers for you",
-                   next=[Next("my-offers", {"query": "<merchant>"},
+                   empty=past or ("no offers of yours match" if (query or bank or card or added)
+                                  else "Offer.love's My Offers lists no live offers for you"),
+                   next=[*([_first_page("my-offers")] if past else []),
+                         Next("my-offers", {"query": "<merchant>"},
                               "list only that merchant's offers of yours (add `--fields terms --json` for "
                               "the whole terms, where gift card exclusions usually are)"),
                          Next("search", {"query": "<merchant>"}, "list every bank's public offers at that merchant")])
