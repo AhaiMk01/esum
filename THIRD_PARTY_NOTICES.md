@@ -135,3 +135,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Wings of the Points (test fixtures only)
+
+The `wotp` site reads [Wings of the Points](https://github.com/USCreditCardGuide/Wings-of-the-Points),
+a chart by Martin Gao, Runjie Guan and physixfan, licensed
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Two of its files,
+`_data/transfers.csv` and `README.md`, are kept whole and unchanged in
+`src/esum/sites/wotp/tests/fixtures/` as test input. They stay under that license, not ESUM's MIT
+license; `NOTICE.md` beside them has the details. ESUM's packages don't include them.

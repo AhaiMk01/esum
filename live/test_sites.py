@@ -157,6 +157,22 @@ def test_aerolopa_fleet_seatmap_schedule_routes(esum):
     assert found and any("%" in f["layouts"] for f in found)
 
 
+def test_wotp_airlines_programs_changes_notes(esum):
+    """Wings of the Points has no threads: the chart by airline and by currency, the currencies
+    compared, the change log and the notes."""
+    chart = esum("wotp", "airlines")
+    assert chart["total"] >= 50 and all(len(r["code"]) == 2 and r["name"] and r["alliance"] for r in chart["airlines"])
+    found = esum("wotp", "airlines", "--airline", "AF", "klm")
+    assert [r["code"] for r in found["airlines"]] == ["AF"] and "KLM" in found["shared"] and found["updated"][:2] == "20"
+    both = esum("wotp", "airlines", "--points", "UR", "MR", "--match", "all")["airlines"]
+    assert both and all(":" in r["chase"] and ":" in r["amex"] and r["best"] for r in both)
+    currencies = esum("wotp", "programs")["programs"]
+    assert {"chase", "amex"} <= {r["key"] for r in currencies} and all(r["partners"] > 0 and r["ratios"] for r in currencies)
+    log = esum("wotp", "changes", "--query", "chase", "--limit", "3")["changes"]
+    assert log and all(date.fromisoformat(r["date"]) and r["change"] for r in log)
+    assert "Marriott" in esum("wotp", "notes")["notes"]
+
+
 def test_gflights_search_returns_detail(esum):
     """Google Flights has no threads: a round-trip search → returns → detail with its booking link."""
     out = (date.today() + timedelta(days=45)).isoformat()

@@ -102,7 +102,7 @@ no built-in site.
   ESUM didn't open. Launch lazily, because T1 sites never start a browser. Don't duplicate what
   patchright-cli already does.
 - `src/esum/engines/` (discourse, wordpress, vbulletin, discuz): platform code. `src/esum/sites/`:
-  thin site configs on engines, plus standalone modules (hn, reddit, v2ex, substack, kanxue, nodeseek, nga, onepoint3acres, matrix, gflights, flightconnections, aerolopa). Sites are addressed by site name.
+  thin site configs on engines, plus standalone modules (hn, reddit, v2ex, substack, kanxue, nodeseek, nga, onepoint3acres, matrix, gflights, flightconnections, aerolopa, wotp). Sites are addressed by site name.
   Custom sites are discovered at runtime from `~/.esum/sites/`.
 - `skills/esum/` (router + rules + `references/workflows/*.md`; site docs come from `esum docs <site>`) and
   `skills/esum-site-author/` (how to add a site, plus `references/module-format.md`, the versioned

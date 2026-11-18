@@ -1,0 +1,205 @@
+# Wings of the Points
+
+This is a chart to visually represent the transfer partnerships between rewards programs of US credit cards and airlines.
+
+Live Demo -> [https://uscreditcardguide.github.io/Wings-of-the-Points/index.html](https://uscreditcardguide.github.io/Wings-of-the-Points/index.html)
+
+
+Transfer ratios → [US Credit Card Guide](https://www.uscreditcardguide.com/wings-points-points-miles-transfer-chart-amex-chase-citi-spg-marriott/)
+
+## Local preview
+
+Clone or download the repository and double-click `index.html` to open the chart in a browser. The chart loads some of its libraries from CDNs.
+
+## Updating transfers
+
+Edit [the transfer CSV](_data/transfers.csv). Find the airline by its code and change the ratio in the program column. A blank cell means that the route is unavailable.
+
+For a new airline, add a row using an existing alliance value. The optional link_order field controls the order of the connections within an alliance. The row order controls the order of the airline nodes.
+
+Add a dated [Change Log](#change-log) entry describing each update.
+
+GitHub Actions regenerates and publishes the chart after a push to `gh-pages`. Pull the branch after the workflow finishes to see the updated chart locally.
+
+To preview your own CSV edits before pushing, run this command from the repository folder with Python 3 installed, then refresh the chart in your browser.
+
+```sh
+python3 build.py
+```
+
+
+## Usage
+* On a narrow screen, tap an airline code to see its full name or tap a transfer line to see its ratio.
+* Move your mouse over the point name or airline name to highlight transfer relationships. 
+* Move your mouse over any line connecting a point and a mile to see the transfer ratio. 
+* The airlines are grouped by alliances, and inside an alliance the airlines are sorted by alphabetical order. 
+* You can use ctrl+F (or cmd+F) to quickly find an airline.
+
+## Note
+
+* Chase UR is short for Chase Ultimate Rewards points; AmEx MR is short for American Express Membership Rewards points; Citi TYP is short for Citi ThankYou Points; C1 is short for Capital One Rewards.
+* Citi TYP ratios shown assume an eligible premium ThankYou card, such as Citi Strata Elite, Citi Strata Premier, or Citi Prestige. Ratios vary by card: for example, transfers to Copa ConnectMiles (CM) and Japan Airlines Mileage Bank (JL) are 1:1 with qualifying premium cards, but 1:0.7 with cards such as Citi Double Cash, Citi Custom Cash, and Citi Strata. Use the ratio available for your card when calculating a transfer.
+* Marriott Bonvoy transfers to most airline programs at a base ratio of 3:1. The chart includes the standard bonus for transfers in multiples of 60,000 Bonvoy points; its effective ratios do not apply to every transfer amount. Each complete block of 60,000 points earns the bonus shown below; any remainder converts at the base ratio. See the [Marriott transfer rules](https://www.marriott.com/loyalty/redeem/travel/points-to-miles.mi) and [United partnership details](https://travel-partner.marriott.com/united/en-us).
+
+| Marriott Bonvoy transfer destination | Base ratio | Bonus per 60,000 Bonvoy points | Total received for 60,000 points | Ratio shown in chart |
+| --- | --- | --- | --- | --- |
+| Most airline partners | 3:1 | 5,000 miles | 25,000 miles | 3:1.25 |
+| American AAdvantage (AA), Avianca LifeMiles (AV), Delta SkyMiles (DL) | 3:1 | None | 20,000 miles | 3:1 |
+| United MileagePlus (UA) | 3:1 | 10,000 miles | 30,000 miles | 3:1.5 |
+| Air New Zealand Koru (NZ) | 200:1 | 75 Airpoints | 375 Airpoints | 200:1.25 |
+
+* Apart from Air France (AF), Flying Blue is also the frequent flyer program for KLM (KL) and TAROM (RO). These airlines are represented by the Air France node to save space.
+* Apart from Lufthansa (LH), Miles & More is also the frequent flyer program for Austrian Airlines (OS), Brussels Airlines (SN), Croatia Airlines (OU), ITA Airways (AZ), LOT Polish Airlines (LO), and SWISS (LX). These airlines are represented by the Lufthansa node to save space.
+* To save space, airlines sharing a frequent flyer program are generally grouped under a representative airline node, as with Flying Blue (Air France) and Miles & More (Lufthansa).
+
+
+## Change Log
+
+### 2026-11-18
+
+* Added Cathay Pacific Asia Miles (CX) and Qantas Frequent Flyer (QF) as Chase UR transfer partners, both at 1:1.
+
+### 2026-11.04
+
+* CM is now a transfer partner of C1 at ratio 1:0.75.
+* CM is now a transfer partner of Citi at ratio 1:1.
+(and the following old changes)
+* Combined Alaska Mileage Plan and HawaiianMiles into Atmos Rewards under Alaska / Hawaiian Airlines.
+* EK is no longer a transfer partner of UR; MR/TYP to EK ratio is lowered from 1:1 to 1:0.8; C1 to EK ratio is lowered from 1:1 to 1:0.75.
+* EY is no longer a transfer partner of MR.
+* VS is now a transfer partner of C1 at ratio 1:1.
+* CZ is now a transfer partner of Marriott at 3:1.25.
+* ET is now a transfer partner of Marriott at 3:1.25.
+* SU is no longer a transfer partner of Marriott.
+* SA is no longer a transfer partner of Marriott.
+* Added Vueling Club (VY) as a transfer partner of Marriott at 3:1.25.
+* Moved Scandinavian Airlines (SK) from Star Alliance to SkyTeam.
+* Removed Czech Airlines (OK), whose OK Plus program has ended.
+* Updated the loyalty program names for BA, IB, AM, AI, and NZ.
+* Clarified Marriott transfer bonuses, Citi card eligibility, and shared frequent flyer programs in the README.
+* Added Royal Air Maroc (AT) and Oman Air (WY) to oneworld as N/A.
+* Added Kenya Airways (KQ, Asante Rewards) to SkyTeam as N/A and consolidated Shenzhen Airlines (ZH) under Air China (CA, PhoenixMiles).
+* Corrected JetBlue's alphabetical position and removed transfer-ratio tooltips from N/A links.
+* Replaced RawGit dependencies with a local copy of d3.chart; the Sankey implementation is already bundled locally.
+
+### 2026-10-20
+
+* B6 is now a transfer partner of Bilt at ratio 1:1.
+
+### 2026-09-20
+
+* JL is now a transfer partner of TYP at ratio 1:1.
+
+### 2026-03-01
+
+* The transfer ratio for MR to CX is lowered to 1:0.8 (from 1:1).
+
+### 2026-01-25
+
+* AeroMexico (AM) is no longer a transfer partner of Citi TYP.
+
+### 2025-10-08
+
+* EY is now a transfer partner of Bilt at ratio 1:1.
+
+### 2025-09-23
+
+* JL is now a transfer partner of C1 at ratio 1:0.75. QR is now a transfer partner of C1 at ratio 1:1.
+
+### 2025-09-12
+
+* OZ is not a transfer partner of Marriott any more.
+
+### 2025-07-27
+
+* AA is now a transfer partner of Citi TYP at ratio 1:1.
+
+### 2025-07-06
+
+* AMEX-Hawaiian transfer has terminated.
+
+### 2025-05-22
+
+* QR is now a transfer partner of Bilt points at ratio 1:1.
+
+### 2025-05-13
+
+* JL is now a transfer partner of Bilt points at ratio 1:1.
+
+### 2025-05-12
+
+* Bilt Rewards is added to this chart
+* B6 is now a transfer partner of C1 points at ratio 1:0.6.
+* Marriott -> UA ratio is increased to 3:1.5. (If you’re a United MileagePlus® member, you’ll get 10,000 bonus miles for every 60,000 points you transfer.)
+* KE is no longer a transfer partner for Marriott.
+
+### 2023-07-28
+* QR is now a transfer partner of AmEx MR at ratio 1:1.
+
+### 2022-11-01
+* Marriott Bonvoy transfer ratio reduced from 3:1.25 to 3:1 for the following partners: AA, AV, DL.
+* Marriott Bonvoy lost partner CZ.
+
+### 2021-10-07
+* Capital One Miles made most transfer ratios to be 1:1 now.
+
+### 2021-08-03
+* Air Canada (AC) Aeroplan is now a transfer partner of Chase UR.
+
+### 2021-05-25
+* El Al (LY) Matmid is no longer a transfer partner of MR points.
+
+### 2021-04-19
+* Capital One added the following transfer partners: BA, TP, TK. It also improved transfer ratio for several partners. Removed MU from MB transfer partners. AS joined Oneworld. LATAM left Oneworld.
+
+### 2020-05-12
+* Capital One lost transfer partners Qatar Airways (QR) and Hainan Airways (HU)
+
+### 2020-04-19
+* Emirates (EK) Skywards is now a transfer partner of Citi TYP.
+
+### 2019-10-21
+* AeroMexico (AM) Club Premier is now a transfer partner of Citi TYP. 
+
+### 2019-08-25
+* Emirates (EK) Skywards is now a transfer partner of Chase UR.
+
+### 2019-08-18
+
+* Garuda Indonesia (GA) GarudaMiles is no longer a transfer partner of Citi TYP.
+* Delisted some airlines sharing the same frequent flyer programs (i.e. Flying Blue and Miles & More)
+
+### 2019-06-07
+
+* Lufthansa (LH) Miles and More program is no longer a transfer partner of Marriott Bonvoy as of 06/2019.
+* Added the corresponding names of the frequent flyer program to the airlines.
+
+### 2019-05-31
+* Qantas (QF) is now a transfer partner of AmEx MR.
+
+### 2019-05-25
+* Forked from [Siriolabs](https://github.com/Siriolabs/Wings-of-the-Points) by physixfan and keep this repo up to date.
+* Added C1 - Capital One Miles transfer partners.
+* Added Aer Lingus (EI) to AmEx MR as they have a new partnership as of 06/2018.
+* Added Avianca (AV) to AmEx MR as they have a new partnership as of 11/2018.
+* Moved CZ from SkyTeam to non-Alliance as it left SkyTeam as of 01/2019.
+
+### 2018-09-04
+* Dealt with the Marriott/SPG merger mess.
+* Added Avianca (AV) to Citi TYP as they have a new partnership as of 11/2017.
+* Removed Korean Air (KE) from Chase UR as transfer agreements have ended as of 08/2018.
+* Added JetBlue (B6) to Chase UR as they have a new partnership as of 08/2018.
+
+### 2018-02-14
+* Removed Virgin America (VX) as it is acquired by Alaska (AS).
+* Add Cathay Dragon (KA) to Amex, Citi, Marriott, SPG as they share Asia Miles with CX.
+* Add Aer Lingus (EI) and Iberia (IB) to Chase as these can be transferred directly as of 11/2017.
+
+
+## Contributors
+
+* [Martin Gao](http://www.yeekapp.com) (The original author and the owner of this chart)
+
+* [Runjie Guan](http://anoxic.me) (Added the transfer rate box to the chart)
+
+* [physixfan](https://www.uscreditcardguide.com) (Proposed this idea and keep updating)
