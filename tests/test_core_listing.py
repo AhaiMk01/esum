@@ -49,6 +49,10 @@ def test_fields_add_columns_and_unknown_fields_fail():
     assert "topics[2]{id,title,replies,tags,author}:" in text and '  1,"First, with a comma",3,x; y,a' in text
     assert "topics[2]{id,title,replies,author,tags}:" in render_listing(listing(), site="demo", action="latest",
                                                                          fields="all")
+    # a column the first row leaves empty keeps its place among the rows' keys
+    late = listing(rows=[{"id": 1, "title": "t", "replies": 0, "author": None, "tags": ["x"]},
+                         {"id": 2, "title": "u", "replies": 1, "author": "b", "tags": []}])
+    assert "topics[2]{id,title,replies,author,tags}:" in render_listing(late, site="demo", action="latest", fields="all")
     with pytest.raises(FieldsError, match="unknown field nope for topics; fields with values: id, title, replies, author, tags"):
         render_listing(listing(), site="demo", action="latest", fields="nope")
     blank = listing(rows=[{"id": 1, "title": "t", "replies": 0, "author": "a", "tags": None}], total=1)

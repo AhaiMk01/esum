@@ -196,8 +196,10 @@ def columns(listing: Listing, fields: str | None) -> list[str]:
     if not fields:
         return [f for f in listing.fields if f in keys or not listing.rows]
     # a default column is a field even when every row leaves it empty (a score a site hides)
-    known = list(dict.fromkeys(k for row in listing.rows for k, v in row.items()
-                               if v not in (None, "") or k in listing.fields))
+    filled = {k for row in listing.rows for k, v in row.items() if v not in (None, "") or k in listing.fields}
+    # in the rows' own key order, whichever row first fills a column: a ratio the first row lacks
+    # still prints beside its neighbours
+    known = [k for k in dict.fromkeys(k for row in listing.rows for k in row) if k in filled]
     if fields.strip() == "all":
         return known
     extra = [f.strip() for f in fields.split(",") if f.strip()]
