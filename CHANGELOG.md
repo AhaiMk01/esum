@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.0
+
+- A new site, `wotp` (Wings of the Points): which US card points (Chase UR, AmEx MR, Citi TYP,
+  Capital One, Bilt, Marriott Bonvoy) transfer to which airline programs and at what ratio, by
+  airline, currency or alliance. `programs` compares the currencies, `changes` reads the chart's
+  change log, and `notes` says what the ratios assume. That makes 24 built-in sites.
+- `offerlove merchants` lists Offer.love's whole merchant directory in one request (about 5,900
+  merchants with their offer counts), filtered by name or by offer count; `merchant` then reads
+  one merchant's offers. The directory is a day behind at times, and the output says so and
+  points to the merchant's own live page.
+- Fixed: Offer.love's lists (`bank`, `latest`, `expiring`, `my-offers`) said nothing matched when
+  `--offset` was past the last row; they now say how many rows there are.
+- Fixed: `--fields all` prints the columns in the rows' own order, whichever row first has a value.
+
 ## 0.1.0
 
 The first public release.

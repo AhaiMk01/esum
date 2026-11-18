@@ -1,6 +1,6 @@
 [project]
 name = "esum"
-version = "0.1.0"
+version = "0.2.0"
 description = "ESUM (Every Site, Unwrapped for Models): agent-agnostic CLI and skills for reading websites and making gated, reversible account actions."
 requires-python = ">=3.12"
 readme = "README.md"
