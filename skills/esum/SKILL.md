@@ -1,6 +1,6 @@
 ---
 name: esum
-description: "Read websites through the `esum` CLI: card, bank, points and travel forums and deal blogs, Chinese tech, security and community forums, general discussion and newsletter sites such as Reddit, card-linked merchant offers, shopping portal cashback rates, gift card resale rates, points-to-airline transfer partners and ratios, airfare search, flight routes and timetables, aircraft seat maps, and the user's own custom sites. Search, read whole threads with every comment, list recent posts and deals, collect data points (DPs), and make gated, reversible account actions such as a forum bookmark. Use when the user asks about card, bank, points or travel data points, deals or forum discussions, card-linked offers, shopping portal cashback, gift card resale rates, which card points transfer to an airline program and at what ratio, US jobs, interviews (面经) and visas, airfares, fare rules, flight routes or schedules, seat maps or which aircraft and seat a flight has, or names a forum, deal blog or community site to read or search: `esum list` shows the sites it has."
+description: "Read websites through the `esum` CLI: card, bank, points and travel forums and deal blogs, Chinese tech, security and community forums, general discussion and newsletter sites such as Reddit, card-linked merchant offers, shopping portal cashback rates, gift card resale rates, points-to-airline transfer partners and ratios, airfare search, flight routes and timetables, aircraft seat maps, and the user's own custom sites. Search, read whole threads with every comment, list recent posts and deals, collect data points (DPs), and make gated, reversible account actions such as a forum bookmark. Use when the user asks about card, bank, points or travel data points, deals or forum discussions, card-linked offers, whether the user's own card offers can be resold for profit as gift cards, shopping portal cashback, gift card resale rates, which card points transfer to an airline program and at what ratio, US jobs, interviews (面经) and visas, airfares, fare rules, flight routes or schedules, seat maps or which aircraft and seat a flight has, or names a forum, deal blog or community site to read or search: `esum list` shows the sites it has."
 ---
 
 # esum
@@ -163,5 +163,7 @@ Recipes to follow, adapting them with judgment:
   ticketing question from a fare's filed rules, and say what the rules can't answer.
 - [Deep read](references/workflows/deep-read.md): read one thread fully, by range, or chunked for
   huge threads.
+- [Offer resale](references/workflows/offer-resale.md): which of the user's own card offers pay a
+  profit when bought as gift cards and sold to Aligned Incentives or CardCenter.
 
 Read a site's doc with `esum docs <site>`; it works the same for built-in and custom sites.
