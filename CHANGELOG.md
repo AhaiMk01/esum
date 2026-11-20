@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.2
+
+- Fixed: T2 sites that borrow the browser's login (`curl_cffi` with your browser's cookies) sent
+  Client Hints (`Sec-Ch-Ua*`) for curl_cffi's own Chrome version and Windows platform, and an
+  English `Accept-Language`, next to your browser's User-Agent and cookies. They now send what
+  your browser would: the hints follow its Chrome version and platform, and `Accept-Language`
+  follows its languages, so a site that checks the headers against each other or against its
+  clearance cookie sees one browser.
+
 ## 0.2.1
 
 - A new workflow in the `esum` skill: which of your own card-linked offers (every bank Offer.love
