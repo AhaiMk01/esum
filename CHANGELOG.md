@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.1
+
+- A new workflow in the `esum` skill: which of your own card-linked offers (every bank Offer.love
+  reads) pay off as gift cards you resell. It matches your offers to Aligned Incentives and
+  CardCenter deals, recomputes the profit from your offer, and checks face value, standing prices
+  and terms.
+- Fixed: in `attach` and `native` mode, downloads you started in your own Chrome tabs while ESUM
+  was connected were saved to a temporary folder and deleted, and dialogs in your tabs were
+  dismissed ([#1](https://github.com/AhaiMk01/esum/issues/1)). The fix is in patchright-cli
+  0.15.1, which ESUM now requires in every mode: run `uv tool install -U patchright-cli`, then
+  `patchright-cli kill-all`.
+
 ## 0.2.0
 
 - A new site, `wotp` (Wings of the Points): which US card points (Chase UR, AmEx MR, Citi TYP,
