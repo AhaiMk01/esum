@@ -16,7 +16,7 @@ from esum import Tier
 from esum import Transport
 from esum import action
 from esum import site
-from esum.browser.session import BrowserSession
+from esum.browser.session import IDENTITY_JS, BrowserSession
 from esum.core.context import Options
 from esum.core.runner import run_action
 from test_browser_transports import FakeDaemon
@@ -359,7 +359,7 @@ def test_action_error_survives_a_daemon_that_is_gone_at_cleanup(monkeypatch):
     def reply(msg):
         options = dict(msg["options"])
         session = options.pop("session")
-        if msg["command"] == "eval" and msg["args"][0] not in ("location.href", "navigator.userAgent"):
+        if msg["command"] == "eval" and msg["args"][0] not in ("location.href", IDENTITY_JS):
             value = {"title": "Page", "href": "https://forum.example"}
             if "fetch(a.url" in msg["args"][0]:
                 value = {"ok": True, "status": 200, "url": "https://forum.example/latest",

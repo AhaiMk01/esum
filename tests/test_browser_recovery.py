@@ -198,9 +198,9 @@ def test_other_eval_errors_in_our_tab_are_not_retried_elsewhere(fake):
     assert not isinstance(info.value, TabLost)
 
 
-def test_t2_user_agent_is_read_in_a_tab_of_esums_own(fake):
+def test_t2_identity_is_read_in_a_tab_of_esums_own(fake):
     s = session(fake, "attach", "http://127.0.0.1:9222")
-    assert s.user_agent() == "Mozilla/5.0 FakeChrome/140"
+    assert s.identity() == ("Mozilla/5.0 FakeChrome/140", ("en-US", "en"))
     ua = [c for c in fake.calls if c[0] == "eval"]
     assert ua and all(c[3].get("tab", "").startswith("esum-") for c in ua)  # not the user's tab
     assert fake.named("esum-attach-127-0-0-1-9222") == []
@@ -224,6 +224,7 @@ def test_t2_backend_builds_its_client_from_the_session(fake):
     backend._client()
     backend.close()
     assert built[0].headers["User-Agent"] == "Mozilla/5.0 FakeChrome/140"
+    assert built[0].headers["Accept-Language"] == "en-US,en;q=0.9"
 
 
 # --- 7. the missing-Chrome hint names a command that exists (review-r4 #3) --------------------------

@@ -19,7 +19,7 @@ import secrets
 import sys
 import time
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Callable, NamedTuple
 from urllib.parse import urlsplit
 
 from filelock import FileLock
@@ -49,6 +49,13 @@ _VIEWPORT = ("async () => ({width: innerWidth, height: innerHeight, "
 
 # An empty cookie jar is a success reply, so it has no code: "0 cookies in this session".
 NO_COOKIES = "0 cookies"
+# what T2 copies so its requests read as the browser's own (clearance cookies are bound to the UA)
+IDENTITY_JS = "({userAgent: navigator.userAgent, languages: navigator.languages})"
+
+
+class BrowserIdentity(NamedTuple):
+    user_agent: str
+    languages: tuple[str, ...]
 
 
 class TabLost(BrowserError):
@@ -180,13 +187,14 @@ class BrowserSession:
         """The session's cookie jar (Playwright cookie dicts). Kept in memory, never written."""
         return self._retrying(lambda: cookie_jar(self.run("cookie-list")))
 
-    def user_agent(self) -> str:
-        """The browser's user agent, read in a short-lived tab of ESUM's own."""
-        def step() -> str:
+    def identity(self) -> BrowserIdentity:
+        """The browser's user agent and languages, read in a short-lived tab of ESUM's own."""
+        def step() -> BrowserIdentity:
             name = _tab_name()
             try:
                 self.run("open", "about:blank", tab=name)
-                return str(json.loads(self.run("eval", "navigator.userAgent", tab=name)))
+                value = json.loads(self.run("eval", IDENTITY_JS, tab=name))
+                return BrowserIdentity(str(value["userAgent"]), tuple(str(x) for x in value["languages"]))
             finally:
                 _close_quietly(self, name)
         return self._retrying(step)

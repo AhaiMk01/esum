@@ -20,13 +20,13 @@ def test_managed_ensure_promotes_an_existing_session_without_replacing_tabs(isol
     assert daemon.tabs() == {"default": existing}
 
 
-@pytest.mark.parametrize("read_user_agent", [False, True])
-def test_every_managed_open_carries_background_policy_and_profile(isolated, read_user_agent):
+@pytest.mark.parametrize("read_identity", [False, True])
+def test_every_managed_open_carries_background_policy_and_profile(isolated, read_identity):
     daemon = FakeDaemon()
     session = BrowserSession(client=daemon)
 
-    if read_user_agent:
-        assert session.user_agent() == "Mozilla/5.0 FakeChrome/140"
+    if read_identity:
+        assert session.identity().user_agent == "Mozilla/5.0 FakeChrome/140"
     else:
         tab = session.open_tab("https://forum.example/read")
         tab.close()
@@ -38,8 +38,8 @@ def test_every_managed_open_carries_background_policy_and_profile(isolated, read
         assert {key: options[key] for key in managed_options(isolated)} == managed_options(isolated)
 
 
-@pytest.mark.parametrize("read_user_agent", [False, True])
-def test_named_open_recreates_managed_profile_after_daemon_replacement(isolated, read_user_agent):
+@pytest.mark.parametrize("read_identity", [False, True])
+def test_named_open_recreates_managed_profile_after_daemon_replacement(isolated, read_identity):
     class ReplacedDaemon(FakeDaemon):
         replace_on_named_open = False
 
@@ -54,8 +54,8 @@ def test_named_open_recreates_managed_profile_after_daemon_replacement(isolated,
     session.ensure_open()
     daemon.replace_on_named_open = True
 
-    if read_user_agent:
-        assert session.user_agent() == "Mozilla/5.0 FakeChrome/140"
+    if read_identity:
+        assert session.identity().user_agent == "Mozilla/5.0 FakeChrome/140"
     else:
         tab = session.open_tab("https://forum.example/read")
         tab.close()

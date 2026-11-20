@@ -22,7 +22,7 @@ import pytest
 
 from esum.browser import session as session_mod
 from esum.browser.daemon import BrowserError
-from esum.browser.session import _PAGE_STATE, _VIEWPORT, BrowserSession, TabLost
+from esum.browser.session import _PAGE_STATE, _VIEWPORT, IDENTITY_JS, BrowserSession, TabLost
 from esum.core.context import Options
 from esum.core.errors import CHECK_NEEDED, CheckNeeded, LoginNeeded
 from esum.core.model import Site, Transport
@@ -66,6 +66,7 @@ class FakeDaemon:
         self.responder = responder
         self.titles = titles or {}
         self.cookies = cookies or []
+        self.identity = {"userAgent": "Mozilla/5.0 FakeChrome/140", "languages": ["en-US", "en"]}
         self.delay = delay
         self.eval_delay = 0.0   # time an eval spends "in the page", outside the daemon's mutex
         self.before_eval = None
@@ -148,8 +149,8 @@ class FakeDaemon:
         raise AssertionError(f"unexpected command {command}")
 
     def _eval(self, tab: FakeTab, expr: str):
-        if expr == "navigator.userAgent":
-            return "Mozilla/5.0 FakeChrome/140"
+        if expr == IDENTITY_JS:
+            return self.identity
         if expr == "location.href":
             return tab.url
         origin, fn, arg = expr
@@ -627,7 +628,7 @@ def test_attach_mode_uses_its_own_session_and_never_touches_the_users_tabs(fake)
     backend = in_page.make_backend(make_site(), Options(browser="attach", cdp="http://localhost:9333"), session=fake.session(Options(browser="attach", cdp="http://localhost:9333")))
     try:
         backend.send(Request("GET", "https://forum.example/a"))
-        assert backend.session.user_agent() == "Mozilla/5.0 FakeChrome/140"
+        assert backend.session.identity().user_agent == "Mozilla/5.0 FakeChrome/140"
     finally:
         backend.close()
     attach = next(c for c in fake.calls if c[0] == "attach")
@@ -810,6 +811,46 @@ def test_t2_sends_the_browser_cookie_jar_and_user_agent(fake, local_server):
     assert fake.names().count("cookie-list") == 1        # the jar is read once per call
     assert first.status == 200 and first.json() == {"ok": True}
     assert first.headers["x-multi"] == "a, b"
+
+
+CHROME_157_WIN = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/157.0.0.0 Safari/537.36")
+
+
+@pytest.mark.parametrize("user_agent, sec_ch_ua, platform", [
+    # both captured from real requests (Chrome 157; curl_cffi 0.17's Chrome 152 target)
+    (CHROME_157_WIN, '"Not-A.Brand";v="99", "Google Chrome";v="157", "Chromium";v="157"', '"Windows"'),
+    (CHROME_157_WIN.replace("157", "152").replace("Windows NT 10.0; Win64; x64", "Macintosh; Intel Mac OS X 10_15_7"),
+     '"Chromium";v="152", "Not?A_Brand";v="24", "Google Chrome";v="152"', '"macOS"'),
+])
+def test_client_hints_follow_the_user_agent(user_agent, sec_ch_ua, platform):
+    assert browser_http.client_hints(user_agent) == {
+        "Sec-Ch-Ua": sec_ch_ua, "Sec-Ch-Ua-Mobile": "?0", "Sec-Ch-Ua-Platform": platform}
+
+
+def test_client_hints_skip_a_user_agent_that_is_not_chromes():
+    assert browser_http.client_hints("Mozilla/5.0 FakeChrome/140") == {}
+    assert browser_http.client_hints(CHROME_157_WIN + " Edg/157.0.0.0") == {}
+
+
+def test_t2_headers_agree_with_the_browsers_identity(fake, local_server):
+    fake.cookies = COOKIES
+    fake.identity = {"userAgent": CHROME_157_WIN, "languages": ["zh-CN", "zh"]}
+    backend = browser_http.make_backend(make_site(Transport.BROWSER_HTTP), Options(), session=fake.session(Options()))
+    try:
+        backend.send(Request("GET", f"{local_server.base}/first"))
+    finally:
+        backend.close()
+    (_, headers), = local_server.seen
+    assert headers["user-agent"] == CHROME_157_WIN
+    assert headers["sec-ch-ua"] == '"Not-A.Brand";v="99", "Google Chrome";v="157", "Chromium";v="157"'
+    assert headers["sec-ch-ua-platform"] == '"Windows"'
+    assert headers["accept-language"] == "zh-CN,zh;q=0.9"  # as the browser sent it, not curl_cffi's English
+
+
+def test_accept_language_is_chromes():
+    assert browser_http.accept_language(["zh-CN", "zh", "en-US", "en"]) == "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+    assert browser_http.accept_language(["l"] * 12).endswith("l;q=0.2,l;q=0.1,l;q=0.1,l;q=0.1")
 
 
 def test_t2_throttle_runs_after_the_browser_cookies_are_read(fake, local_server):
