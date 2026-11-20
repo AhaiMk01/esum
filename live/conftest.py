@@ -28,14 +28,17 @@ _CLI = "import sys; from esum.cli import main; sys.exit(main(sys.argv[1:]))"
 
 
 class Esum:
-    def __call__(self, *args: str) -> dict:
-        """Run `esum <args> --json` and return its `data`; skip on LOGIN NEEDED, fail on any error."""
+    def __call__(self, *args: str, refused: str | None = None) -> dict | None:
+        """Run `esum <args> --json` and return its `data`; skip on LOGIN NEEDED, fail on any error.
+        An error whose message has `refused` in it returns None instead: the site's own answer."""
         env = {**os.environ, "PYTHONIOENCODING": "utf-8", "ESUM_SPILL_CHARS": str(10**9)}
         proc = subprocess.run([sys.executable, "-c", _CLI, *args, "--json"], capture_output=True,
                               text=True, encoding="utf-8", errors="replace", env=env,
                               timeout=RUN_TIMEOUT)
         if proc.returncode == LOGIN_NEEDED:
             pytest.skip(f"login needed: esum {' '.join(args)}")
+        if refused and proc.returncode != 0 and refused in proc.stdout:
+            return None
         assert proc.returncode == 0, (f"esum {' '.join(args)} exited {proc.returncode}:\n"
                                       f"{proc.stderr.strip() or proc.stdout.strip()}")
         out = json.loads(proc.stdout)

@@ -204,10 +204,19 @@ def test_gflights_search_all_reads_the_rows_behind_view_more_flights(esum):
     unpriced = [row["id"] for row in more if "price" in row["missing"]]     # Google lists a few rows without one
     assert len(unpriced) <= len(more) // 10, unpriced
     assert sum("layovers" in row["missing"] for row in more) <= len(more) // 10, found["listed"]
-    # a row from behind the button is named by its flights, and that name alone reads it again
-    row = more[0]
-    assert row["id"].count(":") == 2 * len(row["legs"]), row["id"]
-    detail = esum("gflights", "detail", "--search", found["search"], "--id", row["id"])
+    # a row from behind the button is named by its flights, and that name alone reads it again.
+    # Google gives the details only of flights it also sells with a return (doc.md); a one-way-only
+    # combination (MU590+MU5822+MU5081, AS1541+SQ37 SFO-SIN) is refused, so the first rows that
+    # read back are checked, and at least one of five must.
+    tried = []
+    for row in more[:5]:
+        assert row["id"].count(":") == 2 * len(row["legs"]), row["id"]
+        detail = esum("gflights", "detail", "--search", found["search"], "--id", row["id"],
+                      refused="did not give the details")
+        tried.append(row["id"])
+        if detail is not None:
+            break
+    assert detail is not None, f"Google gave the details of none of {tried}"
     assert [leg["flight"] for leg in detail["slices"][0]["legs"]] == [leg["flight"] for leg in row["legs"]]
     assert detail["booking_url"].startswith("https://www.google.com/travel/flights/booking?tfs=")
 
