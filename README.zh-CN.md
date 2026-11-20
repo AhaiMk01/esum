@@ -82,8 +82,8 @@ npx -y skills add AhaiMk01/esum -g -y
 <details>
 <summary><b>浏览器类站点（FlyerTalk、Reddit、LINUX DO、NodeSeek、NGA、看雪、吾爱破解、一亩三分地、CardCenter、Aligned Incentives、Discourse 收藏）</b></summary>
 
-这些站点要经过 Chrome。默认 managed 模式需要 patchright-cli 0.12.0 或更新版本
-（`uv tool install -U patchright-cli`），它打开 Chrome 时不抢桌面焦点。更旧的 daemon 会在启动 Chrome 前被 ESUM 拒绝。
+这些站点要经过 Chrome，需要 patchright-cli 0.15.1 或更新版本
+（`uv tool install -U patchright-cli`）。更旧的 daemon 会在启动 Chrome 前被 ESUM 拒绝。
 
 ```sh
 uv tool run --from patchright-cli patchright install chrome   # 只在没有 Chrome 时需要
@@ -219,6 +219,8 @@ Discourse 论坛还可以保存一个由你授权的密钥（在你自己的终�
 
 > [!WARNING]
 > `native` 模式下，ESUM 的标签页开在你真实的浏览器里，驱动这个会话的程序可以操作你登录过的任何网站。所以它需要你自己打开。
+>
+> ESUM 不碰你自己的标签页：下载、弹窗和网络请求都照常。最后一次调用后最多 30 分钟内 ESUM 仍保持连接，这期间后台标签页里的网页可能以为自己处于焦点状态。
 
 ## 写入前先问你
 

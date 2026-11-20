@@ -10,7 +10,7 @@ The wire format is patchright-cli's published client protocol (its docs/daemon-p
 `patchright-cli daemon-info --json` reports the installed version, the protocol number and the
 auth-token path; ESUM reads it once per install, refuses a protocol it doesn't know, and sends the
 token (read fresh per request, never printed). An install without `daemon-info` is older than the
-0.11 minimum: ESUM reads `--version` only to name it in the upgrade message. The token falls back
+minimum: ESUM reads `--version` only to name it in the upgrade message. The token falls back
 to the daemon's default path when ESUM can't ask (patchright-cli not on PATH, daemon running).
 
 Every failed reply reaches callers as a `BrowserError` with a `code` (see `reply_code`), so nothing
@@ -36,8 +36,11 @@ from typing import Any
 from ..core.errors import EsumError
 
 DEFAULT_PORT = 9321
-MIN_VERSION = (0, 11)  # named tabs (0.8), daemon-info (0.9.1), no CDP Runtime.enable on every page
-                       # (0.11): before it, bot checks could tell ESUM's tabs are automated
+MIN_VERSION = (0, 15, 1)  # named tabs (0.8), daemon-info (0.9.1), no CDP Runtime.enable on every page
+                          # (0.11): before it, bot checks could tell ESUM's tabs are automated;
+                          # in attach and native mode, leaves the user's own tabs alone (0.15.1):
+                          # before it, their downloads went to a temp dir that was then deleted
+                          # and their dialogs were dismissed (D-105)
 COMMAND_TIMEOUT = 120.0  # what patchright-cli's own client allows a command
 START_TIMEOUT = 60.0
 TOKEN_DIR = Path.home() / ".patchright-cli"  # the daemon's default token directory
@@ -207,10 +210,11 @@ class DaemonClient:
 
     def _apply(self, info: dict[str, Any]) -> None:
         version = info.get("version") or ""
-        m = re.search(r"(\d+)\.(\d+)", version)
-        if not m or (int(m.group(1)), int(m.group(2))) < MIN_VERSION:
+        m = re.search(r"(\d+)\.(\d+)(?:\.(\d+))?", version)
+        if not m or (int(m.group(1)), int(m.group(2)), int(m.group(3) or 0)) < MIN_VERSION:
             raise BrowserError(f"ESUM needs patchright-cli {'.'.join(map(str, MIN_VERSION))} or newer "
-                               f"(older ones let bot checks detect its tabs); found "
+                               f"(older ones let bot checks detect its tabs, and in attach and native "
+                               f"mode lose downloads and dismiss dialogs in your own tabs); found "
                                f"{version or 'an unknown version'}. Upgrade with "
                                f"`uv tool install -U patchright-cli`",
                                help="Run `uv tool install -U patchright-cli`, then `patchright-cli kill-all` "

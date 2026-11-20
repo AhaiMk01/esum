@@ -97,7 +97,7 @@ no built-in site.
   is ISO-8859-1).
 - `src/esum/browser/`: wraps the **patchright-cli daemon and named sessions**. Modes: managed
   (default), attach, and opt-in native (the user's everyday Chrome); attached Chromes are detached,
-  never closed. Each call uses its own named tab (`--tab`; ESUM needs patchright-cli ≥ 0.11, and managed mode ≥ 0.12 for background opens) in a shared
+  never closed. Each call uses its own named tab (`--tab`; ESUM needs patchright-cli ≥ 0.15.1) in a shared
   session, so parallel calls are safe and overlap; never run page code in, or plain-`close`, a tab
   ESUM didn't open. Launch lazily, because T1 sites never start a browser. Don't duplicate what
   patchright-cli already does.

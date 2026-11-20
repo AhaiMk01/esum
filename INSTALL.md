@@ -71,14 +71,13 @@ Verify: the agent's skills directory now contains `esum/SKILL.md` and
 ## 4. Browser support (optional)
 
 FlyerTalk, Reddit, LINUX DO, NodeSeek, NGA, Kanxue, 52pojie, 1point3acres, CardCenter, Aligned
-Incentives and the Discourse bookmarks run through Chrome (cookies or an in-page fetch). Managed
-mode needs patchright-cli 0.12.0 or newer, which opens Chrome without taking desktop focus. Attach
-and native modes work from 0.11. USCardForum, Offer.love and FlightConnections use Chrome only
+Incentives and the Discourse bookmarks run through Chrome (cookies or an in-page fetch). ESUM
+needs patchright-cli 0.15.1 or newer in every mode. USCardForum, Offer.love and FlightConnections use Chrome only
 when a bot check (Cloudflare, AWS WAF) challenges a read. The other sites don't need Chrome;
 `esum list` shows each site's transport (`T1` never starts a browser).
 
 ```sh
-uv tool install -U patchright-cli                             # 0.12.0 or newer
+uv tool install -U patchright-cli                             # 0.15.1 or newer
 patchright-cli --version
 uv tool run --from patchright-cli patchright install chrome   # only if Google Chrome isn't installed
 ```

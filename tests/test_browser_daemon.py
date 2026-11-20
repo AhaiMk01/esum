@@ -162,7 +162,7 @@ def _fake_cli(tmp_path, monkeypatch, version_output, daemon_info=None):
 
 def test_too_old_patchright_cli_fails_clearly(tmp_path, monkeypatch):
     _fake_cli(tmp_path, monkeypatch, "patchright-cli 0.5.0\n")
-    with pytest.raises(BrowserError, match=r"needs patchright-cli 0\.11 or newer.*found patchright-cli 0\.5\.0.*uv tool install -U patchright-cli") as e:
+    with pytest.raises(BrowserError, match=r"needs patchright-cli 0\.15\.1 or newer.*found patchright-cli 0\.5\.0.*uv tool install -U patchright-cli") as e:
         DaemonClient(_free_port(), cwd=str(tmp_path)).check_version()
     # the agent upgrades on its own (skills/esum: keep patchright-cli current), so help gives both steps
     assert "`uv tool install -U patchright-cli`, then `patchright-cli kill-all`" in e.value.help
@@ -172,13 +172,25 @@ def test_patchright_cli_before_0_11_is_refused(tmp_path, monkeypatch):
     """0.10 speaks the protocol but enables CDP Runtime on every page, which bot checks detect."""
     _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.10.0", "protocol": 1, "port": 9321,
                                                  "token_path": None})
-    with pytest.raises(BrowserError, match=r"needs patchright-cli 0\.11 or newer.*found 0\.10\.0"):
+    with pytest.raises(BrowserError, match=r"needs patchright-cli 0\.15\.1 or newer.*found 0\.10\.0"):
         DaemonClient(_free_port(), cwd=str(tmp_path)).check_version()
+
+
+def test_patchright_cli_0_15_0_is_refused_and_0_15_1_accepted(tmp_path, monkeypatch):
+    """0.15.0 and older, attached to the user's Chrome, lost their downloads and dismissed their
+    dialogs (AhaiMk01/esum#1), so the patch level counts."""
+    _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.15.0", "protocol": 1, "port": 9321,
+                                                 "token_path": None})
+    with pytest.raises(BrowserError, match=r"needs patchright-cli 0\.15\.1 or newer.*found 0\.15\.0"):
+        DaemonClient(_free_port(), cwd=str(tmp_path)).check_version()
+    _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.15.1", "protocol": 1, "port": 9321,
+                                                 "token_path": None})
+    DaemonClient(_free_port(), cwd=str(tmp_path)).check_version()
 
 
 def test_version_check_is_cached_per_executable(tmp_path, monkeypatch):
     port = _free_port()
-    exe, runs = _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.11.0", "protocol": 1,
+    exe, runs = _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.15.1", "protocol": 1,
                                                              "port": port, "token_path": None})
     DaemonClient(port, cwd=str(tmp_path)).check_version()
     DaemonClient(port, cwd=str(tmp_path)).check_version()  # a later esum call
@@ -194,7 +206,7 @@ def test_daemon_info_supplies_the_token_path(tmp_path, monkeypatch, server):
     token = tmp_path / "elsewhere" / "daemon.token"
     token.parent.mkdir()
     token.write_text("s3cret\n", encoding="utf-8")
-    _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.11.0", "protocol": 1, "port": server.port,
+    _fake_cli(tmp_path, monkeypatch, "unused", {"version": "0.15.1", "protocol": 1, "port": server.port,
                                                  "token_path": str(token)})
     client = DaemonClient(server.port, cwd=str(tmp_path))
     client._started = True

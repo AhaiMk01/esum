@@ -85,9 +85,8 @@ The `esum` skill tells it which commands to run. For a site ESUM doesn't have, s
 <details>
 <summary><b>Browser sites (FlyerTalk, Reddit, LINUX DO, NodeSeek, NGA, Kanxue, 52pojie, 1point3acres, CardCenter, Aligned Incentives, Discourse bookmarks)</b></summary>
 
-These go through Chrome. Managed mode needs patchright-cli 0.12.0 or newer
-(`uv tool install -U patchright-cli`), which opens Chrome without taking desktop focus.
-ESUM rejects an older daemon before opening Chrome.
+These go through Chrome, which needs patchright-cli 0.15.1 or newer
+(`uv tool install -U patchright-cli`). ESUM rejects an older daemon before opening Chrome.
 
 ```sh
 uv tool run --from patchright-cli patchright install chrome   # only if Chrome is missing
@@ -250,6 +249,8 @@ logging out of a site, and why ESUM doesn't copy your Chrome cookies.
 
 > [!WARNING]
 > In `native` mode ESUM's tabs open in your real browser, and any program that drives that session can act on every site you're logged in to. That's why you have to turn it on yourself.
+>
+> ESUM leaves your own tabs alone: their downloads, dialogs and requests are untouched. For up to 30 minutes after the last call, while ESUM stays connected, a page in a background tab may see itself as focused.
 
 ## Writes ask you first
 

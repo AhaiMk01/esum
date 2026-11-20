@@ -585,7 +585,7 @@ and T2 sites with `browser_cookies: False` never launch a browser.
 | `attach` | `esum-attach-<host>-<port>` | the Chrome at `--cdp=<url>` (default `http://127.0.0.1:9222`), its own cookies (host context) |
 | `native` | `esum-native` | the user's everyday Chrome, found through `DevToolsActivePort` once they turn on `chrome://inspect/#remote-debugging`; host context; detached, never closed |
 
-Each call works in its own named tab (patchright-cli ≥ 0.11, checked at start) and closes it at the
+Each call works in its own named tab (patchright-cli ≥ 0.15.1, checked at start) and closes it at the
 end; parallel calls on a session never touch each other's pages, and their requests overlap. T3 opens one tab per origin. The tab first loads the
 site's `base_url` (or `extras["browser_home"]`), and ESUM waits up to 20 s for an anti-bot
 interstitial to clear. When an action falls short, the agent can drive the same session with

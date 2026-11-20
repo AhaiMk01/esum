@@ -42,7 +42,7 @@ sites answer `<page>.json`.
 
 ## 2. Explore with patchright-cli
 
-ESUM needs patchright-cli 0.12 or newer. Check with `patchright-cli --version`, and upgrade with
+ESUM needs patchright-cli 0.15.1 or newer. Check with `patchright-cli --version`, and upgrade with
 `uv tool install -U patchright-cli`, then `patchright-cli kill-all` so a running daemon restarts
 on it. If `--version` still shows an older version, another copy
 comes first on the PATH (`where patchright-cli` on Windows, `which -a patchright-cli` elsewhere,
